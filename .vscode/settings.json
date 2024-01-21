@@ -19,6 +19,9 @@
      "editor.defaultFormatter": "HookyQR.beautify",
      "editor.formatOnSave": true
   },
-  "files.autoSave": "off"
+  "files.autoSave": "off",
+  "cSpell.words": [
+    "allauth"
+  ]
  }
  
