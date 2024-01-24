@@ -2,7 +2,25 @@
 {% load static %}
 {% block favicon %}
 {% endblock %}
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
 
 {% block content %}
-<h1 class="display-4 text-success">Working!</h1>
+<div class="container h-80">
+    <div class="h-100">
+        <div class="col-7 col-md-6 my-auto">
+            <h1 class="headline text-black">Retro Gaming Redefined</h1>
+            <div class="my-5">
+                <h4>
+                    <a href="" class="shop-now btn btn-lg rounded-0 py-3 text-uppercase">Shop Now</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
