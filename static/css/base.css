@@ -1,0 +1,68 @@
+html {
+    height: 100%;
+   
+}
+
+body {
+    background-color: #eeb8b6;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.hero-image {
+    background: url("/media/retro-games-background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 50vh;
+}
+
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headline {
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0;
+    border: 1px solid;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'VT323', sans-serif;
+}
+
+.logo-image {
+    height: 100px;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+nav {
+    position: sticky;
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+
