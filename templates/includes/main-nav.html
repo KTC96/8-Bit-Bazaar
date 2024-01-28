@@ -1,0 +1,63 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar w-auto mx-auto list-unstyled">
+
+        <!-- Home Link (visible on small screens) -->
+        <li class="nav-item d-block d-md-none">
+            <a class="font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
+
+        <!-- All Games Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="all-games-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Games
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-games-link">
+                <a href="" class="dropdown-item">By Price</a>
+                <a href="" class="dropdown-item">By Rating</a>
+                <a href="" class="dropdown-item">All Products</a>
+            </div>
+        </li>
+
+        <!-- Genre Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="genre-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Genre
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="genre-link">
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item">Adventure</a>
+                <a href="#" class="dropdown-item">Casual</a>
+                <!-- Add more genres as needed -->
+            </div>
+        </li>
+
+        <!-- Category Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="category-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Category
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="category-link">
+                <a href="#" class="dropdown-item">Top Sellers</a>
+                <a href="#" class="dropdown-item">All-Time Classics</a>
+                <a href="#" class="dropdown-item">Staff Picks</a>
+                <a href="#" class="dropdown-item">Retro Remasters</a>
+            </div>
+        </li>
+
+        <!-- Special Offers Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Special Offers
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+                <a href="#" class="dropdown-item">Bundle Deals</a>
+                <a href="#" class="dropdown-item">Discounted Games</a>
+                <a href="#" class="dropdown-item">Seasonal Specials</a>
+                <a href="#" class="dropdown-item">All Specials</a>
+            </div>
+        </li>
+
+    </ul>
+</div>

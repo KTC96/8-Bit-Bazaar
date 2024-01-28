@@ -58,7 +58,11 @@ body {
 
 nav {
     position: sticky;
-    margin: 50px;
+    
+}
+
+.pink-background {
+    background-color: #eeb8b6;
 }
 
 .icon {
@@ -90,3 +94,4 @@ nav {
         text-align: right !important;
     }
 }
+
