@@ -1,0 +1,3029 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp50011",
+      "name": "Super_Mario_64",
+      "description": "The first three dimensional entry in the Mario franchise, Super Mario 64 follows Mario as he puts his broadened 3D movement arsenal to use in order to rescue Princess Peach from the clutches of his arch rival Bowser. Mario has to jump into worlds-within-paintings ornamenting the walls of Peach's castle, uncover secrets and hidden challenges and collect golden stars as reward for platforming trials.",
+      "price": 36.68,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 4.1,
+      "video": "Super_Mario_64.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Mario_64.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp50012",
+      "name": "Final_Fantasy_VII",
+      "description": "Final Fantasy VII is the seventh main installment in the Final Fantasy series, and was the first title to feature three-dimensional graphics, pre-rendered backgrounds and numerous full motion videos.\n             \n\n              The gameplay is a departure from previous entries in the series in many ways. Though it retains the Active Time Battle pseudo-turn based menu command system, FFVII features three party members rather than four. The Materia system allows the player to customize each party member's abilities to their liking, and the Limit system grants them unique combat skills.\n             \n\n              Though minigames had been a recurring feature, FFVII introduces numerous new ones, many of them playable in the theme park Gold Saucer varying from racing with Chocobos to snowboarding.",
+      "price": 56.72,
+      "genre": [
+        1,
+        7,
+        8
+      ],
+      "rating": 4.2,
+      "video": "Final_Fantasy_VII.mp4",
+      "image_url": "",
+      "image": "media/games/Final_Fantasy_VII.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp50013",
+      "name": "The_Legend_of_Zelda:_Ocarina_of_Time",
+      "description": "The Legend of Zelda: Ocarina of Time is the fifth main installment of The Legend of Zelda series and the first to be released for the Nintendo 64. It was one of the most highly anticipated games of its age, and is listed among the greatest video games ever created by numerous websites and magazines. The gameplay of Ocarina of Time was revolutionary for its time, it has arguably made more of an impact on later games in the series than any of its predecessors even though they had the same cores of exploration, dungeons, puzzles and item usage. Among the gameplay mechanics, one of the most noteworthy is the time-traveling system. The game begins with the player controlling the child Link, but later on an adult Link becomes a playable character as well and each of them has certain unique abilities. Ocarina of Time also introduces the use of music to solve puzzles: as new songs are learned, they can be used to solve puzzles, gain access to new areas and warp to different locations. Dungeon exploration is somewhat more puzzle-oriented than in earlier games but they are not too complex.",
+      "price": 40.74,
+      "genre": [
+        1,
+        7
+      ],
+      "rating": 4.3,
+      "video": "The_Legend_of_Zelda:_Ocarina_of_Time.mp4",
+      "image_url": "",
+      "image": "media/games/The_Legend_of_Zelda:_Ocarina_of_Time.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp50014",
+      "name": "Chrono_Trigger",
+      "description": "In this turn-based Japanese RPG, young Crono must travel through time through a misfunctioning teleporter to rescue his misfortunate companion and take part in an intricate web of past and present perils. The adventure that ensues soon unveils an evil force set to destroy the world, triggering Crono's race against time to change the course of history and bring about a brighter future.",
+      "price": 57.9,
+      "genre": [
+        1,
+        7
+      ],
+      "rating": 4.5,
+      "video": "Chrono_Trigger.mp4",
+      "image_url": "",
+      "image": "media/games/Chrono_Trigger.webp",
+      "category": 3,
+      "release_year": 95
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp50015",
+      "name": "Super_Mario_World",
+      "description": "A 2D platformer and first entry on the SNES in the Super Mario franchise, Super Mario World follows Mario as he attempts to defeat Bowser's underlings and rescue Princess Peach from his clutches. The game features a save system, a less linear world map, an expanded movement arsenal and numerous new items for Mario, alongside new approaches to level design and art direction.",
+      "price": 51.49,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 4.2,
+      "video": "Super_Mario_World.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Mario_World.webp",
+      "category": 3,
+      "release_year": 90
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp50016",
+      "name": "EarthBound",
+      "description": "A turn-based JRPG and sequel to then-Japan-only Earthbound Beginnings (1989) in which Ness, a young boy living in a land based on the USA, leaves home to go on an adventure through strange locations, get to know quirky characters and defeat an unknowable alien threat called Giygas while facing up to the realities of growing up and becoming familiar with the real world.",
+      "price": 57.51,
+      "genre": [
+        1,
+        7,
+        8
+      ],
+      "rating": 4.2,
+      "video": "EarthBound.mp4",
+      "image_url": "",
+      "image": "media/games/EarthBound.webp",
+      "category": 3,
+      "release_year": 94
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp50017",
+      "name": "Castlevania:_Symphony_of_the_Night",
+      "description": "A seminal 2D metroidvania in which after the events of Castlevania: Rondo of Blood (1993), a man named Alucard arrives at Dracula's castle after it rises from the rubble, and seeks to defeat the evil contained within it once and for all by exploring, fighting its inhabitants and collecting the various weapons and abilities hidden in its depths.",
+      "price": 55.15,
+      "genre": [
+        1,
+        3,
+        7
+      ],
+      "rating": 4.4,
+      "video": "Castlevania:_Symphony_of_the_Night.mp4",
+      "image_url": "",
+      "image": "media/games/Castlevania:_Symphony_of_the_Night.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp50018",
+      "name": "Super_Metroid",
+      "description": "The Space Pirates, merciless agents of the evil Mother Brain, have stolen the last Metroid from a research station, and once again Mother Brain threatens the safety of the galaxy! Samus Aran must don her awesome array of high-tech weaponry to retrieve the deadly Metroid hidden deep within the cave-riddled planet Zebes. Super Metroid features excellent graphics, with a huge variety of enemies and worlds to explore. The side-view action will be familiar to many players, only now there are new weapons and items, including the Grappling Beam, which allows Samus to swing across large chasms, and the X-Ray Scope, which reveals secret passages.",
+      "price": 58.96,
+      "genre": [
+        1,
+        3,
+        4
+      ],
+      "rating": 4.3,
+      "video": "Super_Metroid.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Metroid.webp",
+      "category": 3,
+      "release_year": 94
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp50019",
+      "name": "Super_Mario_Bros.",
+      "description": "A side scrolling 2D platformer and first entry in the Super Mario franchise, Super Mario Bros. follows Italian plumber Mario as he treks across many levels of platforming challenges featuring hostile enemies to rescue Princess Peach from the evil king Bowser.",
+      "price": 31.54,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.5,
+      "video": "Super_Mario_Bros..mp4",
+      "image_url": "",
+      "image": "media/games/Super_Mario_Bros..webp",
+      "category": 3,
+      "release_year": 85
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500110",
+      "name": "Half-Life",
+      "description": "Dr. Gordon Freeman doesn't speak, but he's got a helluva story to tell. This first-person roller-coaster initiated a new era in the history of action games by combining engrossing gameplay, upgraded graphics, ingenious level design and a revolutionary story that may not be all that it seems, told not through cutscenes, but through the visual environment.",
+      "price": 46.89,
+      "genre": [
+        1,
+        11,
+        4
+      ],
+      "rating": 4,
+      "video": "Half-Life.mp4",
+      "image_url": "",
+      "image": "media/games/Half-Life.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500111",
+      "name": "Super_Mario_Bros._3",
+      "description": "Super Mario Bros. 3, the third entry in the Super Mario Bros. series and Super Mario franchise, sees Mario or Luigi navigate a nonlinear world map containing platforming levels and optional minigames and challenges. The game features more diverse movement options and new items alongside more complex level designs and boss battles.",
+      "price": 41.2,
+      "genre": [
+        3
+      ],
+      "rating": 4,
+      "video": "Super_Mario_Bros._3.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Mario_Bros._3.webp",
+      "category": 3,
+      "release_year": 88
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500112",
+      "name": "Doom",
+      "description": "In the future, humans have left Earth and settled throughout the galaxy. On Mars, the Union Aerospace Corporation has established a radioactive waste facility and allowed the military to conduct teleportation experiments on the nearby moons of Deimos and Phobos. Hours ago, the base on Mars began receiving incoherent distress messages from Phobos, while Deimos has disappeared completely. With all attempts to establish contact failing, you and your team have been dispatched to investigate. Upon arrival, you secure the perimeter as the rest of your team enters the facility. As you stand guard, your radio crackles with the sound of gunfire, cracking bones and blood-curdling screams and eventually falls silent. Alone, with no way off the planet or means to defend yourself other than your trusty pistol, there\u00e2\u0080\u0099s only one way out - into the complex of death and the horrors that await you within. If you plan to get out of here alive you must fend off the hordes of demonic imps, haunting spectres and your undead, former comrades waiting to tear you limb from limb. So, grab the nearest shotgun and blast your way out of this fragging madness!",
+      "price": 56.17,
+      "genre": [
+        4
+      ],
+      "rating": 4,
+      "video": "Doom.mp4",
+      "image_url": "",
+      "image": "media/games/Doom.webp",
+      "category": 3,
+      "release_year": 93
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500113",
+      "name": "Sonic_the_Hedgehog",
+      "description": "Sonic the Hedgehog is a 2D, side-scrolling platformer, whose gameplay centers around Sonic's ability to run at high speed through levels incorporating springs, slopes, high falls, and loop-the-loops. The levels contain hazards in the form of robots (\"badniks\" in the Western game manuals) in which Dr. Robotnik has trapped animals. Although destroying a robot frees the animal within, this is not required to complete the game. The player must avoid rows of sharp spikes, falling into bottomless pits, being crushed by moving walls or platforms, and drowning (which can be avoided by breathing air bubbles periodically released from vents). Sonic's main attack is his spin, where he curls into a ball and rotates rapidly (damaging enemies and some obstacles). This can be performed by jumping in the air or rolling on the ground.\n             \n\n              Scattered around each level map are gold rings and collecting 100 rings rewards the player with an extra life. Rings are a layer of protection against hazards; if Sonic has at least one ring when he collides with an enemy, he will survive. However, all his rings will be scattered; they will flicker and disappear in a few seconds if they are not picked up again. If Sonic is hit without any rings, he loses a life. Although shields and temporary invincibility may be collected to provide additional protection, certain hazards (such as drowning, being crushed, falling down a bottomless pit or running out of time) will cost Sonic a life regardless of rings or other protection.\n             \n\n              The game is divided into six zones (Green Hill, Marble, Spring Yard, Labyrinth, Star Light, and Scrap Brain), each with its own visual style and enemies. A player must navigate through each zone (subdivided into three acts) to progress.\n             \n\n              At the end of each zone's third act, the player confronts Dr. Robotnik (who pilots a different vehicle each time) in a boss fight. After the sixth zone, the player continues directly to the Final Zone for a last encounter with Robotnik. They begin with three lives (power-ups and rings add more), which are lost when Sonic collides with hazardous enemies (or objects) without rings, falls off-screen or exceeds an act's ten-minute time limit. Lampposts acting as checkpoints allow Sonic to return to the most-recently activated post when he loses a life. If he loses a life as a result of time running out but has another life, the timer will reset to 0:00 when he returns to the checkpoint. If all lives are lost at any point in the game, the game over screen will appear (when the player can return to the beginning of the act with three lives, if they have any continues).\n             \n\n              When Sonic reaches the end of act one or act two of a zone with at least fifty rings, a large ring appears through which he can jump to enter a Special Stage (a \"Secret Zone\" in the original Genesis manual). In each of six Special Stages, Sonic bounces off the bumpers and walls of a rotating maze in spin attack. Although the player earns a continue with each 50 rings found, their main goal is to obtain the Chaos Emerald at the end of the maze without colliding with a \"goal block\" (which ends the level).",
+      "price": 49.14,
+      "genre": [
+        3
+      ],
+      "rating": 3.1,
+      "video": "Sonic_the_Hedgehog.mp4",
+      "image_url": "",
+      "image": "media/games/Sonic_the_Hedgehog.webp",
+      "category": 3,
+      "release_year": 91
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500114",
+      "name": "Donkey_Kong_Country",
+      "description": "Donkey Kong Country is a side scrolling platformer by British developers Rare in 1994. It featured revolutionary pre-rendered 3D graphics that give the game a very unique look compared to most other games on consoles at the time. The two playable characters featured in the game are the titular character, Donkey Kong and his nephew, Diddy Kong. Together the two swing, climb, jump, swim, cartwheel, ride animals, and blast out of barrels on their way to recover their stolen bannanas from the evil King K. Rool and his Kremling army. The adventure takes you through a variety of different environments and levels that continually change up gameplay. Donkey Kong Country also provides plenty of opportunities for exploration with almost every level having a multitude of collectible, shortcuts, and hidden bonus areas.",
+      "price": 34.31,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.9,
+      "video": "Donkey_Kong_Country.mp4",
+      "image_url": "",
+      "image": "media/games/Donkey_Kong_Country.webp",
+      "category": 3,
+      "release_year": 94
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500115",
+      "name": "Final_Fantasy_VI",
+      "description": "Final Fantasy VI is the sixth main installment in the Final Fantasy series, developed and published by Square. It was the final title in the series to feature two-dimensional graphics, and the first story that did not revolve around crystals.\n             \n\n              The game gives players up to fourteen playable characters, the largest cast in the series, and features the Active Time Battle pseudo-turn based menu command system. A party can consist of up to four characters, though some events require the player to assemble three different parties of up to four and switch between them.\n             \n\n              Each character has a unique command ability, such as Terra's Trance, Locke's Steal, Edgar's Tools or Sabin's Blitz, and can also learn Magic spells from earning AP from battles with magicite equipped. Each character's rare Desperation Attack will randomly activate after using the Attack command when at critical health.",
+      "price": 38.78,
+      "genre": [
+        1,
+        7
+      ],
+      "rating": 4.4,
+      "video": "Final_Fantasy_VI.mp4",
+      "image_url": "",
+      "image": "media/games/Final_Fantasy_VI.webp",
+      "category": 3,
+      "release_year": 94
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500116",
+      "name": "The_Legend_of_Zelda",
+      "description": "The Legend of Zelda is the first title in the Zelda series, it has marked the history of video games particularly for it's game mechanics and universe. The player controls Link and must make his way through the forests, graveyards, plains and deserts of the Otherworld to find the secret entrances to the eight dungeons and try to restore the broken Triforce. Among the game's mechanics, it was the first time we saw a continuous world that could be freely explored, power-ups that permanently enhanced the main character's abilities and a battery save feature that allowed players to keep their progress instead of having to start over. The gameplay balanced action sequences with discovery, secrets and exploration.",
+      "price": 49.49,
+      "genre": [
+        1
+      ],
+      "rating": 3.2,
+      "video": "The_Legend_of_Zelda.mp4",
+      "image_url": "",
+      "image": "media/games/The_Legend_of_Zelda.webp",
+      "category": 3,
+      "release_year": 86
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500117",
+      "name": "Banjo-Kazooie",
+      "description": "In this 3D platformer, the heroic but naive bear Banjo enlists his cowardly bird buddy Kazooie to help rescue his younger sister from a vain, beauty-stealing witch. The player is tasked with exploring the witch's lair and the nine large, open levels within it, looking for tasks and challenges to complete. Along the way they meet a variety of characters who teach them new moves and transform them into different animals. Modeled after Super Mario 64, Banjo-Kazooie is distinguished by its cheeky and sarcastic sense of humor and by a large, varied, and novel moveset.",
+      "price": 41.49,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 4,
+      "video": "Banjo-Kazooie.mp4",
+      "image_url": "",
+      "image": "media/games/Banjo-Kazooie.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500118",
+      "name": "Mega_Man_X",
+      "description": "Near the end of his life, Dr. Light succeeds in creating the first of a new series of robots which will change the world. Able to think and make decisions, this new robot holds great danger as well as great possibilities. Fearful of the possible consequences of unleashing his creation on the world, Dr. Light decides to seal him in a capsule and test his systems until they are totally reliable. The future will have to decide his fate...\n             \n\n              Released from the capsule by Dr. Cain, \"X\" is born into the world of the future where the robot rebellions are a thing of the past. But when Dr. Cain tries to implement Dr. Light's designs into a new series of Reploids, something goes hideously wrong. Now the future lies on the brink of destruction and a new Mega Man must emerge to face Sigma and his forces before the human race is wiped from the planet!",
+      "price": 31.54,
+      "genre": [
+        1,
+        3,
+        4
+      ],
+      "rating": 4.1,
+      "video": "Mega_Man_X.mp4",
+      "image_url": "",
+      "image": "media/games/Mega_Man_X.webp",
+      "category": 3,
+      "release_year": 93
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500119",
+      "name": "Tetris",
+      "description": "Tetris is a tile-matching puzzle video game. The goal is to place pieces made up of four tiles in a ten-by-twenty well, organizing them into complete rows, which then disappear. The main objective of each round is to clear 25 lines, after which the player moves on to the next round. If the stack reaches the top of the field, the player loses a life, and if all three lives are lost, the game is over.\n             \n\n              The game lets the player choose the starting stage and round, as well as one of three background tunes. Difficulty is increased throughout the stages by an increase in speed and the addition of garbage blocks in the well.",
+      "price": 48.39,
+      "genre": [
+        2,
+        11
+      ],
+      "rating": 4.1,
+      "video": "Tetris.mp4",
+      "image_url": "",
+      "image": "media/games/Tetris.webp",
+      "category": 3,
+      "release_year": 89
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500120",
+      "name": "Donkey_Kong_Country_2:_Diddy's_Kong_Quest",
+      "description": "Donkey Kong Country 2: Diddy's Kong Quest is the sequel to Donkey Kong Country. It was developed by Rare and is one of the best selling Super Nintendo games.",
+      "price": 54.87,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 4.2,
+      "video": "Donkey_Kong_Country_2:_Diddy's_Kong_Quest.mp4",
+      "image_url": "",
+      "image": "media/games/Donkey_Kong_Country_2:_Diddy's_Kong_Quest.webp",
+      "category": 3,
+      "release_year": 95
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500121",
+      "name": "Kirby's_Adventure",
+      "description": "Not everything is well in Dream Land. For some mysterious reason, the Dream Spring, a magical well that is the reservoir for all the dreams of the citizens of Dream Land, is no longer working. Everyone is being subjected to their worst nightmares every time they go to sleep. Upon reaching the Dream Spring, Kirby finds out that evil King Dedede has stolen the Star Rod, thus depriving Dream Land of the magical energy that feeds its spring. Using 20 unique tricks and your ability to steal your enemies' powers by swallowing them, you'll have to make your way through a horrific land filled with all kinds of nightmares. Recover the broken pieces of the Star Rod, and everyone in Dream Land will sleep peacefully once again. If you fail, the citizens of Dream Land will be subjected to a lifetime of terrible nightmares.",
+      "price": 42.86,
+      "genre": [
+        3
+      ],
+      "rating": 3.6,
+      "video": "Kirby's_Adventure.mp4",
+      "image_url": "",
+      "image": "media/games/Kirby's_Adventure.webp",
+      "category": 3,
+      "release_year": 93
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500122",
+      "name": "Super_Smash_Bros.",
+      "description": "Super Smash Bros. is a crossover fighting video game between several different Nintendo franchises, and the first installment in the Super Smash Bros. series. Players must defeat their opponents multiple times in a fighting frenzy of items and power-ups. Super Smash Bros. is a departure from the general genre of fighting games: instead of depleting an opponent's life bar, the players seek to knock opposing characters off a stage. Each player has a damage total, represented by a percentage, which rises as the damage is taken.",
+      "price": 37.96,
+      "genre": [
+        12,
+        3
+      ],
+      "rating": 3.4,
+      "video": "Super_Smash_Bros..mp4",
+      "image_url": "",
+      "image": "media/games/Super_Smash_Bros..webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500123",
+      "name": "Mega_Man_2",
+      "description": "In the year 200X, a super robot named Mega Man was created. Dr. Light created Mega Man to stop the evil desires of Dr. Wily. However, after his defeat, Dr. Wily created eight of his own robots to counter Mega Man.",
+      "price": 54.88,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.6,
+      "video": "Mega_Man_2.mp4",
+      "image_url": "",
+      "image": "media/games/Mega_Man_2.webp",
+      "category": 3,
+      "release_year": 89
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500124",
+      "name": "Klonoa:_Door_to_Phantomile",
+      "description": "Klonoa: Door to Phantomile is a side-scrolling platform game viewed from a \"2.5D\" perspective. The player moves the protagonist, Klonoa, along a path in a two-dimensional fashion, but the game is rendered in three dimensions. This allows the path followed to curve and for the player to interact with objects outside of the path.",
+      "price": 41.73,
+      "genre": [
+        3
+      ],
+      "rating": 4.1,
+      "video": "Klonoa:_Door_to_Phantomile.mp4",
+      "image_url": "",
+      "image": "media/games/Klonoa:_Door_to_Phantomile.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500125",
+      "name": "Super_Mario_RPG:_Legend_of_the_Seven_Stars",
+      "description": "A JRPG entry in the Super Mario franchise in which Mario meets many unlikely allies in order to jump and fight his way through the Mushroom Kingdom and collect stars to repair the Star Road, the pathway that grants people's wishes, which was destroyed by Smithy, the otherworldly entity that hijacked Bowser's castle and threw the Kingdom into disarray.",
+      "price": 47.77,
+      "genre": [
+        1,
+        3,
+        7
+      ],
+      "rating": 4,
+      "video": "Super_Mario_RPG:_Legend_of_the_Seven_Stars.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Mario_RPG:_Legend_of_the_Seven_Stars.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500126",
+      "name": "Zelda_II:_The_Adventure_of_Link",
+      "description": "Zelda II: The Adventure of Link is the second major installment in The Legend of Zelda series and the direct sequel to the first game. Like its predecessor, it features dungeons that must be located in the overworld and searched for an item that will prove useful. However, the game presents many very important gameplay changes compared to the previous one, affecting especially the movements and the combat. Moving around the world map involves encounters with enemies that take place on a side-scrolling playfield rather than the top-down perspective for which the series became known.",
+      "price": 34.32,
+      "genre": [
+        1,
+        7
+      ],
+      "rating": 2.6,
+      "video": "Zelda_II:_The_Adventure_of_Link.mp4",
+      "image_url": "",
+      "image": "media/games/Zelda_II:_The_Adventure_of_Link.webp",
+      "category": 3,
+      "release_year": 87
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500127",
+      "name": "Super_Mario_64",
+      "description": "The first three dimensional entry in the Mario franchise, Super Mario 64 follows Mario as he puts his broadened 3D movement arsenal to use in order to rescue Princess Peach from the clutches of his arch rival Bowser. Mario has to jump into worlds-within-paintings ornamenting the walls of Peach's castle, uncover secrets and hidden challenges and collect golden stars as reward for platforming trials.",
+      "price": 43.2,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 4.1,
+      "video": "Super_Mario_64.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Mario_64.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500128",
+      "name": "Final_Fantasy_VII",
+      "description": "Final Fantasy VII is the seventh main installment in the Final Fantasy series, and was the first title to feature three-dimensional graphics, pre-rendered backgrounds and numerous full motion videos.\n             \n\n              The gameplay is a departure from previous entries in the series in many ways. Though it retains the Active Time Battle pseudo-turn based menu command system, FFVII features three party members rather than four. The Materia system allows the player to customize each party member's abilities to their liking, and the Limit system grants them unique combat skills.\n             \n\n              Though minigames had been a recurring feature, FFVII introduces numerous new ones, many of them playable in the theme park Gold Saucer varying from racing with Chocobos to snowboarding.",
+      "price": 31.99,
+      "genre": [
+        1,
+        7,
+        8
+      ],
+      "rating": 4.2,
+      "video": "Final_Fantasy_VII.mp4",
+      "image_url": "",
+      "image": "media/games/Final_Fantasy_VII.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500129",
+      "name": "The_Legend_of_Zelda:_Ocarina_of_Time",
+      "description": "The Legend of Zelda: Ocarina of Time is the fifth main installment of The Legend of Zelda series and the first to be released for the Nintendo 64. It was one of the most highly anticipated games of its age, and is listed among the greatest video games ever created by numerous websites and magazines. The gameplay of Ocarina of Time was revolutionary for its time, it has arguably made more of an impact on later games in the series than any of its predecessors even though they had the same cores of exploration, dungeons, puzzles and item usage. Among the gameplay mechanics, one of the most noteworthy is the time-traveling system. The game begins with the player controlling the child Link, but later on an adult Link becomes a playable character as well and each of them has certain unique abilities. Ocarina of Time also introduces the use of music to solve puzzles: as new songs are learned, they can be used to solve puzzles, gain access to new areas and warp to different locations. Dungeon exploration is somewhat more puzzle-oriented than in earlier games but they are not too complex.",
+      "price": 56.13,
+      "genre": [
+        1,
+        7
+      ],
+      "rating": 4.3,
+      "video": "The_Legend_of_Zelda:_Ocarina_of_Time.mp4",
+      "image_url": "",
+      "image": "media/games/The_Legend_of_Zelda:_Ocarina_of_Time.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500130",
+      "name": "The_Legend_of_Zelda:_A_Link_to_the_Past",
+      "description": "The Legend of Zelda: A Link to the Past is a top-down action game with puzzle-solving elements similar to the original The Legend of Zelda. After the side-scrolling and RPG-like gameplay of Zelda II: The Adventure of Link, the game is a return to the top-down view and gameplay style of the first installment. It introduces major new items to the series such as the Master Sword and the concept of two different worlds, which was revisited to some extent in Ocarina of Time with two distinct time periods rather than dark and light worlds.",
+      "price": 32.05,
+      "genre": [
+        1,
+        11,
+        7
+      ],
+      "rating": 4.1,
+      "video": "The_Legend_of_Zelda:_A_Link_to_the_Past.mp4",
+      "image_url": "",
+      "image": "media/games/The_Legend_of_Zelda:_A_Link_to_the_Past.webp",
+      "category": 3,
+      "release_year": 91
+    }
+  },
+  {
+    "pk": 31,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500131",
+      "name": "Silent_Hill",
+      "description": "Silent Hill is the first installment in the Silent Hill series of psychological survival horror video games. Unlike earlier survival horror games that focused on protagonists with combat training, the main character Harry Mason is an average man. The gameplay consists of combat, exploration, and puzzle-solving. The controller vibration is used to indicate Harry's heartbeat and will vibrate on low health. The player must regularly enter an inventory screen to check Harry's health, use items, and equip different weapons.",
+      "price": 56.45,
+      "genre": [
+        1,
+        11
+      ],
+      "rating": 4.1,
+      "video": "Silent_Hill.mp4",
+      "image_url": "",
+      "image": "media/games/Silent_Hill.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 32,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500132",
+      "name": "Super_Mario_Bros._3",
+      "description": "Super Mario Bros. 3, the third entry in the Super Mario Bros. series and Super Mario franchise, sees Mario or Luigi navigate a nonlinear world map containing platforming levels and optional minigames and challenges. The game features more diverse movement options and new items alongside more complex level designs and boss battles.",
+      "price": 58.06,
+      "genre": [
+        3
+      ],
+      "rating": 4,
+      "video": "Super_Mario_Bros._3.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Mario_Bros._3.webp",
+      "category": 3,
+      "release_year": 88
+    }
+  },
+  {
+    "pk": 33,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500133",
+      "name": "Doom",
+      "description": "In the future, humans have left Earth and settled throughout the galaxy. On Mars, the Union Aerospace Corporation has established a radioactive waste facility and allowed the military to conduct teleportation experiments on the nearby moons of Deimos and Phobos. Hours ago, the base on Mars began receiving incoherent distress messages from Phobos, while Deimos has disappeared completely. With all attempts to establish contact failing, you and your team have been dispatched to investigate. Upon arrival, you secure the perimeter as the rest of your team enters the facility. As you stand guard, your radio crackles with the sound of gunfire, cracking bones and blood-curdling screams and eventually falls silent. Alone, with no way off the planet or means to defend yourself other than your trusty pistol, there\u00e2\u0080\u0099s only one way out - into the complex of death and the horrors that await you within. If you plan to get out of here alive you must fend off the hordes of demonic imps, haunting spectres and your undead, former comrades waiting to tear you limb from limb. So, grab the nearest shotgun and blast your way out of this fragging madness!",
+      "price": 33.26,
+      "genre": [
+        4
+      ],
+      "rating": 4,
+      "video": "Doom.mp4",
+      "image_url": "",
+      "image": "media/games/Doom.webp",
+      "category": 3,
+      "release_year": 93
+    }
+  },
+  {
+    "pk": 34,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500134",
+      "name": "Sonic_the_Hedgehog",
+      "description": "Sonic the Hedgehog is a 2D, side-scrolling platformer, whose gameplay centers around Sonic's ability to run at high speed through levels incorporating springs, slopes, high falls, and loop-the-loops. The levels contain hazards in the form of robots (\"badniks\" in the Western game manuals) in which Dr. Robotnik has trapped animals. Although destroying a robot frees the animal within, this is not required to complete the game. The player must avoid rows of sharp spikes, falling into bottomless pits, being crushed by moving walls or platforms, and drowning (which can be avoided by breathing air bubbles periodically released from vents). Sonic's main attack is his spin, where he curls into a ball and rotates rapidly (damaging enemies and some obstacles). This can be performed by jumping in the air or rolling on the ground.\n             \n\n              Scattered around each level map are gold rings and collecting 100 rings rewards the player with an extra life. Rings are a layer of protection against hazards; if Sonic has at least one ring when he collides with an enemy, he will survive. However, all his rings will be scattered; they will flicker and disappear in a few seconds if they are not picked up again. If Sonic is hit without any rings, he loses a life. Although shields and temporary invincibility may be collected to provide additional protection, certain hazards (such as drowning, being crushed, falling down a bottomless pit or running out of time) will cost Sonic a life regardless of rings or other protection.\n             \n\n              The game is divided into six zones (Green Hill, Marble, Spring Yard, Labyrinth, Star Light, and Scrap Brain), each with its own visual style and enemies. A player must navigate through each zone (subdivided into three acts) to progress.\n             \n\n              At the end of each zone's third act, the player confronts Dr. Robotnik (who pilots a different vehicle each time) in a boss fight. After the sixth zone, the player continues directly to the Final Zone for a last encounter with Robotnik. They begin with three lives (power-ups and rings add more), which are lost when Sonic collides with hazardous enemies (or objects) without rings, falls off-screen or exceeds an act's ten-minute time limit. Lampposts acting as checkpoints allow Sonic to return to the most-recently activated post when he loses a life. If he loses a life as a result of time running out but has another life, the timer will reset to 0:00 when he returns to the checkpoint. If all lives are lost at any point in the game, the game over screen will appear (when the player can return to the beginning of the act with three lives, if they have any continues).\n             \n\n              When Sonic reaches the end of act one or act two of a zone with at least fifty rings, a large ring appears through which he can jump to enter a Special Stage (a \"Secret Zone\" in the original Genesis manual). In each of six Special Stages, Sonic bounces off the bumpers and walls of a rotating maze in spin attack. Although the player earns a continue with each 50 rings found, their main goal is to obtain the Chaos Emerald at the end of the maze without colliding with a \"goal block\" (which ends the level).",
+      "price": 31.96,
+      "genre": [
+        3
+      ],
+      "rating": 3.1,
+      "video": "Sonic_the_Hedgehog.mp4",
+      "image_url": "",
+      "image": "media/games/Sonic_the_Hedgehog.webp",
+      "category": 3,
+      "release_year": 91
+    }
+  },
+  {
+    "pk": 35,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500135",
+      "name": "Donkey_Kong_Country",
+      "description": "Donkey Kong Country is a side scrolling platformer by British developers Rare in 1994. It featured revolutionary pre-rendered 3D graphics that give the game a very unique look compared to most other games on consoles at the time. The two playable characters featured in the game are the titular character, Donkey Kong and his nephew, Diddy Kong. Together the two swing, climb, jump, swim, cartwheel, ride animals, and blast out of barrels on their way to recover their stolen bannanas from the evil King K. Rool and his Kremling army. The adventure takes you through a variety of different environments and levels that continually change up gameplay. Donkey Kong Country also provides plenty of opportunities for exploration with almost every level having a multitude of collectible, shortcuts, and hidden bonus areas.",
+      "price": 43.74,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.9,
+      "video": "Donkey_Kong_Country.mp4",
+      "image_url": "",
+      "image": "media/games/Donkey_Kong_Country.webp",
+      "category": 3,
+      "release_year": 94
+    }
+  },
+  {
+    "pk": 36,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500136",
+      "name": "The_Legend_of_Zelda",
+      "description": "The Legend of Zelda is the first title in the Zelda series, it has marked the history of video games particularly for it's game mechanics and universe. The player controls Link and must make his way through the forests, graveyards, plains and deserts of the Otherworld to find the secret entrances to the eight dungeons and try to restore the broken Triforce. Among the game's mechanics, it was the first time we saw a continuous world that could be freely explored, power-ups that permanently enhanced the main character's abilities and a battery save feature that allowed players to keep their progress instead of having to start over. The gameplay balanced action sequences with discovery, secrets and exploration.",
+      "price": 38.55,
+      "genre": [
+        1
+      ],
+      "rating": 3.2,
+      "video": "The_Legend_of_Zelda.mp4",
+      "image_url": "",
+      "image": "media/games/The_Legend_of_Zelda.webp",
+      "category": 3,
+      "release_year": 86
+    }
+  },
+  {
+    "pk": 37,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500137",
+      "name": "Banjo-Kazooie",
+      "description": "In this 3D platformer, the heroic but naive bear Banjo enlists his cowardly bird buddy Kazooie to help rescue his younger sister from a vain, beauty-stealing witch. The player is tasked with exploring the witch's lair and the nine large, open levels within it, looking for tasks and challenges to complete. Along the way they meet a variety of characters who teach them new moves and transform them into different animals. Modeled after Super Mario 64, Banjo-Kazooie is distinguished by its cheeky and sarcastic sense of humor and by a large, varied, and novel moveset.",
+      "price": 37.5,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 4,
+      "video": "Banjo-Kazooie.mp4",
+      "image_url": "",
+      "image": "media/games/Banjo-Kazooie.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 38,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500138",
+      "name": "Mega_Man_X",
+      "description": "Near the end of his life, Dr. Light succeeds in creating the first of a new series of robots which will change the world. Able to think and make decisions, this new robot holds great danger as well as great possibilities. Fearful of the possible consequences of unleashing his creation on the world, Dr. Light decides to seal him in a capsule and test his systems until they are totally reliable. The future will have to decide his fate...\n             \n\n              Released from the capsule by Dr. Cain, \"X\" is born into the world of the future where the robot rebellions are a thing of the past. But when Dr. Cain tries to implement Dr. Light's designs into a new series of Reploids, something goes hideously wrong. Now the future lies on the brink of destruction and a new Mega Man must emerge to face Sigma and his forces before the human race is wiped from the planet!",
+      "price": 48.39,
+      "genre": [
+        1,
+        3,
+        4
+      ],
+      "rating": 4.1,
+      "video": "Mega_Man_X.mp4",
+      "image_url": "",
+      "image": "media/games/Mega_Man_X.webp",
+      "category": 3,
+      "release_year": 93
+    }
+  },
+  {
+    "pk": 39,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500139",
+      "name": "Tetris",
+      "description": "Tetris is a tile-matching puzzle video game. The goal is to place pieces made up of four tiles in a ten-by-twenty well, organizing them into complete rows, which then disappear. The main objective of each round is to clear 25 lines, after which the player moves on to the next round. If the stack reaches the top of the field, the player loses a life, and if all three lives are lost, the game is over.\n             \n\n              The game lets the player choose the starting stage and round, as well as one of three background tunes. Difficulty is increased throughout the stages by an increase in speed and the addition of garbage blocks in the well.",
+      "price": 45.35,
+      "genre": [
+        2,
+        11
+      ],
+      "rating": 4.1,
+      "video": "Tetris.mp4",
+      "image_url": "",
+      "image": "media/games/Tetris.webp",
+      "category": 3,
+      "release_year": 89
+    }
+  },
+  {
+    "pk": 40,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500140",
+      "name": "Donkey_Kong_Country_2:_Diddy's_Kong_Quest",
+      "description": "Donkey Kong Country 2: Diddy's Kong Quest is the sequel to Donkey Kong Country. It was developed by Rare and is one of the best selling Super Nintendo games.",
+      "price": 51.39,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 4.2,
+      "video": "Donkey_Kong_Country_2:_Diddy's_Kong_Quest.mp4",
+      "image_url": "",
+      "image": "media/games/Donkey_Kong_Country_2:_Diddy's_Kong_Quest.webp",
+      "category": 3,
+      "release_year": 95
+    }
+  },
+  {
+    "pk": 41,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500141",
+      "name": "Sonic_the_Hedgehog_3_&_Knuckles",
+      "description": "Sonic the Hedgehog 3 & Knuckles (or simply Sonic 3 & Knuckles or Sonic 3 Complete Edition) is a platform video game which is the result of locking-on Sonic & Knuckles with Sonic the Hedgehog 3 using the former catridge's unique \"lock-on\" technology. It is essentially a large combined game of its two lock-on components and contains all Zones from the said games and also contains special features unique to this game. This would have been the original Sonic the Hedgehog 3 the developers intended but time constraints by Sega resulted in the game being split into two.",
+      "price": 38.63,
+      "genre": [
+        3
+      ],
+      "rating": 4.2,
+      "video": "Sonic_the_Hedgehog_3_&_Knuckles.mp4",
+      "image_url": "",
+      "image": "media/games/Sonic_the_Hedgehog_3_&_Knuckles.webp",
+      "category": 3,
+      "release_year": 94
+    }
+  },
+  {
+    "pk": 42,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500142",
+      "name": "Resident_Evil_2",
+      "description": "Resident Evil 2 is a sequel to the first Resident Evil title. Like the previous game in the series, Resident Evil 2 is a 3D action-adventure using three-dimensional polygon characters over two-dimensional pre-rendered backgrounds, with the action viewed through a variety of cinematic fixed camera angles in each room. Players can choose to play as one of two possible characters, each goes through the same initial scenario but with differences in the type of weaponry they find and the people they meet along the way.",
+      "price": 36.7,
+      "genre": [
+        1,
+        4
+      ],
+      "rating": 4.2,
+      "video": "Resident_Evil_2.mp4",
+      "image_url": "",
+      "image": "media/games/Resident_Evil_2.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 43,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500143",
+      "name": "Mario_Kart_64",
+      "description": "Mario Kart 64 is the second main installment of the Mario Kart series. It is the first game in the series to use three-dimensional graphics, however, the characters and items in this game are still two-dimensional, pre-rendered sprites. The game offers two camera angles and three engine sizes: 50cc, 100cc and 150cc. Each kart has distinctive handling, acceleration and top speed capabilities. Shells that you fire at rival racers, Bananas that make them skid out and Lightning Bolts that make them small and very slow are just a few of the game's unique power-ups.",
+      "price": 31.26,
+      "genre": [
+        10
+      ],
+      "rating": 3.5,
+      "video": "Mario_Kart_64.mp4",
+      "image_url": "",
+      "image": "media/games/Mario_Kart_64.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 44,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500144",
+      "name": "Kirby's_Adventure",
+      "description": "Not everything is well in Dream Land. For some mysterious reason, the Dream Spring, a magical well that is the reservoir for all the dreams of the citizens of Dream Land, is no longer working. Everyone is being subjected to their worst nightmares every time they go to sleep. Upon reaching the Dream Spring, Kirby finds out that evil King Dedede has stolen the Star Rod, thus depriving Dream Land of the magical energy that feeds its spring. Using 20 unique tricks and your ability to steal your enemies' powers by swallowing them, you'll have to make your way through a horrific land filled with all kinds of nightmares. Recover the broken pieces of the Star Rod, and everyone in Dream Land will sleep peacefully once again. If you fail, the citizens of Dream Land will be subjected to a lifetime of terrible nightmares.",
+      "price": 39.5,
+      "genre": [
+        3
+      ],
+      "rating": 3.6,
+      "video": "Kirby's_Adventure.mp4",
+      "image_url": "",
+      "image": "media/games/Kirby's_Adventure.webp",
+      "category": 3,
+      "release_year": 93
+    }
+  },
+  {
+    "pk": 45,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500145",
+      "name": "Super_Smash_Bros.",
+      "description": "Super Smash Bros. is a crossover fighting video game between several different Nintendo franchises, and the first installment in the Super Smash Bros. series. Players must defeat their opponents multiple times in a fighting frenzy of items and power-ups. Super Smash Bros. is a departure from the general genre of fighting games: instead of depleting an opponent's life bar, the players seek to knock opposing characters off a stage. Each player has a damage total, represented by a percentage, which rises as the damage is taken.",
+      "price": 42.32,
+      "genre": [
+        12,
+        3
+      ],
+      "rating": 3.4,
+      "video": "Super_Smash_Bros..mp4",
+      "image_url": "",
+      "image": "media/games/Super_Smash_Bros..webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 46,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500146",
+      "name": "Mega_Man_2",
+      "description": "In the year 200X, a super robot named Mega Man was created. Dr. Light created Mega Man to stop the evil desires of Dr. Wily. However, after his defeat, Dr. Wily created eight of his own robots to counter Mega Man.",
+      "price": 35.13,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.6,
+      "video": "Mega_Man_2.mp4",
+      "image_url": "",
+      "image": "media/games/Mega_Man_2.webp",
+      "category": 3,
+      "release_year": 89
+    }
+  },
+  {
+    "pk": 47,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500147",
+      "name": "Klonoa:_Door_to_Phantomile",
+      "description": "Klonoa: Door to Phantomile is a side-scrolling platform game viewed from a \"2.5D\" perspective. The player moves the protagonist, Klonoa, along a path in a two-dimensional fashion, but the game is rendered in three dimensions. This allows the path followed to curve and for the player to interact with objects outside of the path.",
+      "price": 36.28,
+      "genre": [
+        3
+      ],
+      "rating": 4.1,
+      "video": "Klonoa:_Door_to_Phantomile.mp4",
+      "image_url": "",
+      "image": "media/games/Klonoa:_Door_to_Phantomile.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 48,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500148",
+      "name": "Resident_Evil_3:_Nemesis",
+      "description": "Resident Evil 3: Nemesis is a survival horror video game and the third installment in the Resident Evil series. Like its two predecessors, it is a third-person action-adventure game with polygonal characters on pre-rendered backgrounds with cinematic camera angles. Although the game uses the same basic engine and gameplay as the previous games, the gameplay is improved by features such as auto-targeting, a 180 degree spin, and a new dodge move that allows Jill to avoid enemy attacks. The PC and Dreamcast versions includes all eight of Jill's possible costumes, as well as the mercenary mini-game Operation Mad Jackal which allows you to play as one of the three Umbrella soldiers. On the Playstation version, these special features must be unlocked by beating the game with a high score.",
+      "price": 52.22,
+      "genre": [
+        1,
+        4
+      ],
+      "rating": 3.8,
+      "video": "Resident_Evil_3:_Nemesis.mp4",
+      "image_url": "",
+      "image": "media/games/Resident_Evil_3:_Nemesis.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 49,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500149",
+      "name": "Shin_Megami_Tensei:_Devil_Summoner_-_Soul_Hackers",
+      "description": "Soul Hackers delivers a first-person, dungeon-crawling RPG experience set in a future where technology and otherworldly forces meet in a macabre fusion of cyberpunk futurism and gothic horror. A first-person sci-fi RPG epic, Soul Hackers tells of a city held up as a beacon of humanity's triumph of technology, but with an infernal secret. In this would-be utopia, a group of hackers takes on a centuries-old mystic society, and a battle for control over humanity's fate is about to begin.",
+      "price": 42.81,
+      "genre": [
+        1,
+        7
+      ],
+      "rating": 3.8,
+      "video": "Shin_Megami_Tensei:_Devil_Summoner_-_Soul_Hackers.mp4",
+      "image_url": "",
+      "image": "media/games/Shin_Megami_Tensei:_Devil_Summoner_-_Soul_Hackers.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 50,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500150",
+      "name": "Pac-Man",
+      "description": "Pac-Man is an arcade game developed by Namco and first released in Japan on May 22, 1980. it is considered one of the classics of the medium, virtually synonymous with video games, and an icon of 1980s popular culture. The player controls Pac-Man through a maze, eating pac-dots (also called pellets or just dots). When all pac-dots are eaten, Pac-Man is taken to the next stage. Four enemies (Blinky, Pinky, Inky and Clyde) roam the maze, trying to catch Pac-Man. If an enemy touches Pac-Man, a life is lost and the Pac-Man itself withers and dies. When all lives have been lost, the game ends. Near the corners of the maze are four larger, flashing dots known as power pellets that provide Pac-Man with the temporary ability to eat the enemies. The enemies turn deep blue, reverse direction and usually move more slowly. When an enemy is eaten, its eyes remain and return to the center box where it is regenerated in its normal color. Blue enemies flash white to signal that they are about to become dangerous again and the length of time for which the enemies remain vulnerable varies from one stage to the next, generally becoming shorter as the game progresses.",
+      "price": 40.8,
+      "genre": [
+        2
+      ],
+      "rating": 3.4,
+      "video": "Pac-Man.mp4",
+      "image_url": "",
+      "image": "media/games/Pac-Man.webp",
+      "category": 3,
+      "release_year": 80
+    }
+  },
+  {
+    "pk": 51,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500151",
+      "name": "Street_Fighter_III:_3rd_Strike",
+      "description": "Street Fighter III 3rd Strike: Fight for the Future is a 2D competitive fighting game produced by Capcom originally released for the arcade in 1999. It is the second follow-up to Street Fighter III, following Street Fighter III 2nd Impact. Like its predecessors, it runs on the CP System III hardware. 3rd Strike increased the character roster by adding five new characters, including Chun-Li. It also added further refinements to the previous game's play mechanics and rules. It was ported to the Dreamcast, PlayStation 2, and Xbox. A downloadable online version titled Street Fighter III: 3rd Strike Online Edition was released on PlayStation Network and Xbox Live Arcade in August 2011.",
+      "price": 39.5,
+      "genre": [
+        2,
+        12
+      ],
+      "rating": 4.2,
+      "video": "Street_Fighter_III:_3rd_Strike.mp4",
+      "image_url": "",
+      "image": "media/games/Street_Fighter_III:_3rd_Strike.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 52,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500152",
+      "name": "Moon:_Remix_RPG_Adventure",
+      "description": "In this \"anti-RPG\" adventure game notable for parodying and subverting common JRPG conventions, you level up by loving, not fighting. Revive dead animals and bond with everyone around you to obtain the most important thing in the universe \u00e2\u0080\u0094 love.",
+      "price": 56.31,
+      "genre": [
+        1,
+        11,
+        7
+      ],
+      "rating": 4.4,
+      "video": "Moon:_Remix_RPG_Adventure.mp4",
+      "image_url": "",
+      "image": "media/games/Moon:_Remix_RPG_Adventure.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 53,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500153",
+      "name": "Final_Fantasy_Tactics",
+      "description": "Lead epic battles in a new FINAL FANTASY world. Betrayal and darker dealings await in Squaresoft's game of war. Fight hundreds of battles across dangerous 3D terrain as an ancient blood feud awakens a deadlier foe.",
+      "price": 54.11,
+      "genre": [
+        7,
+        15,
+        9,
+        8
+      ],
+      "rating": 4.2,
+      "video": "Final_Fantasy_Tactics.mp4",
+      "image_url": "",
+      "image": "media/games/Final_Fantasy_Tactics.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 54,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500154",
+      "name": "Tekken_3",
+      "description": "Tekken 3 maintains the same core fighting system and concept as its predecessors, but brings many improvements, such as significantly more detailed graphics and animations, fifteen new characters added to the game's roster, more modern music and faster and more fluid gameplay.\n              \n              Perhaps the most noticeable change from Tekken 2 fight system is movement reform - whereas the element of depth had been largely insignificant in previous Tekken games (aside from some characters having unique sidesteps and dodging maneuvers), Tekken 3 added emphasis on the third axis, allowing all characters to sidestep in or out of the background by lightly pressing the arcade stick (or tapping the controller button in the console version) towards the corresponding direction. Another big change in movement was that jumping was toned down, no longer allowing fighters to jump to extreme heights (as was present in previous games), but keeping leaps to reasonable, realistic heights. It made air combat more controllable, and put more use to sidestep dodges, as jumping no longer became a universal dodge move that was flying above all of the ground moves. Other than that, the improved engine allowed for quick recoveries from knock-downs, more escapes from tackles and stuns, better juggling (as many old moves had changed parameters, allowing them to connect in combo-situations, where they wouldn't connect in previous games) and extra newly created combo throws.\n             \n\n              Tekken 3 was the first Tekken to feature a beat 'em up minigame called \"Tekken Force\", which pitted the player in various stages against enemies in a side-scrolling fashion. If the player succeeds in beating the minigame four times, Dr. Bosconovitch would be a playable character (granted that you defeat him first). This was continued in Tekken 4 and succeeded by the Devil Within minigame in Tekken 5 - but Boskonovitch was dropped as a playable character after Tekken 3. There is also a minigame \"Tekken Ball\", similar to beach volleyball, where one has to hit the ball with a powerful attack to hurt the opponent or try to hit the ball in such a way that it hits the ground in the opponent's area, thus causing damage.",
+      "price": 59.65,
+      "genre": [
+        12
+      ],
+      "rating": 3.9,
+      "video": "Tekken_3.mp4",
+      "image_url": "",
+      "image": "media/games/Tekken_3.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 55,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500155",
+      "name": "Armored_Core",
+      "description": "Armored Core (\u00e3\u0082\u00a2\u00e3\u0083\u00bc\u00e3\u0083\u009e\u00e3\u0083\u00bc\u00e3\u0083\u0089\u00e3\u0083\u00bb\u00e3\u0082\u00b3\u00e3\u0082\u00a2 \u00c4\u0080m\u00c4\u0081do Koa) is a mecha video game released in 1997, the first in the Armored Core series. It is an action game played from third person perspective.",
+      "price": 54.84,
+      "genre": [
+        4,
+        6
+      ],
+      "rating": 3.4,
+      "video": "Armored_Core.mp4",
+      "image_url": "",
+      "image": "media/games/Armored_Core.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 56,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500156",
+      "name": "Metal_Slug",
+      "description": "Metal Slug is a 1996 run and gun arcade video game originally developed by Nazca Corporation and released by SNK for the Neo Geo MVS. It is the first installment in the eponymous series. Set in 2028, players assume the role of Peregrine Falcon Strike Force soldiers Marco Rossi and Tarma Roving on a fight against the Rebel Army led by Donald Morden and overthrow his coup d'\u00c3\u00a9tat to prevent a New World Order.",
+      "price": 35.25,
+      "genre": [
+        2,
+        3,
+        4
+      ],
+      "rating": 3.6,
+      "video": "Metal_Slug.mp4",
+      "image_url": "",
+      "image": "media/games/Metal_Slug.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 57,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500157",
+      "name": "Suikoden_II",
+      "description": "Experience An Epic Tale of Warfare, Magic, Friendship And Betrayal\n             \n\n              -New tactical map battles add a whole level of strategy\n              \n              -Fantastic spells with stunning animation sequences and specialized attacks\n              \n              -Over 108 different characters can join your party and help you on your quest\n              \n              -Unlock hidden storylines using your memory card data from the original Suikoden\n              \n              -Build up your castle during the game to a thriving virtual community",
+      "price": 32.68,
+      "genre": [
+        7,
+        15
+      ],
+      "rating": 4.4,
+      "video": "Suikoden_II.mp4",
+      "image_url": "",
+      "image": "media/games/Suikoden_II.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 58,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500158",
+      "name": "Serial_Experiments_Lain",
+      "description": "An adventure game where you follow the cybernetic journeys of a girl named Lain.",
+      "price": 55.82,
+      "genre": [
+        1
+      ],
+      "rating": 4,
+      "video": "Serial_Experiments_Lain.mp4",
+      "image_url": "",
+      "image": "media/games/Serial_Experiments_Lain.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 59,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500159",
+      "name": "Kirby's_Dream_Land_2",
+      "description": "Kirby returns and has joined forces with new friends in this thrilling sequel!\n             \n\n              The Rainbow Bridges that connect the seven Rainbow Islands have disappeared! Help Kirby solve the mystery! Search through the different islands while battling King DeDeDe and his horde of evil minions.\n             \n\n              Along the way, meet Rick the Hamster, Kine the Fish, and Coo the Owl. Each possesses important abilities that can multiply the magnitude of Kirby's powers! Earn the mysterious Rainbow Sword, and prepare to face Kirby's most menacing rival ever--the evil Dark Matter!",
+      "price": 31.67,
+      "genre": [
+        3
+      ],
+      "rating": 3.2,
+      "video": "Kirby's_Dream_Land_2.mp4",
+      "image_url": "",
+      "image": "media/games/Kirby's_Dream_Land_2.webp",
+      "category": 3,
+      "release_year": 95
+    }
+  },
+  {
+    "pk": 60,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500160",
+      "name": "Castlevania:_Bloodlines",
+      "description": "Time refuses to forget the Belmont family's horrifying, bloody destiny. And in 1917 two of its descendants are summoned by fate into epic battle. Their enemy? The most evil incarnation of Castlevania legacy to ever rise from the grave, the vampiress Countess Bartley. This spine-tingling, 6-stage fear-fest overflows with graphic sights and sounds from your worst nightmares. As John Morris, the whip wielding vampire hunter, or Eric Lecarde, master lanceman, you'll pursue the demonic Countess all across Europe before she resurrects Dracula for a final reign of global terror. Alas, her trail of doom is laden with zombies, hideous mutants, grotesque giants, ghouls and ghastly creatures. Taste the sweat dripping into your mouth as you try rescuing yourself from diabolical traps. Feel the torturous strain on every muscle as you wield again and again sacred weapon power-ups such as Holy Water, the Battle Axe, the Crystal Blade Boomerang and the Mirror of Truth. But in the end, make sure you've saved enough strength to scream!",
+      "price": 55.62,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.7,
+      "video": "Castlevania:_Bloodlines.mp4",
+      "image_url": "",
+      "image": "media/games/Castlevania:_Bloodlines.webp",
+      "category": 3,
+      "release_year": 94
+    }
+  },
+  {
+    "pk": 61,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500161",
+      "name": "Final_Fantasy_V",
+      "description": "Final Fantasy V is a fantasy role-playing video game developed and published by Square in 1992 as a part of the Final Fantasy series. The game first appeared only in Japan on Nintendo's Super Famicom (known internationally as the Super Nintendo Entertainment System).\n             \n\n              It has been ported with minor differences to Sony's PlayStation and Nintendo's Game Boy Advance. An original video animation produced in 1994 called FINAL FANTASY: Legend of the Crystals serves as a sequel to the events depicted in the game. It was released for the PlayStation Network on April 6, 2011, in Japan. An enhanced port of the game, with new high-resolution graphics and a touch-based interface, was released for iPhone and iPad on March 28, 2013, and for Android on September 25, 2013.\n             \n\n              FINAL FANTASY V has been praised for the freedom of customization that the player has over the characters, achieved through the greatly expanded Job System. Despite being released only in Japan, the Super Famicom version sold more than two million copies. The PlayStation version has earned \"Greatest Hits\" status, selling more than 350,000 copies.",
+      "price": 59.12,
+      "genre": [
+        1,
+        7
+      ],
+      "rating": 3.8,
+      "video": "Final_Fantasy_V.mp4",
+      "image_url": "",
+      "image": "media/games/Final_Fantasy_V.webp",
+      "category": 3,
+      "release_year": 92
+    }
+  },
+  {
+    "pk": 62,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500162",
+      "name": "Fire_Emblem:_Genealogy_of_the_Holy_War",
+      "description": "Fire Emblem: Genealogy of the Holy War is a Japanese Super Famicom tactical role-playing game developed by Intelligent Systems and published by Nintendo. It was released on May 14, 1996 in Japan. It is the fourth title in the Fire Emblem series, the second Fire Emblem title for the Super Famicom, and the last game produced by the late Gunpei Yokoi. It was released on the Japanese Virtual Console service on January 30, 2007. The game was originally to be titled as Fire Emblem: Light Inheritors.",
+      "price": 31.75,
+      "genre": [
+        7,
+        15,
+        8
+      ],
+      "rating": 4,
+      "video": "Fire_Emblem:_Genealogy_of_the_Holy_War.mp4",
+      "image_url": "",
+      "image": "media/games/Fire_Emblem:_Genealogy_of_the_Holy_War.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 63,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500163",
+      "name": "Half-Life:_Opposing_Force",
+      "description": "Opposing Force returns to the same setting as Half-Life, but instead portrays the events from the perspective of a U.S. Marine, one of the enemy characters in the original game. The player character, Adrian Shephard, is sent in to neutralize the Black Mesa Research Facility after a scientific mishap causes it to be invaded by aliens, but quickly finds that the Marines are outnumbered and slowly being beaten back by a second alien race and black operations units.",
+      "price": 32.38,
+      "genre": [
+        3,
+        11,
+        4
+      ],
+      "rating": 3.7,
+      "video": "Half-Life:_Opposing_Force.mp4",
+      "image_url": "",
+      "image": "media/games/Half-Life:_Opposing_Force.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 64,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500164",
+      "name": "Pok\u00c3\u00a9mon_Gold",
+      "description": "Pok\u00c3\u00a9mon Gold, along with Pok\u00c3\u00a9mon Silver, are the sequels to Pok\u00c3\u00a9mon Red and Blue. They offer 100 new Pok\u00c3\u00a9mon to capture and train, 8 more Gyms to take on and a new Pok\u00c3\u00a9mon League challenge. Featuring an expanded post-game, Pok\u00c3\u00a9mon Gold and Silver additionally offer extra content from the previous entries in the series.",
+      "price": 53.68,
+      "genre": [
+        1,
+        7,
+        8
+      ],
+      "rating": 3.8,
+      "video": "Pok\u00c3\u00a9mon_Gold.mp4",
+      "image_url": "",
+      "image": "media/games/Pok\u00c3\u00a9mon_Gold.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 65,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500165",
+      "name": "Live_A_Live",
+      "description": "Live A Live's story is split across seven seemingly unrelated chapters that can be played in any order, based on popular genres such as Western, science fiction, and mecha. Each chapter has its own plot, setting, and characters. Although the basic gameplay is the same throughout the game, each chapter adds a new factor to the basic formula, such as the stealth elements in the ninja chapter. After the first seven chapters are completed, two final chapters take place to establish the connection between the seven previous and resolve the story.",
+      "price": 58.63,
+      "genre": [
+        7
+      ],
+      "rating": 4.2,
+      "video": "Live_A_Live.mp4",
+      "image_url": "",
+      "image": "media/games/Live_A_Live.webp",
+      "category": 3,
+      "release_year": 94
+    }
+  },
+  {
+    "pk": 66,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500166",
+      "name": "Fire_Emblem:_Thracia_776",
+      "description": "Fire Emblem: Thracia 776 is a Japanese tactical role-playing game developed by Intelligent Systems and published by Nintendo, and the fifth installment in the Fire Emblem series. It is also the third and final Fire Emblem series title to be released on the Super Famicom.\n             \n\n              Fire Emblem: Thracia 776 takes place between Chapters 5 and 6 of the previous game, Fire Emblem: Seisen no Keifu. Several characters from Fire Emblem: Seisen no Keifu appear, such as Leaf, Fin, and Nanna. It takes place in the Thracian peninsula in southeastern Jugdral.",
+      "price": 55.19,
+      "genre": [
+        7,
+        15,
+        9
+      ],
+      "rating": 4.1,
+      "video": "Fire_Emblem:_Thracia_776.mp4",
+      "image_url": "",
+      "image": "media/games/Fire_Emblem:_Thracia_776.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 67,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500167",
+      "name": "Mario_Party_2",
+      "description": "Mario and the gang are back for another round of Bowser-bashin' party action! Watch as your favorite Nintendo characters don different duds for each of the five all-new Adventure Boards! A slew of new tricks and devices bring new levels of challenge and excitement to board game play. New board maps, new Mini-Games, new action and new surprises means a whole new batch of fun! Get ready to unleash your best Hip Drops, hammer swings and high-flying high junks for another round of frenzied multi-player action!",
+      "price": 49.96,
+      "genre": [
+        20
+      ],
+      "rating": 3.7,
+      "video": "Mario_Party_2.mp4",
+      "image_url": "",
+      "image": "media/games/Mario_Party_2.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 68,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500168",
+      "name": "Super_Mario_64",
+      "description": "The first three dimensional entry in the Mario franchise, Super Mario 64 follows Mario as he puts his broadened 3D movement arsenal to use in order to rescue Princess Peach from the clutches of his arch rival Bowser. Mario has to jump into worlds-within-paintings ornamenting the walls of Peach's castle, uncover secrets and hidden challenges and collect golden stars as reward for platforming trials.",
+      "price": 46.58,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 4.1,
+      "video": "Super_Mario_64.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Mario_64.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 69,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500169",
+      "name": "Final_Fantasy_VII",
+      "description": "Final Fantasy VII is the seventh main installment in the Final Fantasy series, and was the first title to feature three-dimensional graphics, pre-rendered backgrounds and numerous full motion videos.\n             \n\n              The gameplay is a departure from previous entries in the series in many ways. Though it retains the Active Time Battle pseudo-turn based menu command system, FFVII features three party members rather than four. The Materia system allows the player to customize each party member's abilities to their liking, and the Limit system grants them unique combat skills.\n             \n\n              Though minigames had been a recurring feature, FFVII introduces numerous new ones, many of them playable in the theme park Gold Saucer varying from racing with Chocobos to snowboarding.",
+      "price": 59.1,
+      "genre": [
+        1,
+        7,
+        8
+      ],
+      "rating": 4.2,
+      "video": "Final_Fantasy_VII.mp4",
+      "image_url": "",
+      "image": "media/games/Final_Fantasy_VII.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 70,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500170",
+      "name": "The_Legend_of_Zelda:_Ocarina_of_Time",
+      "description": "The Legend of Zelda: Ocarina of Time is the fifth main installment of The Legend of Zelda series and the first to be released for the Nintendo 64. It was one of the most highly anticipated games of its age, and is listed among the greatest video games ever created by numerous websites and magazines. The gameplay of Ocarina of Time was revolutionary for its time, it has arguably made more of an impact on later games in the series than any of its predecessors even though they had the same cores of exploration, dungeons, puzzles and item usage. Among the gameplay mechanics, one of the most noteworthy is the time-traveling system. The game begins with the player controlling the child Link, but later on an adult Link becomes a playable character as well and each of them has certain unique abilities. Ocarina of Time also introduces the use of music to solve puzzles: as new songs are learned, they can be used to solve puzzles, gain access to new areas and warp to different locations. Dungeon exploration is somewhat more puzzle-oriented than in earlier games but they are not too complex.",
+      "price": 35.33,
+      "genre": [
+        1,
+        7
+      ],
+      "rating": 4.3,
+      "video": "The_Legend_of_Zelda:_Ocarina_of_Time.mp4",
+      "image_url": "",
+      "image": "media/games/The_Legend_of_Zelda:_Ocarina_of_Time.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 71,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500171",
+      "name": "Metal_Gear_Solid",
+      "description": "Metal Gear Solid is a stealth game created by Hideo Kojima which follows the MSX2 video games Metal Gear and Metal Gear 2: Solid Snake. Despite a transition to 3D, Metal Gear Solid's gameplay remains similar to his predecessors. The game utilizes a traditional top-down view and the player must navigate the protagonist Solid Snake through the game's areas without being detected. Detection will set off an alarm which draws armed enemies to his location. Conversations with Snake's allies and cutscenes are used extensively to advance the plot and gain more insight into it. Metal Gear Solid is regarded as one of the greatest and most important video games of all time, and helped popularize the stealth genre and in-engine cinematic cutscenes.",
+      "price": 34.09,
+      "genre": [
+        1,
+        9
+      ],
+      "rating": 4.2,
+      "video": "Metal_Gear_Solid.mp4",
+      "image_url": "",
+      "image": "media/games/Metal_Gear_Solid.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 72,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500172",
+      "name": "Chrono_Trigger",
+      "description": "In this turn-based Japanese RPG, young Crono must travel through time through a misfunctioning teleporter to rescue his misfortunate companion and take part in an intricate web of past and present perils. The adventure that ensues soon unveils an evil force set to destroy the world, triggering Crono's race against time to change the course of history and bring about a brighter future.",
+      "price": 45.79,
+      "genre": [
+        1,
+        7
+      ],
+      "rating": 4.5,
+      "video": "Chrono_Trigger.mp4",
+      "image_url": "",
+      "image": "media/games/Chrono_Trigger.webp",
+      "category": 3,
+      "release_year": 95
+    }
+  },
+  {
+    "pk": 73,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500173",
+      "name": "The_Legend_of_Zelda:_A_Link_to_the_Past",
+      "description": "The Legend of Zelda: A Link to the Past is a top-down action game with puzzle-solving elements similar to the original The Legend of Zelda. After the side-scrolling and RPG-like gameplay of Zelda II: The Adventure of Link, the game is a return to the top-down view and gameplay style of the first installment. It introduces major new items to the series such as the Master Sword and the concept of two different worlds, which was revisited to some extent in Ocarina of Time with two distinct time periods rather than dark and light worlds.",
+      "price": 47.72,
+      "genre": [
+        1,
+        11,
+        7
+      ],
+      "rating": 4.1,
+      "video": "The_Legend_of_Zelda:_A_Link_to_the_Past.mp4",
+      "image_url": "",
+      "image": "media/games/The_Legend_of_Zelda:_A_Link_to_the_Past.webp",
+      "category": 3,
+      "release_year": 91
+    }
+  },
+  {
+    "pk": 74,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500174",
+      "name": "Silent_Hill",
+      "description": "Silent Hill is the first installment in the Silent Hill series of psychological survival horror video games. Unlike earlier survival horror games that focused on protagonists with combat training, the main character Harry Mason is an average man. The gameplay consists of combat, exploration, and puzzle-solving. The controller vibration is used to indicate Harry's heartbeat and will vibrate on low health. The player must regularly enter an inventory screen to check Harry's health, use items, and equip different weapons.",
+      "price": 51.63,
+      "genre": [
+        1,
+        11
+      ],
+      "rating": 4.1,
+      "video": "Silent_Hill.mp4",
+      "image_url": "",
+      "image": "media/games/Silent_Hill.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 75,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500175",
+      "name": "Super_Mario_Bros._3",
+      "description": "Super Mario Bros. 3, the third entry in the Super Mario Bros. series and Super Mario franchise, sees Mario or Luigi navigate a nonlinear world map containing platforming levels and optional minigames and challenges. The game features more diverse movement options and new items alongside more complex level designs and boss battles.",
+      "price": 57.14,
+      "genre": [
+        3
+      ],
+      "rating": 4,
+      "video": "Super_Mario_Bros._3.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Mario_Bros._3.webp",
+      "category": 3,
+      "release_year": 88
+    }
+  },
+  {
+    "pk": 76,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500176",
+      "name": "Doom",
+      "description": "In the future, humans have left Earth and settled throughout the galaxy. On Mars, the Union Aerospace Corporation has established a radioactive waste facility and allowed the military to conduct teleportation experiments on the nearby moons of Deimos and Phobos. Hours ago, the base on Mars began receiving incoherent distress messages from Phobos, while Deimos has disappeared completely. With all attempts to establish contact failing, you and your team have been dispatched to investigate. Upon arrival, you secure the perimeter as the rest of your team enters the facility. As you stand guard, your radio crackles with the sound of gunfire, cracking bones and blood-curdling screams and eventually falls silent. Alone, with no way off the planet or means to defend yourself other than your trusty pistol, there\u00e2\u0080\u0099s only one way out - into the complex of death and the horrors that await you within. If you plan to get out of here alive you must fend off the hordes of demonic imps, haunting spectres and your undead, former comrades waiting to tear you limb from limb. So, grab the nearest shotgun and blast your way out of this fragging madness!",
+      "price": 36.16,
+      "genre": [
+        4
+      ],
+      "rating": 4,
+      "video": "Doom.mp4",
+      "image_url": "",
+      "image": "media/games/Doom.webp",
+      "category": 3,
+      "release_year": 93
+    }
+  },
+  {
+    "pk": 77,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500177",
+      "name": "Sonic_the_Hedgehog",
+      "description": "Sonic the Hedgehog is a 2D, side-scrolling platformer, whose gameplay centers around Sonic's ability to run at high speed through levels incorporating springs, slopes, high falls, and loop-the-loops. The levels contain hazards in the form of robots (\"badniks\" in the Western game manuals) in which Dr. Robotnik has trapped animals. Although destroying a robot frees the animal within, this is not required to complete the game. The player must avoid rows of sharp spikes, falling into bottomless pits, being crushed by moving walls or platforms, and drowning (which can be avoided by breathing air bubbles periodically released from vents). Sonic's main attack is his spin, where he curls into a ball and rotates rapidly (damaging enemies and some obstacles). This can be performed by jumping in the air or rolling on the ground.\n             \n\n              Scattered around each level map are gold rings and collecting 100 rings rewards the player with an extra life. Rings are a layer of protection against hazards; if Sonic has at least one ring when he collides with an enemy, he will survive. However, all his rings will be scattered; they will flicker and disappear in a few seconds if they are not picked up again. If Sonic is hit without any rings, he loses a life. Although shields and temporary invincibility may be collected to provide additional protection, certain hazards (such as drowning, being crushed, falling down a bottomless pit or running out of time) will cost Sonic a life regardless of rings or other protection.\n             \n\n              The game is divided into six zones (Green Hill, Marble, Spring Yard, Labyrinth, Star Light, and Scrap Brain), each with its own visual style and enemies. A player must navigate through each zone (subdivided into three acts) to progress.\n             \n\n              At the end of each zone's third act, the player confronts Dr. Robotnik (who pilots a different vehicle each time) in a boss fight. After the sixth zone, the player continues directly to the Final Zone for a last encounter with Robotnik. They begin with three lives (power-ups and rings add more), which are lost when Sonic collides with hazardous enemies (or objects) without rings, falls off-screen or exceeds an act's ten-minute time limit. Lampposts acting as checkpoints allow Sonic to return to the most-recently activated post when he loses a life. If he loses a life as a result of time running out but has another life, the timer will reset to 0:00 when he returns to the checkpoint. If all lives are lost at any point in the game, the game over screen will appear (when the player can return to the beginning of the act with three lives, if they have any continues).\n             \n\n              When Sonic reaches the end of act one or act two of a zone with at least fifty rings, a large ring appears through which he can jump to enter a Special Stage (a \"Secret Zone\" in the original Genesis manual). In each of six Special Stages, Sonic bounces off the bumpers and walls of a rotating maze in spin attack. Although the player earns a continue with each 50 rings found, their main goal is to obtain the Chaos Emerald at the end of the maze without colliding with a \"goal block\" (which ends the level).",
+      "price": 38.21,
+      "genre": [
+        3
+      ],
+      "rating": 3.1,
+      "video": "Sonic_the_Hedgehog.mp4",
+      "image_url": "",
+      "image": "media/games/Sonic_the_Hedgehog.webp",
+      "category": 3,
+      "release_year": 91
+    }
+  },
+  {
+    "pk": 78,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500178",
+      "name": "Donkey_Kong_Country",
+      "description": "Donkey Kong Country is a side scrolling platformer by British developers Rare in 1994. It featured revolutionary pre-rendered 3D graphics that give the game a very unique look compared to most other games on consoles at the time. The two playable characters featured in the game are the titular character, Donkey Kong and his nephew, Diddy Kong. Together the two swing, climb, jump, swim, cartwheel, ride animals, and blast out of barrels on their way to recover their stolen bannanas from the evil King K. Rool and his Kremling army. The adventure takes you through a variety of different environments and levels that continually change up gameplay. Donkey Kong Country also provides plenty of opportunities for exploration with almost every level having a multitude of collectible, shortcuts, and hidden bonus areas.",
+      "price": 41.19,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.9,
+      "video": "Donkey_Kong_Country.mp4",
+      "image_url": "",
+      "image": "media/games/Donkey_Kong_Country.webp",
+      "category": 3,
+      "release_year": 94
+    }
+  },
+  {
+    "pk": 79,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500179",
+      "name": "Sonic_the_Hedgehog_2",
+      "description": "Dr. Eggman (aka Dr. Robotnik) has returned, turning helpless animals into robots and forcing them to build his ultimate weapon, the Death Egg! But this time, Sonic has a friend that can help him: Tails! Find the 7 Chaos Emeralds and stop Dr. Robotnik\u00e2\u0080\u0099s evil scheme!",
+      "price": 39.91,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.7,
+      "video": "Sonic_the_Hedgehog_2.mp4",
+      "image_url": "",
+      "image": "media/games/Sonic_the_Hedgehog_2.webp",
+      "category": 3,
+      "release_year": 92
+    }
+  },
+  {
+    "pk": 80,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500180",
+      "name": "Castlevania",
+      "description": "Step into the shadows of the deadliest dwelling on earth. You've arrived at Castlevania, and you're here on business: To destroy forever the Curse of the Evil Count.\n             \n\n              Unfortunately, everybody's home this evening. Bats, ghosts, every kind of creature you can imagine. You'll find 'em all over the place, if they don't find you first. Because you've got to get through six monstrous floors before you even meet up with the Master of the House. Your Magic Whip will help, and you'll probably find a weapons or two along the way. But once you make it to the tower, you can count on a Duel to the Death. The Count has waited 100 years for a rematch.",
+      "price": 51.02,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.4,
+      "video": "Castlevania.mp4",
+      "image_url": "",
+      "image": "media/games/Castlevania.webp",
+      "category": 3,
+      "release_year": 86
+    }
+  },
+  {
+    "pk": 81,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500181",
+      "name": "Crash_Bandicoot",
+      "description": "Crash Bandicoot is the first installment in the Crash Bandicoot series that established Naughty Dog's reputation in the video game industry. Its premises chronicle the creation of the titular Crash, a bandicoot who has been uplifted by the mad scientist Doctor Neo Cortex. The goal of Crash Bandicoot is to traverses several levels in sequence in order to progress. The game is played from a third-person perspective in which the camera trails behind Crash, though some levels showcase forward-scrolling and side-scrolling perspectives. Crash is able to defeat enemies by either jumping on them or using a spinning attack that launches them.",
+      "price": 33.62,
+      "genre": [
+        3
+      ],
+      "rating": 3.5,
+      "video": "Crash_Bandicoot.mp4",
+      "image_url": "",
+      "image": "media/games/Crash_Bandicoot.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 82,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500182",
+      "name": "Super_Mario_Bros._2",
+      "description": "Super Mario Bros. 2, 2D platformer and sequel to Super Mario Bros. (1985), features 4 selectable characters (Mario, Luigi, Princess Peach, Toad) as they navigate the dream world of Subcon to defeat the evil toad king Wart. Super Mario Bros. 2 features different ways interacting with enemies and the world, including an object carrying mechanic and more intricate level designs.",
+      "price": 48.34,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.1,
+      "video": "Super_Mario_Bros._2.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Mario_Bros._2.webp",
+      "category": 3,
+      "release_year": 88
+    }
+  },
+  {
+    "pk": 83,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500183",
+      "name": "Super_Mario_World_2:_Yoshi's_Island",
+      "description": "Super Mario World 2: Yoshi's Island is a platform video game acting as a prequel to 1990's Super Mario World. The game casts players as Yoshi as he escorts Baby Mario through 48 levels in order to reunite him with his brother Luigi, who had been kidnapped by Baby Bowser's minions. As a Super Mario series platformer, Yoshi runs and jumps to reach the end of the level while solving puzzles and collecting items. In a style new to the series, the game has a hand-drawn aesthetic and is the first to have Yoshi as its main character. The game introduces his signature abilities to flutter jump, produce eggs from swallowed enemies, and transform into vehicles.",
+      "price": 54.12,
+      "genre": [
+        3
+      ],
+      "rating": 4.1,
+      "video": "Super_Mario_World_2:_Yoshi's_Island.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Mario_World_2:_Yoshi's_Island.webp",
+      "category": 3,
+      "release_year": 95
+    }
+  },
+  {
+    "pk": 84,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500184",
+      "name": "Final_Fantasy_VIII",
+      "description": "Final Fantasy VIII is the eighth main installment in the Final Fantasy series. The gameplay makes a departure from many series standards. While it still uses the Active Time Battle system, it deviates from the series' traditional means of boosting a character's power via leveling, although levels are not completely abandoned as they were in Final Fantasy II. In addition, it does not have a Magic Point-based system for spell-casting. Instead, magic is collected, drawn, and created from items, and is used to power up the characters via the junction system.",
+      "price": 31.19,
+      "genre": [
+        1,
+        7
+      ],
+      "rating": 3.6,
+      "video": "Final_Fantasy_VIII.mp4",
+      "image_url": "",
+      "image": "media/games/Final_Fantasy_VIII.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 85,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500185",
+      "name": "Kirby's_Dream_Land",
+      "description": "The gluttonous King Dedede has stolen all of the food from the inhabitants of Dream Land for a midnight feast, so Kirby, a resident of Dream Land, goes to retrieve the food and stop Dedede. Kirby's Dream Land plays like other platformers of the 8-bit and 16-bit era of video games: Kirby must use various natural abilities and occasionally external abilities or items while heading toward the goal at the end of each level. Like many 1980s-era platformers, the player can accumulate points, with an extra life granted when the player has enough points. However, because Kirby lacks a save function, scores are not recorded. Also, there are no save files, so the player has to start over again when the Game Boy is turned off, if the player chooses to return to the title screen after a Game Over, or if the player resets the game. All levels are played on a two-dimensional plane, letting Kirby move only left, right, up, and down. Kirby can walk, jump, and fly. Kirby can also inhale objects and enemies, swallowing them or spitting them out as projectiles.",
+      "price": 39.06,
+      "genre": [
+        3
+      ],
+      "rating": 3.2,
+      "video": "Kirby's_Dream_Land.mp4",
+      "image_url": "",
+      "image": "media/games/Kirby's_Dream_Land.webp",
+      "category": 3,
+      "release_year": 92
+    }
+  },
+  {
+    "pk": 86,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500186",
+      "name": "Sonic_the_Hedgehog_3_&_Knuckles",
+      "description": "Sonic the Hedgehog 3 & Knuckles (or simply Sonic 3 & Knuckles or Sonic 3 Complete Edition) is a platform video game which is the result of locking-on Sonic & Knuckles with Sonic the Hedgehog 3 using the former catridge's unique \"lock-on\" technology. It is essentially a large combined game of its two lock-on components and contains all Zones from the said games and also contains special features unique to this game. This would have been the original Sonic the Hedgehog 3 the developers intended but time constraints by Sega resulted in the game being split into two.",
+      "price": 44.52,
+      "genre": [
+        3
+      ],
+      "rating": 4.2,
+      "video": "Sonic_the_Hedgehog_3_&_Knuckles.mp4",
+      "image_url": "",
+      "image": "media/games/Sonic_the_Hedgehog_3_&_Knuckles.webp",
+      "category": 3,
+      "release_year": 94
+    }
+  },
+  {
+    "pk": 87,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500187",
+      "name": "Resident_Evil_2",
+      "description": "Resident Evil 2 is a sequel to the first Resident Evil title. Like the previous game in the series, Resident Evil 2 is a 3D action-adventure using three-dimensional polygon characters over two-dimensional pre-rendered backgrounds, with the action viewed through a variety of cinematic fixed camera angles in each room. Players can choose to play as one of two possible characters, each goes through the same initial scenario but with differences in the type of weaponry they find and the people they meet along the way.",
+      "price": 31.23,
+      "genre": [
+        1,
+        4
+      ],
+      "rating": 4.2,
+      "video": "Resident_Evil_2.mp4",
+      "image_url": "",
+      "image": "media/games/Resident_Evil_2.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 88,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500188",
+      "name": "Super_Mario_RPG:_Legend_of_the_Seven_Stars",
+      "description": "A JRPG entry in the Super Mario franchise in which Mario meets many unlikely allies in order to jump and fight his way through the Mushroom Kingdom and collect stars to repair the Star Road, the pathway that grants people's wishes, which was destroyed by Smithy, the otherworldly entity that hijacked Bowser's castle and threw the Kingdom into disarray.",
+      "price": 51.34,
+      "genre": [
+        1,
+        3,
+        7
+      ],
+      "rating": 4,
+      "video": "Super_Mario_RPG:_Legend_of_the_Seven_Stars.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Mario_RPG:_Legend_of_the_Seven_Stars.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 89,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500189",
+      "name": "Pok\u00c3\u00a9mon_Red",
+      "description": "Pok\u00c3\u00a9mon Red, along with Pok\u00c3\u00a9mon Green, are the first video games in the Pok\u00c3\u00a9mon series of games. They are the first paired versions of Generation I. Developed over the course of several years, Red and Green established several standards for later Pok\u00c3\u00a9mon games and sequels. They take place in the Kanto region, with the player having to collect eight Gym Badges to become the Pok\u00c3\u00a9mon Champion while also completing the Pok\u00c3\u00a9dex by collecting all 151 Pok\u00c3\u00a9mon.",
+      "price": 48.43,
+      "genre": [
+        1,
+        7,
+        8
+      ],
+      "rating": 3.4,
+      "video": "Pok\u00c3\u00a9mon_Red.mp4",
+      "image_url": "",
+      "image": "media/games/Pok\u00c3\u00a9mon_Red.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 90,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500190",
+      "name": "Mega_Man",
+      "description": "Experience the game that started it all! Play as cybernetic hero Mega Man as you battle to stop the evil scientist Dr. Wily and his Robot Masters from taking over the world! A classic platformer in every sense of the word, Mega Man features timeless 8-bit graphics, a memorable soundtrack, and balanced but challenging gameplay that combine to create one of the most iconic video games of all time.\n             \n\n              Mega Man, known as Rockman in Japan, is a 1987 action-platform video game developed and published by Capcom for the Nintendo Entertainment System (NES). It was directed by Akira Kitamura, with Nobuyuki Matsushima as lead programmer, and is the first game of the Mega Man franchise and the original video game series. Mega Man was produced by a small team specifically for the home console market, a first for Capcom, who previously focused on arcade titles.",
+      "price": 57.34,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 2.8,
+      "video": "Mega_Man.mp4",
+      "image_url": "",
+      "image": "media/games/Mega_Man.webp",
+      "category": 3,
+      "release_year": 87
+    }
+  },
+  {
+    "pk": 91,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500191",
+      "name": "Sonic_CD",
+      "description": "Sonic travels to the distant shores of Never Lake for the once-a-year appearance of Little Planet - a mysterious world where past, present, and future collide through the power of the Time Stones that lie hidden within it.\n             \n\n              Sonic arrives only to find the once beautiful world imprisoned beneath a twisted metallic shell. His arch-nemesis, Dr. Eggman, has come for the Time Stones and with them, will soon have the power to control time itself!\n             \n\n              In order to put an end to Dr. Eggman\u00e2\u0080\u0099s nefarious schemes, Sonic must use the power of Little Planet to travel through time; breaking Dr. Eggman\u00e2\u0080\u0099s hold over the future by destroying his machines in the past and recovering the missing Time Stones!",
+      "price": 38.91,
+      "genre": [
+        3
+      ],
+      "rating": 3.4,
+      "video": "Sonic_CD.mp4",
+      "image_url": "",
+      "image": "media/games/Sonic_CD.webp",
+      "category": 3,
+      "release_year": 93
+    }
+  },
+  {
+    "pk": 92,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500192",
+      "name": "Super_Castlevania_IV",
+      "description": "A century of Transylvanian tranquility is about to come to a shocking end. Once again the mortifying screams of helpless villagers shake the ground as they huddle against new nightmarish horrors unleashed by the Duke of Darkness, Count Dracula. And this time he has a tombstone with your name on it, Simon Belmont.\n              \n              You must descend into Castle of the Undead and its gruesome ground, accompanied by the most chilling sound effects to ever tingle your spine. Inside, a freshly dug 11 levels maze features the treacherous Terrace of Terror, the dangerous Rotating Dungeon, the Sunken Ruins of Lost Spirits, torture chambers and creature filled caves. Use your whip like a grappling hook and swing past hundreds of traps and a host of ghost freaks, living corpses and hidden goblins. All while dodging or destroying the unpredictable spitting lizards, carnivorous coffins, and more.\n              \n              Find the concealed weapons needed to defeat everything from eerie phantoms to haunted furniture. Then prepare to find yourself face-to-thing with hideous torments like the Tongue Lasher, the Darkest Knight, the Bone-Afide Horseman and the Granite Crusher. When your nerves get shot, use your password and take a breather. But forge on, Simon Belmont, because if you though Dracula was down for the count, he's only just begun to fright!",
+      "price": 58.31,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.7,
+      "video": "Super_Castlevania_IV.mp4",
+      "image_url": "",
+      "image": "media/games/Super_Castlevania_IV.webp",
+      "category": 3,
+      "release_year": 91
+    }
+  },
+  {
+    "pk": 93,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500193",
+      "name": "GoldenEye_007",
+      "description": "GoldenEye 007 is a first-person shooter video game developed by Rare and based on the 1995 James Bond film GoldenEye. It was exclusively released for the Nintendo 64 video game console in August 1997.",
+      "price": 55.22,
+      "genre": [
+        4
+      ],
+      "rating": 3.6,
+      "video": "GoldenEye_007.mp4",
+      "image_url": "",
+      "image": "media/games/GoldenEye_007.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 94,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500194",
+      "name": "Fallout_2",
+      "description": "A turn-based tactical Western RPG in which the Chosen One is tasked with exploring post-nuclear California to locate and retrieve the fabled Garden of Eden Creation Kit for their famine-stricken tribe, while coming into contact through branching dialogue trees with numerous tribes, factions and micro-civilizations, each with their own virtues, vices, socioeconomic situations and political agendas.",
+      "price": 35.73,
+      "genre": [
+        7,
+        8
+      ],
+      "rating": 4.1,
+      "video": "Fallout_2.mp4",
+      "image_url": "",
+      "image": "media/games/Fallout_2.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 95,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500195",
+      "name": "Chrono_Cross",
+      "description": "CHRONO CROSS, the sequel to the SNES favorite CHRONO TRIGGER, is one of the most ambitious role-playing games ever made. There are over 40 playable characters, each with their back-story, special moves, abilities, and weapons. The story spans two discs and follows the story of Serge, a young man who is able to cross dimensions. Suddenly he is pulled between worlds, trying to figure out his own past at the same time. The graphics are bright and beautiful, utilizing the PlayStation's capabilities to the fullest. The polygonal character models are huge and detailed, and the pre-rendered backgrounds are immaculately detailed. The music is composed and arranged by Yasunori Mitsuda, and features very realistic-sounding synthesizers. The battle system revolves around Elements, which are used to grant magical powers, as well as to summon huge monsters. For anyone that wanted to see the story of CHRONO TRIGGER continue, this is your chance.",
+      "price": 39.69,
+      "genre": [
+        7
+      ],
+      "rating": 4,
+      "video": "Chrono_Cross.mp4",
+      "image_url": "",
+      "image": "media/games/Chrono_Cross.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 96,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500196",
+      "name": "Resident_Evil",
+      "description": "Resident Evil is a survival horror classic in which a group of special forces agents, known as S.T.A.R.S, struggle against hordes of zombies and various other mutants in a mysterious mansion as they try to uncover the truth behind the terrifying infection. The gameplay environment consists of polygonal 3D characters placed over pre-rendered 2D backgrounds. As such, the game relies on pre-determined camera angles for a view of the action instead of a real-time camera like most games. The game is credited for coining the phrase \"survival horror\" and popularizing the genre.",
+      "price": 40.95,
+      "genre": [
+        1,
+        11
+      ],
+      "rating": 3.7,
+      "video": "Resident_Evil.mp4",
+      "image_url": "",
+      "image": "media/games/Resident_Evil.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 97,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500197",
+      "name": "Ridge_Racer_Type_4",
+      "description": "R4: Ridge Racer Type 4 (Ridge Racer Type 4 in Europe) is a racing video game developed and published by Namco for the PlayStation. It is the fourth title in the Ridge Racer series and the last to be released for the PlayStation. It was later re-released on the PlayStation Network in 2011. It is the first Ridge Racer series game on the PlayStation to use Gouraud shading on polygons.",
+      "price": 60.77,
+      "genre": [
+        10
+      ],
+      "rating": 4.2,
+      "video": "Ridge_Racer_Type_4.mp4",
+      "image_url": "",
+      "image": "media/games/Ridge_Racer_Type_4.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 98,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500198",
+      "name": "Crazy_Taxi",
+      "description": "Hey hey, come on over and have some fun with Crrrrrazy Taxi! Barrel through traffic packed streets, hurdle off parking garages, and Crazy Combo your way to Crazy Money in a wild frantic race to scare up the most fares. In Crazy Taxi, time is money, and only the Craziest Cabbies come out victorious.",
+      "price": 41.9,
+      "genre": [
+        2,
+        10
+      ],
+      "rating": 3.6,
+      "video": "Crazy_Taxi.mp4",
+      "image_url": "",
+      "image": "media/games/Crazy_Taxi.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 99,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp500199",
+      "name": "Pok\u00c3\u00a9mon_Blue",
+      "description": "Pok\u00c3\u00a9mon Blue is the third core series Pok\u00c3\u00a9mon game released as a minor revision of Pok\u00c3\u00a9mon Red and Green, which were released earlier that year. It was thus the first solitary version in the core series of Pok\u00c3\u00a9mon games. Various fixes in the game include a graphics and sound upgrade, as well as the removal of several known glitches that had been found in the original pair. Outside of Japan, its graphics, game engine and script formed the basis of Pok\u00c3\u00a9mon Red and Blue, while the wild Pok\u00c3\u00a9mon and game-exclusive Pok\u00c3\u00a9mon lists were changed to match Red and Green.",
+      "price": 33.89,
+      "genre": [
+        1,
+        7,
+        8
+      ],
+      "rating": 3.6,
+      "video": "Pok\u00c3\u00a9mon_Blue.mp4",
+      "image_url": "",
+      "image": "media/games/Pok\u00c3\u00a9mon_Blue.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 100,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001100",
+      "name": "Planescape:_Torment",
+      "description": "A CRPG set in the Dungeons & Dragons setting of Planescape in which The Nameless One, an immortal amnesiac, sets off on a quest across the infinite Planes and gathers a party of conflicted companions to find out who he is and reclaim his mortality. Throughout it, he faces the consequences of the horrors he committed in his past lives and tries to find the root of all the torment plaguing his companions and the Planes.",
+      "price": 42.06,
+      "genre": [
+        7,
+        15
+      ],
+      "rating": 4.3,
+      "video": "Planescape:_Torment.mp4",
+      "image_url": "",
+      "image": "media/games/Planescape:_Torment.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 101,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001101",
+      "name": "Mega_Man_3",
+      "description": "It's robot rebellion, and nobody's safe! Least of all, Mega Man! This time the superpowerful cyborg takes on a horde of metal maniacs who've had it with being obedient! And they use every android-annihilator ever invented to make you believe it! Mega Man goes berserk, blasting through a galaxy of mining stations in search of energy crystals. But it takes more than guts to battle the phenomenal robot masters who control these worlds. It's a wrenching job, the worst - and the best - that Mega Man's faced so far!",
+      "price": 57.58,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.4,
+      "video": "Mega_Man_3.mp4",
+      "image_url": "",
+      "image": "media/games/Mega_Man_3.webp",
+      "category": 3,
+      "release_year": 90
+    }
+  },
+  {
+    "pk": 102,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001102",
+      "name": "Metroid_II:_Return_of_Samus",
+      "description": "A Sinister Planet Threatens the Galaxy!\n             \n\n              Space Hunter Samus Aran returns to battle a planet crawling with evil creatures bent on universal domination in this bigger than ever sequel to the NES classic, Metroid.\n             \n\n              Take control! Guide Samus through cavernous corridors, ancient ruins and alien traps. On the mysterious planet of the Metroids, you'll find artifacts of a lost civilization that grant amazing powers. Cut through creatures in a buzz-saw blur! Roll through hidden tunnels and climb sheer walls!\n             \n\n              A battery back-up allows you to save your progress as you fight to the heart of the planet and search for the merciless Metroid leaders. If you are a cunning explorer, you'll earn the best of several super endings.\n             \n\n              Enter this exciting Metroid sequel and experience the thrills of Game Boy like never before!\n             \n\n              The Game Boy Color has stored preset color palettes for Metroid II and a few other Game Boy games. If played on the GBC the game will have some variation in color.",
+      "price": 33.03,
+      "genre": [
+        1,
+        3,
+        4
+      ],
+      "rating": 3.1,
+      "video": "Metroid_II:_Return_of_Samus.mp4",
+      "image_url": "",
+      "image": "media/games/Metroid_II:_Return_of_Samus.webp",
+      "category": 3,
+      "release_year": 91
+    }
+  },
+  {
+    "pk": 103,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001103",
+      "name": "Shenmue",
+      "description": "\"He shall appear from a far Eastern land across the sea. A young man who has yet to know his potential. This potential is a power that can either destroy him, or realize his will. His courage shall determine his fate. The path he must traverse, fraught with adversity, I await whilst praying. For this destiny predetermined since ancient times... A pitch, black night unfolds with the morning star as its only light. And thus the saga, begins...\"\n             \n\n              This first chapter of Shenmue kicks off Yu Suzuki's cinematic Dreamcast tour-de-force, an exploration-heavy adventure that has players immerse themselves in Yokosuka, Japan. Players slip into the role of a young martial artist named Ryo Hazuki, who is on the trail of his father's killer. On the way, players must talk with hundreds of characters, engage in martial arts battles, and marvel at the realistic depiction of the Japanese coastal town.",
+      "price": 58.41,
+      "genre": [
+        1,
+        13,
+        7,
+        6
+      ],
+      "rating": 3.8,
+      "video": "Shenmue.mp4",
+      "image_url": "",
+      "image": "media/games/Shenmue.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 104,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001104",
+      "name": "Crash_Team_Racing",
+      "description": "Crash Team Racing is a kart racing game featuring popular characters from the Crash Bandicoot series. The gameplay is very similar to other kart racing video games like Mario Kart: players have to choose a character and compete against the other racers on various racetracks. The story mode allows you to choose any one of the characters to complete all the main races and beat the ultimate boss Nitrous Oxide. Each of the main races are against 7 other AI competitors with 5 boss races. There are also a few arcade modes up to 4 players.",
+      "price": 35.46,
+      "genre": [
+        10
+      ],
+      "rating": 4,
+      "video": "Crash_Team_Racing.mp4",
+      "image_url": "",
+      "image": "media/games/Crash_Team_Racing.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 105,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001105",
+      "name": "Kirby's_Dream_Land_3",
+      "description": "That mean old King Dedede is at it again! He's causing his mischief and Dreamland's in trouble! Kirby, the resident hero of Dreamland, sets out to teach Dedede a lesson, this time with the help of many of his good friends!\n             \n\n              But wait! Something's wrong! Dedede doesn't seem to be himself...\n             \n\n              Looks like Kirby has to stop Dedede and find out what is wrong with him! It almost seems like something's controlling him...",
+      "price": 50.68,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.4,
+      "video": "Kirby's_Dream_Land_3.mp4",
+      "image_url": "",
+      "image": "media/games/Kirby's_Dream_Land_3.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 106,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001106",
+      "name": "Final_Fantasy_IV",
+      "description": "FINAL FANTASY IV is the fourth main installment in the FINAL FANTASY series, developed and published by Squaresoft. It was released in July 1991 for the Super Nintendo Entertainment System in Japan, and released as FINAL FANTASY II in North America in October 1991 with alterations made due to Nintendo of America's guidelines at the time.\n             \n\n              The game saw a rerelease in Japan on the WonderSwan Color and a global release on PlayStation under its original name as part of the FINAL FANTASY CHRONICLES and FINAL FANTASY ANTHOLOGY collections.",
+      "price": 43.02,
+      "genre": [
+        7
+      ],
+      "rating": 3.7,
+      "video": "Final_Fantasy_IV.mp4",
+      "image_url": "",
+      "image": "media/games/Final_Fantasy_IV.webp",
+      "category": 3,
+      "release_year": 91
+    }
+  },
+  {
+    "pk": 107,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001107",
+      "name": "Castlevania_III:_Dracula's_Curse",
+      "description": "Led by the immortal Count Dracula, the greatest army of evil ever assembled is poised to bury mankind in a Tomb of Terror. Destroying this legion of Swamp Dragons, Slasher Skeletons and Forces of the Undead will be the supreme challenge for the mightiest of warriors. Your place in history is 100 years before Simon Belmont's birth. Dracula is young at heart, and it will take more than a stake to penetrate his evil. Luckily, you command the role of Trevor - Simon's forefather and the origin of the Belmont Warlord Chromosomes. Trevor has a power never before seen by human eyes - the power to transform into three different spirits: Grant DaNasty, the ferocious Ghost Pirate. Sypha, the Mystic Warlord. And Alucard, Dracula's forgotten son. You must perfectly time Trevor's body transformations to match up his different fighting spirits against Ultimate Evils. Trevor also has the strength and wisdom to command the Battle Axe, Invisibility Potion and Mystic Whip. But the most important weapon Trevor has is your cunning to choose the correct Paths of Fate and your bravery to lead him past 17 possible levels of never-ending doom, including the Haunted Ship of Fools, the Sunken City of Poltergeists, the Clock Tower of Untimely Death and Curse Castle. Never before have so many dangers confronted you at one time. And if by some miracle you triumph, you'll no longer be a mere mortal. You'll be a legend who'll live forever!",
+      "price": 37.98,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.6,
+      "video": "Castlevania_III:_Dracula's_Curse.mp4",
+      "image_url": "",
+      "image": "media/games/Castlevania_III:_Dracula's_Curse.webp",
+      "category": 3,
+      "release_year": 90
+    }
+  },
+  {
+    "pk": 108,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001108",
+      "name": "Tetris",
+      "description": "Tetris is a puzzle video game for the Game Boy released in 1989. It is a portable version of Alexey Pajitnov's original Tetris and it was bundled in the North American and European releases of the Game Boy itself. It was the first game compatible with the Game Link Cable, a pack-in accessory that allowed two Game Boys to link together for multiplayer purposes.",
+      "price": 32.53,
+      "genre": [
+        11
+      ],
+      "rating": 4,
+      "video": "Tetris.mp4",
+      "image_url": "",
+      "image": "media/games/Tetris.webp",
+      "category": 3,
+      "release_year": 89
+    }
+  },
+  {
+    "pk": 109,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001109",
+      "name": "Street_Fighter_II",
+      "description": "A sequel to Street Fighter, Street Fighter II improved upon the many concepts introduced in the first game, including the use of command-based special moves and a six-button configuration, while offering players a selection of multiple playable characters, each with their own unique fighting style and special moves.\n             \n\n              Street Fighter II is credited for starting the fighting game boom during the 1990s. Its success led to the production of several updated versions, each offering additional features and characters over previous versions, as well as many home versions. Some of the home versions of the Street Fighter II games have sold millions of copies, with the SNES port of the first Street Fighter II being Capcom's best-selling consumer game of all-time as of 2008.\n             \n\n              Street Fighter II follows several of the conventions and rules already established by its original 1987 predecessor. The player engages opponents in one-on-one close quarter combat in a series of best-two-out-of-three matches. The objective of each round is to deplete the opponent's vitality before the timer runs out. If both opponents knock each other out at the same time or the timer runs out with both fighters having an equal amount of vitality left, a \"double KO\" or \"draw game\" is declared and additional rounds will be played until sudden death. In the first Street Fighter II, a match could last up to ten rounds if there was no clear winner; this was reduced to four rounds in Champion Edition and onward. If there is no clear winner by the end of the final round, then either the computer-controlled opponent will win by default in a single-player match or both fighters will lose in a 2-player match.\n             \n\n              After every third match in the single player mode, the player will participate in a \"bonus game\" for additional points. The bonus games includes (in order) a car-breaking event; a barrel breaking bonus game where the barrels are dropped off from a conveyor belt above the player; and a drum-breaking bonus game where drums are flammable and piled over each other. The bonus games were removed from the arcade version of Super Street Fighter II Turbo.\n             \n\n              Like in the original, the game's controls uses a configuration of an eight-directional joystick and six attack buttons. The player uses the joystick to jump, crouch and move the character towards or away from the opponent, as well as to guard the character from an opponent's attacks. There are three punch buttons and three kick buttons of differing strength and speed (Light, Medium and Heavy). The player can perform a variety of basic moves in any position, including grabbing/throwing attacks, which were not featured in the original Street Fighter. Like in the original, the player can perform special moves by inputting a combination of directional and button-based commands.\n             \n\n              Street Fighter II differs from the original due to the selection of multiple playable characters, each with their distinct fighting styles and special moves. Additionally, the player can also \"cancel\" during animation by performing another move, allowing for a combination of several basic and special moves. Both of these features would be expanded upon in subsequent installments.",
+      "price": 58.48,
+      "genre": [
+        2,
+        12
+      ],
+      "rating": 3.5,
+      "video": "Street_Fighter_II.mp4",
+      "image_url": "",
+      "image": "media/games/Street_Fighter_II.webp",
+      "category": 3,
+      "release_year": 91
+    }
+  },
+  {
+    "pk": 110,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001110",
+      "name": "Shin_Megami_Tensei",
+      "description": "The story follows a nameless protagonist who lives in near-future Tokyo. When a portal to the realm of demons is opened, United States officials order a nuclear attack on Tokyo. Transported with two other supporting characters thirty years into the future, the protagonist finds the Earth ruined by a demon invasion, which is now the stage for an escalating conflict between the Order of Messiah and the Ring of Gaea, conflicting cults who wish to bring about kingdoms for their respective patron deities (YHVH and Lucifer). The story is influenced by moral decisions the protagonist makes, aligning him either with the Order, the Ring of Gaea, or setting him up as an independent agent.\n             \n\n              The gameplay uses first-person navigation of dungeons and turn-based battles against demons. The player can recruit demons as allies by talking to them rather than fighting them, and two to three demons can be fused to create new demons.",
+      "price": 31.14,
+      "genre": [
+        7
+      ],
+      "rating": 3.3,
+      "video": "Shin_Megami_Tensei.mp4",
+      "image_url": "",
+      "image": "media/games/Shin_Megami_Tensei.webp",
+      "category": 3,
+      "release_year": 92
+    }
+  },
+  {
+    "pk": 111,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001111",
+      "name": "Tomb_Raider",
+      "description": "Tomb Raider is a 3D action game developed by Core Design and published by Eidos Interactive. The game follows the exploits of Lara Croft, a British female archaeologist in search of ancient treasures.\n             \n\n              The objective of Tomb Raider is to guide Lara through a series of tombs and other locations in search of treasures and artifacts. On the way, she must kill dangerous animals and other creatures, while collecting objects and solving puzzles to gain access to an ultimate prize, usually a powerful artifact.\n             \n\n              The game was critically acclaimed and widely influential, it spawned a number of sequels and a franchise of related media.",
+      "price": 57.13,
+      "genre": [
+        1,
+        3,
+        11,
+        4
+      ],
+      "rating": 3.3,
+      "video": "Tomb_Raider.mp4",
+      "image_url": "",
+      "image": "media/games/Tomb_Raider.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 112,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001112",
+      "name": "Secret_of_Mana",
+      "description": "Initially released in Japan in 1993, Secret of Mana took the world by storm with its innovative real-time battle system and gorgeously rendered world. It continues to stand out among other action RPGs for its seamless gameplay that anyone from beginner to veteran can enjoy.\n             \n\n              One of the most memorable elements of the Mana series is the Ring Command menu system. With the single press of a button, a ring-shaped menu appears on the screen, where players can use items, change weapons, and do a variety of other actions without needing to switch screens. This Ring Command menu system for which the Mana series is so well known was first introduced in Secret of Mana and has since appeared in most games in the series.\n             \n\n              Play as Randi and his two companions, Primm and Popoi, as they adventure all around the world. At the center of our epic story is the mystical power of Mana. Battle the empire in its quest for control of Mana. Befriend the eight elementals who wield the forces of nature itself. Numerous encounters await at every turn.",
+      "price": 41.41,
+      "genre": [
+        7
+      ],
+      "rating": 3.3,
+      "video": "Secret_of_Mana.mp4",
+      "image_url": "",
+      "image": "media/games/Secret_of_Mana.webp",
+      "category": 3,
+      "release_year": 93
+    }
+  },
+  {
+    "pk": 113,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001113",
+      "name": "Mega_Man_Legends",
+      "description": "THE BLUE BOMBER BLASTS INTO A WHOLE NEW DIMENSION\n             \n\n              Mega Man blasts his way into the third dimension in an amazing new adventure. Mega Man Legends combines the best of classic Mega Man action with enormous bosses, a riveting storyline and all the depth of the hottest RPG.\n             \n\n              Explore vast 3-D worlds in your quest to find the treasure of all treasures, the Mother Lode. You'll love the new 3-D graphics, deadly weapons and non-stop action... unless of course, you're a boss.\n             \n\n              * Awesome Weapons!\n              \n              * Diabolical Bosses!\n              \n              * Legendary Gameplay!\n              \n              * Non-Stop 3-D Action!",
+      "price": 39.37,
+      "genre": [
+        1,
+        7,
+        4
+      ],
+      "rating": 3.7,
+      "video": "Mega_Man_Legends.mp4",
+      "image_url": "",
+      "image": "media/games/Mega_Man_Legends.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 114,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001114",
+      "name": "Pok\u00c3\u00a9mon_Stadium",
+      "description": "In the game's Stadium Mode, one player competes in 80 different battles, divided into four tournaments. Beat the Stadium Mode and you're in for a bonus battle against the ultimate Pok\u00c3\u00a9mon warrior, Mewtwo, as well as a secret mode that gives you 80 brand-new, and devilishly tough battles. There is virtually no way you can beat the secret mode without having trained your own, elite Pok\u00c3\u00a9mon. One to four players compete against each other or the computer in a no-holds-barred battle with customizable rules. You can select rental Pok\u00c3\u00a9mon for these battles -- but that makes them much too predictable since their selection of techniques isn't determined by the trainer. You can also select quick and easy versus and random battles.",
+      "price": 56.3,
+      "genre": [
+        7,
+        8
+      ],
+      "rating": 3.3,
+      "video": "Pok\u00c3\u00a9mon_Stadium.mp4",
+      "image_url": "",
+      "image": "media/games/Pok\u00c3\u00a9mon_Stadium.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 115,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001115",
+      "name": "Fire_Emblem:_Thracia_776",
+      "description": "Fire Emblem: Thracia 776 is a Japanese tactical role-playing game developed by Intelligent Systems and published by Nintendo, and the fifth installment in the Fire Emblem series. It is also the third and final Fire Emblem series title to be released on the Super Famicom.\n             \n\n              Fire Emblem: Thracia 776 takes place between Chapters 5 and 6 of the previous game, Fire Emblem: Seisen no Keifu. Several characters from Fire Emblem: Seisen no Keifu appear, such as Leaf, Fin, and Nanna. It takes place in the Thracian peninsula in southeastern Jugdral.",
+      "price": 51.28,
+      "genre": [
+        7,
+        15,
+        9
+      ],
+      "rating": 4.1,
+      "video": "Fire_Emblem:_Thracia_776.mp4",
+      "image_url": "",
+      "image": "media/games/Fire_Emblem:_Thracia_776.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 116,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001116",
+      "name": "Mario_Party_2",
+      "description": "Mario and the gang are back for another round of Bowser-bashin' party action! Watch as your favorite Nintendo characters don different duds for each of the five all-new Adventure Boards! A slew of new tricks and devices bring new levels of challenge and excitement to board game play. New board maps, new Mini-Games, new action and new surprises means a whole new batch of fun! Get ready to unleash your best Hip Drops, hammer swings and high-flying high junks for another round of frenzied multi-player action!",
+      "price": 31.91,
+      "genre": [
+        20
+      ],
+      "rating": 3.7,
+      "video": "Mario_Party_2.mp4",
+      "image_url": "",
+      "image": "media/games/Mario_Party_2.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 117,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001117",
+      "name": "Metal_Gear",
+      "description": "Metal Gear is considered to be the progenitor of the stealth game genre, it was also the first video game designed by Hideo Kojima, who also directed many of the later Metal Gear sequels. A heavily altered port was produced for the Famicom/NES (without Kojima's involvement). A remade version based on the original MSX2 game was released as a bonus game in Metal Gear Solid 3: Subsistence for the PlayStation 2 and, as a result, is also included in Metal Gear Solid HD Collection and Metal Gear Solid: The Legacy Collection.\n             \n\n              The game revolves around a special forces operative codenamed Solid Snake who goes into a solo infiltration mission into the fortified state of Outer Heaven to destroy Metal Gear, a bipedal walking tank capable of launching nuclear missiles from anywhere in the world.\n             \n\n              The player must navigate the main character, a military operative codenamed Solid Snake, through various locations, while avoiding visual contact and direct confrontation with patrolling guards. If the player is seen, the game enters the \"Alert Mode.\" In this situation, Snake must escape from enemy's sight in order to resume infiltration. The method of escaping varies depending on the circumstances behind discovery:\n             \n\n              If Snake is seen and only a single exclamation mark appears over an enemy's head, only the enemies in the player's present screen will attack and Snake can escape by simply moving to an adjacent screen.\n              \n              However, if two exclamation marks appear over the enemy (or the player triggers an alarm by being spotted by a camera, infrared sensor or by using an unsuppressed weapon), reinforcements from off-screen will appear as well. Snake can only escape by eliminating all incoming enemies, going outdoors, or by entering an elevator.\n              \n              The player starts the game unarmed, but eventually acquires firearms such as a Beretta 92F and an M79 grenade launcher, as well as explosives such as remote control missiles and landmines. Ammo and supplies for weapons are limited, but are replenished by picking up ammunition caches or additional supplies. Weapons can not only be used to kill enemies, but also to clear obstacles such as hollow walls and electrified floors. Snake can also use his fists to punch and defeat patrolling enemies. Occasionally, if the player defeats a guard with punches without alerting anyone, the defeated guard will yield a single unit of rations or an ammo box that can be picked up. In addition to enemy guards, the player will also be confronted by mercenaries who will challenge the player to combat, serving as the boss characters.\n             \n\n              The enemy base consists of three different buildings, with multiple floors (including basement levels) within them. The player uses key cards and other items to unlock doors and explore new areas. Each door will only open to its corresponding key cards. Information can be obtained by rescuing hostages being held within the buildings. After rescuing five hostages, the player's rank will increase by one star (with the maximum rank being four stars), allowing for increased carrying capacity and maximum health. However, if a hostage is killed, the player is demoted to the previous rank.\n             \n\n              A transceiver is available for the player to communicate with their commanding officer, Big Boss, or one of the resistance members operating covertly near Outer Heaven (Schneider, Diane, and Jennifer). Each of Snake's allies specializes in a specific subject. The player must keep track of their allies' frequency numbers in order to contact them. All of the radio messages are dependent on the rooms where the player is located.",
+      "price": 39.76,
+      "genre": [
+        1,
+        4
+      ],
+      "rating": 2.9,
+      "video": "Metal_Gear.mp4",
+      "image_url": "",
+      "image": "media/games/Metal_Gear.webp",
+      "category": 3,
+      "release_year": 87
+    }
+  },
+  {
+    "pk": 118,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001118",
+      "name": "Disney's_Aladdin",
+      "description": "Disney's Aladdin is a 1993 video game developed by Capcom for the Super Nintendo Entertainment System (SNES). Based on the film of the same name, Disney's Aladdin is a 2D side-scrolling video game in which the player characters are Aladdin and his monkey Abu.",
+      "price": 56.96,
+      "genre": [
+        1,
+        2,
+        3
+      ],
+      "rating": 3.4,
+      "video": "Disney's_Aladdin.mp4",
+      "image_url": "",
+      "image": "media/games/Disney's_Aladdin.webp",
+      "category": 3,
+      "release_year": 93
+    }
+  },
+  {
+    "pk": 119,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001119",
+      "name": "F-Zero_X",
+      "description": "It's you against 29 other machines competing for the title of F-Zero X Champion. You're racing at speeds of over 1,000 km/h high above the atmosphere. Your competition comes from every corner of the galaxy and won't shed a tear at the thought of smashing you off the track. With four-player simultaneous gameplay and the Rumble Pak accessory, you have the fastest racing game on the N64 system!",
+      "price": 49.51,
+      "genre": [
+        2,
+        10
+      ],
+      "rating": 3.9,
+      "video": "F-Zero_X.mp4",
+      "image_url": "",
+      "image": "media/games/F-Zero_X.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 120,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001120",
+      "name": "Mega_Man_7",
+      "description": "Mega Man 7 is an action platform video game developed and published by Capcom for the Super Nintendo Entertainment System. It is the seventh game in the original Mega Man series. The game was released in Japan on March 24, 1995 and was localized later in the year in North America and Europe.",
+      "price": 31.16,
+      "genre": [
+        1,
+        3,
+        4
+      ],
+      "rating": 3.5,
+      "video": "Mega_Man_7.mp4",
+      "image_url": "",
+      "image": "media/games/Mega_Man_7.webp",
+      "category": 3,
+      "release_year": 95
+    }
+  },
+  {
+    "pk": 121,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001121",
+      "name": "Snatcher",
+      "description": "Snatcher is a cyberpunk-themed graphic adventure game directed and written by Hideo Kojima and produced by Konami. The setting and story of Snatcher is heavily influenced by cyberpunk and science-fiction media, taking place in a large futuristic dystopian city. The story revolves around an investigator named Gillian Seed assigned to investigate a breed of bioroids known as \"snatchers\", who are killing humans and taking their place in society. The game is set in a primarily first person perspective and uses a menu-based interface that allows the protagonist to interact with his environment. The player can choose to \"Look\", \"Investigate\", \"Talk\", \"Ask\" and \"Move\" (in addition to other options) to acquire key items or receive vital information from other characters. The player can analyze items in Gillian's belongings or show it to other characters. During key points of the game's story, the player must pass shooting sequences to defend Gillian from assailants. These shooting segments use a 3x3 grid which the player can target to fire at enemies. A shooting trainer, called \"Junker's Eyes\", is accessible at Junker HQ that allows the player to measure their accuracy.",
+      "price": 58.85,
+      "genre": [
+        1,
+        17,
+        4,
+        16
+      ],
+      "rating": 4,
+      "video": "Snatcher.mp4",
+      "image_url": "",
+      "image": "media/games/Snatcher.webp",
+      "category": 3,
+      "release_year": 92
+    }
+  },
+  {
+    "pk": 122,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001122",
+      "name": "Microsoft_Minesweeper",
+      "description": "Microsoft Minesweeper (formerly just Minesweeper, and also known as Flower Field) is a minesweeper-type video game created by Curt Johnson, originally for IBM's OS/2, that was ported to Microsoft Windows by Robert Donner, both Microsoft employees at the time.",
+      "price": 39.22,
+      "genre": [
+        11
+      ],
+      "rating": 3.2,
+      "video": "Microsoft_Minesweeper.mp4",
+      "image_url": "",
+      "image": "media/games/Microsoft_Minesweeper.webp",
+      "category": 3,
+      "release_year": 90
+    }
+  },
+  {
+    "pk": 123,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001123",
+      "name": "Sonic_3D_Blast",
+      "description": "Sonic 3D Blast is a 1996 platform video game developed by Traveller's Tales and Sonic Team, and published by Sega for the Genesis, Saturn, and Windows. Part of the Sonic the Hedgehog series, the game abandons previous Sonic games' side-scrolling style in favor of isometric gameplay, making use of some pre-rendered 3D models converted into sprites. The game features creatures known as Flickies, which first appeared in the 1984 arcade game Flicky. Controlling only Sonic himself, the player's goal is to collect Flickies and carry them to safety, periodically sparring with the series antagonist Dr. Robotnik, who is imprisoning them within robots.",
+      "price": 41.04,
+      "genre": [
+        3
+      ],
+      "rating": 2.3,
+      "video": "Sonic_3D_Blast.mp4",
+      "image_url": "",
+      "image": "media/games/Sonic_3D_Blast.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 124,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001124",
+      "name": "System_Shock",
+      "description": "A seminal cyberpunk first-person exploratory adventure game with RPG elements in which, waking up in the Citadel Space Station, a lone hacker has to survive corrupted enemies and collect audio logs and equipment from former station workers in order to shut down SHODAN, the station's artificial intelligence that has killed everyone on board and now intends to destroy the world.",
+      "price": 53.71,
+      "genre": [
+        7,
+        4
+      ],
+      "rating": 3.9,
+      "video": "System_Shock.mp4",
+      "image_url": "",
+      "image": "media/games/System_Shock.webp",
+      "category": 3,
+      "release_year": 94
+    }
+  },
+  {
+    "pk": 125,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001125",
+      "name": "Marvel_vs._Capcom:_Clash_of_Super_Heroes",
+      "description": "Marvel vs. Capcom: Clash of Super Heroes is the fifth Marvel Comics-licensed fighting game by Capcom and the third game in the Marvel vs. Capcom series. In contrast to X-Men vs. Street Fighter and Marvel Super Heroes vs. Street Fighter, the game features characters from numerous Capcom franchises such as Mega Man and Strider, rather than just Street Fighter characters. The game takes place within the Marvel comic continuity, as Professor Charles Xavier calls out for heroes to stop him before he merges with the consciousness of Magneto and becomes the being known as Onslaught, the final boss.",
+      "price": 36.26,
+      "genre": [
+        12
+      ],
+      "rating": 3.7,
+      "video": "Marvel_vs._Capcom:_Clash_of_Super_Heroes.mp4",
+      "image_url": "",
+      "image": "media/games/Marvel_vs._Capcom:_Clash_of_Super_Heroes.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 126,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001126",
+      "name": "Ristar",
+      "description": "Ristar is a platform game developed and published by Sega for the Sega Genesis in 1995. A Sega Game Gear game, of the same name and genre, Ristar, was also released, which shared similar themes while possessing different level design and gameplay mechanics. The game stars an anthropomorphic cartoon star who uses his hands and long, stretchable arms to both move and combat enemies. Reception for the game has been generally positive, but the game's initial release was overshadowed due to the imminent ending of the Genesis's lifecycle and the succession of the Sega Saturn and other fifth generation video game consoles. While never receiving any sequels, Sega has re-released the game a number of times digitally and on Sega-themed compilations, and has occasionally given Ristar himself cameos in other Sega properties.",
+      "price": 44.51,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.6,
+      "video": "Ristar.mp4",
+      "image_url": "",
+      "image": "media/games/Ristar.webp",
+      "category": 3,
+      "release_year": 95
+    }
+  },
+  {
+    "pk": 127,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001127",
+      "name": "The_Simpsons_Arcade_Game",
+      "description": "The Simpsons is basically a side-scrolling beat-em-up featuring the characters from The Simpsons TV show. The player can choose to play as each of the four Simpson characters. Homer, who punches and kicks; Marge, who swings her vacuum cleaner; Bart, who wields his skateboard; and Lisa, who uses a jump rope as a whip. Other weapons such as hammers and bowling balls are also available to use.\n             \n\n              The game's levels are Downtown Springfield, Krustyland, Springfield Discount Cemetery, Moe's Tavern, Springfield Gorge, Dreamland, the Channel 6 studio, and the Power Plant. Each level ends with a boss whose speed and strength will increase after taking a certain amount of damage.\n             \n\n              Between levels, the player can compete against the other characters in two mini-games to be first to complete a task (inflating a balloon and waking up their character).",
+      "price": 54.17,
+      "genre": [
+        2,
+        13
+      ],
+      "rating": 3.3,
+      "video": "The_Simpsons_Arcade_Game.mp4",
+      "image_url": "",
+      "image": "media/games/The_Simpsons_Arcade_Game.webp",
+      "category": 3,
+      "release_year": 91
+    }
+  },
+  {
+    "pk": 128,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001128",
+      "name": "Toy_Story_2:_Buzz_Lightyear_to_the_Rescue!",
+      "description": "Woody has been stolen from the bedroom, ready to be sold to the highest bidder by an evil toy collector. It's up to good friend Buzz Lightyear to fight his way through from the bedroom to the outside world in order to save Woody from the toy market and bring him home. All of the character from the 3D animated movie appear through-out the side scroller to help Buzz get to where he is needed. Along with the use of his cannon, Buzz can jump to hard to reach places, also useful in collecting the hidden coins that open bonus levels.",
+      "price": 55.78,
+      "genre": [
+        1,
+        3
+      ],
+      "rating": 3.4,
+      "video": "Toy_Story_2:_Buzz_Lightyear_to_the_Rescue!.mp4",
+      "image_url": "",
+      "image": "media/games/Toy_Story_2:_Buzz_Lightyear_to_the_Rescue!.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 129,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001129",
+      "name": "Megami_Ibunroku_Persona",
+      "description": "While the West got Persona: Revelations, an Americanized port for the Playstation, Japan got its first Persona game under Megami Ibunroku Persona. The West eventually got a more faithful and enhanced remake on the Playstation Portable titled, Shin Megami Tensei: Persona with changed UI and music.\n             \n\n              This 1996 Atlus role-playing game takes you on an adventure throughout Mikage-cho, where your classmate, Maki Sonomura, suddenly goes missing. Battle against demons as you fight your way to the suspicious SEBEC branch president, Takahisa Kandori. Additionally, join the battle back at St. Hermelin and rival against the Snow Queen as she freezes the school and possesses your beloved homeroom teacher, Ms. Saeko.",
+      "price": 58.08,
+      "genre": [
+        7
+      ],
+      "rating": 3.7,
+      "video": "Megami_Ibunroku_Persona.mp4",
+      "image_url": "",
+      "image": "media/games/Megami_Ibunroku_Persona.webp",
+      "category": 3,
+      "release_year": 96
+    }
+  },
+  {
+    "pk": 130,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001130",
+      "name": "Mortal_Kombat_3",
+      "description": "Mortal Kombat 3 brings new elements to the 2D fighting series: multi-level playfields, \"Dial-A-Combo\" attacks, a \"Run\" button to speed up the battles, and \"Vs.\" codes, which unlock new powers and abilities once both players enter a code sequence in pre-match-up screens. Also included are more stage fatalities and finishing moves as each warrior attempts to go one-on-one with the Centaurian enforcer Motaro, and Shao Kahn himself.",
+      "price": 58.72,
+      "genre": [
+        12
+      ],
+      "rating": 3.1,
+      "video": "Mortal_Kombat_3.mp4",
+      "image_url": "",
+      "image": "media/games/Mortal_Kombat_3.webp",
+      "category": 3,
+      "release_year": 95
+    }
+  },
+  {
+    "pk": 131,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001131",
+      "name": "Bubble_Bobble",
+      "description": "In the game, each player controls one of the two Bubble Dragons, Bub and Bob. The player can move along platforms, as well as jump to those above and to the side, similar to most platform games.\n             \n\n              The player can also blow bubbles. These can trap enemies, who are defeated if the bubble is then burst by the player's spiny back. Bubbles that contain enemies can be popped at the same time resulting in different foods being projected around the level. Each enemy trapped in a bubble equates to a different food. Food is consumed and transferred to points (an increasing scale of 1000 points is awarded for each enemy burst in tandem with another meaning: one enemy burst equals one food item worth 1000 points, two enemies burst equals two food items worth 1000 and 2000 points, three enemies burst equals three food items worth 1000, 2000 and 4000 points, and so on), which results in earning lives. These same bubbles also float for a time before bursting, and can be jumped on, allowing access to otherwise inaccessible areas. Players progress to the next level once all enemies on the current level are defeated.\n             \n\n              Enemies turn \"angry\" \u00e2\u0080\u0094 becoming pink-colored and moving faster \u00e2\u0080\u0094 if they are the last enemy remaining, escape from a bubble after being left too long or a certain amount of time has been spent on the current level. A monster will also become angry if either player collects a skull (the only negative item in the game), and the monster is hit by the resulting comet crossing the screen (however, this is a rare occurrence).\n             \n\n              After a further time limit expires, an additional invincible enemy appears for each player, actively chasing them using only vertical and horizontal movements. These do not need to be defeated to complete the level, and disappear once a player's life is lost.\n             \n\n              Contact with enemies and their projectiles (rocks, lasers, fireballs, etc.) results in death.",
+      "price": 37.62,
+      "genre": [
+        2,
+        3,
+        11,
+        15
+      ],
+      "rating": 3.3,
+      "video": "Bubble_Bobble.mp4",
+      "image_url": "",
+      "image": "media/games/Bubble_Bobble.webp",
+      "category": 3,
+      "release_year": 86
+    }
+  },
+  {
+    "pk": 132,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001132",
+      "name": "Snake",
+      "description": "This is Nokia's version of Snake, installed on their mobile phones, starting on the Nokia 6110.\n              \n              The game was later ported in 2017 to be released for smartphones (Android/iOS) to be played on the Facebook Messenger app.",
+      "price": 51.24,
+      "genre": [
+        2
+      ],
+      "rating": 3.1,
+      "video": "Snake.mp4",
+      "image_url": "",
+      "image": "media/games/Snake.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 133,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001133",
+      "name": "Suikoden",
+      "description": "Treachery is eating like a maggot at the heart of the Scarlet Moon Empire. But is the Empire corrupt or the people just disloyal? Only you can find out. Take the role of an Imperial Guard in this epic tale of betrayal, greed and honour as he struggles to find the truth. Head teams of fighters and magicians in battles against weird monsters then lead an army into battle against awesome opponents.",
+      "price": 34.13,
+      "genre": [
+        7
+      ],
+      "rating": 3.6,
+      "video": "Suikoden.mp4",
+      "image_url": "",
+      "image": "media/games/Suikoden.webp",
+      "category": 3,
+      "release_year": 95
+    }
+  },
+  {
+    "pk": 134,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001134",
+      "name": "The_Secret_of_Monkey_Island",
+      "description": "I cursed my luck again as I slid down the monkey's throat. Have my dreams of guzzling grog and plundering galleons been reduced to this? \"Three small trials and you're a pirate like us,\" they said. Fair enough. If only I could stomach the foul brew these scurvy seadogs swilled, the rest would be easy. How could I have known I'd meet a powerful and beautiful woman with a jealous suitor too stupid to realize he'd been dead for years? And how can I crawl through this great stone monkey to find a man who walks three inches above the ground and sets fire to his beard every morning?\n             \n\n              Do business with quaint and humble shopkeepers. Participate in complex and meaningful dialogues. Visit interesting places and steal stuff. Experience the never-ending nightlife of Melee Island.",
+      "price": 43.53,
+      "genre": [
+        1,
+        17,
+        11
+      ],
+      "rating": 4.1,
+      "video": "The_Secret_of_Monkey_Island.mp4",
+      "image_url": "",
+      "image": "media/games/The_Secret_of_Monkey_Island.webp",
+      "category": 3,
+      "release_year": 90
+    }
+  },
+  {
+    "pk": 135,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001135",
+      "name": "Worms_Armageddon",
+      "description": "Those intrepid invertebrates return with a vengeance in the much-loved Worms Armageddon. It\u00e2\u0080\u0099s a whole new can of worms! It\u00e2\u0080\u0099s hilarious fun that you can enjoy on your own or with all your friends.\n             \n\n              Worms Armageddon was originally developed as an expansion pack to Worms 2 and initially titled Wormageddon before it was released as a standalone game. Worms Armageddon was acclaimed by critics, who praised the refined gameplay and stylized graphics, and it has been featured in a number of \"greatest games of all time\" lists. Worms Armageddon is still updated periodically as of 2020, and was released on the Steam platform in 2013.",
+      "price": 35.37,
+      "genre": [
+        3,
+        4,
+        15
+      ],
+      "rating": 3.8,
+      "video": "Worms_Armageddon.mp4",
+      "image_url": "",
+      "image": "media/games/Worms_Armageddon.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 136,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001136",
+      "name": "Street_Fighter_II_Turbo",
+      "description": "They're back and they're badder than ever! Faster, stronger and with all new moves, twelve of the greatest fighters from across the globe are ready to do battle! Choose your champion and get ready for the big brawl as they try to earn the right to battle M. Bison for the title. And just when you think you've mastered it all, crank it up a notch and go TURBO!",
+      "price": 39.02,
+      "genre": [
+        12
+      ],
+      "rating": 3.7,
+      "video": "Street_Fighter_II_Turbo.mp4",
+      "image_url": "",
+      "image": "media/games/Street_Fighter_II_Turbo.webp",
+      "category": 3,
+      "release_year": 93
+    }
+  },
+  {
+    "pk": 137,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001137",
+      "name": "Legacy_of_Kain:_Soul_Reaver",
+      "description": "A third-person action/adventure game in which, after the events of Blood Omen: Legacy of Kain (1996), Kain has created a vampiric empire in the world of Nosgoth. One of Kain's children and underlings, Raziel, is disgraced and cast down by a jealous Kain after surpassing him by growing wings and woken up centuries after in a corrupted form to get revenge against his once-brothers.",
+      "price": 35.49,
+      "genre": [
+        1
+      ],
+      "rating": 3.7,
+      "video": "Legacy_of_Kain:_Soul_Reaver.mp4",
+      "image_url": "",
+      "image": "media/games/Legacy_of_Kain:_Soul_Reaver.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 138,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001138",
+      "name": "Metal_Gear_2:_Solid_Snake",
+      "description": "Solid Snake, now retired from Fox-Hound, returns in this sequel to Metal Gear. Dr. Kio Marv, the inventor of OILIX, was taken hostage. The new commander of Fox-Hound, Colonel Roy Campbell, calls Snake back to active duty to infiltrate Zanzibar and rescue Dr. Marv.",
+      "price": 50.03,
+      "genre": [
+        1
+      ],
+      "rating": 3.5,
+      "video": "Metal_Gear_2:_Solid_Snake.mp4",
+      "image_url": "",
+      "image": "media/games/Metal_Gear_2:_Solid_Snake.webp",
+      "category": 3,
+      "release_year": 90
+    }
+  },
+  {
+    "pk": 139,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001139",
+      "name": "Quake_II",
+      "description": "Quake II is a first-person shooter video game developed by id Software and published by Activision. It is not a direct sequel to Quake, id decided to revert to an existing trademark when they were unable to agree on a new name that did not violate another company's trademark.",
+      "price": 32.29,
+      "genre": [
+        4
+      ],
+      "rating": 3.4,
+      "video": "Quake_II.mp4",
+      "image_url": "",
+      "image": "media/games/Quake_II.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 140,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001140",
+      "name": "NBA_Jam",
+      "description": "NBA Jam is a basketball arcade game published and developed by Midway in 1993. It is the first entry in the NBA Jam series. The main designer and programmer for this game was Mark Turmell. Midway had previously released such sports games as Arch Rivals in 1989, High Impact in 1990, and Super High Impact in 1991. The gameplay of NBA Jam is based on Arch Rivals, another 2-on-2 basketball video game. However, it was the release of NBA Jam that brought mainstream success to the genre.\n              \n              The game became exceptionally popular, and generated a significant amount of money for arcades after its release, creating revenue of $1 billion in quarters. In early 1994, the Amusement & Music Operators Association reported that NBA Jam had become the highest-earning arcade game of all time.\n              \n              The release of NBA Jam gave rise to a new genre of sports games which were based around fast, action-packed gameplay and exaggerated realism, a formula which Midway would also later apply to the sports of football (NFL Blitz), and hockey (2 on 2 Open Ice Challenge).",
+      "price": 44.79,
+      "genre": [
+        5
+      ],
+      "rating": 3.6,
+      "video": "NBA_Jam.mp4",
+      "image_url": "",
+      "image": "media/games/NBA_Jam.webp",
+      "category": 3,
+      "release_year": 93
+    }
+  },
+  {
+    "pk": 141,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001141",
+      "name": "Altered_Beast",
+      "description": "Unleash metamorphic power. \"Awaken, dead warrior!\" cries Zeus, God of Thunder. And you rise. Called upon to live again, you kick, punch, grapple and tear at the inhuman and monstrous flesh of horrible, dangerous underworld henchmen out to do you wrong. Savagely intent upon rescuing Athena, daughter of Zeus, from the demon god Neff, you stalk the bowels of Hades and beyond.\n             \n\n              What you are now you will not be. You are the Altered Beast - bestowed with five formidable forces of transformation - each more ferocious, more overwhelming, than the last. By battling, conquering and capturing spirit balls, your metamorphic powers will grow. But to what end?\n             \n\n              The final confrontation. Your triumph over crocodile worms, hammer demons and grave masters brings on the horror of Neff himself. But boldness and cunning will be rewarded - in the ultimate Altered Beast!\n             \n\n              Transformation is the ultimate power.",
+      "price": 47.68,
+      "genre": [
+        13,
+        3
+      ],
+      "rating": 2.5,
+      "video": "Altered_Beast.mp4",
+      "image_url": "",
+      "image": "media/games/Altered_Beast.webp",
+      "category": 3,
+      "release_year": 88
+    }
+  },
+  {
+    "pk": 142,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001142",
+      "name": "Ms._Pac-Man",
+      "description": "In 1982, a sequel to the incredibly popular Pac-Man was introduced in the form of his girlfriend, Ms. Pac-Man. This sequel continued on the \"eat the dots/avoid the ghosts\" gameplay of the original game, but added new features to keep the title fresh.\n             \n\n              Like her boyfriend, Ms. Pac-Man attempts to clear four various and challenging mazes filled with dots and ever-moving bouncing fruit while avoiding Inky, Blinky, Pinky and Sue, each with their own personalities and tactics. One touch from any of these ghosts means a loss of life for Ms. Pac-Man.\n             \n\n              Ms. Pac-Man can turn the tables on her pursuers by eating one of the four Energizers located within the maze. During this time, the ghosts turn blue, and Ms. Pac-Man can eat them for bonus points. The Energizer power only lasts for a limited amount of time, as the ghost's eyes float back to their center box, and regenerate to chase after Ms. Pac-Man again.\n             \n\n              Survive a few rounds of gameplay, and the player will be treated to humorous intermissions showing the growing romantic relationship between Pac-Man and Ms. Pac-Man, leading all the way up to the arrival of \"Junior\".",
+      "price": 37.24,
+      "genre": [
+        2
+      ],
+      "rating": 3.6,
+      "video": "Ms._Pac-Man.mp4",
+      "image_url": "",
+      "image": "media/games/Ms._Pac-Man.webp",
+      "category": 3,
+      "release_year": 82
+    }
+  },
+  {
+    "pk": 143,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001143",
+      "name": "The_Ultimate_Doom",
+      "description": "The complete megahit game that set the world afire. Plus All-New Episode IV: Thy Flesh Consumed. The demons came and the marines died. Except one. You are the last defense against these hell-spawned hordes. Prepare for the most intense mutant-laden, blood-splattered action ever! The texture-mapped virtual world is so real, you don't just play Doom - you live it.",
+      "price": 39.53,
+      "genre": [
+        4
+      ],
+      "rating": 4.1,
+      "video": "The_Ultimate_Doom.mp4",
+      "image_url": "",
+      "image": "media/games/The_Ultimate_Doom.webp",
+      "category": 3,
+      "release_year": 95
+    }
+  },
+  {
+    "pk": 144,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001144",
+      "name": "Superman:_The_New_Superman_Adventures",
+      "description": "Superman: The New Adventures, often referred to as Superman 64, is a 1999 adventure video game developed and published by Titus Software for the Nintendo 64 video game console. The game is based on the television series Superman: The Animated Series. Superman was first released in North America on May 31, 1999 and in Europe on July 23, 1999.",
+      "price": 45.17,
+      "genre": [
+        1,
+        4
+      ],
+      "rating": 0.7,
+      "video": "Superman:_The_New_Superman_Adventures.mp4",
+      "image_url": "",
+      "image": "media/games/Superman:_The_New_Superman_Adventures.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 145,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001145",
+      "name": "Twisted_Metal",
+      "description": "Twisted Metal consists of a series of arena-based battles against an increasing number of opponents in increasingly large arenas. These battles culminate in a face-off with the winner of the previous year's competition, Darkside, who drives a large armored car which fires multiple missiles at once.\n             \n\n              Players can choose one of 12 different vehicles with which to enter combat. Each vehicle has a distinct driver and special move. The controls consist of accelerator, brake, \"tight turn\" (essentially a handbrake) and turbo on the face buttons, with main weapons and machine gun selection and control on the shoulder buttons.\n             \n\n              Arenas are populated with weapon pickups to re-supply missile stocks, repair stations for repairing damage to your car, pedestrians, and course stewards armed with either machine guns or missile launchers.",
+      "price": 59.5,
+      "genre": [
+        12,
+        10,
+        4
+      ],
+      "rating": 3.1,
+      "video": "Twisted_Metal.mp4",
+      "image_url": "",
+      "image": "media/games/Twisted_Metal.webp",
+      "category": 3,
+      "release_year": 95
+    }
+  },
+  {
+    "pk": 146,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001146",
+      "name": "Parasite_Eve_II",
+      "description": "Parasite Eve II is an action role-playing survival horror video game released exclusively for the PlayStation. The game was developed by Square and published in Japan in 1999 and in both North America and, unlike the previous game, in PAL regions in 2000. It is the sequel to Parasite Eve and the second game in the series of the same name.\n             \n\n              Parasite Eve II is set several years after the events in the original game. The protagonist from the first game, Aya Brea, also features in this game as the playable character. She becomes involved with another outbreak of Mitochondrial creatures. Gameplay diverges from the previous game: battles take place in real time and the area of action is less restrictive. The approach is more typical of traditional survival horror games, although some role-playing elements are retained.",
+      "price": 32.29,
+      "genre": [
+        7
+      ],
+      "rating": 3.4,
+      "video": "Parasite_Eve_II.mp4",
+      "image_url": "",
+      "image": "media/games/Parasite_Eve_II.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 147,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001147",
+      "name": "The_King_of_Fighters_'98",
+      "description": "The All-Star dream battle is here at last: It's King of Fighters '98! Here come 38 of your favorite characters from the King of Fighters series. Your favorite characters and teams are back! Filled with new surprises like the Roulette Team Edit and Advantage System, King '98 will pop your cork with unrelenting excitement!",
+      "price": 51.72,
+      "genre": [
+        12
+      ],
+      "rating": 3.9,
+      "video": "The_King_of_Fighters_'98.mp4",
+      "image_url": "",
+      "image": "media/games/The_King_of_Fighters_'98.webp",
+      "category": 3,
+      "release_year": 98
+    }
+  },
+  {
+    "pk": 148,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001148",
+      "name": "Grand_Theft_Auto",
+      "description": "Grand Theft Auto is the first game in the Grand Theft Auto series and a sandbox-crime game published by Rockstar Games.\n             \n\n              The original Grand Theft Auto is made up of a series of levels each set in one of the three cities in the game. In each level, the player has a target number of points to achieve, and five lives to attain the score.\n             \n\n              The score counter doubles as a money meter; the player can spend this money on paint jobs and various other things. However, any money spent is of course taken away from the score, making the goal that little bit further away.\n             \n\n              On obtaining the target number of points, the player must then drive to a certain location to complete the level, which allows progress to the next one.",
+      "price": 35.71,
+      "genre": [
+        1,
+        10,
+        4
+      ],
+      "rating": 2.5,
+      "video": "Grand_Theft_Auto.mp4",
+      "image_url": "",
+      "image": "media/games/Grand_Theft_Auto.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 149,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001149",
+      "name": "Sonic_the_Hedgehog_2",
+      "description": "This is a completely different game than its 16-bit counterpart on the Genesis/Mega Drive, and was originally released on the Sega Game Gear and Master System.\n             \n\n              The Sonic the Hedgehog 2 game marks the debut of Miles \u00e2\u0080\u0098Tails\u00e2\u0080\u0099 Prower, Sonic\u00e2\u0080\u0099s best pal, who is then seen recurring in the series. Assist Sonic to rescue Tails, who has been kidnapped by Dr. Robotnik in this platform video game. In exchange of Tails\u00e2\u0080\u0099 safety in this Sega Game Gear video game, the evil scientist asks that the six Chaos Emeralds be given away to six robots, so he can dominate the entire globe. With advanced ability of Sonic to smash through walls and grab back scattered rings hit by enemy, this platform video game is made even more exciting. Join the protagonist in the Sonic the Hedgehog 2 game as he rides a mine cart, a hang glider or skims through water surface in his rescue attempt. With seven zones and three acts each, this Sega Game Gear video game is a rollercoaster ride where you get rewarded at the end of each act.",
+      "price": 41.58,
+      "genre": [
+        1,
+        2,
+        3
+      ],
+      "rating": 2.8,
+      "video": "Sonic_the_Hedgehog_2.mp4",
+      "image_url": "",
+      "image": "media/games/Sonic_the_Hedgehog_2.webp",
+      "category": 3,
+      "release_year": 92
+    }
+  },
+  {
+    "pk": 150,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001150",
+      "name": "Dragon_Ball_GT:_Final_Bout",
+      "description": "After achieving cult hit status around the globe, Dragon Ball GT has finally arrived in the U.S. This polygon rendered fighting game features 10 of the best warriors from the animated television series going head-to-head in a no-holds-barred tournament. Each player has devastating finishing moves, including the infamous \"Meteor Smash\", which can be countered by an opponent, resulting in some of the most incredible power struggles you'll ever see! There are also 8 playable hidden characters and a practice mode that lets you build up the skills of each fighter. Now, you can find out what gamers around the world already know -- Dragon Ball GT is the ultimate fighting game!",
+      "price": 43.64,
+      "genre": [
+        12
+      ],
+      "rating": 1.8,
+      "video": "Dragon_Ball_GT:_Final_Bout.mp4",
+      "image_url": "",
+      "image": "media/games/Dragon_Ball_GT:_Final_Bout.webp",
+      "category": 3,
+      "release_year": 97
+    }
+  },
+  {
+    "pk": 151,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001151",
+      "name": "JoJo's_Bizarre_Adventure",
+      "description": "JoJo's Bizarre Adventure is the console version of 1998 Arcade game of the same title. Two console versions were produced. The 1999 PlayStation version is based on JoJo's Venture, but features the additional characters from the second version of the arcade game and an exclusive \"Super Story Mode\", which covers the entire Stardust Crusaders story arc. The Dreamcast version, also released in 1999, features both the original and revised versions of the arcade game in their original forms.",
+      "price": 51.94,
+      "genre": [
+        12
+      ],
+      "rating": 3.7,
+      "video": "JoJo's_Bizarre_Adventure.mp4",
+      "image_url": "",
+      "image": "media/games/JoJo's_Bizarre_Adventure.webp",
+      "category": 3,
+      "release_year": 99
+    }
+  },
+  {
+    "pk": 152,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001152",
+      "name": "Another_World",
+      "description": "Another World chronicles the story of a man hurtled through space and time by a nuclear experiment gone wrong. You assume the role of Lester Knight Chaykin, a young physicist. You\u00e2\u0080\u0099ll need to dodge, outwit, and overcome a host of alien monsters and deadly earthquakes that plague the alien landscape you now call home. Only a perfect blend of logic and skill will get you past the deadly obstacles that lie in waiting.",
+      "price": 56.07,
+      "genre": [
+        1,
+        3,
+        11
+      ],
+      "rating": 3.3,
+      "video": "Another_World.mp4",
+      "image_url": "",
+      "image": "media/games/Another_World.webp",
+      "category": 3,
+      "release_year": 91
+    }
+  }
+]
