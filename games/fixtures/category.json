@@ -1,0 +1,4 @@
+[{"pk": 1, "model": "games.category", "fields": {"name": "top_sellers", "friendly_name": "Top Sellers"}},
+{"pk": 2, "model": "games.category", "fields": {"name": "all_time_classics", "friendly_name": "All Time Classics"}},
+{"pk": 3, "model": "games.category", "fields": {"name": "staff_picks", "friendly_name": "Staff Picks"}},
+{"pk": 4, "model": "games.category", "fields": {"name": "retro_remasters", "friendly_name": "Retro Remasters"}}]

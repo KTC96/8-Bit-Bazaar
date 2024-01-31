@@ -1,16 +1,13 @@
 [
   {
     "pk": 1,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp50011",
       "name": "Super_Mario_64",
       "description": "The first three dimensional entry in the Mario franchise, Super Mario 64 follows Mario as he puts his broadened 3D movement arsenal to use in order to rescue Princess Peach from the clutches of his arch rival Bowser. Mario has to jump into worlds-within-paintings ornamenting the walls of Peach's castle, uncover secrets and hidden challenges and collect golden stars as reward for platforming trials.",
       "price": 39.28,
-      "genre": [
-        1,
-        3
-      ],
+      "genre":[ 1, 3],
       "rating": 4.1,
       "video": "Super_Mario_64.mp4",
       "image_url": "",
@@ -21,7 +18,7 @@
   },
   {
     "pk": 2,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp50012",
       "name": "Final_Fantasy_VII",
@@ -42,7 +39,7 @@
   },
   {
     "pk": 3,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp50013",
       "name": "The_Legend_of_Zelda:_Ocarina_of_Time",
@@ -62,7 +59,7 @@
   },
   {
     "pk": 4,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp50014",
       "name": "Chrono_Trigger",
@@ -82,7 +79,7 @@
   },
   {
     "pk": 5,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp50015",
       "name": "Super_Mario_World",
@@ -102,7 +99,7 @@
   },
   {
     "pk": 6,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp50016",
       "name": "EarthBound",
@@ -123,7 +120,7 @@
   },
   {
     "pk": 7,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp50017",
       "name": "Castlevania:_Symphony_of_the_Night",
@@ -144,7 +141,7 @@
   },
   {
     "pk": 8,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp50018",
       "name": "Super_Metroid",
@@ -165,7 +162,7 @@
   },
   {
     "pk": 9,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp50019",
       "name": "Super_Mario_Bros.",
@@ -185,7 +182,7 @@
   },
   {
     "pk": 10,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500110",
       "name": "Half-Life",
@@ -206,7 +203,7 @@
   },
   {
     "pk": 11,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500111",
       "name": "Super_Mario_Bros._3",
@@ -225,7 +222,7 @@
   },
   {
     "pk": 12,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500112",
       "name": "Doom",
@@ -244,7 +241,7 @@
   },
   {
     "pk": 13,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500113",
       "name": "Sonic_the_Hedgehog",
@@ -263,7 +260,7 @@
   },
   {
     "pk": 14,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500114",
       "name": "Donkey_Kong_Country",
@@ -283,7 +280,7 @@
   },
   {
     "pk": 15,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500115",
       "name": "Final_Fantasy_VI",
@@ -303,7 +300,7 @@
   },
   {
     "pk": 16,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500116",
       "name": "The_Legend_of_Zelda",
@@ -322,7 +319,7 @@
   },
   {
     "pk": 17,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500117",
       "name": "Banjo-Kazooie",
@@ -342,7 +339,7 @@
   },
   {
     "pk": 18,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500118",
       "name": "Mega_Man_X",
@@ -363,7 +360,7 @@
   },
   {
     "pk": 19,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500119",
       "name": "Tetris",
@@ -383,7 +380,7 @@
   },
   {
     "pk": 20,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500120",
       "name": "Donkey_Kong_Country_2:_Diddy's_Kong_Quest",
@@ -403,7 +400,7 @@
   },
   {
     "pk": 21,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500121",
       "name": "Kirby's_Adventure",
@@ -422,7 +419,7 @@
   },
   {
     "pk": 22,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500122",
       "name": "Super_Smash_Bros.",
@@ -442,7 +439,7 @@
   },
   {
     "pk": 23,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500123",
       "name": "Mega_Man_2",
@@ -462,7 +459,7 @@
   },
   {
     "pk": 24,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500124",
       "name": "Klonoa:_Door_to_Phantomile",
@@ -481,7 +478,7 @@
   },
   {
     "pk": 25,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500125",
       "name": "Super_Mario_RPG:_Legend_of_the_Seven_Stars",
@@ -502,7 +499,7 @@
   },
   {
     "pk": 26,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500126",
       "name": "Zelda_II:_The_Adventure_of_Link",
@@ -522,7 +519,7 @@
   },
   {
     "pk": 27,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500127",
       "name": "Super_Mario_64",
@@ -542,7 +539,7 @@
   },
   {
     "pk": 28,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500128",
       "name": "Final_Fantasy_VII",
@@ -563,7 +560,7 @@
   },
   {
     "pk": 29,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500129",
       "name": "The_Legend_of_Zelda:_Ocarina_of_Time",
@@ -583,7 +580,7 @@
   },
   {
     "pk": 30,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500130",
       "name": "The_Legend_of_Zelda:_A_Link_to_the_Past",
@@ -604,7 +601,7 @@
   },
   {
     "pk": 31,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500131",
       "name": "Silent_Hill",
@@ -624,7 +621,7 @@
   },
   {
     "pk": 32,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500132",
       "name": "Super_Mario_Bros._3",
@@ -643,7 +640,7 @@
   },
   {
     "pk": 33,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500133",
       "name": "Doom",
@@ -662,7 +659,7 @@
   },
   {
     "pk": 34,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500134",
       "name": "Sonic_the_Hedgehog",
@@ -681,7 +678,7 @@
   },
   {
     "pk": 35,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500135",
       "name": "Donkey_Kong_Country",
@@ -701,7 +698,7 @@
   },
   {
     "pk": 36,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500136",
       "name": "The_Legend_of_Zelda",
@@ -720,7 +717,7 @@
   },
   {
     "pk": 37,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500137",
       "name": "Banjo-Kazooie",
@@ -740,7 +737,7 @@
   },
   {
     "pk": 38,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500138",
       "name": "Mega_Man_X",
@@ -761,7 +758,7 @@
   },
   {
     "pk": 39,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500139",
       "name": "Tetris",
@@ -781,7 +778,7 @@
   },
   {
     "pk": 40,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500140",
       "name": "Donkey_Kong_Country_2:_Diddy's_Kong_Quest",
@@ -801,7 +798,7 @@
   },
   {
     "pk": 41,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500141",
       "name": "Sonic_the_Hedgehog_3_&_Knuckles",
@@ -820,7 +817,7 @@
   },
   {
     "pk": 42,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500142",
       "name": "Resident_Evil_2",
@@ -840,7 +837,7 @@
   },
   {
     "pk": 43,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500143",
       "name": "Mario_Kart_64",
@@ -859,7 +856,7 @@
   },
   {
     "pk": 44,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500144",
       "name": "Kirby's_Adventure",
@@ -878,7 +875,7 @@
   },
   {
     "pk": 45,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500145",
       "name": "Super_Smash_Bros.",
@@ -898,7 +895,7 @@
   },
   {
     "pk": 46,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500146",
       "name": "Mega_Man_2",
@@ -918,7 +915,7 @@
   },
   {
     "pk": 47,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500147",
       "name": "Klonoa:_Door_to_Phantomile",
@@ -937,7 +934,7 @@
   },
   {
     "pk": 48,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500148",
       "name": "Resident_Evil_3:_Nemesis",
@@ -957,7 +954,7 @@
   },
   {
     "pk": 49,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500149",
       "name": "Shin_Megami_Tensei:_Devil_Summoner_-_Soul_Hackers",
@@ -977,7 +974,7 @@
   },
   {
     "pk": 50,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500150",
       "name": "Pac-Man",
@@ -996,7 +993,7 @@
   },
   {
     "pk": 51,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500151",
       "name": "Street_Fighter_III:_3rd_Strike",
@@ -1016,7 +1013,7 @@
   },
   {
     "pk": 52,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500152",
       "name": "Moon:_Remix_RPG_Adventure",
@@ -1037,7 +1034,7 @@
   },
   {
     "pk": 53,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500153",
       "name": "Final_Fantasy_Tactics",
@@ -1059,7 +1056,7 @@
   },
   {
     "pk": 54,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500154",
       "name": "Tekken_3",
@@ -1078,7 +1075,7 @@
   },
   {
     "pk": 55,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500155",
       "name": "Armored_Core",
@@ -1098,7 +1095,7 @@
   },
   {
     "pk": 56,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500156",
       "name": "Metal_Slug",
@@ -1119,7 +1116,7 @@
   },
   {
     "pk": 57,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500157",
       "name": "Suikoden_II",
@@ -1139,7 +1136,7 @@
   },
   {
     "pk": 58,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500158",
       "name": "Serial_Experiments_Lain",
@@ -1158,7 +1155,7 @@
   },
   {
     "pk": 59,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500159",
       "name": "Kirby's_Dream_Land_2",
@@ -1177,7 +1174,7 @@
   },
   {
     "pk": 60,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500160",
       "name": "Castlevania:_Bloodlines",
@@ -1197,7 +1194,7 @@
   },
   {
     "pk": 61,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500161",
       "name": "Final_Fantasy_V",
@@ -1217,7 +1214,7 @@
   },
   {
     "pk": 62,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500162",
       "name": "Fire_Emblem:_Genealogy_of_the_Holy_War",
@@ -1238,7 +1235,7 @@
   },
   {
     "pk": 63,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500163",
       "name": "Half-Life:_Opposing_Force",
@@ -1259,7 +1256,7 @@
   },
   {
     "pk": 64,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500164",
       "name": "Pok\u00c3\u00a9mon_Gold",
@@ -1280,7 +1277,7 @@
   },
   {
     "pk": 65,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500165",
       "name": "Live_A_Live",
@@ -1299,7 +1296,7 @@
   },
   {
     "pk": 66,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500166",
       "name": "Fire_Emblem:_Thracia_776",
@@ -1320,7 +1317,7 @@
   },
   {
     "pk": 67,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500167",
       "name": "Mario_Party_2",
@@ -1339,7 +1336,7 @@
   },
   {
     "pk": 68,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500168",
       "name": "Super_Mario_64",
@@ -1359,7 +1356,7 @@
   },
   {
     "pk": 69,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500169",
       "name": "Final_Fantasy_VII",
@@ -1380,7 +1377,7 @@
   },
   {
     "pk": 70,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500170",
       "name": "The_Legend_of_Zelda:_Ocarina_of_Time",
@@ -1400,7 +1397,7 @@
   },
   {
     "pk": 71,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500171",
       "name": "Metal_Gear_Solid",
@@ -1420,7 +1417,7 @@
   },
   {
     "pk": 72,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500172",
       "name": "Chrono_Trigger",
@@ -1440,7 +1437,7 @@
   },
   {
     "pk": 73,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500173",
       "name": "The_Legend_of_Zelda:_A_Link_to_the_Past",
@@ -1461,7 +1458,7 @@
   },
   {
     "pk": 74,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500174",
       "name": "Silent_Hill",
@@ -1481,7 +1478,7 @@
   },
   {
     "pk": 75,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500175",
       "name": "Super_Mario_Bros._3",
@@ -1500,7 +1497,7 @@
   },
   {
     "pk": 76,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500176",
       "name": "Doom",
@@ -1519,7 +1516,7 @@
   },
   {
     "pk": 77,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500177",
       "name": "Sonic_the_Hedgehog",
@@ -1538,7 +1535,7 @@
   },
   {
     "pk": 78,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500178",
       "name": "Donkey_Kong_Country",
@@ -1558,7 +1555,7 @@
   },
   {
     "pk": 79,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500179",
       "name": "Sonic_the_Hedgehog_2",
@@ -1578,7 +1575,7 @@
   },
   {
     "pk": 80,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500180",
       "name": "Castlevania",
@@ -1598,7 +1595,7 @@
   },
   {
     "pk": 81,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500181",
       "name": "Crash_Bandicoot",
@@ -1617,7 +1614,7 @@
   },
   {
     "pk": 82,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500182",
       "name": "Super_Mario_Bros._2",
@@ -1637,7 +1634,7 @@
   },
   {
     "pk": 83,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500183",
       "name": "Super_Mario_World_2:_Yoshi's_Island",
@@ -1656,7 +1653,7 @@
   },
   {
     "pk": 84,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500184",
       "name": "Final_Fantasy_VIII",
@@ -1676,7 +1673,7 @@
   },
   {
     "pk": 85,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500185",
       "name": "Kirby's_Dream_Land",
@@ -1695,7 +1692,7 @@
   },
   {
     "pk": 86,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500186",
       "name": "Sonic_the_Hedgehog_3_&_Knuckles",
@@ -1714,7 +1711,7 @@
   },
   {
     "pk": 87,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500187",
       "name": "Resident_Evil_2",
@@ -1734,7 +1731,7 @@
   },
   {
     "pk": 88,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500188",
       "name": "Super_Mario_RPG:_Legend_of_the_Seven_Stars",
@@ -1755,7 +1752,7 @@
   },
   {
     "pk": 89,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500189",
       "name": "Pok\u00c3\u00a9mon_Red",
@@ -1776,7 +1773,7 @@
   },
   {
     "pk": 90,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500190",
       "name": "Mega_Man",
@@ -1796,7 +1793,7 @@
   },
   {
     "pk": 91,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500191",
       "name": "Sonic_CD",
@@ -1815,7 +1812,7 @@
   },
   {
     "pk": 92,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500192",
       "name": "Super_Castlevania_IV",
@@ -1835,7 +1832,7 @@
   },
   {
     "pk": 93,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500193",
       "name": "GoldenEye_007",
@@ -1854,7 +1851,7 @@
   },
   {
     "pk": 94,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500194",
       "name": "Fallout_2",
@@ -1874,7 +1871,7 @@
   },
   {
     "pk": 95,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500195",
       "name": "Chrono_Cross",
@@ -1893,7 +1890,7 @@
   },
   {
     "pk": 96,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500196",
       "name": "Resident_Evil",
@@ -1913,7 +1910,7 @@
   },
   {
     "pk": 97,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500197",
       "name": "Ridge_Racer_Type_4",
@@ -1932,7 +1929,7 @@
   },
   {
     "pk": 98,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500198",
       "name": "Crazy_Taxi",
@@ -1952,7 +1949,7 @@
   },
   {
     "pk": 99,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp500199",
       "name": "Pok\u00c3\u00a9mon_Blue",
@@ -1973,7 +1970,7 @@
   },
   {
     "pk": 100,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001100",
       "name": "Planescape:_Torment",
@@ -1993,7 +1990,7 @@
   },
   {
     "pk": 101,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001101",
       "name": "Mega_Man_3",
@@ -2013,7 +2010,7 @@
   },
   {
     "pk": 102,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001102",
       "name": "Metroid_II:_Return_of_Samus",
@@ -2034,7 +2031,7 @@
   },
   {
     "pk": 103,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001103",
       "name": "Shenmue",
@@ -2056,7 +2053,7 @@
   },
   {
     "pk": 104,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001104",
       "name": "Crash_Team_Racing",
@@ -2075,7 +2072,7 @@
   },
   {
     "pk": 105,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001105",
       "name": "Kirby's_Dream_Land_3",
@@ -2095,7 +2092,7 @@
   },
   {
     "pk": 106,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001106",
       "name": "Final_Fantasy_IV",
@@ -2114,7 +2111,7 @@
   },
   {
     "pk": 107,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001107",
       "name": "Castlevania_III:_Dracula's_Curse",
@@ -2134,7 +2131,7 @@
   },
   {
     "pk": 108,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001108",
       "name": "Tetris",
@@ -2153,7 +2150,7 @@
   },
   {
     "pk": 109,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001109",
       "name": "Street_Fighter_II",
@@ -2173,7 +2170,7 @@
   },
   {
     "pk": 110,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001110",
       "name": "Shin_Megami_Tensei",
@@ -2192,7 +2189,7 @@
   },
   {
     "pk": 111,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001111",
       "name": "Tomb_Raider",
@@ -2214,7 +2211,7 @@
   },
   {
     "pk": 112,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001112",
       "name": "Secret_of_Mana",
@@ -2233,7 +2230,7 @@
   },
   {
     "pk": 113,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001113",
       "name": "Mega_Man_Legends",
@@ -2254,7 +2251,7 @@
   },
   {
     "pk": 114,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001114",
       "name": "Pok\u00c3\u00a9mon_Stadium",
@@ -2274,7 +2271,7 @@
   },
   {
     "pk": 115,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001115",
       "name": "Fire_Emblem:_Thracia_776",
@@ -2295,7 +2292,7 @@
   },
   {
     "pk": 116,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001116",
       "name": "Mario_Party_2",
@@ -2314,7 +2311,7 @@
   },
   {
     "pk": 117,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001117",
       "name": "Metal_Gear",
@@ -2334,7 +2331,7 @@
   },
   {
     "pk": 118,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001118",
       "name": "Disney's_Aladdin",
@@ -2355,7 +2352,7 @@
   },
   {
     "pk": 119,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001119",
       "name": "F-Zero_X",
@@ -2375,7 +2372,7 @@
   },
   {
     "pk": 120,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001120",
       "name": "Mega_Man_7",
@@ -2396,7 +2393,7 @@
   },
   {
     "pk": 121,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001121",
       "name": "Snatcher",
@@ -2418,7 +2415,7 @@
   },
   {
     "pk": 122,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001122",
       "name": "Microsoft_Minesweeper",
@@ -2437,7 +2434,7 @@
   },
   {
     "pk": 123,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001123",
       "name": "Sonic_3D_Blast",
@@ -2456,7 +2453,7 @@
   },
   {
     "pk": 124,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001124",
       "name": "System_Shock",
@@ -2476,7 +2473,7 @@
   },
   {
     "pk": 125,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001125",
       "name": "Marvel_vs._Capcom:_Clash_of_Super_Heroes",
@@ -2495,7 +2492,7 @@
   },
   {
     "pk": 126,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001126",
       "name": "Ristar",
@@ -2515,7 +2512,7 @@
   },
   {
     "pk": 127,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001127",
       "name": "The_Simpsons_Arcade_Game",
@@ -2535,7 +2532,7 @@
   },
   {
     "pk": 128,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001128",
       "name": "Toy_Story_2:_Buzz_Lightyear_to_the_Rescue!",
@@ -2555,7 +2552,7 @@
   },
   {
     "pk": 129,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001129",
       "name": "Megami_Ibunroku_Persona",
@@ -2574,7 +2571,7 @@
   },
   {
     "pk": 130,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001130",
       "name": "Mortal_Kombat_3",
@@ -2593,7 +2590,7 @@
   },
   {
     "pk": 131,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001131",
       "name": "Bubble_Bobble",
@@ -2615,7 +2612,7 @@
   },
   {
     "pk": 132,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001132",
       "name": "Snake",
@@ -2634,7 +2631,7 @@
   },
   {
     "pk": 133,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001133",
       "name": "Suikoden",
@@ -2653,7 +2650,7 @@
   },
   {
     "pk": 134,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001134",
       "name": "The_Secret_of_Monkey_Island",
@@ -2674,7 +2671,7 @@
   },
   {
     "pk": 135,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001135",
       "name": "Worms_Armageddon",
@@ -2695,7 +2692,7 @@
   },
   {
     "pk": 136,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001136",
       "name": "Street_Fighter_II_Turbo",
@@ -2714,7 +2711,7 @@
   },
   {
     "pk": 137,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001137",
       "name": "Legacy_of_Kain:_Soul_Reaver",
@@ -2733,7 +2730,7 @@
   },
   {
     "pk": 138,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001138",
       "name": "Metal_Gear_2:_Solid_Snake",
@@ -2752,7 +2749,7 @@
   },
   {
     "pk": 139,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001139",
       "name": "Quake_II",
@@ -2771,7 +2768,7 @@
   },
   {
     "pk": 140,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001140",
       "name": "NBA_Jam",
@@ -2790,7 +2787,7 @@
   },
   {
     "pk": 141,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001141",
       "name": "Altered_Beast",
@@ -2810,7 +2807,7 @@
   },
   {
     "pk": 142,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001142",
       "name": "Ms._Pac-Man",
@@ -2829,7 +2826,7 @@
   },
   {
     "pk": 143,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001143",
       "name": "The_Ultimate_Doom",
@@ -2848,7 +2845,7 @@
   },
   {
     "pk": 144,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001144",
       "name": "Superman:_The_New_Superman_Adventures",
@@ -2868,7 +2865,7 @@
   },
   {
     "pk": 145,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001145",
       "name": "Twisted_Metal",
@@ -2889,7 +2886,7 @@
   },
   {
     "pk": 146,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001146",
       "name": "Parasite_Eve_II",
@@ -2908,7 +2905,7 @@
   },
   {
     "pk": 147,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001147",
       "name": "The_King_of_Fighters_'98",
@@ -2927,7 +2924,7 @@
   },
   {
     "pk": 148,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001148",
       "name": "Grand_Theft_Auto",
@@ -2948,7 +2945,7 @@
   },
   {
     "pk": 149,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001149",
       "name": "Sonic_the_Hedgehog_2",
@@ -2969,7 +2966,7 @@
   },
   {
     "pk": 150,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001150",
       "name": "Dragon_Ball_GT:_Final_Bout",
@@ -2988,7 +2985,7 @@
   },
   {
     "pk": 151,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001151",
       "name": "JoJo's_Bizarre_Adventure",
@@ -3007,7 +3004,7 @@
   },
   {
     "pk": 152,
-    "model": "products.product",
+    "model": "games.game",
     "fields": {
       "sku": "pp5001152",
       "name": "Another_World",

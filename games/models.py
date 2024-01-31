@@ -13,20 +13,33 @@ class Genre(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+
 
     def __str__(self):
         return self.name
 
+    def get_friendly_name(self):
+        return self.friendly_name
 
-class Reviews
+
+class Platform(models.Model):
+    name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
 
+    def __str__(self):
+        return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
 
 
 class Game(models.Model):
-    genre = models.ForeignKey('Genre', null=True, blank=True, on_delete=models.SET_NULL)
+    genre = models.ManyToManyField(Genre)
     category = models.ForeignKey('Category', null=True, blank=True , on_delete=models.SET_NULL)
     reviews = models.ForeignKey('Reviews', null=True, blank=True, on_delete=models.SET_NULL)
+    platform = models.ForeignKey('Platform', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
@@ -35,10 +48,21 @@ class Game(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     video = models.FileField(null=True, blank=True)
-    platform = models.CharField(null=True, blank=True)
-    release_date = models.CharField(null=True, blank=True)
+    release_year = models.CharField(null=True, blank=True, max_length=100)
 
     def __str__(self):
         return self.name
 
 
+
+class Reviews(models.Model):
+    name = models.CharField(max_length=80)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.name}"
