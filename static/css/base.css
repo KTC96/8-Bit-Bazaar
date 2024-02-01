@@ -89,9 +89,34 @@ nav {
     height: 500px;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #eeb8b6;
+    z-index: -1;
+}
+
+.game-image {
+    height: 200px;
+    padding: 10px;
+    object-fit: contain;
+}
+
+.game-container {
+    margin-top: 200px;
+}
 @media (min-width: 992px) {
     .text-lg-right {
         text-align: right !important;
+    }
+}
+
+@media (max-width : 500px){
+    .game-container {
+        margin-top: 0;
     }
 }
 
