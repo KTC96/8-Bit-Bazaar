@@ -1,15 +1,28 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Game
+from .models import Game, Genre, Category
 
 def all_games(request):
     """A view to show all games, with sorting and searching"""
 
     games = Game.objects.all()
     query = None
+    genres = None
+    categories = None
 
     if request.GET:
+        if 'genre' in request.GET:
+            genres = request.GET['genre'].split(',')
+            games = games.filter(genre__name__in=genres)
+            genres = Genre.objects.filter(name__in=genres)
+
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            games = games.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
+
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -19,9 +32,13 @@ def all_games(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             games = games.filter(queries)
 
+    
+
     context = {
         'games': games,
         'search_term': query, 
+        'current_genres': genres,
+        'current_categories': categories,
     }
 
     return render(request, 'games/games.html', context)

@@ -1,4 +1,8 @@
 [{"pk": 1, "model": "games.category", "fields": {"name": "top_sellers", "friendly_name": "Top Sellers"}},
 {"pk": 2, "model": "games.category", "fields": {"name": "all_time_classics", "friendly_name": "All Time Classics"}},
 {"pk": 3, "model": "games.category", "fields": {"name": "staff_picks", "friendly_name": "Staff Picks"}},
-{"pk": 4, "model": "games.category", "fields": {"name": "retro_remasters", "friendly_name": "Retro Remasters"}}]
+{"pk": 4, "model": "games.category", "fields": {"name": "retro_remasters", "friendly_name": "Retro Remasters"}},
+{"pk": 5, "model": "games.category", "fields": {"name": "bundle_deals", "friendly_name": "Bundle Deals"}},
+{"pk": 6, "model": "games.category", "fields": {"name": "discounted_games", "friendly_name": "Discounted Games"}},
+{"pk": 7, "model": "games.category", "fields": {"name": "seasonal_specials", "friendly_name": "Seasonal Specials"}},
+{"pk": 8, "model": "games.category", "fields": {"name": "all_specials", "friendly_name": "All Specials"}}]

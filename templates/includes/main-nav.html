@@ -20,15 +20,31 @@
             </div>
         </li>
 
-        <!-- Genre Dropdown -->
+        <!-- Genre Dropdown --> 
         <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link text-black mr-5" href="#" id="genre-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Genre
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="genre-link">
-                <a href="#" class="dropdown-item">Action</a>
-                <a href="#" class="dropdown-item">Adventure</a>
-                <a href="#" class="dropdown-item">Casual</a>
+                <a href="{% url 'games' %}?genre=adventure" class="dropdown-item">Adventure</a>
+                <a href="{% url 'games' %}?genre=arcade" class="dropdown-item">Arcade</a>
+                <a href="{% url 'games' %}?genre=platform" class="dropdown-item">Platform</a>
+                <a href="{% url 'games' %}?genre=shooter" class="dropdown-item">Shooter</a>
+                <a href="{% url 'games' %}?genre=sport" class="dropdown-item">Sport</a>
+                <a href="{% url 'games' %}?genre=simulator" class="dropdown-item">Simulator</a>
+                <a href="{% url 'games' %}?genre=rpg" class="dropdown-item">RPG</a>
+                <a href="{% url 'games' %}?genre=turn_based_strategy" class="dropdown-item">Turn Based Strategy</a>
+                <a href="{% url 'games' %}?genre=tactical" class="dropdown-item">Tactical</a>
+                <a href="{% url 'games' %}?genre=racing" class="dropdown-item">Racing</a>
+                <a href="{% url 'games' %}?genre=puzzle" class="dropdown-item">Puzzle</a>
+                <a href="{% url 'games' %}?genre=fighting" class="dropdown-item">Fighting</a>
+                <a href="{% url 'games' %}?genre=brawler" class="dropdown-item">Brawler</a>
+                <a href="{% url 'games' %}?genre=strategy" class="dropdown-item">Strategy</a>
+                <a href="{% url 'games' %}?genre=visual_novel" class="dropdown-item">Visual Novel</a>
+                <a href="{% url 'games' %}?genre=point_and_click" class="dropdown-item">Point-and-Click</a>
+                <a href="{% url 'games' %}?genre=indie" class="dropdown-item">Indie</a>
+                <a href="{% url 'games' %}?genre=music" class="dropdown-item">Music</a>
+                <a href="{% url 'games' %}?genre=card_and_board_game" class="dropdown-item">Card & Board Game</a>
              
             </div>
         </li>
@@ -39,10 +55,10 @@
                 Category
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="category-link">
-                <a href="#" class="dropdown-item">Top Sellers</a>
-                <a href="#" class="dropdown-item">All-Time Classics</a>
-                <a href="#" class="dropdown-item">Staff Picks</a>
-                <a href="#" class="dropdown-item">Retro Remasters</a>
+                <a href="{% url 'games' %}?category=top_sellers" class="dropdown-item">Top Sellers</a>
+                <a href="{% url 'games' %}?category=all_time_classics" class="dropdown-item">All-Time Classics</a>
+                <a href="{% url 'games' %}?category=staff_picks" class="dropdown-item">Staff Picks</a>
+                <a href="{% url 'games' %}?category=retro_remasters" class="dropdown-item">Retro Remasters</a>
             </div>
         </li>
 
@@ -52,10 +68,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="#" class="dropdown-item">Bundle Deals</a>
-                <a href="#" class="dropdown-item">Discounted Games</a>
-                <a href="#" class="dropdown-item">Seasonal Specials</a>
-                <a href="#" class="dropdown-item">All Specials</a>
+                <a href="{% url 'games' %}?category=bundle_deals" class="dropdown-item">Bundle Deals</a>
+                <a href="{% url 'games' %}?category=discounted_games" class="dropdown-item">Discounted Games</a>
+                <a href="{% url 'games' %}?category=seasonal_specials" class="dropdown-item">Seasonal Specials</a>
+                <a href="{% url 'games' %}?category=all_specials" class="dropdown-item">All Specials</a>
             </div>
         </li>
 
