@@ -15,8 +15,26 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="text-black">Games</h2>
+        <div class="col text-center page-margin">
+            <h2 class="text-black">
+                {% if current_genres %}
+                    {{ current_genres.0.friendly_name }} Games
+                {% else %}
+                    Games
+                {% endif %}
+            </h2>
+            
+            
+            {% for g in current_genres %}
+                <a class="genre-badge text-decoration-none" href="{% url 'games' %}?genre={{ g.name }}">
+                    <span class="p-2 mt-20 badge badge-white text-black rounded-1 border border-dark">{{ g.friendly_name }}</span>
+                </a>
+            {% endfor %}
+            {% for c in current_categories %}
+                <a class="category-badge text-decoration-none" href="{% url 'games' %}?category={{ c.name }}">
+                    <span class="p-2 mt-20 badge badge-white text-black rounded-1 border border-dark">{{ c.friendly_name }}</span>
+                </a>
+            {% endfor %}
             <hr class=" w-50 mb-1">
         </div>
     </div>
@@ -43,6 +61,17 @@
                             <div class="row">
                                 <div class="col">
                                     <p class="lea mb-0 text-left font-weight-bold">£{{ game.price }}</p>
+                                    {% if game.genre.all %}
+                                    <p class="mt-1 mb-0">
+                                        <i class="fas fa-tag mr-1"></i>
+                                        {% for genre in game.genre.all %}
+                                            <a class="text-muted" href="{% url 'games' %}?genre={{ genre.name }}" >
+                                               {{ genre.friendly_name }}
+                                            </a>
+                                            {% if not forloop.last %}|{% endif %}
+                                        {% endfor %}
+                                    </p>
+                                    {% endif %}
                                     {% if game.rating %}
                                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ game.rating }} /5</small>
                                     {% else %}

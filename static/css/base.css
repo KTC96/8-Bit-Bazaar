@@ -105,7 +105,17 @@ nav {
     object-fit: contain;
 }
 
-.game-container {
+
+.genre-badge {
+    margin-top: 250px;
+}
+
+a.genre-badge > span.badge:hover {
+    background: black;
+    color: white !important;
+}
+
+.page-margin {
     margin-top: 200px;
 }
 @media (min-width: 992px) {
@@ -117,6 +127,10 @@ nav {
 @media (max-width : 500px){
     .game-container {
         margin-top: 0;
+    }
+
+    .page-margin {
+        margin-top: 100px;
     }
 }
 
