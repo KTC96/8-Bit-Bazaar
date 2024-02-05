@@ -10,8 +10,23 @@ def all_games(request):
     query = None
     genres = None
     categories = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                games = games.annotate(lower_name=Lower('name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            games = games.order_by(sortkey)
+
         if 'genre' in request.GET:
             genres = request.GET['genre'].split(',')
             games = games.filter(genre__name__in=genres)
@@ -32,13 +47,15 @@ def all_games(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             games = games.filter(queries)
 
-    
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'games': games,
         'search_term': query, 
         'current_genres': genres,
         'current_categories': categories,
+        'current_sorting': current_sorting,
+
     }
 
     return render(request, 'games/games.html', context)
