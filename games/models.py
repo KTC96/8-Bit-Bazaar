@@ -59,7 +59,7 @@ class Review(models.Model):
 class Game(models.Model):
     genre = models.ManyToManyField(Genre)
     category = models.ForeignKey('Category', null=True, blank=True , on_delete=models.SET_NULL)
-    reviews = models.ManyToManyField(Review)
+    reviews = models.ManyToManyField(Review,blank=True)
     platform = models.ForeignKey('Platform', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
