@@ -2,67 +2,43 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Game, Genre, Category
+from .models import Game, Category
 
 def all_games(request):
-    """A view to show all games, with sorting and searching"""
+    """A view to show all games, including sorting and search queries"""
 
     games = Game.objects.all()
-    query = None
-    genres = None
+    query = request.GET.get('q')
     categories = None
-    sort = None
-    direction = None
+    sort = request.GET.get('sort')
+    direction = request.GET.get('direction')
 
-    if request.GET:
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
-            sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                games = games.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
-                sortkey = 'category__name'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            games = games.order_by(sortkey)
+    if sort == 'name':
+        sort_key = 'lower_name'
+        games = games.annotate(lower_name=Lower('name')).order_by(f'{sort_key}{"" if direction!="desc" else "-"}')
+    elif sort == 'category':
+        sort_key = 'category__name'
+        games = games.order_by(f'{sort_key}{"" if direction!="desc" else "-"}')
 
-        if 'genre' in request.GET:
-            genres = request.GET['genre'].split(',')
-            games = games.filter(genre__name__in=genres)
-            genres = Genre.objects.filter(name__in=genres)
+    if 'category' in request.GET:
+        categories = request.GET.getlist('category')
+        games = games.filter(category__name__in=categories)
+        categories = Category.objects.filter(name__in=categories)
 
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            games = games.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+    if query:
+        queries = Q(name__icontains=query) | Q(description__icontains=query)
+        games = games.filter(queries)
 
-
-        if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
-                messages.error(request, "You have not inputted any search criteria!")
-                return redirect(reverse('games'))
-
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            games = games.filter(queries)
-
-    current_sorting = f'{sort}_{direction}'
+    current_sorting = f'{sort}_{direction}' if sort and direction else None
 
     context = {
         'games': games,
-        'search_term': query, 
-        'current_genres': genres,
+        'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-
     }
 
     return render(request, 'games/games.html', context)
-
-
 
 def game_detail(request, game_id):
     """A view to show individual game details"""
