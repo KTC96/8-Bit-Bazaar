@@ -118,6 +118,18 @@ a.genre-badge > span.badge:hover {
 .page-margin {
     margin-top: 200px;
 }
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
 @media (min-width: 992px) {
     .text-lg-right {
         text-align: right !important;
