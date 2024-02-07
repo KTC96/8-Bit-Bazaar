@@ -77,6 +77,10 @@ nav {
     width: fit-content;
 }
 
+.navbar-collapse, .navbar {
+    padding: 0;
+}
+
 #topnav {
     background-color: #eeb8b6;
 }
