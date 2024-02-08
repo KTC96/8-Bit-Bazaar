@@ -48,7 +48,7 @@
                                         {% if item.game.on_sale %}
                                             <p class="my-0">£{{ item.discounted_price }}</p>
                                         {% else %}
-                                            <p class="my-0">${{ item.game.price }}</p>
+                                            <p class="my-0">£{{ item.game.price }}</p>
                                         {% endif %}
                                     </td>
                                     <td class="py-3 w-25">
