@@ -84,7 +84,15 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left text-black">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lea mb-0 text-left font-weight-bold">£{{ game.price }}</p>
+                                    {% if game.on_sale %}
+                                    <p><s>£{{ game.price }}</s></p>
+                                    <div class="bg-danger p-1 mb-3"> ON SALE</div>
+                                    <p class="lead">Price:£{{ game.discounted_price }}</p>
+                                   
+                                    
+                                {% else %}
+                                    <p class="lead">Price: £{{ game.price }}</p>
+                                {% endif %}
                                     {% if game.genre.all %}
                                     <p class="mt-1 mb-0">
                                         <i class="fas fa-tag mr-1"></i>

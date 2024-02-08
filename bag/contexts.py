@@ -1,4 +1,4 @@
-from decimal import Decimal
+from decimal import Decimal, ROUND_HALF_UP
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from games.models import Game
@@ -8,17 +8,19 @@ def bag_contents(request):
     total = 0
     game_count = 0
     bag = request.session.get('bag', {})
+    free_game_delta = 0
 
     for item_id, quantity in bag.items():
         game = get_object_or_404(Game, pk=item_id)
-        total += quantity * game.price
-        game_count += quantity
 
         if game.on_sale:
             sale_amount = Decimal(settings.SALE_AMOUNT)
-            discounted_price = game.price - (game.price * sale_amount)
+            discounted_price = round(game.price - (game.price * sale_amount), 2)
+            total += round(quantity * discounted_price, 2)
         else:
-            discounted_price = game.price
+            total += round(quantity * game.price, 2)
+
+        game_count += quantity
 
         bag_items.append({
             'item_id': item_id,
@@ -28,16 +30,14 @@ def bag_contents(request):
         })
 
     if total < settings.FREE_GAME_THRESHOLD:
-        free_game_delta = settings.FREE_GAME_THRESHOLD - total
-    else:
-        free_game_delta = 0
+        free_game_delta = round(settings.FREE_GAME_THRESHOLD - total, 2)
 
     context = {
         'bag_items': bag_items,
-        'total': total,
+        'total': round(total, 2),
         'game_count': game_count,
         'free_game_delta': free_game_delta,
-        'free_game_threshold': settings.FREE_GAME_THRESHOLD,
+        'free_game_threshold': round(settings.FREE_GAME_THRESHOLD, 2),
     }
 
     return context

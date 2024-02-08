@@ -1,8 +1,25 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+from games.models import Game
+from decimal import Decimal
+from django.conf import settings
 
 def view_bag(request):
     """ Returns the bag contents page"""
-    return render(request, 'bag/bag.html')
+
+    games = Game.objects.all()
+    for game in games:
+            if game.on_sale:
+                sale_amount = Decimal(settings.SALE_AMOUNT)
+                discounted_price = round(game.price - (game.price * sale_amount), 2)
+            else:
+                discounted_price = None
+
+
+    context = {
+            'discounted_price': discounted_price,
+    }
+
+    return render(request, 'bag/bag.html', context)
 
 
 def add_to_bag(request, item_id):

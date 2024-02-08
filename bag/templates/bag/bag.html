@@ -45,13 +45,21 @@
                                         <p class="my-0 small text-muted">SKU: {{ item.game.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.game.price }}</p>
+                                        {% if item.game.on_sale %}
+                                            <p class="my-0">£{{ item.discounted_price }}</p>
+                                        {% else %}
+                                            <p class="my-0">${{ item.game.price }}</p>
+                                        {% endif %}
                                     </td>
                                     <td class="py-3 w-25">
                                         <p class="my-0">{{ item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.game.price }}</p>
+                                        {% if item.game.on_sale %}
+                                            <p class="my-0">£{{ item.discounted_price }}</p>
+                                        {% else %}
+                                            <p class="my-0">${{ item.game.price }}</p>
+                                    {% endif %}
                                     </td>
                                 </tr>
                             {% endfor %}

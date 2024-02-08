@@ -8,7 +8,7 @@ from decimal import Decimal
 
 def all_games(request):
     """A view to show all games, including sorting and search queries"""
-
+    
     games = Game.objects.all()
     query = request.GET.get('q')
     categories = None
@@ -33,10 +33,12 @@ def all_games(request):
         games = games.filter(genre__name__in=genres)
         genres = Genre.objects.filter(name__in=genres)
 
-
-    if query:
-        queries = Q(name__icontains=query) | Q(description__icontains=query)
-        games = games.filter(queries)
+    for game in games:
+        if game.on_sale:
+            sale_amount = Decimal(settings.SALE_AMOUNT)
+            game.discounted_price = round(game.price - (game.price * sale_amount), 2)
+        else:
+            game.discounted_price = None
 
     current_sorting = f'{sort}_{direction}' if sort and direction else None
 
@@ -44,7 +46,7 @@ def all_games(request):
         'games': games,
         'search_term': query,
         'current_categories': categories,
-        'current_genres':genres,
+        'current_genres': genres,
         'current_sorting': current_sorting,
     }
 
@@ -57,13 +59,12 @@ def game_detail(request, game_id):
 
     if game.on_sale:
         sale_amount = Decimal(settings.SALE_AMOUNT)
-        discounted_price = round(game.price - (game.price * sale_amount),2)
+        discounted_price = round(game.price - (game.price * sale_amount), 2)
     else:
         discounted_price = None
 
     context = {
         'game': game,
         'discounted_price': discounted_price,
-        
     }
     return render(request, 'games/game_detail.html', context)
