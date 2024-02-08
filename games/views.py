@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Game, Category
+from .models import Game, Category, Genre
+from django.conf import settings
+from decimal import Decimal
 
 def all_games(request):
     """A view to show all games, including sorting and search queries"""
@@ -10,6 +12,7 @@ def all_games(request):
     games = Game.objects.all()
     query = request.GET.get('q')
     categories = None
+    genres = None
     sort = request.GET.get('sort')
     direction = request.GET.get('direction')
 
@@ -25,6 +28,12 @@ def all_games(request):
         games = games.filter(category__name__in=categories)
         categories = Category.objects.filter(name__in=categories)
 
+    if 'genre' in request.GET:
+        genres  = request.GET.getlist('genre')
+        games = games.filter(genre__name__in=genres)
+        genres = Genre.objects.filter(name__in=genres)
+
+
     if query:
         queries = Q(name__icontains=query) | Q(description__icontains=query)
         games = games.filter(queries)
@@ -35,6 +44,7 @@ def all_games(request):
         'games': games,
         'search_term': query,
         'current_categories': categories,
+        'current_genres':genres,
         'current_sorting': current_sorting,
     }
 
@@ -45,8 +55,15 @@ def game_detail(request, game_id):
 
     game = get_object_or_404(Game, pk=game_id)
 
+    if game.on_sale:
+        sale_amount = Decimal(settings.SALE_AMOUNT)
+        discounted_price = round(game.price - (game.price * sale_amount),2)
+    else:
+        discounted_price = None
+
     context = {
         'game': game,
+        'discounted_price': discounted_price,
+        
     }
-
     return render(request, 'games/game_detail.html', context)
