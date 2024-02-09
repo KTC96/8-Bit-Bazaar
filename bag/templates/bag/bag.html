@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -52,7 +53,7 @@
                                         {% endif %}
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form " method="post" action="#">
+                                        <form class="form update-form " method="post" action="{% url 'adjust_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group input-group-{{ item.item_id }}">
@@ -79,23 +80,23 @@
                                             </div>
                                         </form>
                                         <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-link text-danger float-right"><small>Delete</small></a>
+                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Delete</small></a>
                                     </td>
                                     <td class="py-3">
                                         {% if item.game.on_sale %}
-                                            <p class="my-0">£{{ item.game.discounted_price }}</p>
+                                            <p class="my-0">£{{ item.discounted_price | calc_subtotal:item.quantity }}</p>
                                         {% else %}
-                                            <p class="my-0">${{ item.game.price }}</p>
+                                            <p class="my-0">£{{ item.game.price | calc_subtotal:item.quantity }}</p>
                                     {% endif %}
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h4 class="mt-4"><strong>Total: ${{ total|floatformat:2 }}</strong></h4>
+                                    <h4 class="mt-4"><strong>Total: £{{ total|floatformat:2 }}</strong></h4>
                                     {% if free_game_delta > 0 %}
                                         <p class="mb-1 text-danger">
-                                            You could get an exclusive free game by spending just <strong>${{ free_game_delta }}</strong> more!
+                                            You could get an exclusive free game by spending just <strong>£{{ free_game_delta }}</strong> more!
                                         </p>
                                     {% endif %}
                                 </td>
@@ -144,10 +145,10 @@
     })
 
     // Remove item and reload on click
-    $('.delete-link').click(function(e) {
+    $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}`;
+        var url = `/bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
