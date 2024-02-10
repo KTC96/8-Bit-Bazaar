@@ -10,11 +10,11 @@ def all_games(request):
     """A view to show all games, including sorting and search queries"""
     
     games = Game.objects.all()
-    query = request.GET.get('q')
+    query = None
     categories = None
     genres = None
-    sort = request.GET.get('sort')
-    direction = request.GET.get('direction')
+    sort = None
+    direction = None
 
     if sort == 'name':
         sort_key = 'lower_name'
@@ -41,6 +41,15 @@ def all_games(request):
             game.discounted_price = None
 
     current_sorting = f'{sort}_{direction}' if sort and direction else None
+
+    if 'q' in request.GET:
+        query = request.GET['q']
+        if not query:
+            messages.error(request, "You didn't enter any search criteria!")
+            return redirect(reverse('games'))
+            
+        queries = Q(name__icontains=query) | Q(description__icontains=query)
+        games = games.filter(queries)
 
     context = {
         'games': games,
