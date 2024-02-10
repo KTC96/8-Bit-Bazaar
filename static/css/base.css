@@ -128,9 +128,27 @@ a.genre-badge > span.badge:hover {
     right: 10px;
 }
 
-.btt-link, .update-link, .remove-item {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 20px;
+}
+
 @media (min-width: 992px) {
     .text-lg-right {
         text-align: right !important;

@@ -1,6 +1,7 @@
+from decimal import Decimal
 from django.shortcuts import render, redirect, get_object_or_404, reverse, HttpResponse
 from games.models import Game
-from decimal import Decimal
+from django.contrib import messages
 from django.conf import settings
 
 def view_bag(request):
@@ -8,13 +9,12 @@ def view_bag(request):
 
     games = Game.objects.all()
     for game in games:
-            if game.on_sale:
-                sale_amount = Decimal(settings.SALE_AMOUNT)
-                discounted_price = round(game.price - (game.price * sale_amount), 2)
-            else:
-                discounted_price = None
-
-
+        if game.on_sale:
+            sale_amount = Decimal(settings.SALE_AMOUNT)
+            discounted_price = round(game.price - (game.price * sale_amount), 2)
+        else:
+            discounted_price = None
+    
     context = {
             'discounted_price': discounted_price,
     }
@@ -24,7 +24,8 @@ def view_bag(request):
 
 def add_to_bag(request, item_id):
     """ Add a quantity of the game to the shopping bag """
-
+    
+    game = Game.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
@@ -33,6 +34,7 @@ def add_to_bag(request, item_id):
         bag[item_id] += quantity
     else:
         bag[item_id] = quantity
+        messages.success(request, f'Added {game.friendly_name} to your bag')
         
 
     request.session['bag'] = bag
