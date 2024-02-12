@@ -71,11 +71,11 @@
                     <div class="card h-100 border-0">
                         {% if game.image %}
                         <a href="{% url 'game_detail' game.id %}">
-                            <img class="card-img-top img-fluid game-image" src="{{ MEDIA_URL}}/media/media/games/{{game.name}}.webp" alt="{{ game.name }}">
+                            <img class="card-img-top img-fluid game-image" src="{{ MEDIA_URL}}/{{game.name}}.webp" alt="{{ game.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'game_detail' game.id %}">
-                            <img class="card-img-top img-fluid game-image" src="{{ MEDIA_URL}}image_not_found.webp" alt="{{ game.name }}">
+                            <img class="card-img-top img-fluid game-image" src="{{ MEDIA_URL}}/image_not_found.webp" alt="{{ game.name }}">
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
