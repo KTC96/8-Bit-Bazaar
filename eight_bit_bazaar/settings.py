@@ -174,6 +174,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#Stripe
+
 FREE_GAME_THRESHOLD = 60
 SALE_PERCENTAGE = 20
 SALE_AMOUNT = SALE_PERCENTAGE / 100.0
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
