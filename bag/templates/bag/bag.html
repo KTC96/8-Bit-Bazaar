@@ -39,7 +39,7 @@
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="game-image rounded" src="{{ MEDIA_URL }}{{ item.game.name }}.webp">
+                                        <img class="game-image rounded" src="{{ MEDIA_URL }}/games/{{ item.game.name }}.webp">
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.game.friendly_name }}</strong></p>

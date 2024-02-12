@@ -41,9 +41,9 @@
                         <div class="col-2 mb-1">
                             <a href="{% url 'game_detail' item.game.id %}">
                                 {% if item.game.image %}
-                                    <img src="{{ MEDIA_URL }}{{ item.game.name }}.webp" alt="Game Image">
+                                    <img src="{{ MEDIA_URL }}/games/{{ item.game.name }}.webp" alt="Game Image">
                                 {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}/noimage.png" alt="{{ item.game.name }}">
+                                    <img class="w-100" src="{{ MEDIA_URL }}/games/noimage.png" alt="{{ item.game.name }}">
                                 {% endif %}
                             </a>
                         </div>
@@ -92,16 +92,17 @@
                         {{ order_form.street_address2 | as_crispy_field }}
                         {{ order_form.county | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0">
-							{% if user.is_authenticated %}
-								<label class="form-check-label" for="id-save-info">Save this billing information to my profile</label>
+                            {% if user.is_authenticated %}
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-							{% else %}
-								<label class="form-check-label" for="id-save-info">
+                                <label class="form-check-label" for="id-save-info">Save this billing information to my profile</label>
+                            {% else %}
+                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info">
+                                <label class="form-check-label" for="id-save-info">
                                     <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
                                     <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                                 </label>
-							{% endif %}
-						</div>
+                            {% endif %}
+                        </div>
                     </fieldset>
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>

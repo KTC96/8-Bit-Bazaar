@@ -45,10 +45,6 @@
 
     {% block favicon %}
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
-    <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/media/'images/favicon-16x16.png">
-    <link rel="manifest" href="/media/site.webmanifest">
     {% endblock %}
 
     <title>8Bit Bazaar {% block extra_title %}{% endblock %}</title>
@@ -59,7 +55,7 @@
         <div id="topnav" class="row  pt-lg-2 d-none d-lg-flex ">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class=" d-flex align-items-center nav-link main-logo-link">
-                    <img class="logo-image " src="/media/pp5_logo.png">
+                    <img class="logo-image " src="{{ MEDIA_URL}}pp5_logo.png">
                     <h1 class="logo-font text-black my-0">8Bit Bazaar </h1>
                 </a>
             </div>
