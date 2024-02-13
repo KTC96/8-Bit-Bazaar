@@ -64,7 +64,7 @@ class OrderLineItem(models.Model):
         and update the order total.
         """
 
-        if self.game.on_sale:
+        if hasattr(self.game, 'discounted_price') and self.game.discounted_price is not None:
             self.lineitem_total = self.game.discounted_price * self.quantity
         else:
             self.lineitem_total = self.game.price * self.quantity 
@@ -72,6 +72,4 @@ class OrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'SKU {self.product.sku} on order {self.order.order_number}'
-    
-    
+        return f'SKU {self.game.sku} on order {self.order.order_number}'
