@@ -1,46 +1,193 @@
 {% extends "account/base.html" %}
+{% load static %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/gameboy.css' %}">
+{% endblock %}
+
 
 {% load i18n %}
 {% load account socialaccount %}
 
+
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
-{% block content %}
+{% block inner_content %}
 
-<h1>{% trans "Sign In" %}</h1>
+<hr>
+<h2 class="logo-font mb-4">{% trans "Sign In" %}</h2>
+<hr>
 
-{% get_providers as socialaccount_providers %}
+<div class="gameboy text-center" style="margin-top:100px" id="GameBoy">
+  
+  <div class="screen-area">
+    
+    <div class="power">
+      <div class="indicator">
+        <div class="led"></div>
+        <span class="arc" style="z-index:2"></span>
+        <span class="arc" style="z-index:1"></span>
+        <span class="arc" style="z-index:0"></span>
+      </div>
+      POWER
+    </div>
+    <div>
+      {% get_providers as socialaccount_providers %}
 
-{% if socialaccount_providers %}
-<p>{% blocktrans with site.name as site_name %}Please sign in with one
-of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+      {% if socialaccount_providers %}
+      <p>{% blocktrans with site.name as site_name %}Please sign in with one
+      of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+      for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
-<div class="socialaccount_ballot">
+      <div class="socialaccount_ballot">
 
-  <ul class="socialaccount_providers">
-    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-  </ul>
+        <ul class="socialaccount_providers">
+          {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+        </ul>
 
-  <div class="login-or">{% trans 'or' %}</div>
+        <div class="login-or">{% trans 'or' %}</div>
 
+      </div>
+
+      {% include "socialaccount/snippets/login_extra.html" %}
+
+      {% else %}
+      <p>{% blocktrans %}If you have not created an account yet, then please
+      <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+      {% endif %}
+
+      <form class="login d-flex flex-column align-items-center" method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <a class="btn btn-outline-white text-white rounded-0" href="{% url 'home' %}">Home</a>
+        <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+        <p class="mt-2">
+          <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+        </p>
+      </form>
+    </div>
+    
+    <!-- <canvas class="display" id="mainCanvas">
+      <p style="z-index: 999999"> HEllo
+
+
+      
+    </canvas> -->
+    
+    <div class="label">
+      <div class="title">GAME BOY</div>
+      <div class="subtitle">
+        <span class="c">C</span><!--
+     --><span class="o1">O</span><!--
+     --><span class="l">L</span><!--
+     --><span class="o2">O</span><!--
+     --><span class="r">R</span>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="nintendo">Nintendo</div>
+  
+  <div class="controls">
+    <div class="dpad">
+      <div class="up"><i class="fa fa-caret-up"></i></div>
+      <div class="right"><i class="fa fa-caret-right"></i></div>
+      <div class="down"><i class="fa fa-caret-down"></i></div>
+      <div class="left"><i class="fa fa-caret-left"></i></div>
+      <div class="middle"></div>
+    </div>
+    <div class="a-b">
+      <div class="b">B</div>
+      <div class="a">A</div>
+    </div>
+  </div>
+  
+  <div class="start-select">
+    <div class="select">SELECT</div>
+    <div class="start">START</div>
+  </div>
+  
+  <div class="speaker">
+    <div class="dot placeholder"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot placeholder"></div>
+    
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+
+    <div class="dot placeholder"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot closed"></div>
+    <div class="dot open"></div>
+    <div class="dot placeholder"></div>
+  </div>
+  
 </div>
 
-{% include "socialaccount/snippets/login_extra.html" %}
 
-{% else %}
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-{% endif %}
 
-<form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-</form>
+
 
 {% endblock %}
