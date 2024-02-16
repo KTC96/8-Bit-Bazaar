@@ -124,3 +124,10 @@ def edit_game(request, game_id):
     }
 
     return render(request, template, context)
+
+def delete_game(request, game_id):
+    """ Delete a game from the store """
+    game = get_object_or_404(Game, pk=game_id)
+    game.delete()
+    messages.success(request, 'Game deleted!')
+    return redirect(reverse('games'))
