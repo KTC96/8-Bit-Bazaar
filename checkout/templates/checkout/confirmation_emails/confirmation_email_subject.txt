@@ -1,0 +1,1 @@
+8Bit Bazaar Order Confirmation! Order {{ order.order_number }} 
