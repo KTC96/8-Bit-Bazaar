@@ -1,0 +1,1 @@
+web: gunicorn eight_bit_bazaar.wsgi:application

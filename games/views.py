@@ -84,7 +84,7 @@ def game_detail(request, game_id):
 @login_required
 def add_game(request):
     """ Add a game to the shop """
-    if not request.user_is_superuser:
+    if not request.user.is_superuser:
         messages.error(request, 'Sorry, that action is for the 8BitBazaar team only!')
         return redirect(reverse('home'))
     
@@ -108,7 +108,7 @@ def add_game(request):
 @login_required
 def edit_game(request, game_id):
     """ Edit a game in the shop """ 
-    if not request.user_is_superuser:
+    if not request.user.is_superuser:
         messages.error(request, 'Sorry, that action is for the 8BitBazaar team only!')
         return redirect(reverse('home'))
 
@@ -140,7 +140,7 @@ def edit_game(request, game_id):
 @login_required
 def delete_game(request, game_id):
     """ Delete a game from the shop """
-    if not request.user_is_superuser:
+    if not request.user.is_superuser:
         messages.error(request, 'Sorry, that action is for the 8BitBazaar team only!')
         return redirect(reverse('home'))
 
