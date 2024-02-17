@@ -4,8 +4,10 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 from .models import Game, Category, Genre
 from .forms import GameForm
+
 
 def all_games(request):
     """A view to show all games, including sorting and search queries"""
@@ -79,8 +81,13 @@ def game_detail(request, game_id):
     }
     return render(request, 'games/game_detail.html', context)
 
+@login_required
 def add_game(request):
     """ Add a game to the shop """
+    if not request.user_is_superuser:
+        messages.error(request, 'Sorry, that action is for the 8BitBazaar team only!')
+        return redirect(reverse('home'))
+    
     if request.method == 'POST':
         form = GameForm(request.POST, request.FILES)
         if form.is_valid():
@@ -98,8 +105,13 @@ def add_game(request):
     }
     return render(request, template, context)
 
+@login_required
 def edit_game(request, game_id):
     """ Edit a game in the shop """ 
+    if not request.user_is_superuser:
+        messages.error(request, 'Sorry, that action is for the 8BitBazaar team only!')
+        return redirect(reverse('home'))
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry only store owners can do that.')
         return redirect(reverse('home'))
@@ -125,8 +137,13 @@ def edit_game(request, game_id):
 
     return render(request, template, context)
 
+@login_required
 def delete_game(request, game_id):
-    """ Delete a game from the store """
+    """ Delete a game from the shop """
+    if not request.user_is_superuser:
+        messages.error(request, 'Sorry, that action is for the 8BitBazaar team only!')
+        return redirect(reverse('home'))
+
     game = get_object_or_404(Game, pk=game_id)
     game.delete()
     messages.success(request, 'Game deleted!')
