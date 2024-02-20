@@ -40,7 +40,7 @@
                                 <tr>
                                     <td class="p-3 w-25">
                                         {% if item.game.image %}
-                                        <img class="game-image rounded img-fluid" src="{{ MEDIA_URL }}/games/{{ item.game.name }}.webp" alt="{{ item.game.name }}">
+                                        <img class="game-image rounded img-fluid" src="{{ item.game.image.url }}" alt="{{ item.game.name }}">
                                         {% else %}
                                         <img class="game-image rounded img-fluid" src="{{ MEDIA_URL }}placeholder.png" alt="{{ item.game.name }}">
                                         {% endif %}
