@@ -111,6 +111,29 @@
         
     </div>
 </div>
+<div class="reviews mt-4">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="mb-4">Customer Reviews</h2>
+                {% for review in reviews %}
+                    <div class="card bg-dark text-light mb-3">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="card-title">{{ review.name }}</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{ review.body }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="card-text">{{ review.author }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+   
 <div class="modal" tabindex="-1" role="dialog" id="deleteModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

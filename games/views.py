@@ -5,8 +5,9 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
-from .models import Game, Category, Genre
-from .forms import GameForm
+from .models import Game, Category, Genre, Review
+from .forms import GameForm, ReviewForm
+
 
 
 def all_games(request):
@@ -68,6 +69,7 @@ def game_detail(request, game_id):
     """A view to show individual game details"""
 
     game = get_object_or_404(Game, pk=game_id)
+    reviews = Review.objects.filter(game=game)
 
     if game.on_sale:
         sale_amount = Decimal(settings.SALE_AMOUNT)
@@ -78,6 +80,7 @@ def game_detail(request, game_id):
     context = {
         'game': game,
         'discounted_price': discounted_price,
+        'reviews': reviews,
     }
     return render(request, 'games/game_detail.html', context)
 
@@ -148,3 +151,43 @@ def delete_game(request, game_id):
     game.delete()
     messages.success(request, 'Game deleted!')
     return redirect(reverse('games'))
+
+@login_required
+def review(request, game_id):
+    game = get_object_or_404(Game, id=game_id)
+    user_profile = request.user.userprofile
+
+    # Check if user has made any orders
+    if not user_profile.orders.exists():
+        messages.error(request, "To leave a review on a game, you must purchase it first")
+        return redirect('game_detail', game_id)
+
+    # Check if user has purchased the specific game
+    if not any(item.game == game for order in user_profile.orders.all() for item in order.line_items.all()):
+        messages.error(request, "You must have purchased this game to review it.")
+        return redirect('game_detail', game_id)
+
+   # Check if the user has already reviewed the game
+    if Review.objects.filter(game=game, author=request.user).exists():
+        messages.error(request, "You have already reviewed this game. Please update or delete your existing review.")
+        return redirect('game_detail', game_id)
+
+    form = ReviewForm()
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.game = game
+            review.user = request.user
+            review.save()
+
+            messages.success(request, "Your review has been added.")
+            return redirect('game_detail', game_id)
+
+    context = {
+        'game': game,
+        'form': form,
+    }
+
+    return render(request, 'review.html', context)
