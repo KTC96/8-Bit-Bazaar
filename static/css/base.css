@@ -4,8 +4,10 @@ html {
 }
 
 body {
-    background-color: #eeb8b6;
+    background-image: url('../background.jpg');
     width: 100%;
+    background-size: cover;
+    
     min-height: 100vh;
     font-family: 'VT323', sans-serif;
     margin: 0; 
@@ -272,6 +274,13 @@ a.genre-badge > span.badge:hover {
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
 }
+
+/* Game Detail ------------------------------------------------------------------------------ */
+
+.game-details {
+    background-color: #eeb8b6;
+}
+
 
 /* Add/Edit game form  ------------------------------------------------------------------------------ */
 

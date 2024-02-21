@@ -3,6 +3,11 @@
 {% block favicon %}
 {% endblock %}
 
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/buttons.css' %}">
+{% endblock %}
+
+
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -12,127 +17,176 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container-fluid">
-    <div class="row">
-        
-        <div class="col-12">
-            <div class="image-container my-5">
-                {% if game.image %}
-                    <a href="#">
-                        <img class="card-img-top img-fluid game-image" src="{{ game.image.url }}" alt="{{ game.name }}">
-                    </a>
-                    {% else %}
-                    <a href="#">
-                        <img class="card-img-top img-fluid game-image" src="{{ MEDIA_URL }}/games/image_not_found.webp" alt="{{ game.name }}">
-                    </a>
-                {% endif %}
+<div class="game-details mt-5 mx-auto my-4 col-8 ">
+   
+        <div class="row text-center">
+            <div class="col-md-12">
+                <div class="page-header my-3">
+                    <h1>
+                        {{ game.friendly_name }}
+                    </h1>
+                </div>
             </div>
         </div>
-        <div class="col-12">
-            <div class="game-details-container mb-5 text-center d-flex flex-column align-items-center">
-                <p class="mb-0">{{ game.friendly_name }}</p>
-                {% if game.on_sale %}
-                    <p><s>£{{ game.price }}</s></p>
-                    <div class="bg-danger p-1 mb-3"> ON SALE</div>
-                    <p>£{{ discounted_price }}</p>
-                {% else %}
-                    <p class="lead">Price: £{{ game.price }}</p>
-                {% endif %}
-                {% if game.genre.all %}
-                    <p class="mt-1 mb-0">
-                        <i class="fas fa-tag mr-1"></i>
-                        {% for genre in game.genre.all %}
-                            <a class="text-muted" href="{% url 'games' %}?genre={{ genre.name }}" >
-                                {{ genre.friendly_name }}
-                            </a>
-                            {% if not forloop.last %}|{% endif %}
-                        {% endfor %}
-                    </p>
-                    {% endif %}
-                {% if game.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ game.rating }} / 5</small>
-                {% else %}
-                <small class="text-muted">No Rating</small>
-                {% endif %}
-                {% if request.user.is_superuser %}
-                    <small class="ml-3">
-                        <a href="{% url 'edit_game' game.id %}">Edit</a>
-                        <a class="text-danger delete-link" href="#" data-href="{% url 'delete_game' game.id %}">Delete</a>
-                </small>
-                {% endif %}
-                <p class="mt-3 w-50 p-3">{{ game.description }}</p>
-                <form class="form" action="{% url 'add_to_bag' game.id %}" method="POST">
-                    {% csrf_token %}
-                    <div class="form-row">
-                        <div class="col-12 d-flex flex-column align-items-center">
-                            <p class="mt-3"><strong>Quantity:</strong></p>
-                            <div class="form-group">
-                                <div class="input-group input-group-{{ item.item_id }}">
-                                    <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ item.item_id }}" 
-                                            data-item_id="{{ item.item_id }}">
-                                            <span class="icon">
-                                                <i class="fas fa-minus"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <input class="form-control qty_input id_qty_{{ item.item_.id }}" type="number"
-                                        name="quantity" value="1" min="1" max="99"
-                                        data-item_id="{{ item.item_id }}">
-                                    <div class="input-group-append">
-                                        <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ item.item_id }}"
-                                            data-item_id="{{ item.item_id }}">
-                                            <span class="icon">
-                                                <i class="fas fa-plus"></i>
-                                            </span>
-                                        </button>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-8">
+                <div class="row d-flex">
+                    <div class="col-md-8 d-flex ">
+                        
+                            {% if game.image %}
+                                <a href="#">
+                                    <img class="card-img-top img-fluid game-image" src="{{ game.image.url }}" alt="{{ game.name }}">
+                                </a>
+                                {% else %}
+                                <a href="#">
+                                    <img class="card-img-top img-fluid game-image" src="{{ MEDIA_URL }}/games/image_not_found.webp" alt="{{ game.name }}">
+                                </a>
+                            {% endif %}
+                           
+                    </div>
+                    <div class="col-md-4 text-center">
+                        
+                        {% if game.on_sale %}
+                            <p ><s>£{{ game.price }}</s></p>
+                            <div class="bg-danger p-1 mb-3"> ON SALE</div>
+                            <p>£{{ discounted_price }}</p>
+                        {% else %}
+                            <p class="lead">Price: £{{ game.price }}</p>
+                        {% endif %}
+                        <form class="form" action="{% url 'add_to_bag' game.id %}" method="POST">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <div class="col-12 d-flex flex-column align-items-center">
+                                    <p class="mt-3"><strong>Quantity:</strong></p>
+                                    <div class="form-group">
+                                        <div class="input-group input-group-{{ item.item_id }}">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ item.item_id }}" 
+                                                    data-item_id="{{ item.item_id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-minus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control qty_input id_qty_{{ item.item_.id }}" type="number"
+                                                name="quantity" value="1" min="1" max="99"
+                                                data-item_id="{{ item.item_id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ item.item_id }}"
+                                                    data-item_id="{{ item.item_id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+        
+                                <div class="col{% if s %}-12 mt-2{% endif %}">
+                                    <div role='button' class='retro-btn sm primary' onclick="window.location.href='{% url 'games' %}';">
+                                        <a class='btn'> 
+                                            <span class='btn-inner'>
+                                                <span class='content-wrapper'>
+                                                    <span class='btn-content'>
+                                                        <span class='btn-content-inner' label='Keep Shopping'>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                          
+                                    <div role='button' class='retro-btn sm success' onclick="document.getElementById('submitButton').click();">
+                                        <a class='btn'> 
+                                            <span class='btn-inner'>
+                                                <span class='content-wrapper'>
+                                                    <span class='btn-content'>
+                                                        <span class='btn-content-inner' label='Add to Bag'>
+                                                            
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <input type="submit" id="submitButton" class="hidden">
+                                    </div>
+                                </div>
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                <style>
+                                    .hidden {
+                                        display: none;
+                                    }
+                                </style>
+                                
+                            </div>
+                        </form>
+                       
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 ml-3">
+                        {% if game.genre.all %}
+                        <p class="mt-1 mb-0">
+                            <i class="fas fa-tag mr-1"></i>
+                            {% for genre in game.genre.all %}
+                                <a class="text-muted" href="{% url 'games' %}?genre={{ genre.name }}" >
+                                    {{ genre.friendly_name }}
+                                </a>
+                                {% if not forloop.last %}|{% endif %}
+                            {% endfor %}
+                        </p>
+                        {% endif %}
+                        {% if game.rating %}
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ game.rating }} / 5</small>
+                        {% else %}
+                        <small class="text-muted">No Rating</small>
+                        {% endif %}
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_game' game.id %}">Edit</a>
+                                <a class="text-danger delete-link" href="#" data-href="{% url 'delete_game' game.id %}">Delete</a>
+                        </small>
+                        {% endif %} 
+                    </div>
+                </div>
+                
+            </div>
+        
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-8">
+                <p class="mt-3 p-3">{{ game.description }}</p>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="reviews mt-4">
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-md-8 offset-md-2">
+                                <h2 class="mb-4">Customer Reviews</h2>
+                                {% for review in reviews %}
+                                    <div class="card bg-dark text-light mb-3">
+                                        <div class="card-header d-flex justify-content-between align-items-center">
+                                            <h5 class="card-title">{{ review.name }}</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">{{ review.body }}</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <p class="card-text">{{ review.author }}</p>
+                                            <p> {{ review.created_on }}
+                                        </div>
+                                    </div>
+                                {% endfor %}
                             </div>
                         </div>
-
-                        <div class="col{% if s %}-12 mt-2{% endif %}">
-                            <a href="{% url 'games' %}" class="btn rounded-0 mt-5">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
-                        </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        
                     </div>
-                </form>
-            </div>
-            
-        </div>
-        
-    </div>
-</div>
-<div class="reviews mt-4">
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <h2 class="mb-4">Customer Reviews</h2>
-                {% for review in reviews %}
-                    <div class="card bg-dark text-light mb-3">
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <h5 class="card-title">{{ review.name }}</h5>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">{{ review.body }}</p>
-                        </div>
-                        <div class="card-footer">
-                            <p class="card-text">{{ review.author }}</p>
-                            <p> {{ review.created_on }}
-                        </div>
-                    </div>
-                {% endfor %}
             </div>
         </div>
-    </div>
+    
 </div>
    
 <div class="modal" tabindex="-1" role="dialog" id="deleteModal">
@@ -172,5 +226,8 @@
         });
     });
 </script>
+
 {% include 'games/includes/quantity_input_script.html' %}
 {% endblock %}
+
+
