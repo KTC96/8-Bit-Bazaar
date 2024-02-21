@@ -7,6 +7,7 @@ from django.shortcuts import get_object_or_404
 from games.models import Game
 from profiles.models import UserProfile
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 
 
@@ -89,3 +90,8 @@ class Discount(models.Model):
         """Check if the discount code is valid based on the start and end dates and user type."""
         today = timezone.now().date()
         return self.start_date <= today <= self.end_date and (not self.for_new_users or is_new_user)
+
+class AppliedDiscount(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    discount = models.ForeignKey(Discount, on_delete=models.CASCADE)
+    purchase_date = models.DateTimeField(auto_now_add=True)

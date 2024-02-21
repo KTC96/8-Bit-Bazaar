@@ -9,11 +9,12 @@ from bag.contexts import bag_contents
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from .forms import OrderForm
-from .models import Order, OrderLineItem, Discount
+from .models import Order, OrderLineItem, Discount, AppliedDiscount
 
 
 import stripe
 from django.utils import timezone
+from django.db import transaction
 
 
 @require_POST
@@ -221,28 +222,39 @@ def checkout_success(request, order_number):
 def apply_discount(request):
     if request.method == 'POST':
         discount_code = request.POST.get('discount_code')
+
         try:
             discount = Discount.objects.get(code=discount_code)
-            is_new_user = request.user.is_authenticated and request.user.date_joined.date() == timezone.now().date()
 
-            bag = request.session.get('bag', {})
+            if request.user.is_authenticated:
+                # Check if the discount has already been applied for this purchase
+                applied_discount_exists = AppliedDiscount.objects.filter(user=request.user, discount=discount).exists()
 
-            # Calculate total directly
-            total_before_discount = sum(
-                float(item_data['discounted_price']) if 'discounted_price' in item_data else float(item_data['game'].price)
-                for item_data in bag_contents(request)['bag_items']
-            )
+                if not applied_discount_exists:
+                    bag = request.session.get('bag', {})
 
-            discount_amount = total_before_discount * discount.percentage / 100
-            discounted_total = total_before_discount - discount_amount
+                    # Calculate total directly
+                    total_before_discount = sum(
+                        float(item_data['discounted_price']) if 'discounted_price' in item_data else float(item_data['game'].price)
+                        for item_data in bag_contents(request)['bag_items']
+                    )
 
-            # Convert Decimal values to float for serialization
-            request.session['discounted_total'] = float(discounted_total)
-            request.session['discount_amount'] = float(discount_amount)
-            messages.success(request, f'Discount "{discount_code}" applied successfully!')
+                    discount_amount = total_before_discount * discount.percentage / 100
+                    discounted_total = total_before_discount - discount_amount
+
+                    # Apply the discount
+                    AppliedDiscount.objects.create(user=request.user, discount=discount)
+                    
+                    # Convert Decimal values to float for serialization
+                    request.session['discounted_total'] = float(discounted_total)
+                    request.session['discount_amount'] = float(discount_amount)
+                    messages.success(request, f'Discount "{discount_code}" applied successfully!')
+                else:
+                    messages.info(request, 'Discount has already been applied for this purchase.')
+            else:
+                messages.warning(request, 'You need to be logged in to apply a discount. Please log in or create an account.')
         except Discount.DoesNotExist:
             messages.error(request, f'Invalid discount code "{discount_code}"')
 
-       
     # Redirect back to the checkout page
     return redirect('checkout')
