@@ -6,6 +6,7 @@ from django_countries.fields import CountryField
 from django.shortcuts import get_object_or_404
 from games.models import Game
 from profiles.models import UserProfile
+from django.utils import timezone
 
 
 
@@ -23,6 +24,7 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
+    discount_amount = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     original_bag = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
@@ -75,3 +77,15 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'SKU {self.game.sku} on order {self.order.order_number}'
+
+class Discount(models.Model):
+    code = models.CharField(max_length=20, unique=True)
+    percentage = models.PositiveIntegerField()
+    start_date = models.DateField()
+    end_date = models.DateField()
+    for_new_users = models.BooleanField(default=False)
+
+    def is_valid(self, is_new_user):
+        """Check if the discount code is valid based on the start and end dates and user type."""
+        today = timezone.now().date()
+        return self.start_date <= today <= self.end_date and (not self.for_new_users or is_new_user)

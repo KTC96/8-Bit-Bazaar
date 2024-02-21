@@ -9,9 +9,11 @@ from bag.contexts import bag_contents
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from .forms import OrderForm
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, Discount
+
 
 import stripe
+from django.utils import timezone
 
 
 @require_POST
@@ -35,9 +37,37 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
+   # Check if discount code is submitted
+    if request.method == 'POST' and 'discount_code' in request.POST:
+        discount_code = request.POST['discount_code']
+        try:
+            discount = Discount.objects.get(code=discount_code, start_date__lte=timezone.now(), end_date__gte=timezone.now())
+
+            # Check if the discount is valid and applicable
+            is_new_user = request.user.is_authenticated and request.user.date_joined.date() == timezone.now().date()
+            if discount.is_valid(is_new_user):
+                # Apply discount logic here
+                bag = request.session.get('bag', {})
+
+                # Check if discounted total is available in session
+                discounted_total = request.session.get('discounted_total', None)
+                if discounted_total is None:
+                    # Calculate total and apply discount if not available in session
+                    current_bag = bag_contents(request)
+                    total = current_bag['total']
+                    discounted_total = total - (total * discount.amount)
+                    # Store the discounted total in the session
+                    request.session['discounted_total'] = discounted_total
+
+                messages.success(request, f'Discount "{discount_code}" applied successfully!')
+            else:
+                messages.error(request, f'Discount code "{discount_code}" is not valid for your user type.')
+        except Discount.DoesNotExist:
+            messages.error(request, f'Invalid discount code "{discount_code}"')
+
+
     if request.method == 'POST':
         bag = request.session.get('bag', {})
-
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -84,7 +114,13 @@ def checkout(request):
             return redirect(reverse('games'))
 
         current_bag = bag_contents(request)
-        total = current_bag['total']
+        total = 0
+
+        for item in current_bag['bag_items']:
+            # Check if the game is already discounted
+            discounted_price = item['discounted_price'] if item['discounted_price'] else item['game'].price
+            total += round(item['quantity'] * discounted_price, 2)
+
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
@@ -110,7 +146,6 @@ def checkout(request):
                 order_form = OrderForm()
         else:
             order_form = OrderForm()
-        
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -121,6 +156,8 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+        'discounted_total': request.GET.get('discounted_total'),
+        'discount_amount': request.GET.get('discount_amount'),
     }
 
     return render(request, template, context)
@@ -132,6 +169,14 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
+
+    # Check if discounted total and discount amount are available in session
+    discounted_total = request.session.get('discounted_total', None)
+    discount_amount = request.session.get('discount_amount', None)
+
+    if discounted_total:
+        order.total = discounted_total
+        order.save()
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
@@ -157,12 +202,47 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. Keep an eye on your email \
         at {order.email} for a confirmation message.")
 
+    # Retrieve discount_amount for displaying in the template
+    discount_amount = request.session.get('discount_amount', None)
+
     if 'bag' in request.session:
         del request.session['bag']
 
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'discount_amount': discount_amount,  # Include discount amount in the context
     }
 
     return render(request, template, context)
+
+
+
+def apply_discount(request):
+    if request.method == 'POST':
+        discount_code = request.POST.get('discount_code')
+        try:
+            discount = Discount.objects.get(code=discount_code)
+            is_new_user = request.user.is_authenticated and request.user.date_joined.date() == timezone.now().date()
+
+            bag = request.session.get('bag', {})
+
+            # Calculate total directly
+            total_before_discount = sum(
+                float(item_data['discounted_price']) if 'discounted_price' in item_data else float(item_data['game'].price)
+                for item_data in bag_contents(request)['bag_items']
+            )
+
+            discount_amount = total_before_discount * discount.percentage / 100
+            discounted_total = total_before_discount - discount_amount
+
+            # Convert Decimal values to float for serialization
+            request.session['discounted_total'] = float(discounted_total)
+            request.session['discount_amount'] = float(discount_amount)
+            messages.success(request, f'Discount "{discount_code}" applied successfully!')
+        except Discount.DoesNotExist:
+            messages.error(request, f'Invalid discount code "{discount_code}"')
+
+       
+    # Redirect back to the checkout page
+    return redirect('checkout')

@@ -131,6 +131,8 @@
                                     {% endif %}
                                 </div>
                             </div>
+                            
+                        
                             <fieldset class="px-3">
                                 <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                                 <!-- A Stripe card element will go here -->
@@ -154,10 +156,22 @@
                                 </div>
                             </div>
                         </form>
+                        <div class="my-4">
+                            <h3 class="h3">Discount Code</h3>
+                            <form method="post" action="{% url 'apply_discount' %}">
+                                {% csrf_token %}
+                                <input type="text" name="discount_code" placeholder="Enter discount code">
+                                <button type="submit" class="btn btn-outline-secondary">Apply</button>
+                            </form>
+                        </div>
+                        
                     </div>
                 </div>
+                
             </div>
+            
             {% comment %} Order Summary {% endcomment %}
+           
             <div class="col-12 col-lg-6">
                 <div class="row justify-content-start">
                     <div class="col-12 col-lg-10">
@@ -182,14 +196,22 @@
                                     </div>
                                     <div class="col-3 text-right">
                                         <p class="my-0 small text-muted">
-                                            {% if item.game.on_sale %}
-                                                £{{ item.discounted_price | calc_subtotal:item.quantity}}
-                                            {% else %}
-                                                £{{ item.game.price | calc_subtotal:item.quantity}}
+                                            {% for item in bag_items %}
+                                                <p>Game: {{ item.game.name }}</p>
+                                                <p>Quantity: {{ item.quantity }}</p>
+                                                <p>Price: {{ item.discounted_price }}</p>
+                                            {% endfor %}
+                                            <p>Total:{{ total }}</p>
+                                    
+                                          
+                                            {% if request.session.discount_amount %}
+                                                <p>Discount Amount: {{ request.session.discount_amount| floatformat:2 }}</p>
                                             {% endif %}
+                                    
+                                            <p>Total: {{ request.session.discounted_total }}</p>
                                         </p>
                                     </div>
-                                </div>
+                                </div> 
                                 {% endfor %}
                                 
                             </div>
@@ -201,7 +223,13 @@
                                     <p class="h6 text-right"><strong>Total</strong></p>
                                 </div>
                                 <div class="col-2">
+                                    {% if request.session.discounted_total %}
+                                        <p>{{ request.session.discounted_total| floatformat:2 }}</p>
+                                    {% else %}
                                     <p class="h6 text-right">€{{ total|floatformat:2 }}</p>
+                                    {% endif %}
+                        
+                                    
                                 </div>
                             </div>
                         </div>

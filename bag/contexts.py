@@ -18,7 +18,8 @@ def bag_contents(request):
             discounted_price = round(game.price - (game.price * sale_amount), 2)
             total += round(quantity * discounted_price, 2)
         else:
-            discounted_price = 0 
+            # Use the regular price for items that are not on sale
+            discounted_price = round(game.price, 2)
             total += round(quantity * game.price, 2)
 
         game_count += quantity
