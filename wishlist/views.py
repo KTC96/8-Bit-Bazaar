@@ -1,46 +1,28 @@
 from decimal import Decimal
 from django.shortcuts import render, redirect, get_object_or_404, reverse, HttpResponse
+from django.contrib.auth.decorators import login_required
 from games.models import Game
+from .models import Wishlist
 from django.contrib import messages
 from django.conf import settings
 
-def view_wishlist(request):
-    """ Returns the wishlist contents page"""
+@login_required
+def wishlist(request):
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+    games_in_wishlist = wishlist.games.all()
+    return render(request, 'wishlist/wishlist.html', {'games_in_wishlist': games_in_wishlist})
 
-    games = Game.objects.all()
-    wishlist_items = request.session.get('wishlist', {}).items()
-    for game in games:
-        if game.on_sale:
-            sale_amount = Decimal(settings.SALE_AMOUNT)
-            discounted_price = round(game.price - (game.price * sale_amount), 2)
-        else:
-            discounted_price = None
-    
-    context = {
-            'discounted_price': discounted_price,
-            'wishlist_items': wishlist_items,
-    }
+@login_required
+def add_to_wishlist(request, game_id):
+    game = get_object_or_404(Game, id=game_id)
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
 
-    return render(request, 'wishlist/wishlist.html', context)
+    if game not in wishlist.games.all():
+        wishlist.games.add(game)
 
+    return redirect('wishlist')
 
-def add_to_wishlist(request, item_id):
-    """ Add a game to the shopping wishlist """
-    
-    game = get_object_or_404(Game, pk=item_id)
-    
-    redirect_url = request.POST.get('redirect_url')
-    wishlist = request.session.get('wishlist', {})
-
-    if item_id in wishlist:
-        messages.info(request, f'{game.friendly_name} is already in your wishlist')
-    else:
-        wishlist[item_id] = 1
-        messages.success(request, f'Added {game.friendly_name} to your wishlist')
-
-    request.session['wishlist'] = wishlist
-    return redirect(redirect_url)
-
+@login_required
 def remove_from_wishlist(request, item_id):
     """Remove the game from the wishlist"""
 

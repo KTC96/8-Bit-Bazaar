@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from wishlist.models import Wishlist
 class Genre(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
@@ -55,6 +55,7 @@ class Game(models.Model):
     video = models.FileField(null=True, blank=True)
     release_year = models.CharField(null=True, blank=True, max_length=100)
     on_sale = models.BooleanField(default=False, null=True, blank=True)
+    wishlist = models.ManyToManyField('wishlist.Wishlist', blank=True, related_name='games_in_wishlist')
 
     def __str__(self):
         return self.name
