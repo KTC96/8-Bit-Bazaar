@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=VT323&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/buttons.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -107,7 +108,7 @@
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if total %}
-                                    ${{ total|floatformat:2 }}
+                                    £{{ total|floatformat:2 }}
                                     {% else %}
                                     $0.00
                                     {% endif %}

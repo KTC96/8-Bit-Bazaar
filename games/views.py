@@ -16,27 +16,37 @@ def all_games(request):
     games = Game.objects.all()
     query = None
     categories = None
-    genres = None
     sort = None
     direction = None
 
-    if sort == 'name':
-        sort_key = 'lower_name'
-        games = games.annotate(lower_name=Lower('name')).order_by(f'{sort_key}{"" if direction!="desc" else "-"}')
-    elif sort == 'category':
-        sort_key = 'category__name'
-        games = games.order_by(f'{sort_key}{"" if direction!="desc" else "-"}')
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                games = games.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            games = games.order_by(sortkey)
+            
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            games = games.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
-    if 'category' in request.GET:
-        categories = request.GET.getlist('category')
-        games = games.filter(category__name__in=categories)
-        categories = Category.objects.filter(name__in=categories)
-
-    if 'genre' in request.GET:
-        genres  = request.GET.getlist('genre')
-        games = games.filter(genre__name__in=genres)
-        genres = Genre.objects.filter(name__in=genres)
-
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('games'))
+            
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            games = games.filter(queries)
     for game in games:
         if game.on_sale:
             sale_amount = Decimal(settings.SALE_AMOUNT)
@@ -59,7 +69,6 @@ def all_games(request):
         'games': games,
         'search_term': query,
         'current_categories': categories,
-        'current_genres': genres,
         'current_sorting': current_sorting,
     }
 

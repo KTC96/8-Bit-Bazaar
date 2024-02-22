@@ -33,7 +33,7 @@ def add_to_wishlist(request, item_id):
     wishlist = request.session.get('wishlist', {})
 
     if item_id in wishlist:
-        messages.success(request, f'{game.friendly_name} is already in your wishlist')
+        messages.info(request, f'{game.friendly_name} is already in your wishlist')
     else:
         wishlist[item_id] = 1
         messages.success(request, f'Added {game.friendly_name} to your wishlist')
