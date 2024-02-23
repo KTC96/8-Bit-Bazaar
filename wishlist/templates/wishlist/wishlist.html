@@ -37,6 +37,7 @@
                         {% for wishlist in game.wishlist_games.all %}
                         <p>Date Added: {{ wishlist.date_added|date:"d-m-y" }}</p>
                         {% endfor %}
+                        <a class="remove-item text-danger float-right" id="remove_{{ game_id }}"><small>Delete</small></a>
                     </div>
                     <div class="col-md-4">
                         {% if game.on_sale %}
@@ -44,7 +45,7 @@
                         {% else %}
                             <p class="my-0">£{{ game.price }}</p>
                         {% endif %}
-                        <form class="form" action="{% url 'add_to_bag' game.id %}" method="POST">
+                        <form class="form" action="{% url 'add_to_bag_wishlist' game.id %}" method="POST">
                             {% csrf_token %}
                                 <div class="col{% if s %}-12 mt-2{% endif %}">
                                     <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
@@ -59,4 +60,26 @@
         <p class="lead mb-5">Your wishlist is empty.</p>
     {% endif %}
 </div>
+{% endblock %}
+
+
+{% block postloadjs %}
+{{ block.super }}
+
+
+<script type="text/javascript">
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/wishlist/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
 {% endblock %}

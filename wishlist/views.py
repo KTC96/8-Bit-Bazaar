@@ -42,3 +42,23 @@ def remove_from_wishlist(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
+
+def add_to_bag_wishlist(request, item_id):
+    """ Add a quantity of the game to the shopping bag """
+
+    game = get_object_or_404(Game, pk=item_id)
+    
+    # Check if quantity is provided in the request, default to 1 if not
+    quantity = int(request.POST.get('quantity', 1))
+    
+    redirect_url = request.POST.get('redirect_url')
+    bag = request.session.get('bag', {})
+    
+    if item_id in list(bag.keys()):
+        bag[item_id] += quantity
+    else:
+        bag[item_id] = quantity
+        messages.success(request, f'Added {game.friendly_name} to your bag')
+        
+    request.session['bag'] = bag
+    return redirect(redirect_url)

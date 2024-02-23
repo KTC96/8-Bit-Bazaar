@@ -30,14 +30,13 @@ def add_to_bag(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
     
-
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
     else:
         bag[item_id] = quantity
-        messages.success(request, f'Added {game.friendly_name} to your bag')
-        
-
+        messages.add_message(request, messages.SUCCESS, f'Added {game.friendly_name} to your bag')
+    
+    
     request.session['bag'] = bag
     return redirect(redirect_url)
 
