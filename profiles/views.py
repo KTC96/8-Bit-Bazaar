@@ -39,6 +39,9 @@ def profile(request):
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
+    orders = Order.objects.filter(user=request.user).order_by('date')
+
+
     messages.info(request, (
         f'Hey, just a heads up about your previous order {order_number}. '
         'We sent a confirmation email on the day you placed it!'
