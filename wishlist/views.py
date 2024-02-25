@@ -13,8 +13,8 @@ def wishlist(request):
     return render(request, 'wishlist/wishlist.html', {'games_in_wishlist': games_in_wishlist})
 
 @login_required
-def add_to_wishlist(request, game_id):
-    game = get_object_or_404(Game, id=game_id)
+def add_to_wishlist(request, item_id):
+    game = get_object_or_404(Game, id=item_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
 
     if game not in wishlist.games.all():

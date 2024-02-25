@@ -8,3 +8,5 @@ class Wishlist(models.Model):
 
     def __str__(self):
         return f"Wishlist for {self.user.username}"
+
+        
