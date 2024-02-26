@@ -5,6 +5,7 @@ from games.models import Game
 from .models import Wishlist
 from django.contrib import messages
 from django.conf import settings
+from django.utils import timezone
 
 @login_required
 def wishlist(request):
@@ -13,40 +14,46 @@ def wishlist(request):
     return render(request, 'wishlist/wishlist.html', {'games_in_wishlist': games_in_wishlist})
 
 @login_required
-def add_to_wishlist(request, item_id):
-    game = get_object_or_404(Game, id=item_id)
+def add_to_wishlist(request, game_id):
+    game = get_object_or_404(Game, id=game_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
 
     if game not in wishlist.games.all():
-        wishlist.games.add(game)
+        
+        wishlist.games.add(game, through_defaults={'date_added': timezone.now()})
+        messages.success(request, f'Added {game.friendly_name} to your wishlist')
+    else:
+        messages.info(request, f'{game.friendly_name} is already in your wishlist')
 
-    return redirect('wishlist')
-
+    return redirect('games')
 @login_required
-def remove_from_wishlist(request, item_id):
+def remove_from_wishlist(request, game_id):
     """Remove the game from the wishlist"""
 
-    game = get_object_or_404(Game, pk=item_id)
+    game = get_object_or_404(Game, pk=game_id)
 
     try:
-        wishlist = request.session.get('wishlist', {})
+        wishlist = Wishlist.objects.get(user=request.user)
 
-        if item_id in wishlist:
-            wishlist.pop(item_id)
-            request.session['wishlist'] = wishlist
+        # Check if the game is in the wishlist
+        if game in wishlist.games.all():
+            # Remove the game from the wishlist
+            wishlist.games.remove(game)
+
             messages.success(request, f'Removed {game.friendly_name} from your wishlist')
             return HttpResponse(status=200)
-            
         else:
-            return HttpResponse(status=404) 
+            return HttpResponse(status=404)
+    except Wishlist.DoesNotExist:
+        return HttpResponse(status=404)
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
 
-def add_to_bag_wishlist(request, item_id):
+def add_to_bag_wishlist(request, game_id):
     """ Add a quantity of the game to the shopping bag """
 
-    game = get_object_or_404(Game, pk=item_id)
+    game = get_object_or_404(Game, pk=game_id)
     
     # Check if quantity is provided in the request, default to 1 if not
     quantity = int(request.POST.get('quantity', 1))
@@ -54,10 +61,10 @@ def add_to_bag_wishlist(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
     
-    if item_id in list(bag.keys()):
-        bag[item_id] += quantity
+    if game_id in list(bag.keys()):
+        bag[game_id] += quantity
     else:
-        bag[item_id] = quantity
+        bag[game_id] = quantity
         messages.success(request, f'Added {game.friendly_name} to your bag')
         
     request.session['bag'] = bag

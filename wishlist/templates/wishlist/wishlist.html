@@ -34,10 +34,10 @@
                     <div class="col-md-4">
                         <p class="my-0"><strong>{{ game.friendly_name }}</strong></p>
                         <p class="my-0 small text-muted">SKU: {{ game.sku|upper }}</p>
-                        {% for wishlist in game.wishlist_games.all %}
-                        <p>Date Added: {{ wishlist.date_added|date:"d-m-y" }}</p>
-                        {% endfor %}
-                        <a class="remove-item text-danger float-right" id="remove_{{ game_id }}"><small>Delete</small></a>
+                        {% if game.wishlist_games.exists %}
+                        <p>Date Added: {{ game.wishlist_games.first.date_added }}</p>
+                        {% endif %}
+                        <a class="remove-item text-danger float-right" data-game-id="{{ game.id }}"><small>Delete</small></a>
                     </div>
                     <div class="col-md-4">
                         {% if game.on_sale %}
@@ -67,19 +67,27 @@
 {{ block.super }}
 
 
-<script type="text/javascript">
 
-    // Remove item and reload on click
+<script type="text/javascript">
+    
+    $(document).ready(function() {
     $('.remove-item').click(function(e) {
+        e.preventDefault();
+
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/wishlist/remove/${itemId}/`;
+        var gameId = $(this).data('game-id');
+        var url = "/wishlist/remove/" + gameId + "/";
         var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
          .done(function() {
              location.reload();
+         })
+         .fail(function(error) {
+             console.error("Error:", error.responseText);
          });
-    })
+    });
+});
+
 </script>
 {% endblock %}
