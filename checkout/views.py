@@ -101,7 +101,7 @@ def checkout(request):
 
                 except Game.DoesNotExist:
                     messages.error(request, f"The game with ID {item_id} in your bag wasn't found in our database.")
-                    # Optionally, you can choose to skip this item and continue processing other items
+
                     continue
 
             request.session['save_info'] = 'save-info' in request.POST
@@ -160,6 +160,7 @@ def checkout(request):
         'discounted_total': request.GET.get('discounted_total'),
         'discount_amount': request.GET.get('discount_amount'),
     }
+    
 
     return render(request, template, context)
 
@@ -174,6 +175,8 @@ def checkout_success(request, order_number):
     # Check if discounted total and discount amount are available in session
     discounted_total = request.session.get('discounted_total', None)
     discount_amount = request.session.get('discount_amount', None)
+    
+
 
     if discounted_total:
         order.total = discounted_total
@@ -207,6 +210,7 @@ def checkout_success(request, order_number):
 
     # Retrieve discount_amount for displaying in the template
     discount_amount = request.session.get('discount_amount', None)
+    
 
     if 'bag' in request.session:
         del request.session['bag']
