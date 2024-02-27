@@ -1,6 +1,8 @@
 import json
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
+from django.template.loader import render_to_string
+from django.core.mail import send_mail
 from django.contrib import messages
 from django.conf import settings
 
@@ -269,3 +271,35 @@ def apply_discount(request):
 
     # Redirect back to the checkout page
     return redirect('checkout')
+
+def _send_confirmation_email(order, request):
+    """Send the user a confirmation email"""
+    cust_email = order.email
+    subject = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_subject.txt',
+        {'order': order})
+    body = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_body.txt',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+    )
+
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order.order_number}. A confirmation \
+        email will be sent to {order.email}.')
+
+    if 'bag' in request.session:
+        del request.session['bag']
+
+    template = 'checkout/order_confirmation.html'
+    context = {
+        'order': order,
+    }
+
+    _send_confirmation_email(order, request)
+    return render(request, template, context)
