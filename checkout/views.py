@@ -227,7 +227,8 @@ def checkout_success(request, order_number):
         'discount_amount': discount_amount,  # Include discount amount in the context
     }
 
-    
+    _send_confirmation_email(order)
+
 
     return render(request, template, context)
 
@@ -278,7 +279,7 @@ def _send_confirmation_email(order):
     """Send the user a confirmation email"""
     cust_email = order.email
     subject = render_to_string(
-        'checkout/confirmation_emails/confirmation_email_subject.txt',
+        'checkout/templates/checkout/confirmation_emails/confirmation_email_subject.txt',
         {'order': order})
     body = render_to_string(
         'checkout/confirmation_emails/confirmation_email_body.txt',
@@ -291,6 +292,5 @@ def _send_confirmation_email(order):
         [cust_email]
     )
 
-    _send_confirmation_email(order)
 
    
