@@ -1,1 +1,1 @@
-web: npm run python manage.py migrate && gunicorn eight_bit_bazaar.wsgi
+web: gunicorn eight_bit_bazaar.wsgi:application
