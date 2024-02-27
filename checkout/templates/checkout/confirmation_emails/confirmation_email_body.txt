@@ -9,6 +9,9 @@ Order Date: {{ order.date }}
 Order Total: ${{ order.order_total }}
 
 Here's a quick recap of your fantastic choices:
+{% for item in order.orderlineitem.all % }
+{{ item.game.friendly_name}}
+{% endfor %}
 
 
 
