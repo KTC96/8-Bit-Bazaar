@@ -150,7 +150,7 @@ def edit_game(request, game_id):
     return render(request, template, context)
 
 @login_required
-def delete_game(request, game_id):
+def remove_game(request, game_id):
     """ Delete a game from the shop """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, that action is for the 8BitBazaar team only!')
