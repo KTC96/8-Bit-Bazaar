@@ -278,9 +278,18 @@ def apply_discount(request):
 def _send_confirmation_email(order):
     """Send the user a confirmation email"""
     cust_email = order.email
-    subject = render_to_string(
-        'checkout/templates/checkout/confirmation_emails/confirmation_email_subject.txt',
-        {'order': order})
+
+    # Specify the path to the text file containing the email subject
+    subject_file_path = 'checkout/templates/checkout/confirmation_emails/confirmation_email_subject.txt'
+    body_file_path = 'checkout/templates/checkout/confirmation_emails/confirmation_email_body.txt'
+
+     # Read the content of the text files
+    with open(subject_file_path, 'r') as subject_file:
+        subject = subject_file.read()
+
+    with open(body_file_path, 'r') as body_file:
+        body = body_file.read()
+        
     body = render_to_string(
         'checkout/confirmation_emails/confirmation_email_body.txt',
         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
@@ -291,6 +300,3 @@ def _send_confirmation_email(order):
         settings.DEFAULT_FROM_EMAIL,
         [cust_email]
     )
-
-
-   
