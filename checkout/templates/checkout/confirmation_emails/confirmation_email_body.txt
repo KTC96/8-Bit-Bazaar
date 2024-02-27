@@ -8,13 +8,6 @@ Order Date: {{ order.date }}
 
 Order Total: £{{ order.order_total }}
 
-Here's a quick recap of your fantastic choices:
-{% for item in order.orderlineitem.all % }
-{{ item.game.friendly_name}}
-{% endfor %}
-
-
-
 We've got your phone number on file as {{ order.phone_number }}.
 
 f you have any questions or need assistance, feel free to reach out to our friendly customer support team at {{ contact_email }} or reply to this email.
