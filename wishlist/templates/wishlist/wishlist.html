@@ -24,14 +24,16 @@
         <div class="container-fluid">
             <div class="row">
                 {% for game in games_in_wishlist %}
-                    <div class="col-md-4">
+                <div class="col-3 mb-3">
+                    <a href="{% url 'game_detail' game.id %}">
                         {% if game.image %}
-                            <img class="game-image rounded img-fluid" src="{{ game.image.url }}" alt="{{ game.friendly_name }}">
+                            <img class="w-100" src="{{ game.image.url }}" alt="{{ game.name }}">
                         {% else %}
-                            <img class="game-image rounded img-fluid" src="{{ MEDIA_URL }}placeholder.png" alt="{{ game.friendly_name }}">
+                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ game.name }}">
                         {% endif %}
-                    </div>
-                    <div class="col-md-4">
+                    </a>
+                </div>
+                    <div class="col-md-5">
                         <p class="my-0"><strong>{{ game.friendly_name }}</strong></p>
                         <p class="my-0 small text-muted">SKU: {{ game.sku|upper }}</p>
                         {% if game.wishlist_games.exists %}

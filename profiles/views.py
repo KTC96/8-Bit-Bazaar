@@ -40,7 +40,7 @@ def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     user_profile = UserProfile.objects.get(user=request.user)
-    orders = Order.objects.filter(user_profile=user_profile).order_by('date')
+    orders = Order.objects.filter(user_profile=user_profile)
 
     messages.info(request, (
         f'Hey, just a heads up about your previous order {order_number}. '
