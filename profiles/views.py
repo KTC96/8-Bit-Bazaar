@@ -39,8 +39,8 @@ def profile(request):
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
-    orders = Order.objects.filter(user=request.user).order_by('date')
-
+    user_profile = UserProfile.objects.get(user=request.user)
+    orders = Order.objects.filter(user_profile=user_profile).order_by('date')
 
     messages.info(request, (
         f'Hey, just a heads up about your previous order {order_number}. '
@@ -50,6 +50,7 @@ def order_history(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'orders': orders,  # Pass the filtered orders to the template
         'from_profile': True,
     }
 
