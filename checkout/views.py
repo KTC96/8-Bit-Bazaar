@@ -227,6 +227,8 @@ def checkout_success(request, order_number):
         'discount_amount': discount_amount,  # Include discount amount in the context
     }
 
+    
+
     return render(request, template, context)
 
 
@@ -289,17 +291,6 @@ def _send_confirmation_email(order):
         [cust_email]
     )
 
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order.order_number}. A confirmation \
-        email will be sent to {order.email}.')
+    _send_confirmation_email(order)
 
-    if 'bag' in request.session:
-        del request.session['bag']
-
-    template = 'checkout/order_confirmation.html'
-    context = {
-        'order': order,
-    }
-
-    _send_confirmation_email(order, request)
-    return render(request, template, context)
+   
