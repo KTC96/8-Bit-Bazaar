@@ -37,8 +37,10 @@ def add_to_bag(request, item_id):
         bag[item_id] = quantity
         messages.add_message(request, messages.SUCCESS, f'Added {game.friendly_name} to your bag')
     
-    
     request.session['bag'] = bag
+
+    request.session['item_added_to_bag'] = True
+
     return redirect(redirect_url)
 
 def adjust_bag(request, item_id):

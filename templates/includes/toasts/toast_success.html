@@ -1,3 +1,4 @@
+{% load clear_session %}
 <div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
     <div class="arrow-up arrow-success"></div>
     <div class="w-100 toast-capper bg-success"></div>
@@ -14,6 +15,9 @@
                 <hr class="mt-1 mb-3">
             </div>
         </div>
+        
+        {% if request.session.item_added_to_bag %}
+        
         {% if total and not on_profile_page %}
             <p class="logo-font bg-white text-black py-1">Your Bag ({{ game_count }})</p>
             <div class="bag-notification-wrapper">
@@ -23,7 +27,7 @@
                             {% if item.game.image %}
                             <img class="w-100" src="{{ item.game.image.url }}" alt="{{ item.game.friendly_name}}">
                             {% else %}
-                            <img class="w-100" src="{{ MEDIA_URL }}placeholder.png" alt="{{ item.game.friendly_name}}>
+                            <img class="w-100" src="{{ MEDIA_URL }}placeholder.png" alt="{{ item.game.friendly_name}}">
                             {% endif %}
                         </div>
                         <div class="col-9">
@@ -53,5 +57,9 @@
                 </div>
             </div>
         {% endif %}
+        {% clear_session_var request 'item_added_to_bag' %} {# Clear the session variable after use #}
+        {% endif %}
+        
+
     </div>
 </div>
