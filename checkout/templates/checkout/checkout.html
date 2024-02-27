@@ -132,8 +132,15 @@
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>
 							</span>
-							<span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
-						</p>
+							<span>Your card will be charged
+                                {% if request.session.discount_amount %}
+                                   £{{ request.session.discounted_total| floatformat:2 }}</p>
+                                {% else %}
+                                    £{{ total | floatformat:2 }}
+                                {% endif %}
+						        
+                            </span>
+                        </p>
 					</div>
                 </form>
                 <div class="my-4">

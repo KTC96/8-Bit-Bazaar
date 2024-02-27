@@ -207,6 +207,10 @@ def checkout_success(request, order_number):
     messages.success(request, f"Great news! We've processed your order! \
         Your order number is {order_number}. Keep an eye on your email \
         at {order.email} for a confirmation message.")
+    
+    request.session.pop('bag', None)
+    request.session.pop('discounted_total', None)
+    request.session.pop('discount_amount', None)
 
     # Retrieve discount_amount for displaying in the template
     discount_amount = request.session.get('discount_amount', None)
@@ -256,11 +260,12 @@ def apply_discount(request):
                     request.session['discount_amount'] = float(discount_amount)
                     messages.success(request, f'Discount "{discount_code}" applied successfully!')
                 else:
-                    messages.info(request, 'Discount has already been applied for this purchase.')
+                    messages.info(request, 'This discount code has already been has already been applied.')
             else:
                 messages.warning(request, 'You need to be logged in to apply a discount. Please log in or create an account.')
         except Discount.DoesNotExist:
             messages.error(request, f'Invalid discount code "{discount_code}"')
+        
 
     # Redirect back to the checkout page
     return redirect('checkout')
