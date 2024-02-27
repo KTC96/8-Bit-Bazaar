@@ -272,7 +272,7 @@ def apply_discount(request):
     # Redirect back to the checkout page
     return redirect('checkout')
 
-def _send_confirmation_email(order, request):
+def _send_confirmation_email(order):
     """Send the user a confirmation email"""
     cust_email = order.email
     subject = render_to_string(
