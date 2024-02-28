@@ -1,4 +1,4 @@
-Hey{{ order.full_name }},
+Hey {{ order.full_name }},
 
 Woo-hoo! 🎉 It's time to celebrate because your 8Bit Bazaar order is officially confirmed!
 
@@ -6,11 +6,11 @@ Order Number: {{ order.order_number }}
 
 Order Date: {{ order.date }}
 
-Order Total: £{{ order.order_total }}
+Order Total: £{{ order.total }}
 
 We've got your phone number on file as {{ order.phone_number }}.
 
-f you have any questions or need assistance, feel free to reach out to our friendly customer support team at {{ contact_email }} or reply to this email.
+If you have any questions or need assistance, feel free to reach out to our friendly customer support team at {{ contact_email }} or reply to this email.
 
 Thanks a bunch for choosing 8Bit Bazaar! 🎮🛒
 
