@@ -81,5 +81,5 @@ class Review(models.Model):
         ordering = ["-date"]
 
     def __str__(self):
-        return self.name
+          return f"{self.title} - {self.author.username}"
 

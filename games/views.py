@@ -1,5 +1,6 @@
 from decimal import Decimal
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import HttpResponseBadRequest
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -189,7 +190,7 @@ def add_review(request, game_id):
         if form.is_valid():
             review = form.save(commit=False)
             review.game = game
-            review.user = request.user
+            review.author = request.user  # Explicitly set the author field
             review.save()
 
             messages.success(request, "Your review has been added.")
@@ -200,7 +201,7 @@ def add_review(request, game_id):
         'form': form,
     }
 
-    return render(request, 'games/review.html', context)
+    return render(request, 'games/add_review.html', context)
 
 
 @login_required
@@ -239,9 +240,15 @@ def delete_review(request, review_id):
         review.delete()
         messages.success(request, "Your review has been deleted.")
         return redirect('game_detail', review.game.id)
+    else:
+        return HttpResponseBadRequest("Invalid request. Use POST method to delete the review.")
+
+@login_required
+def all_reviews(request):
+    reviews = Review.objects.filter(author=request.user)
 
     context = {
-        'review': review,
+        'reviews': reviews,
     }
 
-    return render(request, 'games/delete_review.html', context)
+    return render(request, 'games/all_reviews.html', context)
