@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="game-details mt-5 mx-auto my-4 col-8 ">
+<div class="game-details mt-4 mx-auto my-4 col-8 ">
    
         <div class="row text-center">
             <div class="col-md-12">
@@ -161,7 +161,7 @@
         </div>
         <div class="row d-flex justify-content-center">
             <div class="col-md-8">
-                <p class="mt-3 p-3">{{ game.description }}</p>
+                <p class="mt-3 p-3 game-description">{{ game.description }}</p>
             </div>
            
         </div>
@@ -171,26 +171,60 @@
                     <div class="container mt-4">
                         <div class="row">
                             <div class="col-md-8 offset-md-2">
-                                <h2 class="mb-4">Customer Reviews</h2>
-                                {% for review in reviews %}
-                                    <div class="card bg-dark text-light mb-3">
-                                        <div class="card-header d-flex justify-content-between align-items-center">
-                                            <h5 class="card-title">{{ review.name }}</h5>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="card-text">{{ review.body }}</p>
-                                        </div>
-                                        <div class="card-footer">
-                                            <p class="card-text">{{ review.author }}</p>
-                                            <p> {{ review.created_on }}
-                                        </div>
+                                {% if reviews %}
+                                
+                                    <h2 class="mb-4">Customer Reviews</h2>
+                                    <div  style="max-height: 300px; overflow-y: auto;">
+                        
+                                        {% for review in reviews %}
+                                            <div class="card pink-checkout-background text-black mb-3">
+                                                <div class="card-header d-flex justify-content-between align-items-center">
+                                                    <h5 class="card-title">{{ review.title }}</h5>
+                                                    {% if review.author == user %}
+                                                        <div>
+                                                            <a href="{% url 'edit_review' review.id %}">Edit Review</a>
+                                                            <a href="{% url 'delete_review' review.id %}">Delete Review</a>
+                                                        </div>
+                                                    {% endif %}
+                                                </div>
+                                                <div class="card-body">
+                                                    <p class="card-text">{{ review.body }}</p>
+                                                    <p>Rating: {{ review.rating }}</p> 
+                                                </div>
+                                                <div class="card-footer d-flex justify-content-between">
+                                                    <p class="card-text">{{ review.author }}</p>
+                                                    <p>{{ review.date }}</p>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
                                     </div>
-                                {% endfor %}
+
+                        
+                                        {% if user.is_authenticated %}
+                                            <a href="{% url 'add_review' game.id %}">Leave a review for this game</a>
+                                        {% else %}
+                                            <p>Please <a href="{% url 'account_login' %}">login</a> to leave a review.</p>
+                                        {% endif %}
+                            
+                                    {% else %}
+                                        <p>No reviews</p>
+                            
+                                        {% if user.is_authenticated %}
+                                            <a href="{% url 'add_review' game.id %}">Add your review</a>
+                                        {% else %}
+                                            <p>Please <a href="{% url 'account_login' %}">login</a> to leave a review.</p>
+                                        {% endif %}
+                            
+                                {% endif %}
+                            
                             </div>
                         </div>
+                        
                     </div>
+                </div>
             </div>
         </div>
+        
     
 </div>
    

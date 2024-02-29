@@ -161,8 +161,9 @@ def remove_game(request, game_id):
     messages.success(request, 'Game deleted!')
     return redirect(reverse('games'))
 
+
 @login_required
-def review(request, game_id):
+def add_review(request, game_id):
     game = get_object_or_404(Game, id=game_id)
     user_profile = request.user.userprofile
 
@@ -172,11 +173,11 @@ def review(request, game_id):
         return redirect('game_detail', game_id)
 
     # Check if user has purchased the specific game
-    if not any(item.game == game for order in user_profile.orders.all() for item in order.line_items.all()):
+    if not any(item.game == game for order in user_profile.orders.all() for item in order.lineitems.all()):
         messages.error(request, "You must have purchased this game to review it.")
         return redirect('game_detail', game_id)
 
-   # Check if the user has already reviewed the game
+    # Check if the user has already reviewed the game
     if Review.objects.filter(game=game, author=request.user).exists():
         messages.error(request, "You have already reviewed this game. Please update or delete your existing review.")
         return redirect('game_detail', game_id)
@@ -199,4 +200,48 @@ def review(request, game_id):
         'form': form,
     }
 
-    return render(request, 'review.html', context)
+    return render(request, 'games/review.html', context)
+
+
+@login_required
+def edit_review(request, review_id):
+    review = get_object_or_404(Review, id=review_id)
+
+    if request.user != review.author:
+        messages.error(request, "You don't have permission to edit this review.")
+        return redirect('game_detail', review.game.id)
+
+    form = ReviewForm(instance=review)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your review has been updated.")
+            return redirect('game_detail', review.game.id)
+
+    context = {
+        'review': review,
+        'form': form,
+    }
+
+    return render(request, 'games/edit_review.html', context)
+
+@login_required
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, id=review_id)
+
+    if request.user != review.author:
+        messages.error(request, "You don't have permission to delete this review.")
+        return redirect('game_detail', review.game.id)
+
+    if request.method == 'POST':
+        review.delete()
+        messages.success(request, "Your review has been deleted.")
+        return redirect('game_detail', review.game.id)
+
+    context = {
+        'review': review,
+    }
+
+    return render(request, 'games/delete_review.html', context)

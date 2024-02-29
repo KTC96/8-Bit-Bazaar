@@ -16,7 +16,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-5">
-            <h2 class="text-black">
+            <h2 class="text-black game-title">
                 {% if current_genres %}
                     {{ current_genres.0.friendly_name }} Games
                 {% else %}
@@ -79,7 +79,7 @@
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
-                            <p class="mb-0">{{ game.friendly_name }}</p>
+                            <p class="mb-0 game-name">{{ game.friendly_name }}</p>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left text-black">
                             <div class="row">

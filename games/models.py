@@ -67,17 +67,18 @@ class Game(models.Model):
 
 class Review(models.Model):
 
-    name = models.CharField(max_length=80)
+    title = models.CharField(max_length=80)
+    rating = models.DecimalField(decimal_places=1, max_digits=2, null=True)
     body = models.TextField()
     game = models.ForeignKey(Game, blank=False,  on_delete=models.CASCADE)
     author = models.ForeignKey(
     User, on_delete=models.CASCADE, related_name="reviews", null=True, blank=True)
-    created_on = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=True)
 
     class Meta:
         unique_together = [['game', 'author']]
-        ordering = ["-created_on"]
+        ordering = ["-date"]
 
     def __str__(self):
         return self.name

@@ -61,7 +61,10 @@ body {
 
 nav {
     position: sticky;
-    
+}
+
+.nav-item a {
+    font-size: 25px;
 }
 
 .pink-background {
@@ -108,10 +111,29 @@ nav {
 
 /* games.html ------------------------------------------------------------------------------ */
 
+.game-title {
+    font-size: 45px;
+}
+
+.game-name {
+    font-size: 20px;
+}
+
 .game-image {
     height: 200px;
     padding: 10px;
-    object-fit: contain;
+    object-fit: contain; 
+}
+
+
+/* game_detail.html ------------------------------------------------------------------------------ */
+
+.game-description {
+    font-size: 20px;
+}
+
+.reviews {
+    background-color: ;
     
 }
 
@@ -152,6 +174,8 @@ a.genre-badge > span.badge:hover {
 .toast-capper {
     height: 20px;
 }
+
+
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
