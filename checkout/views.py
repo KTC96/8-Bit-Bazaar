@@ -181,7 +181,7 @@ def checkout_success(request, order_number):
 
 
     if discounted_total:
-        order.total = discounted_total
+        order.discounted_total = discounted_total
         order.save()
 
     if request.user.is_authenticated:
