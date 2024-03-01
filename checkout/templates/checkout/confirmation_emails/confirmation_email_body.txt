@@ -10,8 +10,13 @@ Order Total: £{{ order.total }}
 
 We've got your phone number on file as {{ order.phone_number }}.
 
+Enjoy your free game! {{ free_game_link }}
+
 {% if free_game_link %}
+    Debugging: free_game_link is not empty. Value: {{ free_game_link }}
     Enjoy your free game! {{ free_game_link }}
+{% else %}
+    Debugging: free_game_link is empty.
 {% endif %}
 
 If you have any questions or need assistance, feel free to reach out to our friendly customer support team at {{ contact_email }} or reply to this email.
