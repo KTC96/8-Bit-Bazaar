@@ -1,29 +1,26 @@
 {
-   "redhat.telemetry.enabled": true,
-   "explorer.confirmDragAndDrop": false,
-   "githubPullRequests.pullBranch": "never",
-   "workbench.colorTheme": "Default Dark Modern",
-   "[html]": {
-     "editor.defaultFormatter": "esbenp.prettier-vscode"
-   },
-   "cSpell.userWords": ["clow", "sqlalchemy", "taskmanager"],
-   "cSpell.ignoreWords": ["Cloudinary"],
-   "files.associations": {
-     "**/templates/*.html": "django-html",
-     "**/*.html": "html"
-   },
-   "beautify.language": {
-     "html": ["htm", "html", "django-html"]
-   },
-   "[django-html]": {
-     "editor.defaultFormatter": "HookyQR.beautify",
-     "editor.formatOnSave": true
+  "redhat.telemetry.enabled": true,
+  "explorer.confirmDragAndDrop": false,
+  "githubPullRequests.pullBranch": "never",
+  "workbench.colorTheme": "Default Dark Modern",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.userWords": ["clow", "sqlalchemy", "taskmanager"],
+  "cSpell.ignoreWords": ["Cloudinary"],
+  "files.associations": {
+    "**/templates/*.html": "django-html",
+    "**/*.html": "html"
+  },
+  "beautify.language": {
+    "html": ["htm", "html", "django-html"]
+  },
+  "[django-html]": {
+    "editor.defaultFormatter": "HookyQR.beautify",
+    "editor.formatOnSave": true
   },
   "files.autoSave": "off",
-  "cSpell.words": [
-    "allauth"
-  ],
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true
- }
- 
+  "cSpell.words": ["allauth"],
+  "editor.defaultFormatter": null,
+  "editor.formatOnSave": false
+}

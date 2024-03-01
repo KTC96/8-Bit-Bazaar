@@ -13,6 +13,11 @@ body {
   padding-top: 150px;
 }
 
+.dropdown-menu {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
 .hero-image {
   background: url("/media/background.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -84,6 +89,10 @@ nav {
 .navbar-collapse,
 .navbar {
   padding: 0;
+}
+
+.offwhite-background {
+    background-color: rgba(242, 233, 223, 0.8)
 }
 
 #topnav {
