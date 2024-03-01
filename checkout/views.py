@@ -177,8 +177,6 @@ def checkout_success(request, order_number):
     # Check if discounted total and discount amount are available in session
     discounted_total = request.session.get('discounted_total', None)
     discount_amount = request.session.get('discount_amount', None)
-    
-
 
     if discounted_total:
         order.discounted_total = discounted_total
@@ -214,9 +212,8 @@ def checkout_success(request, order_number):
     request.session.pop('discounted_total', None)
     request.session.pop('discount_amount', None)
 
-    # Retrieve discount_amount for displaying in the template
-    discount_amount = request.session.get('discount_amount', None)
     
+    discount_amount = request.session.get('discount_amount', None)
 
     if 'bag' in request.session:
         del request.session['bag']
@@ -224,11 +221,13 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
-        'discount_amount': discount_amount,  # Include discount amount in the context
+        'discount_amount': discount_amount,
     }
 
-    _send_confirmation_email(order)
+    order.discounted_total = discounted_total
+    order.save()
 
+    _send_confirmation_email(order)
 
     return render(request, template, context)
 
