@@ -22,6 +22,8 @@
   "files.autoSave": "off",
   "cSpell.words": [
     "allauth"
-  ]
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
  }
  

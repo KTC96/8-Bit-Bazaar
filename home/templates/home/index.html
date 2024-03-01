@@ -1,35 +1,96 @@
-{% extends "base.html" %}
-{% load static %}
-{% block favicon %}
-{% endblock %}
+{% extends "base.html" %} {% load static %} {% block favicon %} {% endblock %}
 {% block page_header %}
 <div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
+  <div class="row">
+    <div class="col"></div>
+  </div>
 </div>
-{% endblock %}
-
-{% block content %}
-
+{% endblock %} {% block content %}
+<div class="overlay"></div>
 <div class="container-fluid hero-image">
-    <div class="row">
-        <div class="col-12 call-to-action">
-            <h1 class="headline text-black">Retro Gaming Redefined</h1>
-            <div class="my-5 shop-now">
-                <h4>
-                    <a href="{% url 'games' %}" class="shop-now-btn btn btn-lg rounded-5 text-uppercase ">Shop Now</a>
-                </h4>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-12 call-to-action">
+      <h1 class="headline text-black">Retro Gaming Redefined</h1>
+      <div class="my-5 shop-now">
+        <h4>
+          <a
+            href="{% url 'games' %}"
+            class="shop-now-btn btn btn-lg rounded-5 text-uppercase"
+            >Shop Now</a
+          >
+        </h4>
+      </div>
     </div>
+  </div>
 </div>
-<div class="container newsletter-container mt-4">
+<div class="container-fluid newsletter-container mx-0 d-flex justify-content-center text-center">
     <div class="row newsletter">
-        <div class="col-12">fsdfds</div>
-        <div class="col-12">dsfdfs</div>
+      <div class="col-md-6 mt-4">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated on the latest retro gaming news, releases, and promotions!</p>
+     </div>  
+     <div class="col-md-6">
+        <div id="mc_embed_shell">
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
+          <div id="mc_embed_signup">
+            <form action="https://gmail.us18.list-manage.com/subscribe/post?u=533839bd0019a66932fd6a5be&amp;id=fef3790031&amp;f_id=005c17e7f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+              <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group">
+                  <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                  <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" />
+                </div>
+                <div id="mce-responses" class="clear foot">
+                  <div class="response" id="mce-error-response" style="display: none"></div>
+                  <div class="response" id="mce-success-response" style="display: none"></div>
+                </div>
+                <div aria-hidden="true" style="position: absolute; left: -5000px">
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+                  <input type="text" name="b_533839bd0019a66932fd6a5be_fef3790031" tabindex="-1" value="" />
+                </div>
+                <div class="optionalParent">
+                  <div class="clear foot">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe" />
+                    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+            </form>
+          </div>
+        </div>
+     </div>
+     
     </div>
+  </div>
+  
+    {% endblock %} {% block postloadjs %} {{ block.super }}
+
+    <script
+      type="text/javascript"
+      src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function ($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0] = "EMAIL";
+        ftypes[0] = "email";
+        fnames[1] = "FNAME";
+        ftypes[1] = "text";
+        fnames[2] = "LNAME";
+        ftypes[2] = "text";
+        fnames[3] = "ADDRESS";
+        ftypes[3] = "address";
+        fnames[4] = "PHONE";
+        ftypes[4] = "phone";
+        fnames[5] = "BIRTHDAY";
+        ftypes[5] = "birthday";
+      })(jQuery);
+      var $mcj = jQuery.noConflict(true);
+    </script>
+
+    {% endblock %}
+  </div>
 </div>
-
-
-{% endblock %}

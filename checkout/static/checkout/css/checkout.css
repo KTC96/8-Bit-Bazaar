@@ -75,7 +75,7 @@ select option[value=""] {
 }
 
 .success-background {
-  background-image:  url('/static/background.jpg');
+  background-image:  url('/media/background.jpg');
   background-size: cover;
   font-family: 'VT323', sans-serif;
   margin: 0; 
