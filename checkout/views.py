@@ -285,6 +285,8 @@ def _send_confirmation_email(order):
     # Read the content of the text files
     with open(subject_file_path, 'r') as subject_file:
         subject = subject_file.read()
+    
+    subject = subject.replace('{{ order.order_number }}', str(order.order_number))
 
     with open(body_file_path, 'r') as body_file:
         body = body_file.read()
