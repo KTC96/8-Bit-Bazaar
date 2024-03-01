@@ -178,6 +178,11 @@ def checkout_success(request, order_number):
     discounted_total = request.session.get('discounted_total', None)
     discount_amount = request.session.get('discount_amount', None)
 
+    if order.total >= settings.FREE_GAME_THRESHOLD:
+    order.discounted_total = order.total
+    order.save()
+
+
     if discounted_total:
         order.discounted_total = discounted_total
         order.save()
@@ -295,8 +300,9 @@ def _send_confirmation_email(order):
     free_game_link = ''
 
     # Check if the free game threshold is met
-    if order.discounted_total is not None and order.discounted_total >= settings.FREE_GAME_THRESHOLD:
+   if order.discounted_total is not None or order.total is not None >= settings.FREE_GAME_THRESHOLD:
         free_game_link = 'https://stephendawsondev.github.io/j-day/' 
+        print(f"Debugging: free_game_link is set to {free_game_link}")
         body += f"\n\nEnjoy your free game! {free_game_link}"
 
     body = render_to_string(
