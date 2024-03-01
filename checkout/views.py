@@ -295,7 +295,7 @@ def _send_confirmation_email(order):
     free_game_link = ''
 
     # Check if the free game threshold is met
-    if (order.discounted_total is not None or order.total is not None) and (order.discounted_total >= settings.FREE_GAME_THRESHOLD or order.total >= settings.FREE_GAME_THRESHOLD):
+    if (order.discounted_total is not None and order.discounted_total >= settings.FREE_GAME_THRESHOLD) or (order.total is not None and order.total >= settings.FREE_GAME_THRESHOLD):
         free_game_link = 'https://stephendawsondev.github.io/j-day/' 
         print(f"Debugging: free_game_link is set to {free_game_link}")
         body += f"\n\nEnjoy your free game! {free_game_link}"
