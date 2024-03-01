@@ -289,14 +289,17 @@ def _send_confirmation_email(order):
     with open(body_file_path, 'r') as body_file:
         body = body_file.read()
 
-     # Check if the free game threshold is met
-    if order.discounted_total >= settings.FREE_GAME_THRESHOLD:
+    if (
+        order.discounted_total is not None and order.discounted_total >= settings.FREE_GAME_THRESHOLD
+        and order.total is not None and order.total >= settings.FREE_GAME_THRESHOLD
+    ):
         free_game_link = 'https://stephendawsondev.github.io/j-day/' 
         body += f"\n\nEnjoy your free game! {free_game_link}"
-        
+
     body = render_to_string(
         'checkout/confirmation_emails/confirmation_email_body.txt',
-        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL,'free_game_link': free_game_link})
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL, 'free_game_link': free_game_link}
+    )
 
     send_mail(
         subject,
