@@ -22,7 +22,22 @@
                     </h1>
                 </div>
             </div>
+            <div role='button' class='retro-btn sm primary' onclick="window.location.href='{% url 'games' %}';">
+                <a class='btn'> 
+                    <span class='btn-inner'>
+                        <span class='content-wrapper'>
+                            <span class='btn-content'>
+                                <span class='btn-content-inner '>
+                                    <i class="fa-solid fa-chevron-left"></i> Keep Shopping 
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                </a>
+            </div>
         </div>
+        
+        
         <div class="row d-flex justify-content-center">
             <div class="col-md-8">
                 <div class="row d-flex">
@@ -78,28 +93,14 @@
                                     </div>
                                 </div>
         
-                                <div class="col{% if s %}-12 mt-2{% endif %}">
-                                    <div role='button' class='retro-btn sm primary' onclick="window.location.href='{% url 'games' %}';">
-                                        <a class='btn'> 
-                                            <span class='btn-inner'>
-                                                <span class='content-wrapper'>
-                                                    <span class='btn-content'>
-                                                        <span class='btn-content-inner' label='Keep Shopping'>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    
-                                          
+                                <div class="col{% if s %}-12 mt-2{% endif %}">  
                                     <div role='button' class='retro-btn sm success' onclick="document.getElementById('submitButton').click();">
                                         <a class='btn'> 
                                             <span class='btn-inner'>
                                                 <span class='content-wrapper'>
                                                     <span class='btn-content'>
-                                                        <span class='btn-content-inner' label='Add to Bag'>
-                                                            
+                                                        <span class='btn-content-inner'>
+                                                            Add to Bag <i class="fas fa-bag-shopping"></i>
                                                         </span>
                                                     </span>
                                                 </span>
@@ -118,13 +119,26 @@
                                 
                             </div>
                         </form>
-                        <form class="form" action="{% url 'add_to_wishlist' game.id %}" method="POST">
-                            {% csrf_token %}
+                        <div role='button' class='retro-btn secondary sm' onclick="document.getElementById('wishlist-form').submit();">
+                            <a class='btn'> 
+                                <span class='btn-inner'>
+                                    <span class='content-wrapper'>
+                                        <span class='btn-content'>
+                                            <span class='btn-content-inner'>
+                                                Add to Wishlist <i class="fa-solid fa-heart"></i>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                            <form id="wishlist-form" class="form" action="{% url 'add_to_wishlist' game.id %}" method="POST">
+                                {% csrf_token %}
                                 <div class="col{% if s %}-12 mt-2{% endif %}">
-                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Wishlist">
+                                    <!-- Any additional form elements can be placed here if needed -->
                                 </div>
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        </form>
+                                <input type="hidden" name="redirect_url" value="">
+                            </form>
+                        </div>
                         
                        
                     </div>
@@ -170,7 +184,7 @@
                 <div class="reviews mt-4">
                     <div class="container mt-4">
                         <div class="row">
-                            <div class="col-md-8 offset-md-2">
+                            <div class="col-md-8 offset-md-2 mb-5">
                                 {% if reviews %}
                                 
                                     <h2 class="mb-4">Customer Reviews</h2>
@@ -201,22 +215,57 @@
                                             </div>
                                         {% endfor %}
                                     </div>
-
+                                    <div class="mt-4 mb-2">
                         
                                         {% if user.is_authenticated %}
-                                            <a href="{% url 'add_review' game.id %}">Leave a review for this game</a>
+                                            <div role='button' class='retro-btn sm secondary' onclick="window.location.href='{% url 'add_review' game.id  %}';">
+                                                <a class='btn'> 
+                                                    <span class='btn-inner'>
+                                                        <span class='content-wrapper'>
+                                                            <span class='btn-content'>
+                                                                <span class='btn-content-inner '>
+                                                                    Leave a review
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            
                                         {% else %}
-                                            <p>Please <a href="{% url 'account_login' %}">login</a> to leave a review.</p>
+                                            <div role='button' class='retro-btn sm secondary' onclick="window.location.href='{% url 'account_login' %}';">
+                                                <a class='btn'> 
+                                                    <span class='btn-inner'>
+                                                        <span class='content-wrapper'>
+                                                            <span class='btn-content'>
+                                                                <span class='btn-content-inner '>
+                                                                    Login to review
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </div>
                                         {% endif %}
                             
                                     {% else %}
-                                        <p>No reviews</p>
-                            
                                         {% if user.is_authenticated %}
-                                            <a href="{% url 'add_review' game.id %}">Add your review</a>
-                                        {% else %}
-                                            <p>Please <a href="{% url 'account_login' %}">login</a> to leave a review.</p>
+                                            <div role='button' class='retro-btn sm secondary' onclick="window.location.href='{% url 'add_review' game.id %}';">
+                                                <a class='btn'> 
+                                                    <span class='btn-inner'>
+                                                        <span class='content-wrapper'>
+                                                            <span class='btn-content'>
+                                                                <span class='btn-content-inner '>
+                                                                    Review this game
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </div>
                                         {% endif %}
+                                    </div>
+
                             
                                 {% endif %}
                             
@@ -227,8 +276,6 @@
                 </div>
             </div>
         </div>
-        
-    
 </div>
    
 <div class="modal" tabindex="-1" role="dialog" id="deleteModal">

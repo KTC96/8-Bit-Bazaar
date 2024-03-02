@@ -11,13 +11,11 @@
     border: 0;
 }
 
-
-
 #title {
   position: relative;
   margin: 70px auto 50px;
-  font-size: 60px;
-  font-family: "Press Start 2P", cursive;
+  font-size: 35px;
+  font-family: "VT323", sans-serif;
 }
 
 .wrapper {
@@ -32,8 +30,8 @@
   height: auto;
   padding: 0;
   text-align: center;
-  font-size: 25px;
-  font-family: "Press Start 2P", cursive;
+  font-size: 35px;
+  font-family: "VT323", sans-serif;
   transform: perspective(200px) rotateX(10deg);
   letter-spacing: 0.1em;
   user-select: none;
@@ -54,7 +52,7 @@
 .retro-btn.lg .btn {
   width: 294px;
   height: 54px;
-  font-size: 17px;
+  font-size: 35px;
   line-height: 50px;
 }
 .retro-btn.lg .btn .btn-inner .content-wrapper .btn-content .btn-content-inner:before {
@@ -64,7 +62,7 @@
 .retro-btn.sm .btn {
   width: 165px;
   height: 37px;
-  font-size: 10.5px;
+  font-size: 12px;
   line-height: 32.5px;
 }
 
@@ -73,16 +71,16 @@
   padding-top: 0;
 }
 .retro-btn.primary .btn .btn-inner .content-wrapper:before {
-  background-color: #eeb8b6;
+  background-color: #9f381f;
 }
 .retro-btn.primary .btn .btn-inner .content-wrapper .btn-content {
-  background-color: #0d47a1;
+  background-color: #ca4727 !important;
 }
 .retro-btn.secondary .btn .btn-inner .content-wrapper:before {
-  background-color: #263238;
+  background-color: #3079ac;
 }
 .retro-btn.secondary .btn .btn-inner .content-wrapper .btn-content {
-  background-color: #37474F;
+  background-color: #79b2da;
 }
 .retro-btn.danger .btn .btn-inner .content-wrapper:before {
   background-color: #590000;
@@ -251,7 +249,7 @@
 .retro-btn .btn .btn-inner .content-wrapper .btn-content {
   background-image: initial;
   background-color: #26a69a;
-  color: #ebf1f8;
+  color: #000;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,7 +309,7 @@
   content: attr(label);
   padding-top: 9.5px;
   font-size: 0.8em;
-  font-family: "Press Start 2P", cursive;
+  font-family: "VT323", sans-serif;
   letter-spacing: 0.06em;
   -webkit-transition: opacity 0.3s ease-out, background-color 0.1125s ease-in;
   transition: opacity 0.3s ease-out, background-color 0.1125s ease-in;
@@ -330,7 +328,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1em;
-  font-family: "Press Start 2P", cursive;
+  font-family: "VT323", sans-serif;
   transform: perspective(400px) rotateX(6deg);
   line-height: 4;
   padding: 0;

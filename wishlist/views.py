@@ -25,7 +25,8 @@ def add_to_wishlist(request, game_id):
     else:
         messages.info(request, f'{game.friendly_name} is already in your wishlist')
 
-    return redirect('games')
+    return redirect(reverse('game_detail', args=[game_id]))
+
 @login_required
 def remove_from_wishlist(request, game_id):
     """Remove the game from the wishlist"""

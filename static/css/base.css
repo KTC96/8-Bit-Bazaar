@@ -54,6 +54,19 @@ body {
   border-color: #000;
 }
 
+.red-btn {
+  background-color: #ca4727 !important;
+  color: #000 !important;
+  border-radius: 5px !important;
+  border: 1px solid !important;
+  border-color: #000 !important;
+}
+
+.red-btn:hover {
+  color: #fff !important;
+  background-color: #bc4224 !important;
+}
+
 .logo-image {
   height: 100px;
 }
@@ -149,6 +162,10 @@ nav {
 
 .genre-badge {
   margin-top: 250px;
+}
+
+.primary {
+  margin-left: 205px;
 }
 
 a.genre-badge > span.badge:hover {
