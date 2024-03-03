@@ -48,13 +48,23 @@
                             Spend <strong>£{{ free_game_delta }}</strong> to get an exclusive free game!
                         </p>
                     {% endif %}
-                    <a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-0">
-                        <span class="text-uppercase">Go To Secure Checkout</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                    </a>
                 </div>
+                <div class="col-12 d-flex justify-content-center mt-3">
+                    <div role='button' class='retro-btn success' onclick="window.location.href='{% url 'view_bag' %}';">
+                        <a class='btn'> 
+                            <span class='btn-inner'>
+                                <span class='content-wrapper'>
+                                    <span class='btn-content'>
+                                        <span class='btn-content-inner '>
+                                            Go To Secure Checkout <i class="fas fa-lock"></i>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+               
             </div>
         {% endif %}
         {% clear_session_var request 'item_added_to_bag' %} {# Clear the session variable after use #}

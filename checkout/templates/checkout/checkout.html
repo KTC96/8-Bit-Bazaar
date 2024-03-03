@@ -57,6 +57,14 @@
                         </div>
                     </div>
                 {% endfor %}
+                <div class="my-4">
+                    <h3 class="h3">Discount Code</h3>
+                    <form method="post" action="{% url 'apply_discount' %}">
+                        {% csrf_token %}
+                        <input type="text" name="discount_code" placeholder="Enter discount code">
+                        <button type="submit" class="btn retro-btn btn-outline-secondary complete-btn">Apply</button>
+                    </form>
+                </div>
                 <hr class="my-0">
                 <div class="row text-black text-right">
                     <div class="col-7 offset-2">
@@ -115,19 +123,27 @@
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
-                    <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
-							<span class="icon">
-								<i class="fas fa-chevron-left"></i>
-							</span>
-							<span class="font-weight-bold">Adjust Bag</span>
-						</a>
-						<button id="submit-button" class="btn btn-black rounded-0">
-							<span class="font-weight-bold">Complete Order</span>
-							<span class="icon">
-								<i class="fas fa-lock"></i>
-							</span>
-						</button>
+                    <div class="submit-button text-right mt-5 mb-2 ">   
+                        <div class="d-flex justify-content-end">       
+                            <div role='button' class='retro-btn sm primary m-0 inline-block' onclick="window.location.href='{% url 'view_bag' %}';">
+                                <a class='btn' > 
+                                    <span class='btn-inner'>
+                                        <span class='content-wrapper' style="height: 33px">
+                                            <span class='btn-content'>
+                                                <span class='btn-content-inner '>
+                                                    <i class="fa-solid fa-chevron-left"></i> Adjust Bag
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <button id="submit-button" class="btn complete-btn rounded-1">
+                                <span class="font-weight-bold">Complete Order</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </button>
+                        </div>   
 						<p class="small text-danger my-0">
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>
@@ -143,23 +159,16 @@
                         </p>
 					</div>
                 </form>
-                <div class="my-4">
-                    <h3 class="h3">Discount Code</h3>
-                    <form method="post" action="{% url 'apply_discount' %}">
-                        {% csrf_token %}
-                        <input type="text" name="discount_code" placeholder="Enter discount code">
-                        <button type="submit" class="btn btn-outline-secondary">Apply</button>
-                    </form>
-                </div>
+                
             </div>
         </div>
     </div>
     <div id="loading-overlay">
-        <h1 class="text-light logo-font loading-spinner">
-            <span class="icon">
-                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-            </span>
-        </h1>
+        <div class="loader">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+          </div>
     </div>
 {% endblock %}
 
@@ -168,4 +177,6 @@
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+   
+
 {% endblock %}

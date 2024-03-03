@@ -62,6 +62,7 @@ body {
   border-color: #000 !important;
 }
 
+
 .red-btn:hover {
   color: #fff !important;
   background-color: #bc4224 !important;
@@ -366,8 +367,9 @@ a.genre-badge > span.badge:hover {
 }
 
 .loader {
-  width: 50px;
+  width: 55px;
   height: 24px;
+  border-radius: 5px;
   padding: 4px 0;
   background: #222;
   border-top: 2px solid #111;
@@ -442,7 +444,7 @@ a.genre-badge > span.badge:hover {
     height: 2px;
     width: 2px;
     visibility: hidden;
-    animation: ani 4s infinite;
+    animation: ani 1.5s infinite;
   }
 
   &::before {

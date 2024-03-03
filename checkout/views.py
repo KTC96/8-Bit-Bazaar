@@ -237,6 +237,11 @@ def apply_discount(request):
     if request.method == 'POST':
         discount_code = request.POST.get('discount_code')
 
+        # Check if discount code is empty or None
+        if not discount_code:
+            messages.warning(request, 'No discount code entered. Please enter a valid discount code.')
+            return redirect('checkout')
+
         try:
             discount = Discount.objects.get(code=discount_code)
 
@@ -269,6 +274,10 @@ def apply_discount(request):
                 messages.warning(request, 'You need to be logged in to apply a discount. Please log in or create an account.')
         except Discount.DoesNotExist:
             messages.error(request, f'Invalid discount code "{discount_code}"')
+        
+
+    # Redirect back to the checkout page
+    return redirect('checkout')
         
 
     # Redirect back to the checkout page
