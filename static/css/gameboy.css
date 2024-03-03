@@ -1,6 +1,6 @@
 .gameboy {
   position: relative;
-  width: 400px;
+  max-width: 400px;
   height: auto;
   border-radius: 20px;
   padding: 20px;
@@ -9,6 +9,8 @@
   font-family: sans-serif;
   -webkit-user-select: none;
   cursor: default;
+  margin-top: 45px;
+  
   /*
   &::before {
     content:'';
@@ -159,7 +161,7 @@
   color: #3436bf;
   font-weight: bold;
   text-align: center;
-  margin: 0 auto;
+  
   border: 2px solid #3436bf;
   border-radius: 11px;
   margin-top: 30px;
@@ -187,7 +189,8 @@
 .gameboy .controls .dpad > * i {
   position: relative;
   display: block;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   height: 100%;
   font-size: 28px;
@@ -337,7 +340,8 @@
 .gameboy .start-select .select::before, .gameboy .start-select .start::before {
   content: "";
   display: block;
-  margin: 0 auto;
+  margin-left:auto;
+  margin-right:auto;
   width: 30px;
   height: 10px;
   margin-bottom: 5px;
@@ -385,22 +389,15 @@
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to top, #aaa 0%, white 100%);
-}
-
 .gameboy {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+
+@media (max-width: 990px){
+  .gameboy {
+    margin-top: 10px;
+  }
+}
 /*# sourceMappingURL=gameboy.css.map */

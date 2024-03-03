@@ -81,7 +81,7 @@ nav {
 }
 
 .nav-item a {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .pink-background {
@@ -140,6 +140,8 @@ nav {
 .game-title {
   font-size: 45px;
 }
+
+
 
 .game-name {
   font-size: 20px;
@@ -260,6 +262,14 @@ a.genre-badge > span.badge:hover {
   .text-lg-right {
     text-align: right !important;
   }
+
+}
+
+@media (max-width: 990px){
+  body {
+    padding-top: 10px;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -491,4 +501,9 @@ a.genre-badge > span.badge:hover {
   to {
     visibility: visible;
   }
+}
+
+/* Logout  ------------------------------------------------------------------------------ */
+.logout {
+  margin-top: 30%;
 }

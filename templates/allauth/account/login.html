@@ -13,13 +13,9 @@
 
 {% block inner_content %}
 
-<hr>
-<h2 class="logo-font mb-4">{% trans "Sign In" %}</h2>
-<hr>
-
-<div class="gameboy text-center" style="margin-top:100px" id="GameBoy">
+<div class="gameboy text-center" id="GameBoy">
   
-  <div class="screen-area">
+  <div class="screen-area pt-1">
     
     <div class="power">
       <div class="indicator">
@@ -61,21 +57,13 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <a class="btn btn-outline-white text-white rounded-0" href="{% url 'home' %}">Home</a>
+        <!-- <a class="btn btn-outline-white text-white rounded-0" href="{% url 'home' %}">Home</a> -->
         <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
         <p class="mt-2">
           <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
         </p>
       </form>
     </div>
-    
-    <!-- <canvas class="display" id="mainCanvas">
-      <p style="z-index: 999999"> HEllo
-
-
-      
-    </canvas> -->
-    
     <div class="label">
       <div class="title">GAME BOY</div>
       <div class="subtitle">
