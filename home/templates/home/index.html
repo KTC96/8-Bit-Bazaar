@@ -1,35 +1,34 @@
-{% extends "base.html" %} {% load static %} {% block favicon %} {% endblock %}
+{% extends "base.html" %} {% load static %}
 {% block page_header %}
 <div class="container header-container">
   <div class="row">
     <div class="col"></div>
   </div>
 </div>
-{% endblock %} {% block content %}
+{% endblock %}
+{% block content %}
 <div class="overlay"></div>
 <div class="container-fluid hero-image">
   <div class="row">
-    <div class="col-12 call-to-action">
-      <h1 class="headline text-black">Retro Gaming Redefined</h1>
-      <div class="my-5 shop-now">
-        <h4>
-          <a
-            href="{% url 'games' %}"
-            class="shop-now-btn btn btn-lg rounded-5 text-uppercase"
-            >Shop Now</a 
-          >
-        </h4>
+      <div class="col-12 call-to-action text-center">
+          <h1 class="headline text-black">Retro Gaming Redefined</h1>
+          <div class="my-5 shop-now">
+              <h4>
+                  <a href="{% url 'games' %}" class="shop-now-btn btn btn-lg text-black rounded-5 text-uppercase">Shop Now</a>
+              </h4>
+          </div>
       </div>
-    </div>
   </div>
 </div>
-<div class="container-fluid newsletter-container mx-0 d-flex justify-content-center text-center">
-    <div class="row newsletter">
-      <div class="col-md-6 mt-4">
-        <h2>Subscribe to Our Newsletter</h2>
-        <p>Stay updated on the latest retro gaming news, releases, and promotions!</p>
-     </div>  
-     <div class="col-md-6">
+
+<!-- Newsletter Section -->
+<div class="container newsletter-container mt-5 ">
+  <div class="row newsletter">
+      <div class="col-md-6 text-center mt-4">
+          <h2>Subscribe to Our Newsletter</h2>
+          <p>Stay updated on the latest retro gaming news, releases, and promotions!</p>
+      </div>
+      <div class="col-md-6">
         <div id="mc_embed_shell">
           <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
           <div id="mc_embed_signup">
@@ -50,19 +49,20 @@
                 <div class="optionalParent">
                   <div class="clear foot">
                     <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button red-btn" value="Subscribe" />
-                    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                  
                   </div>
                 </div>
               </div>
             </form>
           </div>
         </div>
-     </div>
-     
-    </div>
+      </div>
   </div>
-  
-    {% endblock %} {% block postloadjs %} {{ block.super }}
+</div>
+
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
 
     <script
       type="text/javascript"
@@ -89,6 +89,4 @@
       var $mcj = jQuery.noConflict(true);
     </script>
 
-    {% endblock %}
-  </div>
-</div>
+{% endblock %}

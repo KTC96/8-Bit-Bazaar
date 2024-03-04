@@ -18,6 +18,8 @@ body {
   overflow-y: auto;
 }
 
+/* index.html ------------------------------------------------------------------------------ */
+
 .hero-image {
   background: url("/media/background.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -48,10 +50,14 @@ body {
 .shop-now-btn {
   min-width: 100px;
   background-color: #ca4727;
-  color: #fff;
   border-radius: 5px;
-  border: 1px solid;
-  border-color: #000;
+}
+
+.shop-now-btn:hover {
+  
+  background-color: #ca4727;
+  color: white !important;
+  border-color: #fff;
 }
 
 .red-btn {
@@ -121,8 +127,8 @@ nav {
 #mc_embed_signup {
   background: #eeb8b6;
   clear: left;
-  font: 14px Helvetica, Arial, sans-serif;
-  width: 600px;
+  font: 14px "VT323";
+  width: 100%;
 }
 
 .overlay {
@@ -278,6 +284,11 @@ a.genre-badge > span.badge:hover {
 
   .games-heading {
     margin-top: 50px;
+  }
+
+  .clear {
+    display: flex !important;
+    justify-content: center !important;
   }
 
 }
