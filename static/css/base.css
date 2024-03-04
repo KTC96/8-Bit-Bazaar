@@ -311,24 +311,30 @@ a.genre-badge > span.badge:hover {
   color: #aab7c4;
 }
 
+.login-signup-btn {
+  background-color: #28a745 !important;
+}
+
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type="submit"] {
   /* btn */
   display: inline-block;
   font-weight: 400;
   color: #fff;
+  height: 30px;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #000;
-  border: 1px solid #000;
+  border: None;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 5px;
+  font-family: "VT323", sans-serif ;
+  color: black;
 
   /* standard bootstrap btn transitions */
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
