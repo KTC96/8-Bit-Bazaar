@@ -19,6 +19,9 @@
             <h2 class="text-black offwhite-background games-heading">
                 {% if current_genres %}
                     {{ current_genres.0.friendly_name }} Games
+                {% elif current_categories %}
+                    {{ current_categories.0.friendly_name }}
+                
                 {% else %}
                     Games
                 {% endif %}
