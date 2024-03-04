@@ -10,7 +10,6 @@ from .models import Game, Category, Genre, Review
 from .forms import GameForm, ReviewForm
 
 
-
 def all_games(request):
     """A view to show all games, including sorting and search queries"""
     
@@ -19,21 +18,32 @@ def all_games(request):
     categories = None
     sort = None
     direction = None
+    genres = None
+    sortkey = None
 
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
+
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 games = games.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
+            elif sortkey == 'genre':
+                sortkey = 'genre__name'
+            elif sortkey == 'category':
                 sortkey = 'category__name'
+
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             games = games.order_by(sortkey)
+
+        if 'genre' in request.GET:
+            genres = request.GET['genre'].split(',')
+            games = games.filter(genre__name__in=genres)
+            genres = Genre.objects.filter(name__in=genres)
             
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -48,6 +58,7 @@ def all_games(request):
             
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             games = games.filter(queries)
+
     for game in games:
         if game.on_sale:
             sale_amount = Decimal(settings.SALE_AMOUNT)
