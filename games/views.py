@@ -14,6 +14,8 @@ def all_games(request):
     """A view to show all games, including sorting and search queries"""
     
     games = Game.objects.all()
+    all_genres = Genre.objects.all()
+    all_categories = Category.objects.all()
     query = None
     categories = None
     sort = None
@@ -82,6 +84,9 @@ def all_games(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'current_genres': genres,
+        'all_genres': all_genres,
+        'all_categories': all_categories,
     }
 
     return render(request, 'games/games.html', context)

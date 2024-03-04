@@ -15,24 +15,32 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center mt-5 mx-0 px-0">
-            <h2 class="text-black offwhite-background">
+        <div class="col text-center mx-0 px-0">
+            <h2 class="text-black offwhite-background games-heading">
                 {% if current_genres %}
                     {{ current_genres.0.friendly_name }} Games
                 {% else %}
                     Games
                 {% endif %}
             </h2>
-            {% for g in current_genres %}
-                <a class="genre-badge text-decoration-none" href="{% url 'games' %}?genre={{ g.name }}">
-                    <span class="p-2 mt-20 badge badge-white text-black rounded-1 border border-dark">{{ g.friendly_name }}</span>
-                </a>
-            {% endfor %}
-            {% for c in current_categories %}
-                <a class="category-badge text-decoration-none" href="{% url 'games' %}?category={{ c.name }}">
-                    <span class="p-2 mt-20 badge badge-white text-black rounded-1 border border-dark">{{ c.friendly_name }}</span>
-                </a>
-            {% endfor %}
+            {% if request.GET.genre %}
+                {% for g in all_genres %}
+                    <a class="text-decoration-none" href="{% url 'games' %}?genre={{ g.name }}">
+                        <span class="{% if request.GET.genre == g.name %}active{% endif %} p-2 mt-20 badge text-black offwhite-background rounded-1 border border-dark">{{ g.friendly_name }}</span>
+                    </a>
+                {% endfor %}
+            {% endif %}
+            {% if request.GET.category %}
+                {% for c in all_categories %}
+                    <a class="text-decoration-none" href="{% url 'games' %}?category={{ c.name }}">
+                        <span class="{% if request.GET.category == c.name %}active{% endif %} p-2 mt-20 badge text-black offwhite-background rounded-1 border border-dark">{{ c.friendly_name }}</span>
+                    </a>
+                {% endfor %}
+            {% endif %}
+
+
+
+           
             <hr class=" w-100 mb-1">
         </div>
 
@@ -204,3 +212,4 @@
     
     
 {% endblock %}
+
