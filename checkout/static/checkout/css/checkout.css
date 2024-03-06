@@ -93,6 +93,16 @@ select option[value=""] {
   background-color: #009A3E ;
 }
 
+.complete-btn:hover {
+  color: white !important;
+}
+
+.discount-form {
+  border-radius: 5px !important;
+  border: None;
+  padding: 5px;
+}
+
 
 @media (max-width: 991px) {
   .checkout-container h2 {

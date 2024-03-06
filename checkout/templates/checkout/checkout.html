@@ -16,7 +16,7 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container mt-3">
         <div class="row">
             <div class="col">
                 <hr>
@@ -27,13 +27,13 @@
 
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p class="text-muted">Order Summary ({{ game_count }})</p>
+                <p class="">Order Summary ({{ game_count }})</p>
                 <div class="row">
                     <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Item</p>
+                        <p class="mb-1 mt-0 small ">Item</p>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
+                        <p class="mb-1 mt-0 small ">Subtotal</p>
                     </div>
                 </div>
                 {% for item in bag_items %}
@@ -49,20 +49,20 @@
                         </div>
                         <div class="col-7">
                             <p class="my-0"><strong>{{ item.game.friendly_name }}</strong></p>
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            <p class="my-0 small ">Qty: {{ item.quantity }}</p>
                             <p class="my-0">Price: £{{ item.discounted_price }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">£{{ item.discounted_price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small ">£{{ item.discounted_price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
                 <div class="my-4">
                     <h3 class="h3">Discount Code</h3>
-                    <form method="post" action="{% url 'apply_discount' %}">
+                    <form class="d-flex align-items-center" method="post" action="{% url 'apply_discount' %}">
                         {% csrf_token %}
-                        <input type="text" name="discount_code" placeholder="Enter discount code">
-                        <button type="submit" class="btn retro-btn btn-outline-secondary complete-btn">Apply</button>
+                        <input type="text" class="discount-form mr-1" name="discount_code" placeholder="Enter discount code">
+                        <button type="submit" class="btn retro-btn text-black complete-btn">Apply</button>
                     </form>
                 </div>
                 <hr class="my-0">
@@ -84,17 +84,18 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6">
-                <p class="text-muted">Please fill out the form below to complete your order</p>
+                <p class="">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+                        <legend class="fieldset-label small text-black px-2 w-auto"><h3>Personal Details</h3></legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
+                        {{ order_form.phone_number | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small text-black px-2 w-auto">Billing</legend>
-                        {{ order_form.phone_number | as_crispy_field }}
+                        <legend class="fieldset-label small text-black px-2 w-auto"><h3>Billing</h3></legend>
+                        
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
                         {{ order_form.town_or_city | as_crispy_field }}

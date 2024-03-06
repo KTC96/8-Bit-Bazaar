@@ -29,7 +29,7 @@
             {% if request.GET.genre %}
                 {% for g in all_genres %}
                     <a class="text-decoration-none" href="{% url 'games' %}?genre={{ g.name }}">
-                        <span class="{% if request.GET.genre == g.name %}active{% endif %} p-2 mt-20 badge text-black offwhite-background rounded-1 border border-dark">{{ g.friendly_name }}</span>
+                        <span class="{% if request.GET.genre == g.name %}active{% endif %} p-2 mt-1 badge text-black offwhite-background rounded-1 border border-dark">{{ g.friendly_name }}</span>
                     </a>
                 {% endfor %}
             {% endif %}

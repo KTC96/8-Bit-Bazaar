@@ -160,6 +160,11 @@ nav {
   object-fit: contain;
 }
 
+.game-image-bag {
+  padding: 10px;
+  object-fit: contain;
+}
+
 .badge.active {
   background-color: #ca4727;
   color: white !important;
@@ -307,6 +312,15 @@ a.genre-badge > span.badge:hover {
   .game-detail-img {
     justify-content: center;
   }
+
+  .nav-link {
+    padding: 0.15 rem;
+  }
+
+  .genre-rating {
+    display: flex;
+    justify-content: center;
+  }
   
 
 }
@@ -342,6 +356,10 @@ a.genre-badge > span.badge:hover {
 
 .login-signup-btn {
   background-color: #28a745 !important;
+  min-width: 100px !important;
+  font-family: 'VT323', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600 !important;
 }
 
 .allauth-form-inner-content button,
@@ -386,6 +404,8 @@ a.genre-badge > span.badge:hover {
 .game-details {
   background-color: #eeb8b6;
 }
+
+
 
 /* Add/Edit game form  ------------------------------------------------------------------------------ */
 
