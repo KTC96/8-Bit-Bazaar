@@ -61,10 +61,10 @@
                     </div>
                     <div class="col-md-4">
                         <p class="small mb-0 text-right">
-                            {% if item.discounted_price %}
-                                {{ item.discounted_price }}
+                            {% if item.game.discounted_price %}
+                                {{ item.game.discounted_price }}
                             {% else %}
-                                {{ item.game.price}}
+                                {{ item.game.price }}
                             {% endif %}
                         </p>
                     </div>

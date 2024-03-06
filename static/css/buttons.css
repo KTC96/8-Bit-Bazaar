@@ -61,12 +61,11 @@
   letter-spacing: 0.15em;
 }
 .retro-btn.sm .btn {
-  width: 165px;
-  height: 37px;
-  font-size: 12px;
+  width: 180px;
+  height: 40px;
+  font-size: 15px;
   line-height: 32.5px;
 }
-
 
 .retro-btn.sm .btn .btn-inner .content-wrapper .btn-content .btn-content-inner:before {
   padding-top: 0;
@@ -119,8 +118,8 @@
   padding-top: 3px;
   position: relative;
   cursor: pointer;
-  font-weight: 600;
-  font-family: inherit;
+  font-weight: 600 !important;
+  font-family: "VT323", sans-serif !important;
   font-style: normal;
   letter-spacing: 0;
   text-rendering: auto;

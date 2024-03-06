@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Game, Category, Genre, Platform, Review
+from .models import Game, Category, Genre, Review
 
 
 class GameAdmin(admin.ModelAdmin):
@@ -9,7 +9,6 @@ class GameAdmin(admin.ModelAdmin):
         'category',
         'price',
         'rating',
-        'release_year',
         'image',
     )
 
@@ -25,6 +24,5 @@ class GenreAdmin(admin.ModelAdmin):
 admin.site.register(Game, GameAdmin)
 admin.site.register(Category)
 admin.site.register(Genre, GenreAdmin)
-admin.site.register(Platform)
 admin.site.register(Review)
 

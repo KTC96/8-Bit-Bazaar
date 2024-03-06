@@ -6,11 +6,20 @@ from .models import Wishlist
 from django.contrib import messages
 from django.conf import settings
 from django.utils import timezone
+from bag.contexts import bag_contents
 
 @login_required
 def wishlist(request):
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     games_in_wishlist = wishlist.games.all()
+   
+    for game in games_in_wishlist:
+        if game.on_sale:
+            sale_amount = Decimal(settings.SALE_AMOUNT)
+            game.discounted_price = round(game.price - (game.price * sale_amount), 2)
+        else:
+            game.discounted_price = None
+    
     return render(request, 'wishlist/wishlist.html', {'games_in_wishlist': games_in_wishlist})
 
 @login_required

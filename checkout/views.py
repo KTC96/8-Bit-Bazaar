@@ -1,4 +1,5 @@
 import json
+from decimal import Decimal
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.template.loader import render_to_string
@@ -174,6 +175,15 @@ def checkout_success(request, order_number):
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 
+    order_games = Game.objects.filter(orderlineitem__order=order)
+
+    for game in order_games:
+        if game.on_sale:
+            sale_amount = Decimal(settings.SALE_AMOUNT)
+            game.discounted_price = round(game.price - (game.price * sale_amount), 2)
+        else:
+            game.discounted_price = None
+
     # Check if discounted total and discount amount are available in session
     discounted_total = request.session.get('discounted_total', None)
     discount_amount = request.session.get('discount_amount', None)
@@ -222,6 +232,7 @@ def checkout_success(request, order_number):
     context = {
         'order': order,
         'discount_amount': discount_amount,
+        'order_games': order_games,
     }
 
     order.discounted_total = discounted_total

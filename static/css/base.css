@@ -175,12 +175,15 @@ nav {
   background-color: ;
 }
 
-.genre-badge {
-  margin-top: 250px;
+.sale {
+  font-size: 20px;
+  font-weight: 500;
 }
 
-.primary {
-  margin-left: 205px;
+
+
+.genre-badge {
+  margin-top: 250px;
 }
 
 a.genre-badge > span.badge:hover {
@@ -290,6 +293,21 @@ a.genre-badge > span.badge:hover {
     display: flex !important;
     justify-content: center !important;
   }
+
+  .primary {
+    margin: auto;
+  }
+
+  .game-description {
+    font-size: 18px;
+    height: 350px;
+    overflow-y: auto;
+  }
+
+  .game-detail-img {
+    justify-content: center;
+  }
+  
 
 }
 
