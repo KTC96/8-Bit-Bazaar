@@ -484,11 +484,11 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 <details><summary>Click to view the bag wireframes</summary>
 
 #### Desktop
-![screenshot](documentation/wireframes/event-details_wireframe_desktop.png)
+![screenshot](documentation/wireframes/bag_wireframe_desktop.png)
 #### Tablet
-![wireframe](documentation/wireframes/event-details_wireframe_tablet.png)
+![wireframe](documentation/wireframes/bag_wireframe_tablet.png)
 #### Mobile
-![wireframe](documentation/wireframes/event-details_wireframe_mobile.png)
+![wireframe](documentation/wireframes/bag_wireframe_mobile.png)
 </details>
 
 ### Checkout
@@ -496,23 +496,23 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 <details><summary>Click to view the checkout wireframes</summary>
 
 #### Desktop
-![screenshot](documentation/wireframes/event-details_wireframe_desktop.png)
+![screenshot](documentation/wireframes/checkout_wireframe_desktop.png)
 #### Tablet
-![wireframe](documentation/wireframes/event-details_wireframe_tablet.png)
+![wireframe](documentation/wireframes/checkout_wireframe_tablet.png)
 #### Mobile
-![wireframe](documentation/wireframes/event-details_wireframe_mobile.png)
+![wireframe](documentation/wireframes/checkout_wireframe_mobile.png)
 </details>
 
-### Checkout Success
+#### Checkout Success
 
 <details><summary>Click to view the checkout success wireframes</summary>
 
 #### Desktop
-![screenshot](documentation/wireframes/event-details_wireframe_desktop.png)
+![screenshot](documentation/wireframes/checkout_success_wireframe_desktop.png)
 #### Tablet
-![wireframe](documentation/wireframes/event-details_wireframe_tablet.png)
+![wireframe](documentation/wireframes/checkout_success_wireframe_tablet.png)
 #### Mobile
-![wireframe](documentation/wireframes/event-details_wireframe_mobile.png)
+![wireframe](documentation/wireframes/checkout_success_wireframe_mobile.png)
 </details>
 
 ### Profile
@@ -520,11 +520,11 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 <details><summary>Click to view the profile wireframes</summary>
 
 #### Desktop
-![screenshot](documentation/wireframes/event-details_wireframe_desktop.png)
+![screenshot](documentation/wireframes/profile_wireframe_desktop.png)
 #### Tablet
-![wireframe](documentation/wireframes/event-details_wireframe_tablet.png)
+![wireframe](documentation/wireframes/profile_wireframe_tablet.png)
 #### Mobile
-![wireframe](documentation/wireframes/event-details_wireframe_mobile.png)
+![wireframe](documentation/wireframes/profile_wireframe_mobile.png)
 </details>
 
 

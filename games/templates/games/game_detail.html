@@ -1,8 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-
-
-
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -12,21 +9,17 @@
 {% endblock %}
 
 {% block content %}
-<div class="game-details mt-5 mx-auto my-4 col-sm-12 col-lg-8 ">
+<div class="game-details  mx-auto my-4 col-sm-12 col-lg-8 ">
    
-        <div class="row text-center">
-            <div class="col-md-12">
+        <div class="row text-center ">
+            <div class="col-md-12 mt-4">
                 <div class="page-header my-3">
                     <h1>
                         {{ game.friendly_name }}
                     </h1>
                 </div>
             </div>
-           
         </div>
-        
-        
-        
         <div class="row d-flex justify-content-center">
             <div class="col-md-8">
                 <div role='button' class='retro-btn sm primary d-flex justify-content-center' onclick="window.location.href='{% url 'games' %}';">

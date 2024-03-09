@@ -314,7 +314,7 @@ a.genre-badge > span.badge:hover {
   }
 
   .nav-link {
-    padding: 0.15 rem;
+    padding: 0.15rem !important;
   }
 
   .genre-rating {
@@ -333,6 +333,14 @@ a.genre-badge > span.badge:hover {
   .page-margin {
     margin-top: 100px;
   }
+
+  
+  .nav-link i {
+    font-size: 100%;
+  }
+
+
+  
 }
 
 /* Allauth  ------------------------------------------------------------------------------ */
