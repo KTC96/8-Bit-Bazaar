@@ -77,3 +77,24 @@
     {% endif %}
 </div>
 {% endblock %}
+
+{% block postloadjs %}
+
+{{ block.super }}
+<script>
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        e.preventDefault();
+
+        var csrfToken = "{{ csrf_token }}";
+        var gameId = $(this).attr('data-game-id');
+        var url = `/wishlist/remove/${gameId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    });
+</script>
+{% endblock %}
