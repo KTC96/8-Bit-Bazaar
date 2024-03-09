@@ -42,10 +42,10 @@
                         <p class="my-0 lead mb-2 d-flex justify-content-center">Price: £{{ game.price }}</p>
                     {% endif %}
                     <div>
-                        <form class="form" action="{% url 'add_to_bag_wishlist' game.id %}" method="POST">
+                        <form class="form add-to-bag-form" action="{% url 'add_to_bag_wishlist' game.id %}" method="POST" data-game-id="{{ game.id }}">
                             {% csrf_token %}
                             <div class="d-flex justify-content-center">
-                                <div role='button' class='retro-btn sm success' onclick="document.getElementById('submitButton').click();">
+                                <div role='button' class='retro-btn sm success' onclick="addToBag({{ game.id }});">
                                     <a class='btn'>
                                         <span class='btn-inner'>
                                             <span class='content-wrapper'>
@@ -57,15 +57,10 @@
                                             </span>
                                         </span>
                                     </a>
-                                    <input type="submit" id="submitButton" class="hidden">
                                 </div>
                             </div>
+                            <input type="submit" class="hidden submit-button">
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            <style>
-                                .hidden {
-                                    display: none;
-                                }
-                            </style>
                         </form>
                     </div>
                 </div>
@@ -82,8 +77,15 @@
 
 {{ block.super }}
 <script>
+    function addToBag(gameId) {
+        var submitButton = $('.add-to-bag-form[data-game-id="' + gameId + '"] .submit-button');
+        if (submitButton.length) {
+            submitButton.click();
+        }
+    }
+
     // Remove item and reload on click
-    $('.remove-item').click(function(e) {
+    $('.remove-item').click(function (e) {
         e.preventDefault();
 
         var csrfToken = "{{ csrf_token }}";
@@ -92,9 +94,9 @@
         var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
+            .done(function () {
+                location.reload();
+            });
     });
 </script>
 {% endblock %}

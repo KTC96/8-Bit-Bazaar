@@ -13,6 +13,10 @@ body {
   padding-top: 150px;
 }
 
+.hidden {
+  display: None;
+}
+
 .dropdown-menu {
   max-height: 60vh;
   overflow-y: auto;
