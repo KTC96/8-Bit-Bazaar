@@ -336,6 +336,7 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 
 #### Desktop
 ![screenshot](documentation/wireframes/home_wireframe_desktop.png)
+
 #### Tablet
 ![wireframe](documentation/wireframes/home_wireframe_tablet.png)
 #### Mobile
@@ -386,11 +387,11 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 <details><summary>Click to view Games wireframes</summary>
 
 #### Desktop
-![screenshot](documentation/wireframes/events_wireframe_desktop.png)
+![screenshot](documentation/wireframes/games_wireframe_desktop.png)
 #### Tablet
-![wireframe](documentation/wireframes/events_wireframe_tablet.png)
+![wireframe](documentation/wireframes/games_wireframe_tablet.png)
 #### Mobile
-![wireframe](documentation/wireframes/events_wireframe_mobile.png)
+![wireframe](documentation/wireframes/games_wireframe_mobile.png)
 </details>
 
 
@@ -399,11 +400,11 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 <details><summary>Click to view Game Details wireframes</summary>
 
 #### Desktop
-![screenshot](documentation/wireframes/event-details_wireframe_desktop.png)
+![screenshot](documentation/wireframes/game-details_wireframe_desktop.png)
 #### Tablet
-![wireframe](documentation/wireframes/event-details_wireframe_tablet.png)
+![wireframe](documentation/wireframes/game-details_wireframe_tablet.png)
 #### Mobile
-![wireframe](documentation/wireframes/event-details_wireframe_mobile.png)
+![wireframe](documentation/wireframes/game-details_wireframe_mobile.png)
 </details>
 
 #### Product management: Add game
@@ -411,11 +412,11 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 <details><summary>Click to view add game wireframes</summary>
 
 #### Desktop
-![screenshot](documentation/wireframes/event-details_wireframe_desktop.png)
+![screenshot](documentation/wireframes/add_game_wireframe_desktop.png)
 #### Tablet
-![wireframe](documentation/wireframes/event-details_wireframe_tablet.png)
+![wireframe](documentation/wireframes/add_game_wireframe_tablet.png)
 #### Mobile
-![wireframe](documentation/wireframes/event-details_wireframe_mobile.png)
+![wireframe](documentation/wireframes/add_game_wireframe_mobile.png)
 </details>
 
 #### Product management: Edit game
@@ -423,11 +424,11 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 <details><summary>Click to view edit game wireframes</summary>
 
 #### Desktop
-![screenshot](documentation/wireframes/event-details_wireframe_desktop.png)
+![screenshot](documentation/wireframes/edit_game_wireframe_desktop.png)
 #### Tablet
-![wireframe](documentation/wireframes/event-details_wireframe_tablet.png)
+![wireframe](documentation/wireframes/edit_game_wireframe_tablet.png)
 #### Mobile
-![wireframe](documentation/wireframes/event-details_wireframe_mobile.png)
+![wireframe](documentation/wireframes/edit_game_wireframe_mobile.png)
 </details>
 
 #### Wishlist
@@ -435,47 +436,47 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 <details><summary>Click to view the wishlist wireframes</summary>
 
 #### Desktop
-![screenshot](documentation/wireframes/event-details_wireframe_desktop.png)
+![screenshot](documentation/wireframes/wishlist_wireframe_desktop.png)
 #### Tablet
-![wireframe](documentation/wireframes/event-details_wireframe_tablet.png)
+![wireframe](documentation/wireframes/wishlist_wireframe_tablet.png)
 #### Mobile
-![wireframe](documentation/wireframes/event-details_wireframe_mobile.png)
+![wireframe](documentation/wireframes/wishlist_wireframe_mobile.png)
 </details>
 
-### My reviews
+#### My reviews
 
 <details><summary>Click to view the my reviews wireframes</summary>
 
 #### Desktop
-![screenshot](documentation/wireframes/event-details_wireframe_desktop.png)
+![screenshot](documentation/wireframes/reviews_wireframe_desktop.png)
 #### Tablet
-![wireframe](documentation/wireframes/event-details_wireframe_tablet.png)
+![wireframe](documentation/wireframes/reviews_wireframe_tablet.png)
 #### Mobile
-![wireframe](documentation/wireframes/event-details_wireframe_mobile.png)
+![wireframe](documentation/wireframes/reviews_wireframe_mobile.png)
 </details>
 
-### Add review
+#### Add review
 
 <details><summary>Click to view the add review wireframes</summary>
 
 #### Desktop
-![screenshot](documentation/wireframes/event-details_wireframe_desktop.png)
+![screenshot](documentation/wireframes/add_review_wireframe_desktop.png)
 #### Tablet
-![wireframe](documentation/wireframes/event-details_wireframe_tablet.png)
+![wireframe](documentation/wireframes/add_review_wireframe_tablet.png)
 #### Mobile
-![wireframe](documentation/wireframes/event-details_wireframe_mobile.png)
+![wireframe](documentation/wireframes/add_review_wireframe_mobile.png)
 </details>
 
-### Add review
+#### Edit review
 
 <details><summary>Click to view the edit review wireframes</summary>
 
 #### Desktop
-![screenshot](documentation/wireframes/event-details_wireframe_desktop.png)
+![screenshot](documentation/wireframes/edit_review_wireframe_desktop.png)
 #### Tablet
-![wireframe](documentation/wireframes/event-details_wireframe_tablet.png)
+![wireframe](documentation/wireframes/edit_review_wireframe_tablet.png)
 #### Mobile
-![wireframe](documentation/wireframes/event-details_wireframe_mobile.png)
+![wireframe](documentation/wireframes/edit_review_wireframe_mobile.png)
 </details>
 
 ### Bag

@@ -13,8 +13,8 @@
           {% if review.author == user %}
             <div class="card pink-checkout-background text-black mb-3">
               <div class="card-header d-flex justify-content-between align-items-center">
-                <h5 class="card-title">{{ review.title }}</h5>
-                <p>{{ review.game.friendly_name }}</p>
+                <h2 class="card-title">{{ review.title }}</h2>
+                <h3>{{ review.game.friendly_name }}</h3>
                 <div>
                   <a href="{% url 'edit_review' review.id %}">Edit Review</a>
                   <form action="{% url 'delete_review' review.id %}" method="post">
@@ -27,8 +27,8 @@
                 <p class="card-text">{{ review.body }}</p>
               </div>
               <div class="card-footer d-flex justify-content-between">
-                <p class="card-text">Author:{{ review.author }}</p>
-                <p>Date posted:{{ review.date }}</p>
+                <p class="card-text">Author: {{ review.author }}</p>
+                <p>Date posted: {{ review.date }}</p>
               </div>
             </div>
           {% endif %}
