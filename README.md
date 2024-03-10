@@ -610,5 +610,64 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 ### Change password done
 
 
+## Future Development
+
+I aimed to introduce additional features into my project, some of which were initially planned but have been categorized as "Won't Have" on my GitHub project board, following MoSCoW prioritization.
+
+### Social Login
+
+* Streamline the user sign-up process by integrating social login options, such as Google and Facebook. This not only expedites registration but also enhances user experience.
+
+### Email Notifications
+
+* Implement email notifications for users, notifying them when a game on their wishlist goes on sale. This feature aims to keep users engaged and informed about relevant updates.
+
+### Review Moderation
+
+* Create an admin page for review moderation, enabling administrators to review and moderate customer reviews for inappropriate content or spam.
+
+### Active Rating
+
+* Introduce real-time rating logic where users' ongoing ratings dynamically influence the overall rating for a particular game.
+
+### Auto Complete
+
+* Enhance the user search experience by incorporating Google autocomplete functionality. This improvement aims to provide users with a more efficient and convenient game search process.
+
+### Filtering
+
+* Enhance filtering mechanisms to accurately sort games on sale into price order, ensuring a more effective and user-friendly sorting process.
+
+### Bundle Deals
+
+* Integrate logic to enable users to purchase multiple specific games as a bundle, offering an overall discount for the bundled items.
+
+### Notifications
+
+* Improve notification messages throughout the site. For example, redirect non-admin users attempting to access the "add games" URL to the login page with a clear notification, enhancing user guidance and communication.
+
+### Styling
+
+* Refine the platform's visual appeal and responsiveness. Prioritize improvements to styling, aiming for a polished and user-friendly interface. 
+
+## Technologies
+![My Tech Stack](https://github-readme-tech-stack.vercel.app/api/cards?lineCount=3&line1=postgresql%2Cpostgresql%2C6cc7a1%3Bbootstrap%2Cbootstrap%2C7b86c0%3Bamazon%2Camazon%2C62161a%3B3B&line2=django%2Cdjango%2C344312%3Bjavascript%2Cjavascript%2Cecf398%3Bpython%2Cpython%2C9b9ebf%3B&line3=html5%2Chtml5%2C73a4ea%3Bcss3%2Ccss3%2C8983cc%3B)
+
+* HTML: Used for structuring the website's content.
+* CSS: Employed for designing and organizing the site's layout.
+* Bootstrap: Utilized as a CSS framework to establish an adaptive grid layout for responsiveness and to integrate preset styles and components.
+* Python + Django: Served as the backend development stack, providing a robust server-side foundation.
+* Javascript:
+   * Deletion
+   * 
+* PostgreSQL: Chosen as the relational database management system.
+* ElephantSQL: Used to host the PostgreSQL database online.
+* Amazon web services: 
+* Figma: Played a key role in the project by facilitating the creation of wireframes.
+* GitHub + Git: Used for version control and code management.
+* WebAIM Contrast Checker: Ensured sufficient color contrast for accessibility.
+* Heroku: Chosen as the hosting platform for the site.
+* WAVE: To evaluate the accessibility of the site. 
+
 
 

@@ -14,11 +14,20 @@
                 The page you are looking for isn't available
             </h1>
             <div class="my-5">
-                <h4>
-                    <a href="{% url 'games' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                        Return to shop
+
+                <div role='button' class='retro-btn sm success' onclick="window.location.href='{% url 'games' %}';">
+                    <a class='btn'>
+                        <span class='btn-inner'>
+                            <span class='content-wrapper'>
+                                <span class='btn-content'>
+                                    <span class='btn-content-inner'>
+                                        RETURN TO SHOP
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
                     </a>
-                </h4>
+                </div>
             </div>
         </div>
     </div>
