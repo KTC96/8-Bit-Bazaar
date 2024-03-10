@@ -653,21 +653,498 @@ I aimed to introduce additional features into my project, some of which were ini
 ## Technologies
 ![My Tech Stack](https://github-readme-tech-stack.vercel.app/api/cards?lineCount=3&line1=postgresql%2Cpostgresql%2C6cc7a1%3Bbootstrap%2Cbootstrap%2C7b86c0%3Bamazon%2Camazon%2C62161a%3B3B&line2=django%2Cdjango%2C344312%3Bjavascript%2Cjavascript%2Cecf398%3Bpython%2Cpython%2C9b9ebf%3B&line3=html5%2Chtml5%2C73a4ea%3Bcss3%2Ccss3%2C8983cc%3B)
 
-* HTML: Used for structuring the website's content.
-* CSS: Employed for designing and organizing the site's layout.
-* Bootstrap: Utilized as a CSS framework to establish an adaptive grid layout for responsiveness and to integrate preset styles and components.
-* Python + Django: Served as the backend development stack, providing a robust server-side foundation.
-* Javascript:
-   * Deletion
-   * 
-* PostgreSQL: Chosen as the relational database management system.
-* ElephantSQL: Used to host the PostgreSQL database online.
-* Amazon web services: 
-* Figma: Played a key role in the project by facilitating the creation of wireframes.
-* GitHub + Git: Used for version control and code management.
-* WebAIM Contrast Checker: Ensured sufficient color contrast for accessibility.
-* Heroku: Chosen as the hosting platform for the site.
-* WAVE: To evaluate the accessibility of the site. 
+* **HTML:** Employed for structuring the content of the website, providing the foundational structure for web pages.
+* **CSS:** Utilized for designing and organizing the layout of the site, ensuring a visually appealing and well-organized user interface.
+* **Bootstrap:** Applied as a CSS framework to establish an adaptive grid layout for responsiveness and integrate preset styles and components, streamlining the design process.
+* **Python + Django:** Formed the backend development stack, providing a robust server-side foundation for seamless functionality and data management.
+* **JavaScript:**
+   * Displayed and enabled interactivity in the game deletion modal, improving the user experience during game management.
+   * Overwrote the default image selection from Django admin, allowing for customized image handling.
+   * Implemented animation for custom retro buttons, enhancing the visual appeal and user engagement.
+   * Enabled the removal of games from the wishlist and bag, providing users with a seamless shopping experience.
+* **PostgreSQL:** Selected as the relational database management system, ensuring efficient data storage and retrieval.
+* **ElephantSQL:** Deployed to host the PostgreSQL database online, facilitating remote access and management of the database.
+* **Amazon Web Services:** Employed to host static files, ensuring reliable and scalable storage for website assets.
+* **Stripe:** Integrated for handling payments, providing a secure and seamless payment processing solution.
+* **Figma:** Played a pivotal role in the project by facilitating the creation of wireframes, allowing for collaborative design and planning.
+* **GitHub + Git:** Utilized for version control and efficient code management, enabling collaborative development and tracking of code changes.
+* **WebAIM Contrast Checker:** Ensured sufficient color contrast for enhanced accessibility, promoting inclusivity in design.
+* **Heroku:** Selected as the hosting platform for the site, providing a scalable and reliable hosting solution.
+* **WAVE:** Employed to evaluate the accessibility of the site, identifying and addressing potential accessibility issues for a user-friendly experience.
+
+## Database
+
+I created an entity relationship diagram using [DrawSQL](https://drawsql.app/). This allowed me to plan out my database interactions more easily. 
+
+![entity relationship](documentation/entitiy_relationship.png)
+
+
+### Game App
+#### Game Model
+
+| Field Name      | Field Type            | Relationship                |
+| --------------- | --------------------- | --------------------------- |
+| id (PK)         | AutoField             |                             |
+| genre           | ManyToManyField(Genre)| Many-to-Many with User      |
+| category        | ForeignKey(Category)  |                             |
+| sku             | CharField (nullable)  |                             |
+| name            | CharField             |                             |
+| friendly_name   | CharField             |                             |
+| description     | TextField             |                             |
+| price           | DecimalField          |                             |
+| rating          | DecimalField          |                             |
+| image_url       | URLField              |                             |
+| image           | ImageField            |                             |
+| on_sale         | BooleanField          |                             |
+| wishlist        | ManyToManyField(Wishlist)|                          |
+
+#### Genre Model
+
+| Field Name      | Field Type    | Relationship |
+| --------------- | ------------- | ------------ |
+| id (PK)         | AutoField     |              |
+| name            | CharField     |              |
+| friendly_name   | CharField     |              |
+
+#### Category Model
+
+| Field Name      | Field Type    | Relationship |
+| --------------- | ------------- | ------------ |
+| id (PK)         | AutoField     |              |
+| name            | CharField     |              |
+| friendly_name   | CharField     |              |
+
+#### Review Model
+
+| Field Name      | Field Type            | Relationship                |
+| --------------- | --------------------- | --------------------------- |
+| id (PK)         | AutoField             |                             |
+| title           | CharField             |                             |
+| rating          | DecimalField          |                             |
+| body            | TextField             |                             |
+| game            | ForeignKey(Game)      | on_delete=models.CASCADE    |
+| author          | ForeignKey(User)      | on_delete=models.CASCADE    |
+| date            | DateTimeField         |                             |
+| approved        | BooleanField          |                             |
+
+### Checkout App
+
+#### Order Model
+
+| Field Name       | Field Type            | Relationship                |
+| ---------------- | --------------------- | --------------------------- |
+| id (PK)          | AutoField             |                             |
+| order_number     | CharField             |                             |
+| user_profile     | ForeignKey(UserProfile)| related_name='orders'      |
+| full_name        | CharField             |                             |
+| email            | EmailField            |                             |
+| phone_number     | CharField             |                             |
+| country          | CountryField          |                             |
+| postcode         | CharField             |                             |
+| town_or_city     | CharField             |                             |
+| street_address1  | CharField             |                             |
+| street_address2  | CharField             |                             |
+| county           | CharField             |                             |
+| date             | DateTimeField         | auto_now_add=True           |
+| discount_amount  | DecimalField          |                             |
+| total            | DecimalField          |                             |
+| original_bag     | TextField             |                             |
+| stripe_pid       | CharField             |                             |
+
+#### OrderLineItem Model
+
+| Field Name       | Field Type            | Relationship                |
+| ---------------- | --------------------- | --------------------------- |
+| id (PK)          | AutoField             |                             |
+| order            | ForeignKey(Order)     | on_delete=models.CASCADE    |
+| game             | ForeignKey(Game)      | on_delete=models.CASCADE    |
+| quantity         | IntegerField          | default=0                   |
+| lineitem_total   | DecimalField          | editable=False              |
+
+#### Discount Model
+
+| Field Name       | Field Type            | Relationship                |
+| ---------------- | --------------------- | --------------------------- |
+| id (PK)          | AutoField             |                             |
+| code             | CharField             | unique=True                 |
+| percentage       | PositiveIntegerField  |                             |
+| start_date       | DateField             |                             |
+| end_date         | DateField             |                             |
+| for_new_users    | BooleanField          | default=False               |
+
+#### Applied Discount Model
+
+| Field Name       | Field Type            | Relationship                |
+| ---------------- | --------------------- | --------------------------- |
+| id (PK)          | AutoField             |                             |
+| user             | ForeignKey(User)      | on_delete=models.CASCADE    |
+| discount         | ForeignKey(Discount)  | on_delete=models.CASCADE    |
+| purchase_date    | DateTimeField         | auto_now_add=True           |
+
+### UserProfile Model
+
+| Field Name              | Field Type            | Relationship                |
+| ----------------------- | --------------------- | --------------------------- |
+| id (PK)                 | AutoField             |                             |
+| user                    | OneToOneField(User)   | on_delete=models.CASCADE    |
+| default_full_name       | CharField             | null=True, blank=True       |
+| default_email           | EmailField            | null=True, blank=True       |
+| default_phone_number    | CharField             | null=True, blank=True       |
+| default_street_address1 | CharField             | null=True, blank=True       |
+| default_street_address2 | CharField             | null=True, blank=True       |
+| default_town_or_city    | CharField             | null=True, blank=True       |
+| default_county          | CharField             | null=True, blank=True       |
+| default_postcode        | CharField             | null=True, blank=True       |
+| default_country         | CountryField          | blank_label='Country', null=True, blank=True |
+
+### Wishlist Models
+
+#### Wishlist
+
+| Field Name   | Field Type               | Relationship                |
+| ------------ | ------------------------ | --------------------------- |
+| id (PK)      | AutoField                |                             |
+| user         | OneToOneField(User)      | on_delete=models.CASCADE    |
+| date_added   | DateTimeField            | auto_now_add=True           |
+| games        | ManyToManyField(Game)    | related_name='wishlist_games'|
+
+
+### User
+
+* Allauth User Model
+* The User model was built using Django's Allauth library
+
+| Field Name   | Field Type              | Relationship      |
+| ------------ | ----------------------- | ----------------- |
+| id (PK)      | AutoField               |                   |
+| username     | CharField (from AbstractUser)|                 |
+| email        | EmailField (from AbstractUser)|                |
+| password     | CharField (from AbstractUser)|                |
+| ...          | ...                     |                   |
+| saved_events  | ManyToManyField(Event)  | Many-to-Many with Event |
+| comments     | ManyToManyField(EventComment) | Many-to-Many with EventComment |
+
+## Testing
+
+For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
+## Deployment
+
+### Database Setup with ElephantSQL
+
+This project uses [ElephantSQL](https://www.elephantsql.com) for its PostgreSQL Database.
+
+### Steps to Obtain Your Postgres Database:
+
+1. Register using your GitHub account.
+2. Generate a new database instance by selecting **Create New Instance**.
+3. Provide a name (typically the project name: 8-bit-bazaar).
+4. Choose the **Tiny Turtle (Free)** plan.
+5. Keep the **Tags** field empty.
+6. Pick the nearest **Region** and **Data Center**.
+
+
+Amazon AWS
+This project uses AWS to store media and static files online, due to the fact that Heroku doesn't persist this type of data.
+
+Once you've created an AWS account and logged in, follow these series of steps to get your project connected. Make sure you're on the AWS Management Console page.
+
+S3 Bucket
+Search for S3.
+Create a new bucket, give it a name (usually matching your Heroku app name), and choose the region closest to you.
+Untick Block all public access, and acknowledge that the bucket will be public (required for it to work on Heroku).
+From Object Ownership, make sure to have ACLs enabled, and Bucket owner preferred selected.
+From the Properties tab, turn on static website hosting, and type index.html and error.html in their respective fields, then click Save.
+From the Permissions tab, paste in the following CORS configuration:
+[
+ {
+  "AllowedHeaders": [
+   "Authorization"
+  ],
+  "AllowedMethods": [
+   "GET"
+  ],
+  "AllowedOrigins": [
+   "*"
+  ],
+  "ExposeHeaders": []
+ }
+]
+Copy your ARN string.
+
+From the Bucket Policy tab, select the Policy Generator link, and use the following steps:
+
+Policy Type: S3 Bucket Policy
+Effect: Allow
+Principal: *
+Actions: GetObject
+Amazon Resource Name (ARN): paste-your-ARN-here
+Click Add Statement
+Click Generate Policy
+Copy the entire Policy, and paste it into the Bucket Policy Editor
+{
+ "Id": "Policy1234567890",
+ "Version": "2012-10-17",
+ "Statement": [
+  {
+   "Sid": "Stmt1234567890",
+   "Action": [
+    "s3:GetObject"
+   ],
+   "Effect": "Allow",
+   "Resource": "arn:aws:s3:::your-bucket-name/*"
+   "Principal": "*",
+  }
+ ]
+}
+Before you click "Save", add /* to the end of the Resource key in the Bucket Policy Editor (as shown above).
+Click Save.
+From the Access Control List (ACL) section, click "Edit" and enable List for Everyone (public access), and accept the warning box.
+
+If the edit button is disabled, you need to change the Object Ownership section above to ACLs enabled (mentioned above).
+IAM
+Back on the AWS Services Menu, search for and open IAM (Identity and Access Management). Once on the IAM page, follow these steps:
+
+From User Groups, click Create New Group.
+
+Suggested Name: group-sleep-healthily (the group + the project name)
+Tags are optional, but you must click it to get to the review policy page.
+
+From User Groups, select your newly created group, and go to the Permissions tab.
+
+Open the Add Permissions dropdown, and click Attach Policies.
+
+Select the policy, then click Add Permissions at the bottom when finished.
+
+From the JSON tab, select the Import Managed Policy link.
+
+Search for S3, select the AmazonS3FullAccess policy, and then Import.
+You'll need your ARN from the S3 Bucket copied again, which is pasted into "Resources" key on the Policy.
+{
+ "Version": "2012-10-17",
+ "Statement": [
+  {
+   "Effect": "Allow",
+   "Action": "s3:*",
+   "Resource": [
+    "arn:aws:s3:::your-bucket-name",
+    "arn:aws:s3:::your-bucket-name/*"
+   ]
+  }
+ ]
+}
+Click Review Policy.
+Suggested Name: policy-sleep-healthily (policy + the project name)
+Provide a description:
+"Access to S3 Bucket for sleep-healthily static files."
+Click Create Policy.
+From User Groups, click your "group-sleep-healthily".
+
+Click Attach Policy.
+
+Search for the policy you've just created ("policy-sleep-healthily") and select it, then Attach Policy.
+
+From User Groups, click Add User.
+
+Suggested Name: user-sleep-healthily (user + the project name)
+For "Select AWS Access Type", select Programmatic Access.
+
+Select the group to add your new user to: group-sleep-healthily
+
+Tags are optional, but you must click it to get to the review user page.
+
+Click Create User once done.
+
+You should see a button to Download .csv, so click it to save a copy on your system.
+
+IMPORTANT: once you pass this page, you cannot come back to download it again, so do it immediately!
+This contains the user's Access key ID and Secret access key.
+AWS_ACCESS_KEY_ID = Access key ID
+AWS_SECRET_ACCESS_KEY = Secret access key
+Final AWS Setup
+If Heroku Config Vars has DISABLE_COLLECTSTATIC still, this can be removed now, so that AWS will handle the static files.
+Back within S3, create a new folder called: media.
+Select any existing media images for your project to prepare them for being uploaded into the new folder.
+Under Manage Public Permissions, select Grant public read access to this object(s).
+No further settings are required, so click Upload.
+Stripe API
+This project uses Stripe to handle the ecommerce payments.
+
+Once you've created a Stripe account and logged-in, follow these series of steps to get your project connected.
+
+From your Stripe dashboard, click to expand the "Get your test API keys".
+You'll have two keys here:
+STRIPE_PUBLIC_KEY = Publishable Key (starts with pk)
+STRIPE_SECRET_KEY = Secret Key (starts with sk)
+As a backup, in case users prematurely close the purchase-order page during payment, we can include Stripe Webhooks.
+
+From your Stripe dashboard, click Developers, and select Webhooks.
+From there, click Add Endpoint.
+https://sleep-healthily-12a12155ea31.herokuapp.com/checkout/wh/
+Click receive all events.
+Click Add Endpoint to complete the process.
+You'll have a new key here:
+STRIPE_WH_SECRET = Signing Secret (Wehbook) Key (starts with wh)
+Gmail API
+This project uses Gmail to handle sending emails to users for account verification and purchase order confirmations.
+
+Once you've created a Gmail (Google) account and logged-in, follow these series of steps to get your project connected.
+
+Click on the Account Settings (cog icon) in the top-right corner of Gmail.
+Click on the Accounts and Import tab.
+Within the section called "Change account settings", click on the link for Other Google Account settings.
+From this new page, select Security on the left.
+Select 2-Step Verification to turn it on. (verify your password and account)
+Once verified, select Turn On for 2FA.
+Navigate back to the Security page, and you'll see a new option called App passwords.
+This might prompt you once again to confirm your password and account.
+Select Mail for the app type.
+Select Other (Custom name) for the device type.
+Any custom name, such as "Django" or sleep-healthily
+You'll be provided with a 16-character password (API key).
+Save this somewhere locally, as you cannot access this key again later!
+EMAIL_HOST_PASS = user's 16-character API key
+EMAIL_HOST_USER = user's own personal Gmail email address
+
+### Heroku Deployment
+
+
+This project employs Heroku, a platform-as-a-service (PaaS) that empowers developers to construct, execute, and manage applications exclusively in the cloud.
+
+### Deployment Steps:
+
+1. After setting up your account, select **New** in the top-right corner of your Heroku Dashboard and choose **Create new app** from the dropdown menu.
+2. Ensure your app name is unique, choose a region (EU or USA), and select **Create App**.
+3. In the new app **Settings**, click **Reveal Config Vars** and set your environment variables:
+
+   | Key | Value |
+   | --- | --- |
+   | `CLOUDINARY_URL` | Insert your Cloudinary API key here |
+   | `DATABASE_URL` | Insert your ElephantSQL database URL here |
+   | `DISABLE_COLLECTSTATIC` | 1 (*temporary; can be removed for final deployment*) |
+   | `SECRET_KEY` | Any random secret key |
+
+4. Heroku requires two additional files for deployment: *requirements.txt* and *Procfile*.
+
+   Install project **requirements** using:
+   - `pip3 install -r requirements.txt`
+
+   Update the requirements file if needed:
+   - `pip3 freeze --local > requirements.txt`
+
+   Create the **Procfile**:
+   - `echo web: gunicorn app_name.wsgi > Procfile`
+   - Replace **app_name** with your primary Django app name.
+
+5. For Heroku deployment, connect your GitHub repository:
+
+   - Either choose **Automatic Deployment** from the Heroku app.
+   - Or in the Terminal/CLI, connect to Heroku using: `heroku login -i`
+   - Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
+   - After Git `add`, `commit`, and `push` to GitHub, type: `git push heroku main`
+
+6. The project should now be connected and deployed to Heroku!
+
+## Local Deployment
+
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+For either method, you will need to install any applicable packages found within the *requirements.txt* file.
+- `pip3 install -r requirements.txt`.
+
+You will need to create a new file called `env.py` at the root-level,
+and include the same environment variables listed above from the Heroku deployment steps.
+
+Sample `env.py` file:
+
+```python
+import os
+
+os.environ["DATABASE_URL"]='ElephantSQL database URL'
+os.environ["SECRET_KEY"]=" Your secret key"
+os.environ['CLOUDINARY_URL']='clouinary API key'
+os.environ['GOOGLE_API_KEY']='google maps API key'
+
+```
+
+Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
+- Start the Django app: `python3 manage.py runserver`
+- Stop the app once it's loaded: `CTRL+C` or `⌘+C`
+- Make any necessary migrations: `python3 manage.py makemigrations`
+- Migrate the data to the database: `python3 manage.py migrate`
+- Create a superuser: `python3 manage.py createsuperuser`
+-  run the Django app: `python3 manage.py runserver`
+
+### Cloning
+
+Follow these steps to clone the repository:
+
+1. Visit the [GitHub repository](https://github.com/KTC96/GrooveLocator).
+2. Click on the "Code" button above the list of files.
+3. Choose your preferred cloning method (HTTPS, SSH, or GitHub CLI) and copy the URL.
+4. Open Git Bash or Terminal.
+5. Navigate to the directory where you want to clone the repository.
+6. In your IDE Terminal, enter the following command to clone the repository:
+   - `git clone https://github.com/KTC96/GrooveLocator.git`
+7. Press Enter to create your local clone.
+
+### Forking
+
+Forking the GitHub Repository allows you to create a copy on your GitHub account, enabling you to view and make changes without affecting the original owner's repository.
+
+Follow these steps to fork the repository:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/KTC96/GrooveLocator).
+2. Above the "Settings" Button on the menu, find the "Fork" Button.
+3. Click the "Fork" button, and you will now have a copy of the original repository in your own GitHub account!
+
+## Credits
+
+### Code
+
+| Source | Location | Notes |
+| --- | --- | --- |
+|[ticketmaster Discovery API](https://developer.ticketmaster.com/products-and-docs/tutorials/events-search/search_events_in_location.html)  | Home page map | Used this tutorial to set up my google maps API|
+|[Google Maps custom markers](https://developers.google.com/maps/documentation/javascript/custom-markers) | Home page map | I used this tutorial to set up custom markers for my map for each genre |
+| Code Institute | Events and saved events | Used pagination to display events across multiple pages |
+| Code Institute | Saved Events, Home | Auto dismiss bootstrap alerts |
+| [Stack Overflow](https://stackoverflow.com/questions/110378/change-the-width-of-form-elements-created-with-modelform-in-django) | Event details/ forms.py | Increase the size of text input fields (Third approach detailed by zuber)|
+| [Bootstrap](https://getbootstrap.com/docs/5.3/components/navbar/#nav) | Navigation | I used bootstrap as a starting block for my responsive navigation bar |
+| [Django Docs](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/)  | Events and saved events| Fix bug whereby if events not divisible by 3 they would not always fill up a row |
+| Code Institute | Event Details | Used similar code for saving a blog post for the user to save an event |
+| Code Institute | Event Details, Saved Events, Events | Code for displaying a placeholder image if no image available |
+| [Selectize](https://selectize.dev/docs/usage)| Events | Followed documentation to set up selectize search box |
+| [Google Maps custom infowindows](https://developers.google.com/maps/documentation/javascript/infowindows) | Home | Create custom infowindows and close when another is clicked on |
+| [YouTube](https://www.youtube.com/watch?v=h39eMGWmEV4&t=36s) | Home | I followed this tutorial to help me pass backend data to JavaScript|
+| [YouTube](https://www.youtube.com/watch?v=yc2olxLgKLk&t) | All | I followed this tutorial to help get my footer to stay at the bottom of my page when there was not enough content|
+### Content
+
+| Source | Location | Notes |
+| --- | --- | --- |
+| [Canva](https://www.canva.com/)| All pages | I used canva for the logo design|
+| [RedKetchup Favicon Generator](https://redketchup.io/favicon-generator) | All pages | Used to create a range of favicon sizes |
+| [Unsplash](https://unsplash.com/)| Home, Events, Login, Signup, Logout | I used unsplash for event images, user profiles and the background for authentication pages |
+| [Fontawesome](https://fontawesome.com/) | All pages | I used font awesome icons in the footer for links to social media and for the heart icon to save events|
+
+
+### Acknowledgements
+
+I would like to thank my mentor Jack for his help during this project, and also my parents for supporting me on this career changing journey. 
+
+
+### Footnote
+
+The events listed on the screenshots are not the same that are currently on the site due to a database issue near the end of my project.
+
+
+
+
+
+
+
+
+
 
 
 
