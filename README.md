@@ -568,21 +568,44 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 
 ### Product Management - Add game
 
+![Add game](documentation/existing_features/features_add_game.png)
+
 ### Product Management - Edit game
+
+![Edit game](documentation/existing_features/features_edit_game.png)
 
 ### My Profile 
 
+![Profile](documentation/existing_features/features_profile.png)
+
 ### Wishlist
 
-### Logout
+![Wishlist](documentation/existing_features/features_wishlist.png)
 
 ### Login
 
+![Checkout success](documentation/existing_features/features_login.png)
+
+### Signup
+
+![Signup](documentation/existing_features/features_signup.png)
+
+### Logout
+
+![Logout](documentation/existing_features/features_logout.png)
+
+
 ### Password reset
+
+![Checkout success](documentation/existing_features/features_password_reset.png)
 
 ### Password reset done
 
+![Checkout success](documentation/existing_features/password_reset_done.png)
+
 ### Change password
+
+![Checkout success](documentation/existing_features/features_checkout_success.pn)
 
 ### Change password done
 
