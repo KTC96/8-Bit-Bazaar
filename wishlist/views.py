@@ -65,17 +65,19 @@ def add_to_bag_wishlist(request, game_id):
 
     game = get_object_or_404(Game, pk=game_id)
     
-    # Check if quantity is provided in the request, default to 1 if not
-    quantity = int(request.POST.get('quantity', 1))
-    
+    quantity = 1
+
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
     
-    if game_id in list(bag.keys()):
-        bag[game_id] += quantity
-    else:
-        bag[game_id] = quantity
+    game_id_str = str(game_id)
+    
+    if game_id_str in bag:
+        bag[game_id_str] += quantity
         messages.success(request, f'Added {game.friendly_name} to your bag')
-        
+    else:
+        bag[game_id_str] = quantity
+        messages.success(request, f'Added {game.friendly_name} to your bag')
+            
     request.session['bag'] = bag
     return redirect(redirect_url)
