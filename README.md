@@ -527,4 +527,65 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 ![wireframe](documentation/wireframes/profile_wireframe_mobile.png)
 </details>
 
+## Existing Features
+
+### Home Page
+
+![home](documentation/existing_features/features_home.png)
+
+### Games Page
+
+![games](documentation/existing_features/features_games.png)
+
+
+### Game Detail
+
+![game detail](documentation/existing_features/features_game_detail.png)
+
+### Add Review
+
+![add review](documentation/existing_features/features_add_review.png)
+
+### Edit Review
+
+![Edit review](documentation/existing_features/features_edit_review.png)
+
+### My Reviews
+
+![All reviews](documentation/existing_features/features_all_reviews.png)
+
+### Bag
+
+![Bag](documentation/existing_features/features_bag.png)
+
+### Checkout
+
+![Checkout](documentation/existing_features/features_checkout.png)
+
+### Checkout Success
+
+![Checkout success](documentation/existing_features/features_checkout_success.png)
+
+### Product Management - Add game
+
+### Product Management - Edit game
+
+### My Profile 
+
+### Wishlist
+
+### Logout
+
+### Login
+
+### Password reset
+
+### Password reset done
+
+### Change password
+
+### Change password done
+
+
+
 

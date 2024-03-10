@@ -22,6 +22,14 @@ body {
   overflow-y: auto;
 }
 
+.large-text {
+  font-size: 25px;
+}
+
+.medium-text {
+  font-size: 20px;
+}
+
 /* index.html ------------------------------------------------------------------------------ */
 
 .hero-image {
@@ -372,6 +380,10 @@ a.genre-badge > span.badge:hover {
   font-family: 'VT323', sans-serif;
   text-transform: uppercase;
   font-weight: 600 !important;
+}
+
+.login-signup-btn:hover {
+  color: white;
 }
 
 .allauth-form-inner-content button,

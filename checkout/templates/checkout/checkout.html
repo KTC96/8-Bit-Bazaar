@@ -27,13 +27,13 @@
 
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p class="">Order Summary ({{ game_count }})</p>
+                <p class="large-text">Order Summary ({{ game_count }})</p>
                 <div class="row">
                     <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small ">Item</p>
+                        <p class="mb-1 mt-0 medium-text"><strong>Item</strong></p>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small ">Subtotal</p>
+                        <p class="mb-1 mt-0 small medium-text"><strong>Subtotal</strong></p>
                     </div>
                 </div>
                 {% for item in bag_items %}
@@ -53,7 +53,7 @@
                             <p class="my-0">Price: £{{ item.discounted_price }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small ">£{{ item.discounted_price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 ">£{{ item.discounted_price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -68,14 +68,14 @@
                 <hr class="my-0">
                 <div class="row text-black text-right">
                     <div class="col-7 offset-2">
-                        <p class="my-0">Order Total:</p>
+                        <p class="my-0 large-text">Order Total:</p>
                         {% if request.session.discount_amount %}
                             <p class="my-0">Discount Amount:</p>
-                            <p class="my-0">Grand Total:</p>
+                            <p class="my-0 large-text">Grand Total:</p>
                         {% endif %}
                     </div>
                     <div class="col-3">
-                        <p class="my-0">£{{ total | floatformat:2 }}</p>
+                        <p class="my-0 large-text">£{{ total | floatformat:2 }}</p>
                         {% if request.session.discount_amount %}
                             <p class="my-0">£{{ request.session.discount_amount| floatformat:2 }}</p>
                             <p class="my-0">£{{ request.session.discounted_total| floatformat:2 }}</p>
