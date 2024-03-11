@@ -103,6 +103,10 @@ select option[value=""] {
   padding: 5px;
 }
 
+footer {
+  margin-top: auto;
+  width: 100%;
+}
 
 @media (max-width: 991px) {
   .checkout-container h2 {
@@ -111,6 +115,4 @@ select option[value=""] {
   .checkout-container {
     margin-top: 0;
   }
-
- 
 }

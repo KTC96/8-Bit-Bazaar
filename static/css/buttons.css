@@ -139,7 +139,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 .retro-btn .btn, .retro-btn .btn:focus {
-  outline-color: 0;
   outline-style: none;
   outline-width: 0;
 }
