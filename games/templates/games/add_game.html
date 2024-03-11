@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-  <link rel="stylesheet" href="{% static 'css/buttons.css' %}">
-{% endblock %}
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -14,94 +10,72 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid mt-3">
-        <div class="row">
-            <div class="col-12 text-center">
+<div class="overlay"></div>
+    <div class="container mt-3">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-6">
                 <hr>
                 <h2 class="logo-font mb-4">Game Management</h2>
-                <h5 class="text-muted">Add a game</h5>
+                <h5 class="text-muted">Add a Game</h5>
                 <hr>
             </div>
         </div>
 
-        <form method="POST" action="{% url 'add_game' %}" class="form mb-2 d-flex flex-column my-2" enctype="multipart/form-data">
-            {% csrf_token %}
-
-            <div class="row">
-                <div class="col-md-4">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-8">
+                <form method="POST" action="{% url 'add_game' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
                     {% for field in form %}
-                        <div>
-                            {% if field.id_for_label == 'id_genre' or field.id_for_label == 'id_category' or field.id_for_label == 'id_platform' or field.id_for_label == 'id_sku' or field.id_for_label == 'id_name' %}
-                                {{ field | as_crispy_field }}
-                            {% endif %}
-                        </div>
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
                     {% endfor %}
-                </div>
-                <div class="col-md-4">
-                    {% for field in form %}
-                        <div>
-                            {% if field.id_for_label == 'id_friendly_name' or field.id_for_label == 'id_description' or field.id_for_label == 'id_price' %}
-                                {{ field | as_crispy_field }}
-                            {% endif %}
-                        </div>
-                    {% endfor %}
-                </div>
-                <div class="col-md-4">
-                    {% for field in form %}
-                        <div>
-                            {% if field.id_for_label == 'id_rating' or field.id_for_label == 'id_image_url' or field.id_for_label == 'id_image' or field.id_for_label == 'id_video' or field.id_for_label == 'id_release_year' or field.id_for_label == 'id_on_sale' %}
-                                {{ field | as_crispy_field }}
-                            {% endif %}
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="col-12  d-flex flex-row justify-content-center mb-3  ">
-                <div role='button' class='retro-btn success sm' onclick="document.getElementById('submitButton').click();">
-                    <a class='btn'> 
-                        <span class='btn-inner'>
-                            <span class='content-wrapper'>
-                                <span class='btn-content'>
-                                    <span class='btn-content-inner' label='Add Game'>
-                                        
+                   
+                    <div class="col-12  d-flex flex-row justify-content-center mb-3">
+                        <div  class='retro-btn success sm' onclick="document.getElementById('submitButton').click();">
+                            <a class='btn'> 
+                                <span class='btn-inner'>
+                                    <span class='content-wrapper'>
+                                        <span class='btn-content'>
+                                            <span class='btn-content-inner'>
+                                                ADD GAME
+                                            </span>
+                                        </span>
                                     </span>
                                 </span>
-                            </span>
-                        </span>
-                    </a>
-                    <input type="submit" id="submitButton" class="hidden">
-                </div>
-                <div role='button' class='retro-btn sm danger' onclick="window.location.href='{% url 'games' %}';">
-                    <a class='btn'> 
-                        <span class='btn-inner'>
-                            <span class='content-wrapper'>
-                                <span class='btn-content'>
-                                    <span class='btn-content-inner' label='Cancel'>
+                            </a>
+                            <input type="submit" id="submitButton" class="hidden">
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-row justify-content-center mb-3">
+                        <div class='retro-btn sm danger' onclick="window.location.href='{% url 'games' %}';">
+                            <a class='btn'> 
+                                <span class='btn-inner'>
+                                    <span class='content-wrapper'>
+                                        <span class='btn-content'>
+                                            <span class='btn-content-inner'>
+                                                CANCEL
+                                            </span>
+                                        </span>
                                     </span>
                                 </span>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-
-            </div>
-            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-            <style>
-                .hidden {
-                    display: none;
-                }
-            </style>
-            
-            </div>
-        </form>
+                            </a>
+                        </div>
+        
+                    
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                </form>
+            </div>            
+        </div>
     </div>
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];
             $('#filename').text(`Image will be set to: ${file.name}`);

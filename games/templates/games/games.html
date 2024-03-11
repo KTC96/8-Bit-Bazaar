@@ -68,14 +68,12 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 order-md-first">
-                    <span>
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
                             <span class="small bg-white"><a href="{% url 'games' %}">All Games</a> | 
                         {% endif %}
                             {{ games |length }} Games {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}</span>
-                    </p>
-                    
+                    </p>  
                 </div>
                 
             </div>
@@ -141,7 +139,6 @@
 
         </div>
     </div>
-    </div>
 </div>
 <div class="btt-button shadow-sm rounded-0 border border-black">
     <a class="btt-link d-flex h-100 offwhite-background">
@@ -172,14 +169,14 @@
 {% block postloadjs %}
     {{ block.super }}
 
-    <script type="text/javascript">
+    <script>
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
 	</script>
 
     <!--Code for sorting-->
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);

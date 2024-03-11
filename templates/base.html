@@ -58,10 +58,10 @@
 
 <body>
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row  pt-lg-2 d-none d-lg-flex ">
+        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class=" d-flex align-items-center nav-link main-logo-link">
-                    <img class="logo-image " src="{{ MEDIA_URL}}pp5_logo.png">
+                <a href="{% url 'home' %}" class="d-flex align-items-center nav-link main-logo-link">
+                    <img class="logo-image" src="{{ MEDIA_URL}}pp5_logo.png" alt="8Bit Bazaar logo">
                     <h1 class="logo-font text-black my-0">8Bit Bazaar </h1>
                 </a>
             </div>
@@ -161,7 +161,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     {% endblock %}

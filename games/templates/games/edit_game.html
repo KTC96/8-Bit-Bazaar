@@ -34,13 +34,13 @@
                     {% endfor %}
                    
                     <div class="col-12  d-flex flex-row justify-content-center mb-3">
-                        <div role='button' class='retro-btn success sm' onclick="document.getElementById('submitButton').click();">
+                        <div class='retro-btn success sm' onclick="document.getElementById('submitButton').click();">
                             <a class='btn'> 
                                 <span class='btn-inner'>
                                     <span class='content-wrapper'>
                                         <span class='btn-content'>
-                                            <span class='btn-content-inner' label='Update Game'>
-                                                
+                                            <span class='btn-content-inner'>
+                                                UPDATE GAME
                                             </span>
                                         </span>
                                     </span>
@@ -50,26 +50,20 @@
                         </div>
                     </div>
                     <div class="col-12 d-flex flex-row justify-content-center mb-3">
-                        <div role='button' class='retro-btn sm danger' onclick="window.location.href='{% url 'games' %}';">
+                        <div class='retro-btn sm danger' onclick="window.location.href='{% url 'games' %}';">
                             <a class='btn'> 
                                 <span class='btn-inner'>
                                     <span class='content-wrapper'>
                                         <span class='btn-content'>
-                                            <span class='btn-content-inner' label='Cancel'>
+                                            <span class='btn-content-inner'>
+                                                CANCEL
                                             </span>
                                         </span>
                                     </span>
                                 </span>
                             </a>
                         </div>
-        
-                    
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <style>
-                            .hidden {
-                                display: none;
-                            }
-                        </style>
                     </div>
                 </form>
             </div>            
@@ -79,10 +73,11 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];
             $('#filename').text(`Image will be set to: ${file.name}`);
         });
+        
     </script>
 {% endblock %}

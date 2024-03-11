@@ -224,7 +224,10 @@ footer {
   font-weight: 500;
 }
 
-
+.reviews {
+  max-height: 300px;
+  overflow-y: auto;              
+}
 
 .genre-badge {
   margin-top: 250px;
