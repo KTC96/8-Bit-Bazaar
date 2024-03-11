@@ -1075,7 +1075,11 @@ Follow these steps to fork the repository:
 
 | Source | Location | Notes |
 | --- | --- | --- |
-|[ticketmaster Discovery API](https://developer.ticketmaster.com/products-and-docs/tutorials/events-search/search_events_in_location.html)  | Home page map | Used this tutorial to set up my google maps API|
+| [YouTube](https://www.youtube.com/watch?v=yc2olxLgKLk&t) | All | I followed this tutorial to help get my footer to stay at the bottom of my page when there was not enough content|
+| [CodePen](https://codepen.io/) | Login/ Logout/ Buttons | I used code from CodePen for the CSS gameboys on the login an signup pages, as well as for the retro Javascript buttons|
+
+
+
 
 ### Content
 
@@ -1085,7 +1089,7 @@ Follow these steps to fork the repository:
 | [RedKetchup Favicon Generator](https://redketchup.io/favicon-generator) | All pages | Used to create my favicon|
 | [Unsplash](https://unsplash.com/)||  |
 | [Fontawesome](https://fontawesome.com/) | All pages | I used font awesome icons |
-| [Wikipedia]() | Games, Game Detail | I used Wikipedia to source my game images|
+| [Wikipedia](https://www.wikipedia.org/) | Games, Game Detail | I used Wikipedia to source my game images|
 
 
 ### Acknowledgements
