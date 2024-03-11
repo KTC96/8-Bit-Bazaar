@@ -166,6 +166,54 @@
     </script>
     {% endblock %}
 
+    <!-- Footer section -->
+    <footer class=" py-4">
+        <div class="container ">
+            <div class="row">
+                <!-- Contact information-->
+                <div class="col-md-4">
+                    <p class="footer-text">Contact Us</p>
+
+                    <p>Email: <a href="mailto:info@8bitbazaar.co.uk" class="email">info@8bitbazaar.co.uk</a></p>
+                </div>
+                <div class="col-md-4">
+                    <p class="footer-text">Connect with Us</p>
+                    <!-- Social media links with Font Awesome icons -->
+                    <a class="btn btn-primary btn-floating m-1 facebook"
+                        href="https://www.facebook.com/profile.php?id=61556897555658" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-primary btn-floating m-1 twitter" href="https://twitter.com/?lang=en-gb"
+                        target="_blank" rel="noopener noreferrer" aria-label="Twitter (opens in a new tab)">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-primary btn-floating m-1 instagram" href="https://www.instagram.com/"
+                        target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+                <!-- About 8Bit Bazaar -->
+                <div class="col-md-4">
+                    <p class="footer-text">About 8Bit Bazaar</p>
+                    <p>Retro Gaming redefined. Buy your favourite games online and download on Steam!</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <!-- Copyright information-->
+                <div class="col-md-6">
+                    <p>&copy; 2024 8Bit Bazaar. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
 </body>
 
 </html>

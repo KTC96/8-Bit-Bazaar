@@ -843,9 +843,6 @@ This project uses [ElephantSQL](https://www.elephantsql.com) for its PostgreSQL 
 5. Keep the **Tags** field empty.
 6. Pick the nearest **Region** and **Data Center**.
 
-
-
-
 ### Heroku Deployment
 
 
@@ -859,10 +856,17 @@ This project employs Heroku, a platform-as-a-service (PaaS) that empowers develo
 
    | Key | Value |
    | --- | --- |
-   | `CLOUDINARY_URL` | Insert your Cloudinary API key here |
+   | `AWS_ACCESS_KEY_ID` | Insert your AWS access key ID here |
+   | `AWS_SECRET_ACCESS_KEY` | Insert your AWS secret access key ID here |
    | `DATABASE_URL` | Insert your ElephantSQL database URL here |
-   | `DISABLE_COLLECTSTATIC` | 1 (*temporary; can be removed for final deployment*) |
+   | `EMAIL_HOST_PASSWORD` | Insert your Email host password here |
+   | `EMAIL_HOST_USER` | Insert your Email host username here |
    | `SECRET_KEY` | Any random secret key |
+   | `STRIPE_PUBLIC_KEY` | Insert your Stripe public key here |
+   | `STRIPE_SECRET_KEY` | Insert your Stripe secret key here |
+   | `STRIPE_WH_SECRET` | Insert your Stripe webhook secret here |
+   | `USE_AWS` | Set to True |
+   | `DISABLE_COLLECTSTATIC` | 1 (*temporary; can be removed for final deployment*) |
 
 4. Heroku requires two additional files for deployment: *requirements.txt* and *Procfile*.
 
@@ -885,6 +889,9 @@ This project employs Heroku, a platform-as-a-service (PaaS) that empowers develo
 
 6. The project should now be connected and deployed to Heroku!
 
+Note: My project contains a runtime.txt file stating the python version. This ensures my application runs
+in a consistent environment. 
+
 ## Local Deployment
 
 
@@ -901,10 +908,11 @@ Sample `env.py` file:
 ```python
 import os
 
-os.environ["DATABASE_URL"]='ElephantSQL database URL'
-os.environ["SECRET_KEY"]=" Your secret key"
-os.environ['CLOUDINARY_URL']='clouinary API key'
-os.environ['GOOGLE_API_KEY']='google maps API key'
+
+os.environ['STRIPE_PUBLIC_KEY'] = 'Stripe public key'
+os.environ['STRIPE_SECRET_KEY'] = 'Stripe secret key'
+os.environ['STRIPE_WH_SECRET'] = 'Stripe webhook secret key'
+os.environ['SECRET_KEY'] = 'Your secret key'
 
 ```
 
@@ -920,13 +928,13 @@ Once the project is cloned or forked, in order to run it locally, you'll need to
 
 Follow these steps to clone the repository:
 
-1. Visit the [GitHub repository](https://github.com/KTC96/GrooveLocator).
+1. Visit the [GitHub repository](https://github.com/KTC96/8-Bit-Bazaar).
 2. Click on the "Code" button above the list of files.
 3. Choose your preferred cloning method (HTTPS, SSH, or GitHub CLI) and copy the URL.
 4. Open Git Bash or Terminal.
 5. Navigate to the directory where you want to clone the repository.
 6. In your IDE Terminal, enter the following command to clone the repository:
-   - `git clone https://github.com/KTC96/GrooveLocator.git`
+   - `git clone https://github.com/KTC96/8-Bit-Bazaar.git`
 7. Press Enter to create your local clone.
 
 ### Forking
@@ -935,7 +943,7 @@ Forking the GitHub Repository allows you to create a copy on your GitHub account
 
 Follow these steps to fork the repository:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/KTC96/GrooveLocator).
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/KTC96/8-Bit-Bazaar).
 2. Above the "Settings" Button on the menu, find the "Fork" Button.
 3. Click the "Fork" button, and you will now have a copy of the original repository in your own GitHub account!
 
@@ -946,36 +954,21 @@ Follow these steps to fork the repository:
 | Source | Location | Notes |
 | --- | --- | --- |
 |[ticketmaster Discovery API](https://developer.ticketmaster.com/products-and-docs/tutorials/events-search/search_events_in_location.html)  | Home page map | Used this tutorial to set up my google maps API|
-|[Google Maps custom markers](https://developers.google.com/maps/documentation/javascript/custom-markers) | Home page map | I used this tutorial to set up custom markers for my map for each genre |
-| Code Institute | Events and saved events | Used pagination to display events across multiple pages |
-| Code Institute | Saved Events, Home | Auto dismiss bootstrap alerts |
-| [Stack Overflow](https://stackoverflow.com/questions/110378/change-the-width-of-form-elements-created-with-modelform-in-django) | Event details/ forms.py | Increase the size of text input fields (Third approach detailed by zuber)|
-| [Bootstrap](https://getbootstrap.com/docs/5.3/components/navbar/#nav) | Navigation | I used bootstrap as a starting block for my responsive navigation bar |
-| [Django Docs](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/)  | Events and saved events| Fix bug whereby if events not divisible by 3 they would not always fill up a row |
-| Code Institute | Event Details | Used similar code for saving a blog post for the user to save an event |
-| Code Institute | Event Details, Saved Events, Events | Code for displaying a placeholder image if no image available |
-| [Selectize](https://selectize.dev/docs/usage)| Events | Followed documentation to set up selectize search box |
-| [Google Maps custom infowindows](https://developers.google.com/maps/documentation/javascript/infowindows) | Home | Create custom infowindows and close when another is clicked on |
-| [YouTube](https://www.youtube.com/watch?v=h39eMGWmEV4&t=36s) | Home | I followed this tutorial to help me pass backend data to JavaScript|
-| [YouTube](https://www.youtube.com/watch?v=yc2olxLgKLk&t) | All | I followed this tutorial to help get my footer to stay at the bottom of my page when there was not enough content|
+
 ### Content
 
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Canva](https://www.canva.com/)| All pages | I used canva for the logo design|
-| [RedKetchup Favicon Generator](https://redketchup.io/favicon-generator) | All pages | Used to create a range of favicon sizes |
-| [Unsplash](https://unsplash.com/)| Home, Events, Login, Signup, Logout | I used unsplash for event images, user profiles and the background for authentication pages |
-| [Fontawesome](https://fontawesome.com/) | All pages | I used font awesome icons in the footer for links to social media and for the heart icon to save events|
+| [RedKetchup Favicon Generator](https://redketchup.io/favicon-generator) | All pages | Used to create my favicon|
+| [Unsplash](https://unsplash.com/)||  |
+| [Fontawesome](https://fontawesome.com/) | All pages | I used font awesome icons |
+| [Wikipedia]() | Games, Game Detail | I used Wikipedia to source my game images|
 
 
 ### Acknowledgements
 
 I would like to thank my mentor Jack for his help during this project, and also my parents for supporting me on this career changing journey. 
-
-
-### Footnote
-
-The events listed on the screenshots are not the same that are currently on the site due to a database issue near the end of my project.
 
 
 
