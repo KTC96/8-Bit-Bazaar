@@ -4,9 +4,9 @@
 
 <br>
 
-![8BitBAzaar]()
+![8BitBAzaar](documentation/responsive_image.png)
 
-### [Link to live site]()
+### [Link to live site](https://eight-bit-bazaar-8c5cb6f7cbb6.herokuapp.com/)
 
 ## User Experience
 
@@ -312,6 +312,7 @@ This color palette aims to capture the essence of retro gaming while providing a
 ![Colour scheme](documentation/colour_scheme.png)
 
 
+
 ### Typography
 
 I used Google Fonts to browse fonts that fit my theme. 
@@ -319,6 +320,22 @@ I used Google Fonts to browse fonts that fit my theme.
 * [VT323](https://fonts.google.com/specimen/VT323) was used for all of the sites text as it is pixelated and enhances the retro theme throughout the website. 
 
 * [Font Awesome](https://fontawesome.com) icons were used for the mobile navigation menu icons, and for buttons across the site.
+
+### Entity Relationship Diagram
+
+My Entity relationship diagram was create using [DrawSQL] for the planning stage. The ERD represents my database structure visually, and enabled me to plan my
+models and database interactions. 
+
+<details><summary>Click to view the planning ERD</summary>
+
+![Planning ERD](documentation/planning_ERD.png)
+
+</details>
+
+<details><summary>Click to view the final ERD</summary>
+
+![Final ERD](documentation/ERD.png)
+</details>
 
 ### Wireframes
 
@@ -331,8 +348,7 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 * For mobile devices, the wireframes are crafted to the specifications of the iPhone SE, with dimensions set at 375 x 667.
 #### Home Page
 
-<details>
-<summary>Click to view Home Page wireframes</summary>
+<details><summary>Click to view Home Page wireframes</summary>
 
 #### Desktop
 ![screenshot](documentation/wireframes/home_wireframe_desktop.png)
@@ -824,6 +840,59 @@ I created an entity relationship diagram using [DrawSQL](https://drawsql.app/). 
 | saved_events  | ManyToManyField(Event)  | Many-to-Many with Event |
 | comments     | ManyToManyField(EventComment) | Many-to-Many with EventComment |
 
+## Business Model
+
+The website operates as a Business-to-Consumer (B2C) platform specializing in the sale of retro games to customers. The responsibilities of staff members encompass adding new games to the site's inventory, managing sales, and implementing discount codes. Customers, in turn, enjoy the freedom to browse and select games, adding them to their bag before seamlessly proceeding through the checkout process.
+
+Encouraging user participation, customers who have made purchases can actively contribute to the platform by leaving reviews for the games they've acquired.
+
+To foster and sustain a strong connection with the customer base, the website strategically places a newsletter signup form on the home page. Collected email addresses from this form are then leveraged to curate mailing lists, instrumental in conducting customer outreach and executing marketing initiatives.
+
+Additionally, the business maintains a vibrant presence on Facebook through a dedicated business page. This platform serves as a hub for posting engaging content that customers can readily access. The website also incorporates a wishlist feature, enabling users to save games of interest. Customers can receive notifications through mailing lists or the Facebook page, alerting them to special offers, discounts, or promotions for the games in their wishlist, thereby incentivizing potential sales.
+
+### Search Engine Optimization (SEO) and Marketing
+
+#### SEO
+
+##### Keywords
+
+I used [Wordstream](https://www.wordstream.com/keywords) to generate keywords with low competition, using a combination of short and long-tail keywords to include in my site
+meta tags.
+
+These are the keywords I used:
+* retro games
+* vintage video games
+* classic gaming
+* old school games
+* nostalgic gaming
+* collectible games
+* classic arcade games
+* gaming memorabilia
+* 8-bit games
+* 16-bit games
+* video game collectors
+* rare retro games
+* gaming nostalgia
+* gaming culture
+* retro game store
+* timeless games
+* retro gaming community
+
+##### Sitemap
+
+I used [XML Sitemaps](https://www.xml-sitemaps.com/) to create a sitemap. This improves SEO.
+
+#### Robots.txt file
+
+I generated a robots.txt file to improve SEO. This file dictates to search engines which pages are available to crawl and which to ignore.
+
+```
+User-agent: *
+Disallow:
+Sitemap: https://eight-bit-bazaar-8c5cb6f7cbb6.herokuapp.com/
+
+```
+
 ## Testing
 
 For all testing, please refer to the [TESTING.md](TESTING.md) file.
@@ -842,6 +911,59 @@ This project uses [ElephantSQL](https://www.elephantsql.com) for its PostgreSQL 
 4. Choose the **Tiny Turtle (Free)** plan.
 5. Keep the **Tags** field empty.
 6. Pick the nearest **Region** and **Data Center**.
+
+### Amazon Web Services
+
+This project uses AWS to store media and static files online, due to the fact that Heroku doesn't persist this type of data.
+
+Once you've created an AWS account and logged in, follow these series of steps to get your project connected. Make sure you're on the AWS Management Console page.
+
+### S3 Bucket
+
+1. Search for S3 in the AWS Management Console.
+2. Create a new bucket, name it (matching your Heroku app name), and choose your region.
+3. Untick "Block all public access," acknowledging the bucket will be public.
+4. Ensure ACLs are enabled with "Bucket owner preferred."
+5. In the Properties tab, enable static website hosting, set index.html and error.html, and click Save.
+6. In the Permissions tab, paste the provided CORS configuration.
+7. Copy your ARN string.
+8. In the Bucket Policy tab, use the Policy Generator to allow GetObject actions for your ARN.
+9. Before saving, add /* to the end of the Resource key.
+10. Save and in the ACL section, edit, enable List for Everyone, and accept the warning.
+
+### IAM
+
+1. Open IAM from the AWS Services Menu.
+2. Create a new group, e.g., "group-eight-bit-bazaar."
+3. In the Permissions tab, attach policies, including AmazonS3FullAccess.
+4. Create a new policy, e.g., "policy-eight-bit-bazaar," allowing S3 access to your bucket.
+5. Attach the policy to your group.
+6. Create a new user, e.g., "user-eight-bit-bazaar," with programmatic access, and add it to the group.
+7. Download the .csv containing the user's Access Key ID and Secret Access Key.
+
+### Final AWS Setup
+
+1. If DISABLE_COLLECTSTATIC is in Heroku Config Vars, remove it.
+2. In S3, create a "media" folder, upload existing media images, and grant public read access.
+3. Click Upload to complete.
+
+## Stripe API
+
+1. Obtain your test API keys from the Stripe dashboard.
+2. Use these keys:
+   - STRIPE_PUBLIC_KEY = Publishable Key
+   - STRIPE_SECRET_KEY = Secret Key
+   - STRIPE_WH_SECRET = Webhook Signing Secret
+
+## Gmail API
+
+1. Enable 2-Step Verification in Gmail.
+2. Navigate to Security > App passwords, generate a 16-character password for "Mail" with a custom name.
+3. Save the generated password.
+4. Use these keys:
+   - EMAIL_HOST_USER = user's Gmail email address
+   - EMAIL_HOST_PASS = user's 16-character API key
+
 
 ### Heroku Deployment
 
