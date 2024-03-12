@@ -8,9 +8,10 @@ class UserProfileForm(forms.ModelForm):
         exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
-        """ 
+        """
         Add placeholders and classes, remove auto-generated
-        labels (except for 'default_full_name'), and set autofocus on the first field
+        labels (except for 'default_full_name'), and set autofocus
+        on the first field
         """
         super().__init__(*args, **kwargs)
         placeholders = {
@@ -27,7 +28,9 @@ class UserProfileForm(forms.ModelForm):
         # Set autofocus on the first visible field
         for field in self.fields:
             if field != 'default_country':
-                self.fields[field].widget.attrs['class'] = 'border-black profile-form-input'
+                self.fields[field].widget.attrs['class'] = (
+                    'border-black profile-form-input'
+                )
                 self.fields[field].label = False
                 break  # Stop after setting autofocus on the first field
 

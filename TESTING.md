@@ -76,6 +76,18 @@ I have used the [CI Python Linter](https://pep8ci.herokuapp.com) to validate my 
 |Checkout signals.py| ![Checkout Signals](documentation/testing/python/checkout_signals.py.png) | Pass |
 |Checkout urls.py| ![Checkout urls](documentation/testing/python/checkout_urls.py.png) | Pass |
 |Checkout views.py| ![Checkout Views](documentation/testing/python/checkout_views.py.png) | Pass |
+|Home apps.py| ![Home Apps](documentation/testing/python/home_apps.py.png) | Pass |
+|Home urls.py| ![Home urls](documentation/testing/python/home_urls.py.png) | Pass |
+|Home views.py| ![Home Views](documentation/testing/python/home_views.py.png) | Pass |
+|Profile apps.py| ![Profile Apps](documentation/testing/python/profile_apps.py.png) | Pass |
+|Profile forms.py| ![Profile Forms](documentation/testing/python/profile_forms.py.png) | Pass |
+|Profile models.py| ![Profile Models](documentation/testing/python/profile_models.py.png) | Pass |
+|Profile urls.py| ![Profile urls](documentation/testing/python/profile_urls.py.png) | Pass |
+|Profile views.py| ![Profile Views](documentation/testing/python/profile_views.py.png) | Pass |
+|Wishlist apps.py| ![Wishlist Apps](documentation/testing/python/wishlist_apps.py.png) | Pass |
+|Wishlist models.py| ![Wishlist Models](documentation/testing/python/wishlist_models.py.png) | Pass |
+|Wishlist urls.py| ![Wishlist urls](documentation/testing/python/wishlist_urls.py.png) | Pass |
+|Wishlist views.py| ![Wishlist Views](documentation/testing/python/wishlist_views.py.png) | Pass |
 
 ## Lighthouse
 
