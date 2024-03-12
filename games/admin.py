@@ -21,8 +21,8 @@ class GenreAdmin(admin.ModelAdmin):
         'name',
     )
 
+
 admin.site.register(Game, GameAdmin)
 admin.site.register(Category)
 admin.site.register(Genre, GenreAdmin)
 admin.site.register(Review)
-

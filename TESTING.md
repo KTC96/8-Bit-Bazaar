@@ -11,43 +11,45 @@ Because my project uses Jinja syntax, I copied source data from each page and va
 
 | Page | Screenshot | Notes |
 | --- | --- | --- |
-|Home Logged Out  | ![Home](documentation/testing/home_logged_out.png)|Pass |
-|Home Logged In  | ![Home](documentation/testing/home_logged_in.png)|Pass |
-|Login | ![Login](documentation/testing/login_page.png)|Pass |
-|Sign up|  ![Sign Up](documentation/testing/signup.png)|Fail(However this HTML code is part of the Django authentication form, and I could find no way to change it.) |
-|Logout  | ![Logout](documentation/testing/signout_page.png)|Pass |
-|Events Logged Out  | ![Events](documentation/testing/events_logged_out.png)|Pass |
-|Events Logged In  | ![Events](documentation/testing/events_logged_in.png)|Pass |
-|Saved Events | ![Events](documentation/testing/saved_events_logged_in.png)|Pass |
-|Event Details Logged Out | ![Events](documentation/testing/event_details_logged_out.png)|Pass |
-|Event Details Logged In | ![Events](documentation/testing/event_details_logged_in.png)|Pass |
+|Home | ![Home](documentation/testing/html/home.png)|Pass |
+|Games| ![Games](documentation/testing/html/games.png)|Pass |
+|Game Detail | ![Game Detail](documentation/testing/html/game_detail.png)|Pass |
+|Edit Game | ![Edit Game](documentation/testing/html/edit_game.png)| Error with duplicate ID but this is due to how the form is rendered and I was unable to fix this issue.|
+|Add Game | ![Add Game](documentation/testing/html/add_game.png)| Error with duplicate ID but this is due to how the form is rendered and I was unable to fix this issue.|
+| Bag | ![Bag](documentation/testing/html/bag.png)|Pass |
+| Checkout| ![Checkout](documentation/testing/html/checkout.png)|Pass |
+| Checkout Success| ![Checkout Success](documentation/testing/html/checkout_success.png)|Pass |
+| Profile | ![Profile](documentation/testing/html/profile.png)|Pass |
+| Order history | ![Order History](documentation/testing/html/checkout_success_history.png)|Pass |
+| Wishlist | ![Wishlist](documentation/testing/html/wishlist.png)|Pass |
+| All Reviews | ![All reviews](documentation/testing/html/all_reviews.png)|Pass |
+| Add Review | ![Add Review](documentation/testing/html/add_review.png)|Pass |
+| Edit Review | ![Eit Review](documentation/testing/html/edit_review.png)|Pass |
+|Login | ![Login](documentation/testing/html/login.png)|Pass |
+|Sign up|  ![Sign Up](documentation/testing/html/signup.png)|Pass |
+|Logout  | ![Logout](documentation/testing/html/logout.png)|Pass |
+|Password Reset  | ![Password Reset](documentation/testing/html/password_reset.png)|Pass |
+|Password Reset Done  | ![Password Reset Done](documentation/testing/html/password_reset_done.png)|Pass |
+|Password Change | ![Password Change](documentation/testing/html/change_password.png.png)|Pass |
+|Privacy statement | ![Privacy Statement](documentation/testing/html/change_password.png.png)| There are a large number of errors on this page due to the formatting by Termly. I did change these to prevent structure changes and for time constraint reasons |
 
 
 ### CSS
 
-My CSS passed via direct input using the [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator). However it is important to note that when validating by URI, I receive errors relating to bootstrap CSS. I discussed this with my mentor and he assured me that this is not a problem. 
+All CSS passed via direct input using the [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) other than the errors show below:
 
-<p>
-    <a href="http://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border:0;width:88px;height:31px"
-            src="http://jigsaw.w3.org/css-validator/images/vcss"
-            alt="Valid CSS!">
-    </a>
-</p>
-<p>
-<a href="http://jigsaw.w3.org/css-validator/check/referer">
-    <img style="border:0;width:88px;height:31px"
-        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-        alt="Valid CSS!">
-    </a>
-</p>
-        
+![CSS Errors](documentation/testing/css/css_testing.png)
+
+The CSS shown was taken from [Code Pen](https://codepen.io/b1tn3r/pen/YjOzRv) and was provided as SCSS which I converted to CSS. I did not want to make any further changes to the code to prevent any disruption to functionality. 
+
+
 ### Javascript
 
-My current implementation combines JavaScript with Jinja and Django template language, which complicates the validation process. To enhance the structure for future iterations, I intend to separate my JavaScript code into dedicated files. Additionally, I plan to securely pass the Google Maps API key through a Django view.
-
-Despite this, thorough inspection using Google Dev Tools in the browser console reveals no errors related to my JavaScript code.
-
+| File | Screenshot | Notes |
+| --- | --- | --- |
+| buttons.js| ![buttons](documentation/testing/js/buttons.png) | No errors or warnings|
+| stripe_elements.js| ![buttons](documentation/testing/js/stripe_elements.png) | No errors or warnings|
+| Update and delete quantity, delete modal and quantity input script| ![Extra JS](documentation/testing/js/remaining_js.png) | No errors or warnings|
 
 ### Python
 
@@ -55,12 +57,14 @@ I have used the [CI Python Linter](https://pep8ci.herokuapp.com) to validate my 
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| settings.py | ![settings](documentation/testing/settings.png) | Pass|
-| models.py | ![models](documentation/testing/models.png) | Pass |
-| urls.py (GrooveLocator) | ![urls](documentation/testing/main_urls.png) | Pass |
-| urls.py (Map) | ![urls](documentation/testing/urls_map.png) | Pass |
-| views.py (Map) | ![views](documentation/testing/views.png) | Pass |
-| forms.py | ![forms](documentation/testing/forms.png) | Pass |
+| settings.py | ![settings](documentation/testing/python/settings.py.png) | There are 4 errors that come from standard settings.py lines. It is advised not to edit them.|
+| urls.py | ![urls](documentation/testing/python/project_urls.py.png) | Pass |
+|Games admin.py | ![Games Admin](documentation/testing/python/games_admin.py.png) | Pass |
+|Games apps.py| ![Games Apps](documentation/testing/python/games_apps.py.png) | Pass |
+|Games forms.py| ![Games Forms](documentation/testing/python/games_forms.py.png) | Pass |
+|Games models.py| ![Games Models](documentation/testing/python/games_models.py.png) | Pass |
+|Games urls.py| ![Games urls](documentation/testing/python/games_urls.py.png) | Pass |
+|Games views.py| ![Games Views](documentation/testing/python/games_views.py.png) | Pass |
 
 ## Lighthouse
 

@@ -25,11 +25,11 @@ for(var i = 0; i < buttons.length; i++) {
     var myPosX = e.pageX;
     var newClass = "";
     // if on left 1/3 width of btn
-    if(myPosX < (leftOffset + .3 * btnWidth) ) {
-      newClass = 'btn-left'
+    if(myPosX < (leftOffset + 0.3 * btnWidth) ) {
+      newClass = 'btn-left';
     } else {
       // if on right 1/3 width of btn
-      if(myPosX > (leftOffset + .65 * btnWidth) ) {
+      if(myPosX > (leftOffset + 0.65 * btnWidth) ) {
         newClass = 'btn-right';
       } else {
         newClass = 'btn-center';
@@ -109,7 +109,8 @@ var classie = {
   remove: removeClass,
   toggle: toggleClass
 };
-
+  
+/* global define */
 // transport
 if ( typeof define === 'function' && define.amd ) {
   // AMD
@@ -242,7 +243,7 @@ LoaderButton.prototype._stop = function( status ) {
 // enable button
 LoaderButton.prototype._enable = function() {
   this.button.removeAttribute( 'disabled' );
-}
+};
 
 // add to global namespace
 window.LoaderButton = LoaderButton;
@@ -251,7 +252,7 @@ window.LoaderButton = LoaderButton;
 // Initialize Submit Button
 
 [].slice.call( document.querySelectorAll( 'button.loader-button' ) ).forEach( function( bttn ) {
-  new LoaderButton( bttn, {
+  LoaderButton( bttn, {
     callback : function( instance ) {
       var progress = 0,
           interval = setInterval( function() {
@@ -267,7 +268,6 @@ window.LoaderButton = LoaderButton;
     }
   } );
 } );
-  var pButton = document.querySelector('[role="button"].retro-btn.sm.success');
 
   if (pButton) {
     pButton.addEventListener('mousedown', function() {

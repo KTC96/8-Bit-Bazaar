@@ -3,13 +3,18 @@ from .widgets import CustomClearableFileInput
 
 from .models import Game, Category, Genre, Review
 
+
 class GameForm(forms.ModelForm):
 
     class Meta:
         model = Game
         fields = '__all__'
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(
+        label='Image',
+        required=False,
+        widget=CustomClearableFileInput
+        )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -20,10 +25,12 @@ class GameForm(forms.ModelForm):
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black'
 
+
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = ['title', 'rating', 'body']
+
 
 class EditReviewForm(forms.ModelForm):
     class Meta:

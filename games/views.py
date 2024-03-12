@@ -12,7 +12,7 @@ from .forms import GameForm, ReviewForm
 
 def all_games(request):
     """A view to show all games, including sorting and search queries"""
-    
+
     games = Game.objects.all()
     all_genres = Genre.objects.all()
     all_categories = Category.objects.all()
@@ -46,7 +46,7 @@ def all_games(request):
             genres = request.GET['genre'].split(',')
             games = games.filter(genre__name__in=genres)
             genres = Genre.objects.filter(name__in=genres)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             games = games.filter(category__name__in=categories)
@@ -55,16 +55,22 @@ def all_games(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!")
                 return redirect(reverse('games'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = (
+                Q(name__icontains=query) |
+                Q(description__icontains=query)
+            )
+
             games = games.filter(queries)
 
     for game in games:
         if game.on_sale:
             sale_amount = Decimal(settings.SALE_AMOUNT)
-            game.discounted_price = round(game.price - (game.price * sale_amount), 2)
+            game.discounted_price = round(
+                game.price - (game.price * sale_amount), 2)
         else:
             game.discounted_price = None
 
@@ -75,7 +81,7 @@ def all_games(request):
         if not query:
             messages.error(request, "You didn't enter any search criteria!")
             return redirect(reverse('games'))
-            
+
         queries = Q(name__icontains=query) | Q(description__icontains=query)
         games = games.filter(queries)
 
@@ -90,6 +96,7 @@ def all_games(request):
     }
 
     return render(request, 'games/games.html', context)
+
 
 def game_detail(request, game_id):
     """A view to show individual game details"""
@@ -110,13 +117,15 @@ def game_detail(request, game_id):
     }
     return render(request, 'games/game_detail.html', context)
 
+
 @login_required
 def add_game(request):
     """ Add a game to the shop """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, that action is for the 8BitBazaar team only!')
+        messages.error(
+            request, 'Sorry, that action is for the 8BitBazaar team only!')
         return redirect(reverse('home'))
-    
+
     if request.method == 'POST':
         form = GameForm(request.POST, request.FILES)
         if form.is_valid():
@@ -124,7 +133,9 @@ def add_game(request):
             messages.success(request, 'Successfully added game!')
             return redirect(reverse('game_detail', args=[game.id]))
         else:
-            messages.error(request, 'Failed to add game. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add game. Please ensure the form is valid.')
     else:
         form = GameForm()
 
@@ -134,11 +145,13 @@ def add_game(request):
     }
     return render(request, template, context)
 
+
 @login_required
 def edit_game(request, game_id):
-    """ Edit a game in the shop """ 
+    """ Edit a game in the shop """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, that action is for the 8BitBazaar team only!')
+        messages.error(
+            request, 'Sorry, that action is for the 8BitBazaar team only!')
         return redirect(reverse('home'))
 
     if not request.user.is_superuser:
@@ -153,7 +166,9 @@ def edit_game(request, game_id):
             messages.success(request, 'Successfully updated game!')
             return redirect(reverse('game_detail', args=[game.id]))
         else:
-            messages.error(request, 'Failed to update game. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update game. Please ensure the form is valid.')
     else:
         form = GameForm(instance=game)
         messages.info(request, f'You are editing {game.friendly_name}')
@@ -166,11 +181,13 @@ def edit_game(request, game_id):
 
     return render(request, template, context)
 
+
 @login_required
 def remove_game(request, game_id):
     """ Delete a game from the shop """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, that action is for the 8BitBazaar team only!')
+        messages.error(
+            request, 'Sorry, that action is for the 8BitBazaar team only!')
         return redirect(reverse('home'))
 
     game = get_object_or_404(Game, pk=game_id)
@@ -186,17 +203,28 @@ def add_review(request, game_id):
 
     # Check if user has made any orders
     if not user_profile.orders.exists():
-        messages.error(request, "To leave a review on a game, you must purchase it first")
+        messages.error(
+            request, "To leave a review on a game, you must purchase it first")
         return redirect('game_detail', game_id)
 
     # Check if user has purchased the specific game
-    if not any(item.game == game for order in user_profile.orders.all() for item in order.lineitems.all()):
-        messages.error(request, "You must have purchased this game to review it.")
+    if not any(
+        item.game == game
+        for order in user_profile.orders.all()
+        for item in order.lineitems.all()
+    ):
+        messages.error(
+            request, "You must have purchased this game to review it.")
         return redirect('game_detail', game_id)
 
     # Check if the user has already reviewed the game
     if Review.objects.filter(game=game, author=request.user).exists():
-        messages.error(request, "You have already reviewed this game. Please update or delete your existing review.")
+        messages.error(
+            request,
+            "You have already reviewed this game. "
+            "Please update or delete your existing review."
+        )
+
         return redirect('game_detail', game_id)
 
     form = ReviewForm()
@@ -225,7 +253,8 @@ def edit_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
 
     if request.user != review.author:
-        messages.error(request, "You don't have permission to edit this review.")
+        messages.error(
+            request, "You don't have permission to edit this review.")
         return redirect('game_detail', review.game.id)
 
     form = ReviewForm(instance=review)
@@ -244,12 +273,14 @@ def edit_review(request, review_id):
 
     return render(request, 'games/edit_review.html', context)
 
+
 @login_required
 def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
 
     if request.user != review.author:
-        messages.error(request, "You don't have permission to delete this review.")
+        messages.error(
+            request, "You don't have permission to delete this review.")
         return redirect('game_detail', review.game.id)
 
     if request.method == 'POST':
@@ -257,7 +288,9 @@ def delete_review(request, review_id):
         messages.success(request, "Your review has been deleted.")
         return redirect('game_detail', review.game.id)
     else:
-        return HttpResponseBadRequest("Invalid request. Use POST method to delete the review.")
+        return HttpResponseBadRequest(
+            "Invalid request. Use POST method to delete the review.")
+
 
 @login_required
 def all_reviews(request):
