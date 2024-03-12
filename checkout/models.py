@@ -10,15 +10,15 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 
-
 class Order(models.Model):
 
     class Meta:
         ordering = ['-date']
-        
+
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-                                     null=True, blank=True, related_name='orders')
+                                     null=True, blank=True,
+                                     related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
@@ -29,23 +29,27 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    discount_amount = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    discount_amount = models.DecimalField(
+        max_digits=10, decimal_places=2, default=0)
+    total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0)
     original_bag = models.TextField(null=False, blank=False, default='')
-    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+    stripe_pid = models.CharField(
+        max_length=254, null=False, blank=False, default='')
 
     def _generate_order_number(self):
-            """
-            Generate a random, unique order number using UUID
-            """
-            return uuid.uuid4().hex.upper()
+        """
+        Generate a random, unique order number using UUID
+        """
+        return uuid.uuid4().hex.upper()
 
     def update_total(self):
         """
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        self.total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.total = self.lineitems.aggregate(
+            Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.save()
 
     def save(self, *args, **kwargs):
@@ -62,10 +66,15 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
 
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    game = models.ForeignKey(Game, null=False, blank=False, on_delete=models.CASCADE)
+    order = models.ForeignKey(
+        Order, null=False, blank=False, on_delete=models.CASCADE,
+        related_name='lineitems')
+    game = models.ForeignKey(
+        Game, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    lineitem_total = models.DecimalField(
+        max_digits=6, decimal_places=2, null=False, blank=False,
+        editable=False)
 
     def save(self, *args, **kwargs):
         """
@@ -73,15 +82,19 @@ class OrderLineItem(models.Model):
         and update the order total.
         """
 
-        if hasattr(self.game, 'discounted_price') and self.game.discounted_price is not None:
+        if (
+            hasattr(self.game, 'discounted_price') and
+            self.game.discounted_price is not None
+        ):
             self.lineitem_total = self.game.discounted_price * self.quantity
         else:
-            self.lineitem_total = self.game.price * self.quantity 
+            self.lineitem_total = self.game.price * self.quantity
 
         super().save(*args, **kwargs)
 
     def __str__(self):
         return f'SKU {self.game.sku} on order {self.order.order_number}'
+
 
 class Discount(models.Model):
     code = models.CharField(max_length=20, unique=True)
@@ -91,9 +104,13 @@ class Discount(models.Model):
     for_new_users = models.BooleanField(default=False)
 
     def is_valid(self, is_new_user):
-        """Check if the discount code is valid based on the start and end dates and user type."""
+        """Check if the discount code is valid based on the start
+        and end dates and user type.
+        """
         today = timezone.now().date()
-        return self.start_date <= today <= self.end_date and (not self.for_new_users or is_new_user)
+        return self.start_date <= today <= self.end_date and (
+            not self.for_new_users or is_new_user)
+
 
 class AppliedDiscount(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from games.models import Game
 
+
 def bag_contents(request):
     bag_items = []
     total = 0
@@ -18,7 +19,8 @@ def bag_contents(request):
             game_price = getattr(game, 'price', None)
 
             if sale_amount is not None and game_price is not None:
-                discounted_price = round(game_price - (game_price * Decimal(sale_amount)), 2)
+                discounted_price = round(
+                    game_price - (game_price * Decimal(sale_amount)), 2)
             else:
                 discounted_price = Decimal(0)
         else:

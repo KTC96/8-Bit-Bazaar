@@ -65,6 +65,17 @@ I have used the [CI Python Linter](https://pep8ci.herokuapp.com) to validate my 
 |Games models.py| ![Games Models](documentation/testing/python/games_models.py.png) | Pass |
 |Games urls.py| ![Games urls](documentation/testing/python/games_urls.py.png) | Pass |
 |Games views.py| ![Games Views](documentation/testing/python/games_views.py.png) | Pass |
+|Bag apps.py| ![Bag Apps](documentation/testing/python/bag_apps.py.png) | Pass |
+|Bag contexts.py| ![Bag Contexts](documentation/testing/python/bag_contexts.py.png) | Pass |
+|Bag urls.py| ![Bag urls](documentation/testing/python/bag_urls.py.png) | Pass |
+|Bag views.py| ![Bag urls](documentation/testing/python/bag_views.py.png) | Pass |
+|Checkout admin.py | ![Checkout Admin](documentation/testing/python/checkout_admin.py.png) | Pass |
+|Checkout apps.py| ![Checkout Apps](documentation/testing/python/checkout_apps.py.png) | Pass |
+|Checkout forms.py| ![CheckoutForms](documentation/testing/python/checkout_forms.py.png) | Pass |
+|Checkout models.py| ![Checkout Models](documentation/testing/python/checkout_models.py.png) | Pass |
+|Checkout signals.py| ![Checkout Signals](documentation/testing/python/checkout_signals.py.png) | Pass |
+|Checkout urls.py| ![Checkout urls](documentation/testing/python/checkout_urls.py.png) | Pass |
+|Checkout views.py| ![Checkout Views](documentation/testing/python/checkout_views.py.png) | Pass |
 
 ## Lighthouse
 

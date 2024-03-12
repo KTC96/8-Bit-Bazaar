@@ -30,8 +30,10 @@ class OrderForm(forms.ModelForm):
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field == 'country':
-                # Add an empty option as a placeholder
-                self.fields[field].choices = [('', 'Select your country')] + list(self.fields[field].choices)
+
+                self.fields[field].choices = [(
+                    '', 'Select your country')] + list(
+                        self.fields[field].choices)
             else:
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
@@ -40,6 +42,7 @@ class OrderForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
                 self.fields[field].widget.attrs['class'] = 'stripe-style-input'
                 self.fields[field].label = False
+
 
 class DiscountCodeForm(forms.Form):
     code = forms.CharField(max_length=20, required=True)
