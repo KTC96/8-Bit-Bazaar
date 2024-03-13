@@ -1,6 +1,6 @@
 # 8Bit Bazaar
 
-8Bit Bazaar is an online platform to byt retro and old school games. Users can buy and download games. 
+8Bit Bazaar is an online platform to buy retro and old school games. Users can buy and download games. 
 
 <br>
 
@@ -687,6 +687,12 @@ I aimed to introduce additional features into my project, some of which were ini
 * **WebAIM Contrast Checker:** Ensured sufficient color contrast for enhanced accessibility, promoting inclusivity in design.
 * **Heroku:** Selected as the hosting platform for the site, providing a scalable and reliable hosting solution.
 * **WAVE:** Employed to evaluate the accessibility of the site, identifying and addressing potential accessibility issues for a user-friendly experience.
+* **DrawSQL** Used to design my ERD in the planning stage of my project.
+* **Gmail** Email service used to send emails to users.
+* **XML Sitemaps** This was employed to create a sitemap
+
+
+
 
 ## Database
 
@@ -1076,20 +1082,24 @@ Follow these steps to fork the repository:
 | Source | Location | Notes |
 | --- | --- | --- |
 | [YouTube](https://www.youtube.com/watch?v=yc2olxLgKLk&t) | All | I followed this tutorial to help get my footer to stay at the bottom of my page when there was not enough content|
-| [CodePen](https://codepen.io/) | Login/ Logout/ Buttons | I used code from CodePen for the CSS gameboys on the login an signup pages, as well as for the retro Javascript buttons|
-
-
-
+| [CodePen](https://codepen.io/) | Login/ Logout/ Buttons/ Loader | I used code from CodePen for the CSS gameboys on the login an signup pages, as well as for the retro Javascript buttons and heart loading overlay|
+| Code Institute Boutique Ado project | All  | Used to create foundations of the project |
+| [YouTube](https://www.youtube.com/watch?v=otoKdW-lYc8) | Checkout | I followed this walkthrough to help me build my discount logic |
+| [MailChimp](https://mailchimp.com/) | Home | I used the mailchimp signup content for users to signup to my newsletter |
+| [Stack Overflow](https://stackoverflow.com/questions/56580696/how-to-implement-add-to-wishlist-for-a-product-in-django) | Wishlist | I used this post to help inspire my wishlist logic |
+| [Stripe](https://stripe.com/gb) | Checkout | I used Stripe for payment processing|
 
 ### Content
 
 | Source | Location | Notes |
 | --- | --- | --- |
-| [Canva](https://www.canva.com/)| All pages | I used canva for the logo design|
+| [Canva](https://www.canva.com/)| All pages | I used Canva for the logo design|
 | [RedKetchup Favicon Generator](https://redketchup.io/favicon-generator) | All pages | Used to create my favicon|
 | [Unsplash](https://unsplash.com/)||  |
 | [Fontawesome](https://fontawesome.com/) | All pages | I used font awesome icons |
 | [Wikipedia](https://www.wikipedia.org/) | Games, Game Detail | I used Wikipedia to source my game images|
+| [Termly](https://termly.io/products/privacy-policy-generator/) | Privacy Policy | I used Termly to generate the Privacy Policy|
+| [Kaggle](https://www.kaggle.com/datasets) | Fixtures content | Used kaggle for games datasets |
 
 
 ### Acknowledgements

@@ -99,13 +99,40 @@ I have used the [CI Python Linter](https://pep8ci.herokuapp.com) to validate my 
 | Games  | Mobile| ![home](documentation/testing/lighthouse/games_mobile.png)  |
 | Game Detail  | Desktop| ![home](documentation/testing/lighthouse/game_detail_desktop.png)  |
 | Game Detail  | Mobile| ![home](documentation/testing/lighthouse/game_detail_mobile.png)  |
+| Bag  | Desktop| ![home](documentation/testing/lighthouse/bag_desktop.png)  |
+| Bag  | Mobile| ![home](documentation/testing/lighthouse/bag_mobile.png)  |
+| Checkout | Desktop| ![home](documentation/testing/lighthouse/checkout_desktop.png)  |
+| Checkout | Mobile| ![home](documentation/testing/lighthouse/checkout_mobile.png)  |
+| Checkout Success | Desktop| ![home](documentation/testing/lighthouse/checkout_success_desktop.png)  |
+| Checkout Success | Mobile| ![home](documentation/testing/lighthouse/checkout_success_mobile.png)  |
+| Add game | Desktop| ![home](documentation/testing/lighthouse/add_game_desktop.png)  |
+| Add game| Mobile| ![home](documentation/testing/lighthouse/add_game_mobile.png)  |
+| Edit game | Desktop| ![home](documentation/testing/lighthouse/edit_game_desktop.png)  |
+| Edit game| Mobile| ![home](documentation/testing/lighthouse/edit_game_mobile.png)  |
+| Add review | Desktop| ![home](documentation/testing/lighthouse/add_review_desktop.png)  |
+| Add review| Mobile| ![home](documentation/testing/lighthouse/add_review_mobile.png)  |
+| Edit review | Desktop| ![home](documentation/testing/lighthouse/edit_review_desktop.png)  |
+| Edit review| Mobile| ![home](documentation/testing/lighthouse/edit_review_mobile.png)  |
+| My reviews | Desktop| ![home](documentation/testing/lighthouse/all_reviews_desktop.png)  |
+| My reviews | Mobile| ![home](documentation/testing/lighthouse/all_reviews_mobile.png)  |
+| Wishlist | Desktop| ![home](documentation/testing/lighthouse/wishlist_desktop.png)  |
+| Wishlist | Mobile| ![home](documentation/testing/lighthouse/wishlist_mobile.png)  |
 | Login | Desktop | ![Login](documentation/testing/lighthouse/login_desktop.png)  |
 | Login | Mobile | ![Login](documentation/testing/lighthouse/login_mobile.png)  |
 | Logout | Desktop | ![Logout](documentation/testing/lighthouse/logout_desktop.png)  |
 | Logout | Mobile | ![Logout](documentation/testing/lighthouse/logout_mobile.png)  |
 | Sign Up| Desktop | ![Sign Up](documentation/testing/lighthouse/signup_desktop.png)  |
 | Sign Up| Mobile | ![Sign Up](documentation/testing/lighthouse/signup_mobile.png)  |
+| Password reset| Desktop | ![Sign Up](documentation/testing/lighthouse/password_reset_desktop.png)  |
+| Password reset | Mobile |![Sign Up](documentation/testing/lighthouse/password_reset_mobile.png)  |
+| Password reset done| Desktop | ![Sign Up](documentation/testing/lighthouse/password_reset_done_desktop.png)  |
+| Password reset done| Mobile | ![Sign Up](documentation/testing/lighthouse/password_reset_done_mobile.png)  |
+| Privacy Policy| Desktop | ![Sign Up](documentation/testing/lighthouse/privacy_policy_desktop.png)  |
+| Privacy Policy | Mobile | ![Sign Up](documentation/testing/lighthouse/privacy_policy_mobile.png)  |
 
+
+Note: Best practices should be higher, however it is reduced due to the presence of third party cookies due to Stripe.
+Furthermore the SEO is not 100 on some pages because the custom styled Retro buttons are not crawlable.These are points to improve in future development of this site. 
 ## Manual Testing 
 
 ## Home Page

@@ -16,7 +16,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mx-0 px-0">
-            <h2 class="text-black offwhite-background games-heading">
+            <h2 class="text-black offwhite-background games-heading mt-5 mt-lg-3">
                 {% if current_genres %}
                     {{ current_genres.0.friendly_name }} Games
                 {% elif current_categories %}
@@ -40,10 +40,6 @@
                     </a>
                 {% endfor %}
             {% endif %}
-
-
-
-           
             <hr class=" w-100 mb-1">
         </div>
 

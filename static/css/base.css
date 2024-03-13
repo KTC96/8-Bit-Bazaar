@@ -176,9 +176,6 @@ footer {
   font-size: 45px;
 }
 
-.games-heading {
-  margin-top: 35px;
-}
 .game-name {
   font-size: 20px;
 }
@@ -473,10 +470,4 @@ a.genre-badge > span.badge:hover {
   background-color: #dc3545;
   border-color: #dc3545;
   border-radius: 0;
-}
-
-
-/* Logout  ------------------------------------------------------------------------------ */
-.logout {
-  margin-top: 30%;
 }
