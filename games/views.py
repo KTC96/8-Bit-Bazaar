@@ -199,53 +199,23 @@ def remove_game(request, game_id):
 @login_required
 def add_review(request, game_id):
     game = get_object_or_404(Game, id=game_id)
-    user_profile = request.user.userprofile
-
-    # Check if user has made any orders
-    if not user_profile.orders.exists():
-        messages.error(
-            request, "To leave a review on a game, you must purchase it first")
-        return redirect('game_detail', game_id)
-
-    # Check if user has purchased the specific game
-    if not any(
-        item.game == game
-        for order in user_profile.orders.all()
-        for item in order.lineitems.all()
-    ):
-        messages.error(
-            request, "You must have purchased this game to review it.")
-        return redirect('game_detail', game_id)
-
-    # Check if the user has already reviewed the game
-    if Review.objects.filter(game=game, author=request.user).exists():
-        messages.error(
-            request,
-            "You have already reviewed this game. "
-            "Please update or delete your existing review."
-        )
-
-        return redirect('game_detail', game_id)
-
-    form = ReviewForm()
 
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
             review.game = game
-            review.author = request.user  # Explicitly set the author field
+            review.author = request.user
+            if review.rating is not None and review.rating > 5.0:
+                messages.error(request, "Rating cannot be greater than 5.0")
+                return render(request, 'games/add_review.html', {'game': game, 'form': form})
             review.save()
-
             messages.success(request, "Your review has been added.")
             return redirect('game_detail', game_id)
+    else:
+        form = ReviewForm()
 
-    context = {
-        'game': game,
-        'form': form,
-    }
-
-    return render(request, 'games/add_review.html', context)
+    return render(request, 'games/add_review.html', {'game': game, 'form': form})
 
 
 @login_required
@@ -253,25 +223,22 @@ def edit_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
 
     if request.user != review.author:
-        messages.error(
-            request, "You don't have permission to edit this review.")
+        messages.error(request, "You don't have permission to edit this review.")
         return redirect('game_detail', review.game.id)
-
-    form = ReviewForm(instance=review)
 
     if request.method == 'POST':
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
+            if review.rating is not None and review.rating > 5.0:
+                messages.error(request, "Rating cannot be greater than 5.0")
+                return render(request, 'games/edit_review.html', {'review': review, 'form': form})
             form.save()
             messages.success(request, "Your review has been updated.")
             return redirect('game_detail', review.game.id)
+    else:
+        form = ReviewForm(instance=review)
 
-    context = {
-        'review': review,
-        'form': form,
-    }
-
-    return render(request, 'games/edit_review.html', context)
+    return render(request, 'games/edit_review.html', {'review': review, 'form': form})
 
 
 @login_required
