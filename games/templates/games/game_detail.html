@@ -63,11 +63,11 @@
                             {% csrf_token %}
                             <div class="form-row">
                                 <div class="col-12 d-flex flex-column align-items-center">
-                                    <p><strong>Quantity:</strong></p>
+                                    <label for="quantity_input">Quantity:</label>
                                     <div class="form-group">
                                         <div class="input-group input-group-{{ item.item_id }}">
                                             <div class="input-group-prepend">
-                                                <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ item.item_id }}" 
+                                                <button class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ item.item_id }} aria-" aria-label="Decrease quantity"
                                                     data-item_id="{{ item.item_id }}">
                                                     <span class="icon">
                                                         <i class="fas fa-minus"></i>
@@ -78,7 +78,7 @@
                                                 name="quantity" value="1" min="1" max="99"
                                                 data-item_id="{{ item.item_id }}">
                                             <div class="input-group-append">
-                                                <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ item.item_id }}"
+                                                <button class="increment-qty btn btn-black rounded-0 increment-qty_{{ item.item_id }}" aria-label="Increase quantity"
                                                     data-item_id="{{ item.item_id }}">
                                                     <span class="icon">
                                                         <i class="fas fa-plus"></i>
