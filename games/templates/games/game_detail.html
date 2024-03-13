@@ -137,7 +137,7 @@
                         <p class="mt-1 mb-0 genre-rating">
                             <i class="fas fa-tag mr-1"></i>
                             {% for genre in game.genre.all %}
-                                <a class="text-muted" href="{% url 'games' %}?genre={{ genre.name }}" >
+                                <a  href="{% url 'games' %}?genre={{ genre.name }}" >
                                     {{ genre.friendly_name }}
                                 </a>
                                 {% if not forloop.last %}|{% endif %}
@@ -145,9 +145,9 @@
                         </p>
                         {% endif %}
                         {% if game.rating %}
-                        <small class="text-muted genre-rating"><i class="fas fa-star mr-1"></i>{{ game.rating }} / 5</small>
+                        <small class="genre-rating"><i class="fas fa-star mr-1"></i>{{ game.rating }} / 5</small>
                         {% else %}
-                        <small class="text-muted genre-rating">No Rating</small>
+                        <small class="genre-rating">No Rating</small>
                         {% endif %}
                         {% if request.user.is_superuser %}
                             <small class="genre-rating">
