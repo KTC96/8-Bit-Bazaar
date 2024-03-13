@@ -33,6 +33,10 @@ body {
   font-size: 20px;
 }
 
+.small-text {
+  font-size: 15px;
+}
+
 .text-white {
   color:white;
 }
