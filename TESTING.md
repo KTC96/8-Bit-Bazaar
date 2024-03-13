@@ -320,9 +320,10 @@ The list of bugs can be found in my Git Hub project board.
 | Cannot delete game from wishlist | url was corrected |
 | Order history did not show most recent purchases first | Order sorted correctly|
 | Adding another copy of a game already in the bag did not show the toast | Added functionality to add message when a game that is already in the bag is added again|
-| Order history did not show most recent purchases first | Order sorted correctly|
-
-
+| Genre filtering did not work | update all_games view to handle sorting correctly |
+| Running total did not update on mobile | change grand_total to total |
+| Checkout success did not load upon completing payment | Updated HTML structure |
+| Stripe card element not loading | Spelling mistake in post load js |
 
 
 ### Remaining Bugs

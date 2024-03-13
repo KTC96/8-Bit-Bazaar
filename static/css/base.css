@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-image: url("/media/background.jpg");
+  background-image: url("/media/background.webp");
   width: 100%;
   background-size: cover;
   min-height: 100vh;
@@ -33,10 +33,14 @@ body {
   font-size: 20px;
 }
 
+.text-white {
+  color:white;
+}
+
 /* index.html ------------------------------------------------------------------------------ */
 
 .hero-image {
-  background: url("/media/background.jpg") no-repeat center center fixed;
+  background: url("/media/background.webp") no-repeat center center fixed;
   background-size: cover;
   height: 60vh;
   position: relative;
@@ -62,22 +66,8 @@ body {
   border: 1px solid;
 }
 
-.shop-now-btn {
-  min-width: 100px;
-  background-color: #ca4727;
-  border-radius: 5px;
-}
-
-.shop-now-btn:hover {
-  
-  background-color: #ca4727;
-  color: white !important;
-  border-color: #fff;
-}
-
 .red-btn {
   background-color: #ca4727 !important;
-  color: #000 !important;
   border-radius: 5px !important;
   border: 1px solid !important;
   border-color: #000 !important;
@@ -446,7 +436,7 @@ a.genre-badge > span.badge:hover {
 }
 
 .allauth-form-inner-content a {
-  color: #17a2b8; /* text-info */
+  color: white; /* text-info */
 }
 
 /* Game Detail ------------------------------------------------------------------------------ */
