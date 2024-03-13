@@ -345,55 +345,59 @@ def apply_discount(request):
 
 def _send_confirmation_email(order):
     """Send the user a confirmation email"""
-    cust_email = order.email
+    if not order.email_sent:  # Check if email has already been sent
+        cust_email = order.email
 
-    # Specify the path to the text file containing the email subject
-    subject_file_path = (
-        'checkout/templates/checkout/confirmation_emails/'
-        'confirmation_email_subject.txt'
-    )
-    body_file_path = (
-        'checkout/templates/checkout/confirmation_emails/'
-        'confirmation_email_body.txt'
-    )
+        # Specify the path to the text file containing the email subject
+        subject_file_path = (
+            'checkout/templates/checkout/confirmation_emails/'
+            'confirmation_email_subject.txt'
+        )
+        body_file_path = (
+            'checkout/templates/checkout/confirmation_emails/'
+            'confirmation_email_body.txt'
+        )
 
-    # Read the content of the text files
-    with open(subject_file_path, 'r') as subject_file:
-        subject = subject_file.read()
+        # Read the content of the text files
+        with open(subject_file_path, 'r') as subject_file:
+            subject = subject_file.read()
 
-    subject = subject.replace(
-        '{{ order.order_number }}', str(order.order_number))
+        subject = subject.replace(
+            '{{ order.order_number }}', str(order.order_number))
 
-    with open(body_file_path, 'r') as body_file:
-        body = body_file.read()
+        with open(body_file_path, 'r') as body_file:
+            body = body_file.read()
 
-    # Initialize free_game_link
-    free_game_link = ''
+        # Initialize free_game_link
+        free_game_link = ''
 
-    # Check if the free game threshold is met
-    if (
-        (order.discounted_total is not None and
-         order.discounted_total >= settings.FREE_GAME_THRESHOLD) or
-        (order.total is not None and
-         order.total >= settings.FREE_GAME_THRESHOLD)
-    ):
-        free_game_link = 'https://stephendawsondev.github.io/j-day/'
-        print(f"Debugging: free_game_link is set to {free_game_link}")
-        body += f"\nEnjoy your free game! {free_game_link}"
+        # Check if the free game threshold is met
+        if (
+            (order.discounted_total is not None and
+             order.discounted_total >= settings.FREE_GAME_THRESHOLD) or
+            (order.total is not None and
+             order.total >= settings.FREE_GAME_THRESHOLD)
+        ):
+            free_game_link = 'https://stephendawsondev.github.io/j-day/'
+            print(f"Debugging: free_game_link is set to {free_game_link}")
+            body += f"\nEnjoy your free game! {free_game_link}"
 
-    body = render_to_string(
-        'checkout/confirmation_emails/confirmation_email_body.txt',
-        {
-            'order': order,
-            'contact_email': settings.DEFAULT_FROM_EMAIL,
-            'free_game_link': free_game_link
-        }
+        body = render_to_string(
+            'checkout/confirmation_emails/confirmation_email_body.txt',
+            {
+                'order': order,
+                'contact_email': settings.DEFAULT_FROM_EMAIL,
+                'free_game_link': free_game_link
+            }
 
-    )
+        )
 
-    send_mail(
-        subject,
-        body,
-        settings.DEFAULT_FROM_EMAIL,
-        [cust_email]
-    )
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email]
+        )
+
+        order.email_sent = True
+        order.save()
