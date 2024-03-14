@@ -1,7 +1,6 @@
 # 8Bit Bazaar
 
-8Bit Bazaar is an online platform to buy retro and old school games. Users can buy and download games. 
-
+Introducing 8Bit Bazaar: your go-to platform for all things retro gaming. With our marketplace, you can effortlessly browse, buy, review, and wishlist classic games from various eras and platforms. Explore nostalgia-filled adventures with ease through intuitive navigation and user-friendly features. Start your retro gaming journey today with 8Bit Bazaar.
 <br>
 
 ![8BitBAzaar](documentation/responsive_image.png)
@@ -17,18 +16,24 @@ I embraced the Agile methodology and made use of a GitHub project board to strea
 <details><summary>Issues Template</summary>
 
 
-![issue template]()
+![issue template](documentation/issues_template.png)
 
 </details>
 
 <details><summary>Issues List</summary>
 
-![issues]()
+![issues](documentation/issues_list.png)
+</details>
+
+<details><summary>Milestones</summary>
+
+![project board](documentation/milestones.png)
+
 </details>
 
 <details><summary>Project Board</summary>
 
-![project board]()
+![project board](documentation/project_board.png)
 
 </details>
 
@@ -619,13 +624,6 @@ I used [Figma](https://www.figma.com/) to create the wireframes for this project
 
 ![Checkout success](documentation/existing_features/password_reset_done.png)
 
-### Change password
-
-![Checkout success](documentation/existing_features/features_checkout_success.pn)
-
-### Change password done
-
-
 ## Future Development
 
 I aimed to introduce additional features into my project, some of which were initially planned but have been categorized as "Won't Have" on my GitHub project board, following MoSCoW prioritization.
@@ -690,16 +688,11 @@ I aimed to introduce additional features into my project, some of which were ini
 * **DrawSQL** Used to design my ERD in the planning stage of my project.
 * **Gmail** Email service used to send emails to users.
 * **XML Sitemaps** This was employed to create a sitemap
-
-
-
-
 ## Database
 
 I created an entity relationship diagram using [DrawSQL](https://drawsql.app/). This allowed me to plan out my database interactions more easily. 
 
-![entity relationship](documentation/entitiy_relationship.png)
-
+![entity relationship](documentation/ERD.png)
 
 ### Game App
 #### Game Model
@@ -854,7 +847,18 @@ Encouraging user participation, customers who have made purchases can actively c
 
 To foster and sustain a strong connection with the customer base, the website strategically places a newsletter signup form on the home page. Collected email addresses from this form are then leveraged to curate mailing lists, instrumental in conducting customer outreach and executing marketing initiatives.
 
+<details><summary>Signup Form</summary>
+
+![Mailchimp signup](documentation/mailchimp_signup.png)
+</details>
+<br>
+
 Additionally, the business maintains a vibrant presence on Facebook through a dedicated business page. This platform serves as a hub for posting engaging content that customers can readily access. The website also incorporates a wishlist feature, enabling users to save games of interest. Customers can receive notifications through mailing lists or the Facebook page, alerting them to special offers, discounts, or promotions for the games in their wishlist, thereby incentivizing potential sales.
+
+<details><summary>Facebook page</summary>
+
+<img src="documentation/facebook_page.jpg" alt="Facebook screenshot" width="30%">
+</details>
 
 ### Search Engine Optimization (SEO) and Marketing
 
