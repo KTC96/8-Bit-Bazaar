@@ -17,6 +17,9 @@ from bag.contexts import bag_contents
 
 @login_required
 def wishlist(request):
+    """ 
+    A view to render and pass context to the wishlist template
+    """
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
     games_in_wishlist = wishlist.games.all()
 
@@ -35,6 +38,9 @@ def wishlist(request):
 
 @login_required
 def add_to_wishlist(request, game_id):
+    """
+    Logged in users to add games to their wishlist
+    """
     game = get_object_or_404(Game, id=game_id)
     wishlist, created = Wishlist.objects.get_or_create(user=request.user)
 

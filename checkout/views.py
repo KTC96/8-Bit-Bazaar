@@ -278,6 +278,8 @@ def checkout_success(request, order_number):
 
 
 def apply_discount(request):
+    """ Apply the discount code """
+    
     if request.method == 'POST':
         discount_code = request.POST.get('discount_code')
 

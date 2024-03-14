@@ -24,7 +24,51 @@
         <div class="row">
             <div class="col">
                 {% if bag_items %}
-                    <div class="table-responsive rounded">
+                <div class="d-block d-md-none">
+                    <div class="row">
+                        <div class="col text-center">
+                            {% include "bag/bag_total.html" %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            {% include "bag/checkout_buttons.html" %}
+                            <p class="mb-5 text-center">A summary of your bag contents is below</p>
+                        </div>
+                    </div>
+                    {% for item in bag_items %}
+                        <div class="row">
+                            <div class="col-12 col-sm-6 mb-2 d-flex justify-content-center">
+                                {% include "bag/game_image.html" %}
+                            </div>
+                            <div class="col-12 col-sm-6 mb-2 d-flex align-items-center flex-column">
+                                {% include "bag/game_info.html" %}
+                            </div>
+                            <div class="col-12 col-sm-6 order-sm-last d-flex align-items-center flex-column">
+                                {% if item.game.on_sale %}
+                                    <p class="my-0">Price: £{{ item.discounted_price }}</p>
+                                {% else %}
+                                    <p class="my-0">Price: £{{ item.game.price }}</p>
+                                {% endif %}
+                                {% if item.game.on_sale %}
+                                    <p class="my-0 mb-2">Subtotal: £{{ item.discounted_price | calc_subtotal:item.quantity }}</p>
+                                {% else %}
+                                    <p class="my-0 mb-2">Subtotal: £{{ item.game.price | calc_subtotal:item.quantity }}</p>
+                                {% endif %}
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                {% include "bag/quantity_form.html" %}
+                            </div>
+                        </div>
+                        <div class="row"><div class="col"><hr></div></div>
+                    {% endfor %}
+                    <div class="btt-button shadow-sm rounded-0 border border-black">
+                        <a class="btt-link d-flex h-100">
+                            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+                        </a>	
+                    </div>
+                </div>
+                    <div class="table-responsive rounded d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
@@ -39,15 +83,10 @@
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        {% if item.game.image %}
-                                        <img class="game-image-bag rounded img-fluid" src="{{ item.game.image.url }}" alt="{{ item.game.name }}">
-                                        {% else %}
-                                        <img class="game-image-bag rounded img-fluid" src="{{ MEDIA_URL }}placeholder.png" alt="{{ item.game.name }}">
-                                        {% endif %}
+                                        {% include "bag/game_image.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.game.friendly_name }}</strong></p>
-                                        <p class="my-0 small">SKU: {{ item.game.sku|upper }}</p>
+                                        {% include "bag/game_info.html" %}
                                     </td>
                                     <td class="py-3">
                                         {% if item.game.on_sale %}
@@ -57,34 +96,7 @@
                                         {% endif %}
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form " method="post" action="{% url 'adjust_bag' item.item_id %}">
-                                            {% csrf_token %}
-                                            <div class="form-group">
-                                                <div class="input-group input-group-{{ item.item_id }}">
-                                                    <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn-sm btn btn-black rounded-0 decrement-qty_{{ item.item_id }}" aria-label="Decrease Quantity"
-                                                            data-item_id="{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-minus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                    <input class="form-control form-control-sm qty_input id_qty_{{ item.item_.id }}" type="number"
-                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                                        data-item_id="{{ item.item_id }}">
-                                                    <div class="input-group-append">
-                                                        <button class="increment-qty  btn-sm btn btn-black rounded-0 increment-qty_{{ item.item_id }}" aria-label="Increase Quantity"
-                                                            data-item_id="{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-plus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Delete</small></a>
+                                       {% include "bag/quantity_form.html" %}
                                     </td>
                                     <td class="py-3">
                                         {% if item.game.on_sale %}
@@ -97,43 +109,12 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-center text-md-right">
-                                    <h4 class="mt-4"><strong>Total: £{{ total|floatformat:2 }}</strong></h4>
-                                    {% if free_game_delta > 0 %}
-                                        <p class="mb-1 text-danger">
-                                            You could get an exclusive free game by spending just <strong>£{{ free_game_delta }}</strong> more!
-                                        </p>
-                                    {% endif %}
+                                    {% include "bag/bag_total.html" %}
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-center text-md-right">
-                                    <div class='retro-btn sm primary m-0' onclick="window.location.href='{% url 'games' %}';">
-                                        <a class='btn'> 
-                                            <span class='btn-inner'>
-                                                <span class='content-wrapper'>
-                                                    <span class='btn-content'>
-                                                        <span class='btn-content-inner'>
-                                                            <i class="fa-solid fa-chevron-left"></i> Keep Shopping
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    
-                                    <div class='retro-btn sm success' onclick="window.location.href='{% url 'checkout' %}';">
-                                        <a class='btn'> 
-                                            <span class='btn-inner'>
-                                                <span class='content-wrapper'>
-                                                    <span class='btn-content'>
-                                                        <span class='btn-content-inner small-text'>
-                                                            Secure Checkout <i class="fas fa-lock"></i>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </div>
+                                   {% include "bag/checkout_buttons.html" %}
                                 </td>
                             </tr>
                         </table>

@@ -37,6 +37,9 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """
+    Display the users order history
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     user_profile = UserProfile.objects.get(user=request.user)

@@ -198,6 +198,10 @@ def remove_game(request, game_id):
 
 @login_required
 def add_review(request, game_id):
+    """ 
+    Add a review to a game if logged in, game purchased
+    and not previously reviewed
+    """
     game = get_object_or_404(Game, id=game_id)
 
     if request.method == 'POST':
@@ -220,6 +224,9 @@ def add_review(request, game_id):
 
 @login_required
 def edit_review(request, review_id):
+    """
+    Logged in used to edit their previous reviews
+    """
     review = get_object_or_404(Review, id=review_id)
 
     if request.user != review.author:
@@ -243,6 +250,9 @@ def edit_review(request, review_id):
 
 @login_required
 def delete_review(request, review_id):
+    """
+    View to allow user to delete their previous reviews
+    """
     review = get_object_or_404(Review, id=review_id)
 
     if request.user != review.author:
@@ -261,6 +271,10 @@ def delete_review(request, review_id):
 
 @login_required
 def all_reviews(request):
+    """
+    A view so the user can see an overview of all 
+    the reviews they have left for games
+    """
     reviews = Review.objects.filter(author=request.user)
 
     context = {
