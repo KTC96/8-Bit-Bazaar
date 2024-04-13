@@ -13,7 +13,6 @@ from django.template.loader import render_to_string
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.conf import settings
-from django.http import HttpResponseRedirect
 
 from games.models import Game
 from bag.contexts import bag_contents
@@ -49,6 +48,10 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    View to render checkout page with associated variables
+
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -140,16 +143,20 @@ def checkout(request):
             request.session.pop('bag', None)
 
             request.session['save_info'] = 'save-info' in request.POST
-
-            # Redirect to a different URL after successfully processing the POST request
-            return HttpResponseRedirect(reverse('checkout_success', args=[order.order_number]))
-
+            return redirect(
+                reverse('checkout_success', args=[order.order_number]))
+        else:
+            messages.error(
+                request,
+                'There was an error with your form. '
+                'Please double-check your information.'
+            )
     else:
         bag = request.session.get('bag', {})
         if not bag:
             messages.error(
                 request, "There's nothing in your bag at the moment")
-            return HttpResponseRedirect(reverse('games'))
+            return redirect(reverse('games'))
 
         current_bag = bag_contents(request)
         total = 0
