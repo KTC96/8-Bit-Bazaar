@@ -132,6 +132,9 @@ def checkout(request):
                     )
                     continue
 
+            # Clear bag session data after completing the order
+            request.session.pop('bag', None)
+
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(
                 reverse('checkout_success', args=[order.order_number]))
